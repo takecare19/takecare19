@@ -1,7 +1,8 @@
 <template>
   <div>
     <h3>{{this.resource.name}}</h3>
-    <i>{{this.resource.description}}</i>
+    <p>{{this.resource.description}}</p>
+    <a :href="this.resource.url">Go to link</a>
   </div>
 </template>
 
