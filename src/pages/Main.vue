@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Welcome to takecare</h1>
+    <h1>Welcome to takecare 19!</h1>
     <ResourceList :resources="this.resources" />
   </div>
 </template>
