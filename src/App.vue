@@ -9,3 +9,13 @@
     name: "App"
   };
 </script>
+
+<style>
+.v-btn {
+  text-transform: none !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+</style>
