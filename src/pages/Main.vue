@@ -17,29 +17,29 @@
 </template>
 
 <script>
-import db from "../firebase/init";
-import CategoriesList from "@/components/CategoriesList";
+import db from '../firebase/init'
+import CategoriesList from '@/components/CategoriesList'
 
 export default {
-  name: "Main",
+  name: 'Main',
   components: { CategoriesList },
   data() {
     return {
       resources: [],
-      items: ["Anywhere"]
-    };
+      items: ['Anywhere'],
+    }
   },
   created() {
-    this.selectedLocation = this.items[0];
-    db.collection("resources")
+    this.selectedLocation = this.items[0]
+    db.collection('resources')
       .get()
       .then(snapshot => {
         snapshot.forEach(doc => {
-          this.resources.push(doc.data());
-        });
-      });
-  }
-};
+          this.resources.push(doc.data())
+        })
+      })
+  },
+}
 </script>
 
 <style lang="scss" scoped>
