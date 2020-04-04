@@ -5,36 +5,33 @@
         :text="'All' !== selectedCategory"
         :depressed="'All' === selectedCategory"
         @click="selectCategory('All')"
-      >All</v-btn>
+        >All</v-btn
+      >
       <v-btn
-        :text="category.id !== selectedCategory.id"
-        :depressed="category.id === selectedCategory.id"
         v-for="category in allCategories"
         :key="category.id"
+        :text="category.id !== selectedCategory.id"
+        :depressed="category.id === selectedCategory.id"
         @click="selectCategory(category.id)"
-      >{{category.name}}</v-btn>
+        >{{ category.name }}</v-btn
+      >
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
-  name: "CategoriesList",
-  methods: {
-    ...mapActions(["fetchCategories", "selectCategory"])
-  },
-  computed: mapGetters([
-    "allCategories",
-    "isLoading",
-    "error",
-    "selectedCategory"
-  ]),
+  name: 'CategoriesList',
+  computed: mapGetters(['allCategories', 'isLoading', 'error', 'selectedCategory']),
   created() {
-    this.fetchCategories();
-  }
-};
+    this.fetchCategories()
+  },
+  methods: {
+    ...mapActions(['fetchCategories', 'selectCategory']),
+  },
+}
 </script>
 
 <style lang="scss">
@@ -46,4 +43,3 @@ export default {
   height: 50px;
 }
 </style>
-

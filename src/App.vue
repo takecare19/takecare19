@@ -4,7 +4,7 @@
     <router-view></router-view>
     <Footer />
   </v-app>
-</template> 
+</template>
 
 <script>
 import NavBar from '@/components/NavBar'

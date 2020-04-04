@@ -4,9 +4,9 @@
       <div class="hero-content">
         <h1>Accessible mental health resources for coping with COVID-19</h1>
         <v-autocomplete
+          v-model="selectedLocation"
           outlined
           :items="items"
-          v-model="selectedLocation"
           label="Choose a location"
           placeholder="Start typing to Search"
         ></v-autocomplete>
