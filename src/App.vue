@@ -1,13 +1,18 @@
 <template>
-    <v-app id="app">
-      <router-view></router-view>
-    </v-app>
-  </template> 
+  <v-app id="app">
+    <NavBar />
+    <router-view></router-view>
+    <Footer />
+  </v-app>
+</template> 
 
 <script>
-  export default {
-    name: "App"
-  };
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
+export default {
+  name: "App",
+  components: { NavBar, Footer }
+};
 </script>
 
 <style>
@@ -17,5 +22,7 @@
 
 a {
   text-decoration: none !important;
+  color: inherit !important;
 }
+
 </style>

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <NavBar />
     <div class="hero">
       <div class="hero-content">
         <h1>Accessible mental health resources for coping with COVID-19</h1>
@@ -14,21 +13,16 @@
       </div>
     </div>
     <CategoriesList />
-    <!-- <ResourceList :resources="this.resources" /> -->
-    <Footer />
   </div>
 </template>
 
 <script>
 import db from "../firebase/init";
-// import ResourceList from "@/components/ResourceList";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
 import CategoriesList from "@/components/CategoriesList";
 
 export default {
   name: "Main",
-  components: {  NavBar, Footer, CategoriesList },
+  components: { CategoriesList },
   data() {
     return {
       resources: [],
@@ -42,7 +36,6 @@ export default {
       .then(snapshot => {
         snapshot.forEach(doc => {
           this.resources.push(doc.data());
-          console.log(doc.data());
         });
       });
   }

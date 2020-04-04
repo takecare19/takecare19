@@ -1,31 +1,38 @@
 <template>
   <div class="categories-list-frame">
     <div class="categories-list">
-      <v-btn flat depressed>All</v-btn>
-      <v-btn flat text v-for="category in categories" :key="category.id">{{category.name}}</v-btn>
+      <v-btn
+        :text="'All' !== selectedCategory"
+        :depressed="'All' === selectedCategory"
+        @click="selectCategory('All')"
+      >All</v-btn>
+      <v-btn
+        :text="category.id !== selectedCategory.id"
+        :depressed="category.id === selectedCategory.id"
+        v-for="category in allCategories"
+        :key="category.id"
+        @click="selectCategory(category.id)"
+      >{{category.name}}</v-btn>
     </div>
   </div>
 </template>
 
 <script>
-import db from "../firebase/init";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "CategoriesList",
-  data() {
-    return {
-      categories: []
-    };
+  methods: {
+    ...mapActions(["fetchCategories", "selectCategory"])
   },
+  computed: mapGetters([
+    "allCategories",
+    "isLoading",
+    "error",
+    "selectedCategory"
+  ]),
   created() {
-    db.collection("categories")
-      .orderBy("order", "asc")
-      .get()
-      .then(snapshot => {
-        snapshot.forEach(doc => {
-          this.categories.push(doc.data());
-        });
-      });
+    this.fetchCategories();
   }
 };
 </script>
@@ -37,11 +44,6 @@ export default {
   overflow-x: scroll;
   display: flex;
   height: 50px;
-
-  button {
-    display: inline;
-    float: left;
-  }
 }
 </style>
 

@@ -13,7 +13,9 @@
       </v-list>
     </v-menu>
     <v-spacer></v-spacer>
-    <v-toolbar-title>Take Care 19</v-toolbar-title>
+    <router-link to="/">
+      <v-toolbar-title>Take Care 19</v-toolbar-title>
+    </router-link>
     <v-spacer></v-spacer>
     <router-link to="/submit">
       <v-btn x-large icon class="mobile-submit-button">
@@ -28,3 +30,9 @@ export default {
   name: "NavBar"
 };
 </script>
+
+<style lang="scss" scoped>
+.v-toolbar {
+  flex: none;
+}
+</style>
