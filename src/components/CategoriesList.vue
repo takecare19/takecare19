@@ -29,8 +29,8 @@ export default {
     this.fetchCategories()
   },
   methods: {
-    ...mapActions(['fetchCategories', 'selectCategory']),
-  },
+    ...mapActions(['fetchCategories', 'selectCategory'])
+  }
 }
 </script>
 

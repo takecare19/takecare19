@@ -1,5 +1,6 @@
 {
   "editor.formatOnSave": true,
   "vetur.format.defaultFormatter.js": "prettier-eslint",
+  "vetur.format.defaultFormatter.css": "prettier",
   "vetur.format.defaultFormatter.html": "prettier"
 }

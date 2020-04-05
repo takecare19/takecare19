@@ -10,7 +10,7 @@
 export default {
   name: 'ResourceCard',
   props: {
-    resource: Object,
-  },
+    resource: Object
+  }
 }
 </script>

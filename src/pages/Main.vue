@@ -26,7 +26,7 @@ export default {
   data() {
     return {
       resources: [],
-      items: ['Anywhere'],
+      items: ['Anywhere']
     }
   },
   created() {
@@ -38,7 +38,7 @@ export default {
           this.resources.push(doc.data())
         })
       })
-  },
+  }
 }
 </script>
 

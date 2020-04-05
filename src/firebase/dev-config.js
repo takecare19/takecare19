@@ -6,5 +6,5 @@ export default {
   storageBucket: 'takecare19app.appspot.com',
   messagingSenderId: '751478547192',
   appId: '1:751478547192:web:a392c510bfc2258518510d',
-  measurementId: 'G-2463R1E3TY',
+  measurementId: 'G-2463R1E3TY'
 }
