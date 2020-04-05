@@ -5,15 +5,15 @@
 </template>
 
 <script>
-import ResourceCard from "./ResourceCard";
+import ResourceCard from './ResourceCard'
 
 export default {
-  name: "ResourceList",
+  name: 'ResourceList',
   components: {
     ResourceCard
   },
   props: {
     resources: Array
   }
-};
+}
 </script>
