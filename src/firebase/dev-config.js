@@ -1,10 +1,11 @@
+/* eslint-disable no-undef */
 export default {
-  apiKey: 'AIzaSyAUmQXsRhEShHdyc37nJXZxYzdilEQaxIo',
-  authDomain: 'takecare19app.firebaseapp.com',
-  databaseURL: 'https://takecare19app.firebaseio.com',
-  projectId: 'takecare19app',
-  storageBucket: 'takecare19app.appspot.com',
-  messagingSenderId: '751478547192',
-  appId: '1:751478547192:web:a392c510bfc2258518510d',
-  measurementId: 'G-2463R1E3TY'
+  apiKey: process.env.VUE_APP_DEV_FIREBASE_API_KEY,
+  authDomain: process.env.VUE_APP_DEV_FIREBASE_AUTHDOMAIN,
+  databaseURL: process.env.VUE_APP_DEV_FIREBASE_DATABASE_URL,
+  projectId: process.env.VUE_APP_DEV_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.VUE_APP_DEV_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.VUE_APP_DEV_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.VUE_APP_DEV_FIREBASE_APP_ID,
+  measurementId: process.env.VUE_APP_DEV_FIREBASE_MEASUREMENT_ID
 }
