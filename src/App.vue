@@ -66,12 +66,11 @@ export default {
 <style>
 /* .v-btn {
   text-transform: none !important;
-}
+} */
 
 a {
-  text-decoration: none !important;
-  color: inherit !important;
-} */
+  font-size: 1.5rem;
+}
 
 #mc_embed_signup {
   font-family: 'Poppins', sans-serif;
