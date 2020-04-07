@@ -2,13 +2,11 @@
   <v-app id="app">
     <div class="coming-soon">
       <h1>takecare19 coming soon</h1>
-      <h2>
-        <a
-          href="https://docs.google.com/document/d/1_uD7IAe8SqTGsbZOeTXW5lCRCnLzv0MZJ8Rx8SFurkc/edit#heading=h.vcwavvxpz2mh"
-          target="_blank"
-          >Accessible Mental health Resources for Coping with COVID-19 List</a
-        >
-      </h2>
+      <a
+        href="https://docs.google.com/document/d/1_uD7IAe8SqTGsbZOeTXW5lCRCnLzv0MZJ8Rx8SFurkc/edit#heading=h.vcwavvxpz2mh"
+        target="_blank"
+        >Accessible Mental health Resources for Coping with COVID-19 List</a
+      >
       <!-- Begin Mailchimp Signup Form -->
       <div id="mc_embed_signup">
         <form
@@ -66,14 +64,14 @@ export default {
 </script>
 
 <style>
-.v-btn {
+/* .v-btn {
   text-transform: none !important;
 }
 
 a {
   text-decoration: none !important;
   color: inherit !important;
-}
+} */
 
 #mc_embed_signup {
   font-family: 'Poppins', sans-serif;
