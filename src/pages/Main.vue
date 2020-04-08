@@ -2,14 +2,16 @@
   <div>
     <div class="hero">
       <div class="hero-content">
-        <h1>Accessible mental health resources for coping with COVID-19</h1>
-        <v-autocomplete
+        <h1>Accessible mental health resources to cope with COVID-19</h1>
+        <label for="location-filter">See resources revelant to:</label>
+        <v-select
+          id="location-filer"
           v-model="selectedLocation"
-          outlined
+          solo
+          depressed
+          dark
           :items="items"
-          label="Choose a location"
-          placeholder="Start typing to Search"
-        ></v-autocomplete>
+        ></v-select>
       </div>
     </div>
     <CategoriesList />
@@ -42,27 +44,46 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 .hero {
   width: 100%;
-  height: 50vh;
-  min-height: 300px;
-  background: #b0bec5;
+  min-height: 60vh;
+  background: url('../assets/desktop-heroimage.svg');
+  background-size: cover;
+  background-position: center;
   position: relative;
   margin-bottom: 20px;
 
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+  }
+
   .hero-content {
     position: absolute;
-    width: 80%;
+    max-width: 800px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-  }
 
-  .v-input.v-autocomplete {
-    margin: 20px auto 0;
-    width: 300px;
+    label {
+      font-size: 2.4rem;
+      font-family: 'PT Serif', serif;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 15px;
+      margin-top: 30px;
+    }
+
+    .v-select {
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    .v-input__slot {
+      background-color: #2b3545 !important;
+    }
   }
 }
 </style>

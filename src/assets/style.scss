@@ -1,0 +1,91 @@
+$red: #e86137;
+$dark: #333;
+$sunshine: #e9c330;
+$navy: #2b3545;
+$denim: #6f8f9a;
+$pale-blue: #c2d6d5;
+$sky: #dbefee;
+$white: #fff;
+
+h1,
+h2,
+h3 {
+  font-family: 'PT Serif', Times, serf;
+}
+
+h1 {
+  font-size: 4.4rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  flex: 1;
+  margin-bottom: 50px;
+}
+
+.v-btn {
+  text-transform: none;
+}
+
+.v-btn.v-btn--depressed {
+  font-weight: 400;
+}
+
+.v-btn.v-size--default {
+  font-size: 1.6rem;
+}
+
+.v-toolbar {
+  height: 80px !important;
+}
+
+.v-toolbar__content {
+  height: 80px !important;
+  padding: 6px 50px;
+}
+
+.v-input.v-select {
+  border-radius: 0;
+}
+
+.v-btn:not(.v-btn--round),
+.v-input__slot {
+  padding: 0 25px;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.v-select__selection {
+  font-family: 'Poppins', sans-serif;
+}
+
+.v .theme--dark.v-text-field--solo > .v-input__control > .v-input__slot {
+  background-color: #2b3545 !important;
+}
+
+.v-list,
+.v-menu__content {
+  border-radius: 0 !important;
+}

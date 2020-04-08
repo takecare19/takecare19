@@ -1,25 +1,17 @@
 <template>
   <v-app-bar flat color="white">
-    <v-menu left bottom>
-      <template v-slot:activator="{ on }">
-        <v-app-bar-nav-icon v-on="on"></v-app-bar-nav-icon>
-      </template>
-      <v-list>
-        <v-list-item>
-          <v-list-item-title>
-            <router-link to="/about">About</router-link>
-          </v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-menu>
-    <v-spacer></v-spacer>
     <router-link to="/">
-      <v-toolbar-title>Take Care 19</v-toolbar-title>
+      <img class="logo" src="../assets/logo.png" alt="TakeCare19" />
     </router-link>
     <v-spacer></v-spacer>
+    <router-link to="/about">
+      <v-btn text>
+        about
+      </v-btn>
+    </router-link>
     <router-link to="/submit">
-      <v-btn x-large icon class="mobile-submit-button">
-        <v-icon dark>mdi-plus-circle</v-icon>
+      <v-btn color="primary" depressed>
+        add resource
       </v-btn>
     </router-link>
   </v-app-bar>
@@ -34,5 +26,13 @@ export default {
 <style lang="scss" scoped>
 .v-toolbar {
   flex: none;
+}
+
+.logo {
+  width: 150px;
+}
+
+a + a {
+  margin-left: 50px;
 }
 </style>

@@ -1,7 +1,9 @@
 <template>
   <v-app id="app">
     <NavBar />
-    <router-view></router-view>
+    <main>
+      <router-view></router-view>
+    </main>
     <Footer />
   </v-app>
 </template>
@@ -16,12 +18,5 @@ export default {
 </script>
 
 <style>
-.v-btn {
-  text-transform: none !important;
-}
-
-a {
-  text-decoration: none !important;
-  color: inherit !important;
-}
+@import './assets/style.scss';
 </style>
