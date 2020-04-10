@@ -7,16 +7,12 @@
       <img class="logo" src="../assets/logo.png" alt="TakeCare19" />
     </router-link>
     <v-spacer></v-spacer>
-    <router-link to="/about" class="about--desktop">
-      <v-btn text>
-        about
-      </v-btn>
-    </router-link>
-    <router-link to="/submit" class="submit--desktop">
-      <v-btn color="primary" depressed>
-        add resource
-      </v-btn>
-    </router-link>
+    <v-btn to="/about" class="about--desktop" text>
+      about
+    </v-btn>
+    <v-btn to="/submit" class="submit--desktop" color="primary" depressed>
+      add resource
+    </v-btn>
     <router-link to="/submit" class="submit--mobile">
       <v-icon large>
         mdi-plus-circle
@@ -56,25 +52,25 @@ export default {
 @media (min-width: 769px) {
   .about--mobile,
   .submit--mobile {
-    display: none;
+    display: none !important;
   }
 
   .about--desktop,
   .submit--desktop {
-    display: block;
+    display: inline-flex !important;
   }
 }
 
 @media (max-width: 768px) {
   .about--mobile,
   .submit--mobile {
-    display: block;
+    display: inline-flex !important;
   }
 
   .about--desktop,
   .submit--desktop,
   .v-toolbar__content .spacer {
-    display: none;
+    display: none !important;
   }
 
   .v-toolbar__content {

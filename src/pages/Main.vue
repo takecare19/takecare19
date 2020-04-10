@@ -2,7 +2,11 @@
   <div>
     <div class="hero">
       <div class="hero-content">
-        <h1>Accessible mental health resources to cope with COVID-19</h1>
+        <h1>
+          <span>
+            Accessible mental health resources to cope with COVID-19
+          </span>
+        </h1>
         <label for="location-filter">See resources revelant to:</label>
         <v-select
           id="location-filer"
@@ -45,9 +49,12 @@ export default {
 </script>
 
 <style lang="scss" >
+@import '../assets/styles/_variables.scss';
+
 .hero {
   width: 100%;
-  min-height: 60vh;
+  height: 60vh;
+  min-height: 400px;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
@@ -56,6 +63,7 @@ export default {
   h1 {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    line-height: 1.5;
   }
 
   .hero-content {
@@ -78,7 +86,7 @@ export default {
     }
 
     .v-input__slot {
-      background-color: #2b3545 !important;
+      background-color: $navy !important;
     }
   }
 }
@@ -101,7 +109,13 @@ export default {
   }
   .hero-content {
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
+      font-weight: bold;
+
+      span {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 40%, $pale-blue 40%);
+        line-height: 1.5;
+      }
     }
 
     label {

@@ -89,6 +89,10 @@ nav {
 }
 
 @media (max-width: 768px) {
+  footer.v-footer {
+    padding-top: 150px;
+  }
+
   footer.v-footer p {
     font-size: 2rem;
     margin-bottom: 25px;
@@ -104,6 +108,7 @@ nav {
 
     nav ul {
       flex-direction: column;
+      font-size: 2rem;
     }
 
     .flex-column-container {
