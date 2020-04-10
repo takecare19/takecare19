@@ -60,6 +60,7 @@ export default {
 
   .hero-content {
     max-width: 800px;
+    width: 85%;
     text-align: center;
 
     label {
