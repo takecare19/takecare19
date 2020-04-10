@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       resources: [],
-      items: ['Anywhere']
+      items: ['Anywhere', 'Toronto', 'Vancouver']
     }
   },
   created() {
@@ -48,11 +48,10 @@ export default {
 .hero {
   width: 100%;
   min-height: 60vh;
-  background: url('../assets/desktop-heroimage.svg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   h1 {
     font-family: 'Poppins', sans-serif;
@@ -60,11 +59,7 @@ export default {
   }
 
   .hero-content {
-    position: absolute;
     max-width: 800px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
 
     label {
@@ -83,6 +78,33 @@ export default {
 
     .v-input__slot {
       background-color: #2b3545 !important;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .hero {
+    background: url('../assets/desktop-heroimage.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background: url('../assets/mobile-heroimage.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .hero-content {
+    h1 {
+      font-size: 3rem;
+    }
+
+    label {
+      font-size: 1.6rem;
     }
   }
 }
