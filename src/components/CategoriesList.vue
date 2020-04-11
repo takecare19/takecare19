@@ -67,7 +67,7 @@ export default {
 .categories-list-frame--desktop {
   margin: 0 auto;
   width: 90%;
-  max-width: 800px;
+  max-width: 1100px;
   .categories-list {
     display: flex;
     flex-wrap: wrap;
