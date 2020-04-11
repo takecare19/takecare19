@@ -58,8 +58,6 @@ const mutations = {
   },
 
   [SET_SELECTED_CATEGORY]: (state, categoryId) => {
-    console.log(categoryId)
-    console.log(state.categories)
     state.selectedCategory = state.categories.find(category => category.id === categoryId)
   }
 }

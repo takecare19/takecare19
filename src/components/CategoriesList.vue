@@ -1,24 +1,38 @@
 <template>
-  <div class="categories-list-frame">
-    <div class="categories-list">
-      <v-btn
-        v-for="category in firstRow"
-        :key="category.id"
-        :color="category.name === 'Crisis' ? 'error' : 'primary'"
-        :text="category.id !== selectedCategory.id"
-        @click="selectCategory(category.id)"
-        >{{ category.name }}</v-btn
-      >
+  <div>
+    <div class="categories-list-frame--desktop">
+      <div class="categories-list">
+        <v-btn
+          v-for="category in allCategories"
+          :key="category.id"
+          :color="category.name === 'Crisis' ? 'error' : 'primary'"
+          :text="category.id !== selectedCategory.id"
+          @click="selectCategory(category.id)"
+          >{{ category.name }}</v-btn
+        >
+      </div>
     </div>
-    <div class="categories-list">
-      <v-btn
-        v-for="category in secondRow"
-        :key="category.id"
-        :color="category.name === 'Crisis' ? 'error' : 'primary'"
-        :text="category.id !== selectedCategory.id"
-        @click="selectCategory(category.id)"
-        >{{ category.name }}</v-btn
-      >
+    <div class="categories-list-frame--mobile">
+      <div class="categories-list">
+        <v-btn
+          v-for="category in firstRow"
+          :key="category.id"
+          :color="category.name === 'Crisis' ? 'error' : 'primary'"
+          :text="category.id !== selectedCategory.id"
+          @click="selectCategory(category.id)"
+          >{{ category.name }}</v-btn
+        >
+      </div>
+      <div class="categories-list">
+        <v-btn
+          v-for="category in secondRow"
+          :key="category.id"
+          :color="category.name === 'Crisis' ? 'error' : 'primary'"
+          :text="category.id !== selectedCategory.id"
+          @click="selectCategory(category.id)"
+          >{{ category.name }}</v-btn
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -50,17 +64,27 @@ export default {
 </script>
 
 <style lang="scss">
-.categories-list-frame {
+.categories-list-frame--desktop {
   margin: 0 auto;
-  overflow-x: scroll;
-  height: 95px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 90%;
+  max-width: 800px;
+  .categories-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-.categories-list {
+.categories-list-frame--mobile {
+  overflow-x: scroll;
   display: flex;
+  flex-direction: column;
+  padding: 20px;
+  .categories-list {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
 
 .categories-list + .categories-list {
@@ -71,9 +95,21 @@ export default {
   border-radius: 5px;
 }
 
-@media (min-width: 768px) {
-  .categories-list {
-    margin: 0 auto;
+@media (max-width: 768px) {
+  .categories-list-frame--mobile {
+    display: flex;
+  }
+  .categories-list-frame--desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .categories-list-frame--mobile {
+    display: none;
+  }
+  .categories-list-frame--desktop {
+    display: block;
   }
 }
 </style>

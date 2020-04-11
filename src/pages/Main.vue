@@ -4,7 +4,7 @@
       <div class="hero-content">
         <h1>
           <span>
-            Accessible mental health resources to cope with COVID-19
+            accessible mental health resources for coping with covid19
           </span>
         </h1>
         <label for="location-filter">See resources revelant to:</label>
