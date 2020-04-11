@@ -58,11 +58,7 @@ const mutations = {
   },
 
   [SET_SELECTED_CATEGORY]: (state, categoryId) => {
-    if (categoryId === 'All') {
-      state.selectedCategory = categoryId
-    } else {
-      state.selectedCategory = state.categories.find(category => category.id === categoryId)
-    }
+    state.selectedCategory = state.categories.find(category => category.id === categoryId)
   }
 }
 

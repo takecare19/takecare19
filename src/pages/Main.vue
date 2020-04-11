@@ -2,14 +2,20 @@
   <div>
     <div class="hero">
       <div class="hero-content">
-        <h1>Accessible mental health resources for coping with COVID-19</h1>
-        <v-autocomplete
+        <h1>
+          <span>
+            accessible mental health resources for coping with covid19
+          </span>
+        </h1>
+        <label for="location-filter">See resources revelant to:</label>
+        <v-select
+          id="location-filer"
           v-model="selectedLocation"
-          outlined
+          solo
+          depressed
+          dark
           :items="items"
-          label="Choose a location"
-          placeholder="Start typing to Search"
-        ></v-autocomplete>
+        ></v-select>
       </div>
     </div>
     <CategoriesList />
@@ -26,7 +32,7 @@ export default {
   data() {
     return {
       resources: [],
-      items: ['Anywhere']
+      items: ['Anywhere', 'Toronto', 'Vancouver']
     }
   },
   created() {
@@ -42,27 +48,79 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
+@import '../assets/styles/_variables.scss';
+
 .hero {
   width: 100%;
-  height: 50vh;
-  min-height: 300px;
-  background: #b0bec5;
-  position: relative;
+  height: 60vh;
+  min-height: 400px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  .hero-content {
-    position: absolute;
-    width: 80%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
   }
 
-  .v-input.v-autocomplete {
-    margin: 20px auto 0;
-    width: 300px;
+  .hero-content {
+    max-width: 800px;
+    width: 85%;
+    text-align: center;
+
+    label {
+      font-size: 2.4rem;
+      font-family: 'PT Serif', serif;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 15px;
+      margin-top: 30px;
+    }
+
+    .v-select {
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    .v-input__slot {
+      background-color: $navy !important;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .hero {
+    background: url('../assets/desktop-heroimage.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background: url('../assets/mobile-heroimage.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .hero-content {
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+
+      span {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 40%, $pale-blue 40%);
+        line-height: 1.5;
+      }
+    }
+
+    label {
+      font-size: 1.6rem;
+    }
   }
 }
 </style>
