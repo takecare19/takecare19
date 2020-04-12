@@ -2,11 +2,11 @@
   <v-card class="resource-card">
     <div>
       <h3>{{ resource.name }}</h3>
-      <h5 class="category-location">
+      <p class="category-location">
         INFORMATIONAL
         {{ resource.location.anywhere ? '· ANYWHERE' : null }}
         {{ resource.location.specific ? `· ${resource.location.specific}` : null }}
-      </h5>
+      </p>
       <ul class="resource-tag-list mb-4">
         <li class="tag" v-for="tag in resource.tags" :key="tag">
           <v-chip small>{{ tag }}</v-chip>
@@ -98,6 +98,10 @@ export default {
 @media (max-width: 768px) {
   .resource-description {
     width: 90%;
+  }
+
+  .category-location {
+    font-size: 1.2rem;
   }
 }
 </style>

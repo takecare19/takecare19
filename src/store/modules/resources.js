@@ -18,7 +18,7 @@ const actions = {
     commit(FETCH_RESOURCES)
     db.collection('resources')
       .where('approved', '==', true)
-      .orderBy('created_at', 'asc')
+      .orderBy('created_at', 'desc')
       .get()
       .then(snapshot => {
         const resources = []
