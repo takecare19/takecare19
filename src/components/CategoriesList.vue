@@ -68,7 +68,7 @@ export default {
 
 <style lang="scss">
 .categories-list {
-  margin: 25px 0 50px;
+  margin: 25px 0;
 }
 
 .categories-list-frame--desktop {
