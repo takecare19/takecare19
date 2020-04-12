@@ -1,16 +1,103 @@
 <template>
-  <div>
-    <h3>{{ this.resource.name }}</h3>
-    <p>{{ this.resource.description }}</p>
-    <a :href="this.resource.url">Go to link</a>
-  </div>
+  <v-card class="resource-card">
+    <div>
+      <h3>{{ resource.name }}</h3>
+      <h5 class="category-location">
+        INFORMATIONAL
+        {{ resource.location.anywhere ? '· ANYWHERE' : null }}
+        {{ resource.location.specific ? `· ${resource.location.specific}` : null }}
+      </h5>
+      <ul class="resource-tag-list mb-4">
+        <li class="tag" v-for="tag in resource.tags" :key="tag">
+          <v-chip small>{{ tag }}</v-chip>
+        </li>
+      </ul>
+      <p class="resource-description">{{ resource.description }}</p>
+      <v-divider></v-divider>
+      <p class="mt-3 mb-2">{{ resource.company }}</p>
+      <p class="helper mb-0">
+        <v-icon small class="mb-1">mdi-clock-outline</v-icon>
+        {{ resource.created_at.toDate() | formatDate }}
+      </p>
+    </div>
+    <div>
+      <a class="resource-link" href="https://materialdesignicons.com/">
+        <v-icon large>
+          mdi-chevron-right
+        </v-icon>
+      </a>
+    </div>
+  </v-card>
 </template>
 
 <script>
+import moment from 'moment'
 export default {
   name: 'ResourceCard',
   props: {
     resource: Object
+  },
+  filters: {
+    formatDate: date => {
+      if (!date) return ''
+      const now = new Date()
+      const differenceInDays = (now - date) / 1000 / 60 / 60 / 24
+      if (differenceInDays < 7) {
+        return `Added ${moment(date).fromNow()}`
+      }
+
+      return `Added on ${moment(date).format('MMMM Do YYYY')}`
+    }
   }
 }
 </script>
+
+
+<style lang="scss">
+@import '@/assets/styles/_variables.scss';
+
+.resource-card {
+  display: flex;
+  padding-right: 5px;
+
+  & + .resource-card {
+    margin-top: 30px;
+  }
+}
+
+.category-location {
+  font-size: 1.6rem;
+  margin: 10px 0 15px;
+  text-transform: uppercase;
+}
+
+.resource-tag-list {
+  display: flex;
+
+  .tag {
+    .v-chip {
+      background: $pale-blue;
+    }
+
+    & + .tag {
+      margin-left: 5px;
+      font-family: Poppins, sans-serif;
+    }
+  }
+}
+
+.resource-description {
+  width: 80%;
+}
+
+.resource-link {
+  height: 100%;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .resource-description {
+    width: 90%;
+  }
+}
+</style>

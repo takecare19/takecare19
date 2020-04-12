@@ -1,6 +1,3 @@
-/* eslint-disable no-param-reassign */
-/* eslint-disable no-shadow */
-/* eslint-disable no-return-assign */
 import db from '../../firebase/init'
 import {
   FETCH_CATEGORIES,
@@ -11,16 +8,16 @@ import {
 
 const state = {
   categories: [],
-  selectedCategory: 'All',
+  selectedCategory: { id: 'All' },
   isLoading: false,
   error: false
 }
 
 const getters = {
   allCategories: () => state.categories,
-  isLoading: () => state.isLoading,
+  isLoadingCategories: () => state.isLoading,
   selectedCategory: () => state.selectedCategory,
-  error: () => state.error
+  categoriesError: () => state.error
 }
 
 const actions = {
@@ -54,6 +51,7 @@ const mutations = {
 
   [FETCH_CATEGORIES_FAILURE]: (state, error) => {
     state.isLoading = false
+    console.error(error)
     state.error = error
   },
 

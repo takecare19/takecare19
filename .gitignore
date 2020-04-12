@@ -7,7 +7,10 @@ node_modules
 .env.build
 .env.*.local
 .env
-/firebase
+src/firebase
+dev-service-account.json
+prod-service-account.json
+
 
 # Log files
 npm-debug.log*

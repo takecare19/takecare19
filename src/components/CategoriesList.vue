@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="categories-list">
     <div class="categories-list-frame--desktop">
       <div class="categories-list">
         <v-btn
@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="categories-list-frame--mobile">
-      <div class="categories-list">
+      <div class="categories-row">
         <v-btn
           v-for="category in firstRow"
           :key="category.id"
@@ -23,7 +23,7 @@
           >{{ category.name }}</v-btn
         >
       </div>
-      <div class="categories-list">
+      <div class="categories-row">
         <v-btn
           v-for="category in secondRow"
           :key="category.id"
@@ -43,7 +43,7 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'CategoriesList',
   computed: {
-    ...mapGetters(['allCategories', 'isLoading', 'error', 'selectedCategory']),
+    ...mapGetters(['allCategories', 'isLoadingCategories', 'categoriesError', 'selectedCategory']),
     firstRow: function() {
       return [...this.allCategories].splice(0, Math.ceil(this.allCategories.length / 2))
     },
@@ -64,15 +64,15 @@ export default {
 </script>
 
 <style lang="scss">
+.categories-list {
+  margin: 25px 0 50px;
+}
+
 .categories-list-frame--desktop {
-  margin: 0 auto;
-  width: 90%;
-  max-width: 1100px;
-  .categories-list {
+  .categories-row {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
   }
 }
 
@@ -80,14 +80,13 @@ export default {
   overflow-x: scroll;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  .categories-list {
+  .categories-row {
     display: flex;
     flex-wrap: nowrap;
   }
 }
 
-.categories-list + .categories-list {
+.categories-row + .categories-row {
   margin-top: 5px;
 }
 
