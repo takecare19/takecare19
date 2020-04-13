@@ -1,5 +1,9 @@
 <template>
-  <v-card class="resource-card" :href="$vuetify.breakpoint.smAndUp ? resource.url : ''">
+  <v-card
+    v-if="selectedCategory.id === 'All' || selectedCategory.id == resource.categoryId"
+    class="resource-card"
+    :href="$vuetify.breakpoint.smAndUp ? resource.url : ''"
+  >
     <div>
       <h3>{{ resource.name }}</h3>
       <p class="category-location">
@@ -32,10 +36,14 @@
 
 <script>
 import moment from 'moment'
+import { mapGetters } from 'vuex'
 export default {
   name: 'ResourceCard',
   props: {
     resource: Object
+  },
+  computed: {
+    ...mapGetters(['selectedCategory'])
   },
   filters: {
     formatDate: date => {
