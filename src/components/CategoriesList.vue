@@ -3,8 +3,8 @@
     <div class="categories-list-frame--desktop">
       <div class="categories-list">
         <v-btn
-          :small="$vuetify.breakpoint.smAndDown"
           v-for="category in allCategories"
+          :small="$vuetify.breakpoint.smAndDown"
           :key="category.id"
           :color="category.name === 'Crisis' ? 'error' : 'primary'"
           :text="category.id !== selectedCategory.id"
@@ -16,8 +16,8 @@
     <div class="categories-list-frame--mobile">
       <div class="categories-row">
         <v-btn
-          :small="$vuetify.breakpoint.smAndDown"
           v-for="category in firstRow"
+          :small="$vuetify.breakpoint.smAndDown"
           :key="category.id"
           :color="category.name === 'Crisis' ? 'error' : 'primary'"
           :text="category.id !== selectedCategory.id"
@@ -27,8 +27,8 @@
       </div>
       <div class="categories-row">
         <v-btn
-          :small="$vuetify.breakpoint.smAndDown"
           v-for="category in secondRow"
+          :small="$vuetify.breakpoint.smAndDown"
           :key="category.id"
           :color="category.name === 'Crisis' ? 'error' : 'primary'"
           :text="category.id !== selectedCategory.id"

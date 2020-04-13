@@ -60,6 +60,10 @@ main {
   margin-bottom: 50px;
 }
 
+p {
+  font-family: Poppins, sans-serif;
+}
+
 .helper {
   font-size: 1.4rem;
   font-family: Poppins, sans-serif;
@@ -79,6 +83,7 @@ main {
 
 .v-btn {
   text-transform: none;
+  font-family: Poppins, sans-serif !important;
 }
 
 .v-btn.v-btn--depressed {

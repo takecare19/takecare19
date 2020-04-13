@@ -1,15 +1,15 @@
 <template>
-  <v-card class="resource-card">
+  <v-card class="resource-card" :href="$vuetify.breakpoint.smAndUp ? resource.url : ''">
     <div>
       <h3>{{ resource.name }}</h3>
       <p class="category-location">
-        INFORMATIONAL
-        {{ resource.location.anywhere ? '· ANYWHERE' : null }}
+        INFORMATIONAL |
+        {{ resource.location.anywhere ? 'ANYWHERE' : null }}
         {{ resource.location.specific ? `· ${resource.location.specific}` : null }}
       </p>
       <ul class="resource-tag-list mb-4">
         <li class="tag" v-for="tag in resource.tags" :key="tag">
-          <v-chip small>{{ tag }}</v-chip>
+          <v-chip small class="mb-1">{{ tag }}</v-chip>
         </li>
       </ul>
       <p class="resource-description">{{ resource.description }}</p>
@@ -21,7 +21,7 @@
       </p>
     </div>
     <div>
-      <a class="resource-link" href="https://materialdesignicons.com/">
+      <a class="resource-link" :href="resource.url">
         <v-icon large>
           mdi-chevron-right
         </v-icon>
@@ -68,15 +68,17 @@ export default {
 .category-location {
   font-size: 1.6rem;
   margin: 10px 0 15px;
+  color: $grey;
   text-transform: uppercase;
 }
 
 .resource-tag-list {
   display: flex;
+  flex-wrap: wrap;
 
   .tag {
     .v-chip {
-      background: $pale-blue;
+      background: $sky;
     }
 
     & + .tag {
