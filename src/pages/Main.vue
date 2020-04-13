@@ -21,7 +21,8 @@
     <div class="wrapper">
       <h2>Resources</h2>
       <CategoriesList />
-      <ResourceList :resources="allResources" />
+      <ResourceList :resources="allResources" v-if="hasResources" />
+      <p class="empty-message" v-if="!hasResources">No resources</p>
     </div>
   </div>
 </template>
@@ -41,7 +42,13 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['allResources'])
+    ...mapGetters(['allResources', 'selectedCategory']),
+    hasResources: function() {
+      return (
+        this.selectedCategory.id === 'All' ||
+        this.allResources.some(resource => resource.categoryId === this.selectedCategory.id)
+      )
+    }
   },
   created() {
     this.fetchResources()
@@ -93,6 +100,13 @@ export default {
       background-color: $navy !important;
     }
   }
+}
+
+.empty-message {
+  font-size: 2.6rem;
+  font-family: PT serif, serif;
+  text-align: center;
+  color: $grey;
 }
 
 @media (min-width: 769px) {
