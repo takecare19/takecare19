@@ -70,6 +70,7 @@ export default {
   margin: 10px 0 15px;
   color: $grey;
   text-transform: uppercase;
+  letter-spacing: 0.05rem;
 }
 
 .resource-tag-list {
