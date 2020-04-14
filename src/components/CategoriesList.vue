@@ -1,9 +1,10 @@
 <template>
-  <div>
+  <div class="categories-list">
     <div class="categories-list-frame--desktop">
       <div class="categories-list">
         <v-btn
           v-for="category in allCategories"
+          :small="$vuetify.breakpoint.smAndDown"
           :key="category.id"
           :color="category.name === 'Crisis' ? 'error' : 'primary'"
           :text="category.id !== selectedCategory.id"
@@ -13,9 +14,10 @@
       </div>
     </div>
     <div class="categories-list-frame--mobile">
-      <div class="categories-list">
+      <div class="categories-row">
         <v-btn
           v-for="category in firstRow"
+          :small="$vuetify.breakpoint.smAndDown"
           :key="category.id"
           :color="category.name === 'Crisis' ? 'error' : 'primary'"
           :text="category.id !== selectedCategory.id"
@@ -23,9 +25,10 @@
           >{{ category.name }}</v-btn
         >
       </div>
-      <div class="categories-list">
+      <div class="categories-row">
         <v-btn
           v-for="category in secondRow"
+          :small="$vuetify.breakpoint.smAndDown"
           :key="category.id"
           :color="category.name === 'Crisis' ? 'error' : 'primary'"
           :text="category.id !== selectedCategory.id"
@@ -43,7 +46,7 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'CategoriesList',
   computed: {
-    ...mapGetters(['allCategories', 'isLoading', 'error', 'selectedCategory']),
+    ...mapGetters(['allCategories', 'isLoadingCategories', 'categoriesError', 'selectedCategory']),
     firstRow: function() {
       return [...this.allCategories].splice(0, Math.ceil(this.allCategories.length / 2))
     },
@@ -64,30 +67,33 @@ export default {
 </script>
 
 <style lang="scss">
+.categories-list {
+  margin: 25px 0;
+}
+
 .categories-list-frame--desktop {
-  margin: 0 auto;
-  width: 90%;
-  max-width: 1100px;
-  .categories-list {
+  padding-bottom: 10px;
+
+  .categories-row {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
   }
 }
 
 .categories-list-frame--mobile {
+  padding-bottom: 10px;
+
   overflow-x: scroll;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  .categories-list {
+  .categories-row {
     display: flex;
     flex-wrap: nowrap;
   }
 }
 
-.categories-list + .categories-list {
+.categories-row + .categories-row {
   margin-top: 5px;
 }
 

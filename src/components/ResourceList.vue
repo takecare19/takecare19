@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="resource-list">
     <ResourceCard v-for="resource in resources" :key="resource.id" :resource="resource" />
   </div>
 </template>
@@ -12,8 +12,9 @@ export default {
   components: {
     ResourceCard
   },
-  props: {
-    resources: Array
-  }
+  props: ['resources']
 }
 </script>
+
+<style lang="scss">
+</style>

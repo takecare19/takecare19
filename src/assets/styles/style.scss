@@ -25,6 +25,30 @@ h4 {
 
 h5 {
   font-size: 1.8rem;
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3.6rem;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  h4 {
+    font-size: 1.6rem;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+  }
 }
 
 a {
@@ -36,13 +60,30 @@ main {
   margin-bottom: 50px;
 }
 
-.v-application footer ul {
+p {
+  font-family: Poppins, sans-serif;
+}
+
+.helper {
+  font-size: 1.4rem;
+  font-family: Poppins, sans-serif;
+  color: #989898;
+}
+
+.wrapper {
+  max-width: 900px;
+  width: 85%;
+  margin: 50px auto;
+}
+
+.v-application ul {
   list-style-type: none;
-  padding-left: 0;
+  padding-left: 0 !important;
 }
 
 .v-btn {
   text-transform: none;
+  font-family: Poppins, sans-serif !important;
 }
 
 .v-btn.v-btn--depressed {
@@ -51,6 +92,10 @@ main {
 
 .v-btn.v-size--default {
   font-size: 1.6rem;
+}
+
+.v-btn.v-size--small {
+  font-size: 1.2rem !important;
 }
 
 .v-input.v-select {
@@ -80,4 +125,8 @@ main {
 .v-list,
 .v-menu__content {
   border-radius: 0 !important;
+}
+
+.v-card {
+  padding: 20px;
 }

@@ -18,32 +18,36 @@
         ></v-select>
       </div>
     </div>
-    <CategoriesList />
+    <div class="wrapper">
+      <h2>Resources</h2>
+      <CategoriesList />
+      <ResourceList :resources="allResources" />
+    </div>
   </div>
 </template>
 
 <script>
-import db from '../firebase/init'
 import CategoriesList from '@/components/CategoriesList'
+import ResourceList from '@/components/ResourceList'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'Main',
-  components: { CategoriesList },
+  components: { CategoriesList, ResourceList },
   data() {
     return {
-      resources: [],
-      items: ['Anywhere', 'Toronto', 'Vancouver']
+      items: ['Anywhere', 'Toronto', 'Vancouver'],
+      selectedLocation: 'Anywhere'
     }
   },
+  computed: {
+    ...mapGetters(['allResources'])
+  },
   created() {
-    this.selectedLocation = this.items[0]
-    db.collection('resources')
-      .get()
-      .then(snapshot => {
-        snapshot.forEach(doc => {
-          this.resources.push(doc.data())
-        })
-      })
+    this.fetchResources()
+  },
+  methods: {
+    ...mapActions(['fetchResources'])
   }
 }
 </script>
