@@ -1,13 +1,14 @@
 <template>
-  <div>
-    <div class="hero">
-      <div class="hero-content">
-        <h1>
-          <span>
-            accessible mental health resources for coping with covid19
-          </span>
-        </h1>
-        <!-- <label for="location-filter">See resources revelant to:</label>
+  <Layout>
+    <div>
+      <div class="hero">
+        <div class="hero-content">
+          <h1>
+            <span>
+              accessible mental health resources for coping with covid19
+            </span>
+          </h1>
+          <!-- <label for="location-filter">See resources revelant to:</label>
         <v-select
           id="location-filer"
           v-model="selectedLocation"
@@ -16,26 +17,28 @@
           dark
           :items="items"
         ></v-select> -->
+        </div>
+      </div>
+      <div class="wrapper">
+        <h2>Resources</h2>
+        <CategoriesList />
+        <ResourceList :resources="allResources" v-if="hasResources" />
+        <EmptyMessage v-if="!hasResources" />
       </div>
     </div>
-    <div class="wrapper">
-      <h2>Resources</h2>
-      <CategoriesList />
-      <ResourceList :resources="allResources" v-if="hasResources" />
-      <EmptyMessage v-if="!hasResources" />
-    </div>
-  </div>
+  </Layout>
 </template>
 
 <script>
 import CategoriesList from '@/components/CategoriesList'
 import ResourceList from '@/components/ResourceList'
 import EmptyMessage from '@/components/EmptyMessage'
+import Layout from '@/components/Layout'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'Main',
-  components: { CategoriesList, ResourceList, EmptyMessage },
+  components: { CategoriesList, ResourceList, EmptyMessage, Layout },
   data() {
     return {
       items: ['Anywhere', 'Toronto', 'Vancouver'],

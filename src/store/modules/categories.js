@@ -1,4 +1,4 @@
-import db from '../../firebase/init'
+import { db } from '../../firebase/init'
 import {
   FETCH_CATEGORIES,
   SET_SELECTED_CATEGORY,

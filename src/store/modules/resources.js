@@ -1,4 +1,4 @@
-import db from '../../firebase/init'
+import { db } from '../../firebase/init'
 import { FETCH_RESOURCES, FETCH_RESOURCES_SUCCESS, FETCH_RESOURCES_FAILURE } from '../constants'
 
 const state = {
@@ -36,13 +36,13 @@ const mutations = {
 
   [FETCH_RESOURCES_SUCCESS]: (state, resources) => {
     state.resources = resources
-    state.isLoadingResources = false
+    state.isLoading = false
   },
 
   [FETCH_RESOURCES_FAILURE]: (state, error) => {
-    state.isLoadingResources = false
+    state.isLoading = false
     console.error(error)
-    state.resourcesError = error
+    state.resources = error
   }
 }
 
