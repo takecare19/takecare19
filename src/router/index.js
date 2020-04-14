@@ -45,12 +45,8 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  // Check for requiresAuth guard
-  console.log(to)
   if (to.matched.some(record => record.meta.requiresAuth)) {
-    // Check if NO logged user
     if (!firebase.auth().currentUser) {
-      // Go to login
       next({
         path: '/admin/login',
         query: {
@@ -58,13 +54,10 @@ router.beforeEach((to, from, next) => {
         }
       })
     } else {
-      // Proceed to route
       next()
     }
   } else if (to.matched.some(record => record.meta.requiresGuest)) {
-    // Check if NO logged user
     if (firebase.auth().currentUser) {
-      // Go to login
       next({
         path: '/admin/dashboard',
         query: {
@@ -72,11 +65,9 @@ router.beforeEach((to, from, next) => {
         }
       })
     } else {
-      // Proceed to route
       next()
     }
   } else {
-    // Proceed to route
     next()
   }
 })

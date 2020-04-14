@@ -1,7 +1,7 @@
 <template>
   <div class="login-form-container">
     <h1>Admin login</h1>
-    <v-form ref="form" v-model="valid" @submit="login">
+    <v-form ref="form" v-model="valid" @submit="handleSubmit">
       <v-text-field outlined v-model="email" label="Email" :rules="emailRules"></v-text-field>
       <v-text-field
         outlined
@@ -19,8 +19,7 @@
 </template>
 
 <script>
-import { firebase } from '@firebase/app'
-import '@firebase/auth'
+import { mapActions } from 'vuex'
 
 export default {
   data() {
@@ -36,17 +35,10 @@ export default {
     }
   },
   methods: {
-    login(e) {
+    ...mapActions(['login']),
+    handleSubmit(e) {
       e.preventDefault()
-      firebase
-        .auth()
-        .signInWithEmailAndPassword(this.email, this.password)
-        .then(() => {
-          this.$router.push('/admin/dashboard')
-        })
-        .catch(err => {
-          this.error = err.message
-        })
+      this.login({ email: this.email, password: this.password })
     }
   }
 }

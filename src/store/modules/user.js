@@ -1,7 +1,13 @@
 import { firebase } from '@firebase/app'
 import '@firebase/auth'
 
-import { LOGIN_USER, SET_USER, LOGIN_USER_FAILURE, LOGIN_USER_SUCCESS } from '../constants'
+import {
+  LOGIN_USER,
+  LOGIN_USER_FAILURE,
+  LOGIN_USER_SUCCESS,
+  LOGOUT_USER_FAILURE,
+  LOGOUT_USER_SUCCESS
+} from '../constants'
 import router from '../../router'
 
 let currentUser
@@ -24,41 +30,49 @@ const actions = {
     commit(LOGIN_USER)
     firebase
       .auth()
-      .setPersistence(firebase.auth.Auth.Persistence.SESSION)
-      .then(() => {
-        firebase
-          .auth()
-          .signInWithEmailAndPassword(email, password)
-          .then(user => {
-            commit(LOGIN_USER_SUCCESS, user)
-          })
-          .catch(err => {
-            commit(LOGIN_USER_FAILURE, err)
-          })
+      .signInWithEmailAndPassword(email, password)
+      .then(user => {
+        commit(LOGIN_USER_SUCCESS, user)
+      })
+      .catch(err => {
+        commit(LOGIN_USER_FAILURE, err)
       })
   },
-  setUser: ({ commit }) => {
-    commit(LOGIN_USER)
-    firebase.auth().onAuthStateChanged(user => {
-      if (user) {
-        commit(LOGIN_USER_SUCCESS, user)
-      }
-    })
+  logout: ({ commit }) => {
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        commit(LOGOUT_USER_SUCCESS)
+        this.$router.push('/admin/login')
+      })
   }
 }
 
 const mutations = {
   [LOGIN_USER]: state => (state.isLoading = true),
 
-  [SET_USER]: (state, user) => (state.user = user),
+  SET_USER: (state, user) => (state.user = user),
 
   [LOGIN_USER_SUCCESS]: (state, user) => {
     state.user = user
     state.isLoading = false
-    router.push('/dashboard')
+    router.go({ path: router.path })
   },
 
   [LOGIN_USER_FAILURE]: (state, error) => {
+    state.isLoading = false
+    console.error(error)
+    state.error = error
+  },
+
+  [LOGOUT_USER_SUCCESS]: state => {
+    state.isLoading = false
+    state.user = null
+    router.go({ path: '/admin/login' })
+  },
+
+  [LOGOUT_USER_FAILURE]: (state, error) => {
     state.isLoading = false
     console.error(error)
     state.error = error

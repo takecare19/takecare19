@@ -17,18 +17,10 @@
 
 
 <script>
-import { firebase } from '@firebase/app'
-import '@firebase/auth'
+import { mapActions } from 'vuex'
 export default {
   methods: {
-    logout() {
-      firebase
-        .auth()
-        .signOut()
-        .then(() => {
-          this.$router.push('/admin/login')
-        })
-    }
+    ...mapActions(['logout'])
   }
 }
 </script>
