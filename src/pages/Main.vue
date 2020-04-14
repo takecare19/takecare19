@@ -7,7 +7,7 @@
             accessible mental health resources for coping with covid19
           </span>
         </h1>
-        <label for="location-filter">See resources revelant to:</label>
+        <!-- <label for="location-filter">See resources revelant to:</label>
         <v-select
           id="location-filer"
           v-model="selectedLocation"
@@ -15,13 +15,14 @@
           depressed
           dark
           :items="items"
-        ></v-select>
+        ></v-select> -->
       </div>
     </div>
     <div class="wrapper">
       <h2>Resources</h2>
       <CategoriesList />
-      <ResourceList :resources="allResources" />
+      <ResourceList :resources="allResources" v-if="hasResources" />
+      <EmptyMessage v-if="!hasResources" />
     </div>
   </div>
 </template>
@@ -29,11 +30,12 @@
 <script>
 import CategoriesList from '@/components/CategoriesList'
 import ResourceList from '@/components/ResourceList'
+import EmptyMessage from '@/components/EmptyMessage'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'Main',
-  components: { CategoriesList, ResourceList },
+  components: { CategoriesList, ResourceList, EmptyMessage },
   data() {
     return {
       items: ['Anywhere', 'Toronto', 'Vancouver'],
@@ -41,7 +43,13 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['allResources'])
+    ...mapGetters(['allResources', 'selectedCategory']),
+    hasResources: function() {
+      return (
+        this.selectedCategory.id === 'All' ||
+        this.allResources.some(resource => resource.categoryId === this.selectedCategory.id)
+      )
+    }
   },
   created() {
     this.fetchResources()
