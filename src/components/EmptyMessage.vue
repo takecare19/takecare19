@@ -2,7 +2,7 @@
   <div class="empty-message my-8">
     <img src="../assets/sadface.svg" alt="Sorry!" />
     <h3 class="my-6">Sorry, no resources found</h3>
-    <p>Try choosing another location or category</p>
+    <p>Try choosing another category</p>
   </div>
 </template>
 
