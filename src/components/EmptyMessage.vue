@@ -20,4 +20,10 @@ export default {
   text-align: center;
   color: $grey;
 }
+
+@media (max-width: 768px) {
+  p {
+    font-size: 1.2rem;
+  }
+}
 </style>
