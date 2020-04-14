@@ -22,7 +22,7 @@
       <h2>Resources</h2>
       <CategoriesList />
       <ResourceList :resources="allResources" v-if="hasResources" />
-      <p class="empty-message" v-if="!hasResources">No resources</p>
+      <EmptyMessage v-if="!hasResources" />
     </div>
   </div>
 </template>
@@ -30,11 +30,12 @@
 <script>
 import CategoriesList from '@/components/CategoriesList'
 import ResourceList from '@/components/ResourceList'
+import EmptyMessage from '@/components/EmptyMessage'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'Main',
-  components: { CategoriesList, ResourceList },
+  components: { CategoriesList, ResourceList, EmptyMessage },
   data() {
     return {
       items: ['Anywhere', 'Toronto', 'Vancouver'],
@@ -100,13 +101,6 @@ export default {
       background-color: $navy !important;
     }
   }
-}
-
-.empty-message {
-  font-size: 2.6rem;
-  font-family: PT serif, serif;
-  text-align: center;
-  color: $grey;
 }
 
 @media (min-width: 769px) {
