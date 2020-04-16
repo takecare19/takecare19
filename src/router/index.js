@@ -9,6 +9,7 @@ import Submit from '../pages/Submit.vue'
 import Admin from '../pages/admin/Index.vue'
 import AdminLogin from '../pages/admin/Login.vue'
 import AdminDashboard from '../pages/admin/Dashboard.vue'
+import NewResource from '../pages/admin/NewResource.vue'
 
 Vue.use(VueRouter)
 
@@ -31,6 +32,13 @@ const routes = [
       {
         path: 'dashboard',
         component: AdminDashboard,
+        meta: {
+          requiresAuth: true
+        }
+      },
+      {
+        path: 'new',
+        component: NewResource,
         meta: {
           requiresAuth: true
         }

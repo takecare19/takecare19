@@ -98,7 +98,7 @@ export default {
 }
 
 .categories-list .v-btn {
-  border-radius: 5px;
+  border-radius: 5px !important;
 }
 
 @media (max-width: 768px) {

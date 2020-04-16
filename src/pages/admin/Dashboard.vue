@@ -1,26 +1,34 @@
 <template>
   <div>
-    <v-app-bar flat color="white">
-      <router-link to="/">
-        <img class="logo" src="../../assets/logo.png" alt="TakeCare19" />
-      </router-link>
-      <v-spacer></v-spacer>
-      <v-btn color="primary" depressed @click="logout">
-        Logout
-      </v-btn>
-    </v-app-bar>
+    <AdminNav />
     <div class="wrapper">
-      <h1>Dashboard</h1>
+      <h1 class="mb-5">Dashboard</h1>
     </div>
   </div>
 </template>
 
 
 <script>
-import { mapActions } from 'vuex'
+import AdminNav from '@/components/AdminNav.vue'
+
+import { mapActions, mapGetters } from 'vuex'
+
 export default {
+  components: { AdminNav },
   methods: {
-    ...mapActions(['logout'])
+    ...mapActions(['fetchResources'])
+  },
+  computed: {
+    ...mapGetters(['allResources', 'selectedCategory']),
+    hasResources: function() {
+      return (
+        this.selectedCategory.id === 'All' ||
+        this.allResources.some(resource => resource.categoryId === this.selectedCategory.id)
+      )
+    }
+  },
+  created() {
+    this.fetchResources()
   }
 }
 </script>
