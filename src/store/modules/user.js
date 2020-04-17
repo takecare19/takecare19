@@ -26,7 +26,6 @@ const getters = {
 
 const actions = {
   login: ({ commit }, { email, password }) => {
-    console.log(email, password)
     commit(LOGIN_USER)
     firebase
       .auth()

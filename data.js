@@ -102,4 +102,47 @@ const categories = [
   }
 ]
 
-module.exports = { categories, resources }
+const locations = [
+  {
+    id: 'i6G7CdD6Z0wN1rE1jadn',
+    name: 'Anywhere',
+    order: 1
+  },
+  {
+    id: 'CaDm5zWm82h7eLIXgXye',
+    order: 5,
+    name: 'Canada'
+  },
+  {
+    id: '0GHEIYUBtuxmLlOzHLd4',
+    name: 'Ontario',
+    order: 20
+  },
+  {
+    id: 'PdFkW2NseEATQzCL8jZM',
+    name: 'Ottawa, ON',
+    order: 30
+  },
+  {
+    id: 'P7cn4TqZEBzH7tV5c8FL',
+    order: 40,
+    name: 'Toronto, ON'
+  },
+  {
+    id: 'tMim2vVCU0ZVRkXAiVKf',
+    order: 50,
+    name: 'Vancouver, BC'
+  },
+  {
+    id: 'gPaj0FpaOjbAaU8wQEfR',
+    order: 100,
+    name: 'United States'
+  },
+  {
+    id: 'y8jOgKjU0CB5RQWtdgxG',
+    name: 'International',
+    order: 500
+  }
+]
+
+module.exports = { categories, resources, locations }

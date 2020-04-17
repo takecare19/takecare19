@@ -2,7 +2,7 @@ const admin = require('firebase-admin')
 
 const prodServiceAccount = require('./prod-service-account.json')
 const devServiceAccount = require('./dev-service-account.json')
-const { categories, resources } = require('./data.js')
+const { categories, resources, locations } = require('./data.js')
 
 const addToCollection = (collection, data, env) => {
   const credential =
@@ -49,26 +49,23 @@ const addWithId = (collection, data, env) => {
   })
 }
 
-const getCategories = () => {
-  const categories = []
+const getDataFromCollection = collection => {
   admin
     .initializeApp({
       credential: admin.credential.cert(prodServiceAccount)
     })
     .firestore()
-    .collection('categories')
+    .collection(collection)
     .get()
     .then(snapshot => {
-      const categories = []
+      const data = []
 
       snapshot.forEach(doc => {
-        categories.push({ id: doc.ref.id, ...doc.data() })
+        data.push({ id: doc.ref.id, ...doc.data() })
       })
-
-      console.log(categories)
     })
 }
 
-// addToCollection('resources', resources, 'prod')
-// getCategories()
-addWithId('categories', categories, 'dev')
+addToCollection('locations', locations, 'dev')
+// getDataFromCollection('locations')
+// addWithId('categories', categories, 'dev')
