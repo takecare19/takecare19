@@ -1,32 +1,23 @@
-# TakeCare19
+# 💜 TakeCare19 💜
 Accessible mental health resources for coping with covid19
 A serverless web-app built with Vue, Vuetify, and Google Cloud Firestore
 
 ## Quick Links
 
 ### Documentation
-
-[Vue](https://vuejs.org/v2/guide/)
-
-[Vuetify](https://vuetifyjs.com/en/)
-
-[Firestore](https://firebase.google.com/docs/firestore/query-data/get-data)
+- [Vue](https://vuejs.org/v2/guide/)
+- [Vuetify](https://vuetifyjs.com/en/)
+- [Firestore](https://firebase.google.com/docs/firestore/query-data/get-data)
 
 ### Tutorials
-
-[Vuex](https://www.youtube.com/watch?v=5lVQgZzLMHc&t=2070s)
-
-[Vue with Firestore](https://www.youtube.com/watch?v=sYNjEzcOTOs)
+- [Vuex](https://www.youtube.com/watch?v=5lVQgZzLMHc&t=2070s)
+- [Vue with Firestore](https://www.youtube.com/watch?v=sYNjEzcOTOs)
 
 ### Links
-
-[Github](https://github.com/takecare19/takecare19)
-
-[Z](https://zeit.co/teams/teamtakecare19/settings/members)[e](https://zeit.co/teamtakecare19/takecare19)[it](https://zeit.co/teams/teamtakecare19/settings/members) 
-
-[Local Database](https://console.firebase.google.com/u/1/project/takecare19app/database/firestore/data~2Fcategories~2F3XPwVvmldDcEUUlfsrG2) (used for local development)
-
-[Prod Database](https://console.firebase.google.com/u/1/project/takecare19-prod/database/firestore/data~2Fcategories~2F3JeIOXT7sy7KOWUgX9zk) (used for ZEIT deploys and eventually production)
+- [Github](https://github.com/takecare19/takecare19)
+- [Z](https://zeit.co/teams/teamtakecare19/settings/members)[e](https://zeit.co/teamtakecare19/takecare19)[it](https://zeit.co/teams/teamtakecare19/settings/members) 
+- [Local Database](https://console.firebase.google.com/u/1/project/takecare19app/database/firestore/data~2Fcategories~2F3XPwVvmldDcEUUlfsrG2) (used for local development)
+- [Prod Database](https://console.firebase.google.com/u/1/project/takecare19-prod/database/firestore/data~2Fcategories~2F3JeIOXT7sy7KOWUgX9zk) (used for ZEIT deploys and eventually production)
 
 ---
 
