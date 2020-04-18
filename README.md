@@ -59,7 +59,7 @@ Install modules
 
     npm i
 
-In the root directory of your project, create 3 files: `.env`, `prod-service-account.json`, and `dev-service-account.json`, 
+In the root directory of your project, create 3 files: `.env`, `prod-service-account.json`, and `dev-service-account.json`. Susie can give you the contents for these files.
 
 Switch to the `development` branch
 
