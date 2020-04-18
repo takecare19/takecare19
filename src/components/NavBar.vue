@@ -19,11 +19,14 @@
     >
       add resource
     </v-btn>
-    <router-link to="/submit" class="submit--mobile">
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSepscN5ZHSy7hQ2rxS40Z93ItSWljyvHAsN8gBy6k1HngdV4Q/viewform"
+      class="submit--mobile"
+    >
       <v-icon large>
         mdi-plus-circle
       </v-icon>
-    </router-link>
+    </a>
   </v-app-bar>
 </template>
 
