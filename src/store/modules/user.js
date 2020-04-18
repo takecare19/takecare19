@@ -49,7 +49,10 @@ const actions = {
 }
 
 const mutations = {
-  [LOGIN_USER]: state => (state.isLoading = true),
+  [LOGIN_USER]: state => {
+    state.isLoading = true
+    state.error = null
+  },
 
   SET_USER: (state, user) => (state.user = user),
 

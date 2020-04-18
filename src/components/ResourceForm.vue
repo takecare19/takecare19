@@ -1,9 +1,9 @@
 <template>
-  <v-form ref="form" v-model="valid" :lazy-validation="false">
+  <v-form ref="form" v-model="valid" :lazy-validation="false" @submit="handleSubmit">
     <label class="required" for="category">Category</label>
     <v-autocomplete
       id="category"
-      v-model="category"
+      v-model="categoryId"
       :items="allCategories.filter(category => category.id !== 'All')"
       item-text="name"
       item-value="id"
@@ -115,7 +115,7 @@
       solo
       outlined
     ></v-text-field>
-    <v-btn :disabled="!(valid && isLocationValid)" color="primary" class="mr-4">
+    <v-btn :disabled="!(valid && isLocationValid)" color="primary" class="mr-4" type="submit">
       Submit resource
     </v-btn>
   </v-form>
@@ -125,7 +125,7 @@
 import { mapActions, mapGetters } from 'vuex'
 export default {
   data: () => ({
-    category: null,
+    categoryId: null,
     name: '',
     email: '',
     company: '',
@@ -149,14 +149,22 @@ export default {
   },
   methods: {
     ...mapActions(['fetchCategories', 'fetchTags', 'fetchLocations']),
-    validate() {
-      this.$refs.form.validate()
-    },
-    reset() {
-      this.$refs.form.reset()
-    },
-    resetValidation() {
-      this.$refs.form.resetValidation()
+    handleSubmit(e) {
+      e.preventDefault()
+      const { anywhere, location, description, url, company, name, tags, categoryId } = this
+      const newResource = {
+        created_at: new Date(),
+        location: { anywhere, specific: location },
+        updated_at: new Date(),
+        description,
+        published_at: new Date(),
+        url,
+        company,
+        name,
+        tags,
+        categoryId
+      }
+      this.$emit('submit', newResource)
     }
   },
   created() {

@@ -32,7 +32,10 @@ const actions = {
 }
 
 const mutations = {
-  [FETCH_TAGS]: state => (state.isLoading = true),
+  [FETCH_TAGS]: state => {
+    state.isLoading = true
+    state.error = null
+  },
 
   [FETCH_TAGS_SUCCESS]: (state, categories) => {
     state.tags = categories

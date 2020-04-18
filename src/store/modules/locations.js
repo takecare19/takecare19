@@ -32,7 +32,10 @@ const actions = {
 }
 
 const mutations = {
-  [FETCH_LOCATIONS]: state => (state.isLoading = true),
+  [FETCH_LOCATIONS]: state => {
+    state.isLoading = true
+    state.error = null
+  },
 
   [FETCH_LOCATIONS_SUCCESS]: (state, locations) => {
     state.locations = locations

@@ -4,7 +4,7 @@
     class="resource-card"
     :href="$vuetify.breakpoint.smAndUp ? resource.url : ''"
   >
-    <div>
+    <div class="resource-card-content">
       <h3>{{ resource.name }}</h3>
       <p class="category-location">
         INFORMATIONAL |
@@ -25,7 +25,7 @@
       </p>
     </div>
     <div>
-      <a class="resource-link" :href="resource.url">
+      <a class="resource-link" target="_blank" :href="resource.url">
         <v-icon large>
           mdi-chevron-right
         </v-icon>
@@ -70,6 +70,10 @@ export default {
 
   & + .resource-card {
     margin-top: 30px;
+  }
+
+  &-content {
+    flex-grow: 1;
   }
 }
 
