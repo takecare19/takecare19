@@ -1,6 +1,6 @@
 # 💜 TakeCare19 💜
-Accessible mental health resources for coping with covid19
-A serverless web-app built with Vue, Vuetify, and Google Cloud Firestore
+### Accessible mental health resources for coping with covid19
+### A serverless web-app built with Vue, Vuetify, and Google Cloud Firestore
 
 ## Quick Links
 
