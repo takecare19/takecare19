@@ -28,9 +28,24 @@
         {{ resource.created_at.toDate() | formatDate }}
       </p>
       <div class="admin-actions mt-5" v-if="isAdmin">
-        <v-btn color="error" @click="deleteResource(resource.id)">
-          Delete resource
-        </v-btn>
+        <v-dialog v-model="showDialog" width="500">
+          <template v-slot:activator="{ on }">
+            <v-btn color="error" dark v-on="on">
+              Delete resource
+            </v-btn>
+          </template>
+          <v-card>
+            <strong style="font-size: 2.4rem;">Delete {{ resource.name }}?</strong>
+            <v-card-actions class="mt-5">
+              <v-btn color="error" @click="deleteResource(resource.id)">
+                Delete
+              </v-btn>
+              <v-btn text @click="showDialog = false">
+                Cancel
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
       </div>
     </div>
     <div>
@@ -50,6 +65,11 @@ export default {
   name: 'ResourceCard',
   props: {
     resource: Object
+  },
+  data() {
+    return {
+      showDialog: false
+    }
   },
   computed: {
     ...mapGetters(['selectedCategory', 'allTags', 'allLocations', 'user']),
@@ -96,6 +116,10 @@ export default {
 
   &-content {
     flex-grow: 1;
+  }
+
+  strong {
+    font-size: 3rem;
   }
 }
 
