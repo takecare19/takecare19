@@ -2,7 +2,8 @@
   <v-card
     v-if="selectedCategory.id === 'All' || selectedCategory.id == resource.categoryId"
     class="resource-card"
-    :href="$vuetify.breakpoint.smAndUp ? resource.url : ''"
+    :href="!isAdmin && $vuetify.breakpoint.smAndUp ? resource.url : ''"
+    target="_blank"
   >
     <div class="resource-card-content">
       <h3>{{ resource.name }}</h3>
@@ -24,6 +25,26 @@
         <v-icon small class="mb-1">mdi-clock-outline</v-icon>
         {{ resource.created_at.toDate() | formatDate }}
       </p>
+      <div class="admin-actions mt-5" v-if="isAdmin">
+        <v-dialog v-model="showDialog" width="500">
+          <template v-slot:activator="{ on }">
+            <v-btn color="error" dark v-on="on">
+              Delete resource
+            </v-btn>
+          </template>
+          <v-card>
+            <strong style="font-size: 2.4rem;">Delete {{ resource.name }}?</strong>
+            <v-card-actions class="mt-5">
+              <v-btn color="error" @click="deleteResource(resource.id)">
+                Delete
+              </v-btn>
+              <v-btn text @click="showDialog = false">
+                Cancel
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
+      </div>
     </div>
     <div>
       <a class="resource-link" target="_blank" :href="resource.url">
@@ -37,16 +58,28 @@
 
 <script>
 import moment from 'moment'
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'ResourceCard',
   props: {
     resource: Object
   },
+  data() {
+    return {
+      showDialog: false
+    }
+  },
   computed: {
-    ...mapGetters(['selectedCategory', 'allTags', 'allLocations', 'allCategories'])
+    ...mapGetters(['selectedCategory', 'allTags', 'allLocations', 'user', 'allCategories']),
+    isAdmin() {
+      return !!this.user && this.$route.path.includes('admin')
+    }
   },
   methods: {
+    ...mapActions(['deleteResource']),
+    goToResource(url) {
+      window.open(url, '_blank')
+    },
     getName(itemId, list) {
       const matchingItem = list.find(listItem => listItem.id === itemId)
       return matchingItem ? matchingItem.name : ''
@@ -81,6 +114,10 @@ export default {
 
   &-content {
     flex-grow: 1;
+  }
+
+  strong {
+    font-size: 3rem;
   }
 }
 
