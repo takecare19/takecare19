@@ -68,16 +68,22 @@
       v-model="tags"
       :items="allTags"
       item-text="name"
-      item-value="id"
+      return-object
       solo
       outlined
       chips
       multiple
       :rules="[
         v => !!v || 'Please enter at least one tag',
-        v => (v && !!v.length <= 5) || 'Location is required'
+        v => (v && v.length <= 5) || 'Maximum five tags'
       ]"
-    ></v-autocomplete>
+    >
+      <template v-slot:selection="{ attrs, item, select, selected }">
+        <v-chip v-bind="attrs" :input-value="selected" close @click:close="removeTag(item)">
+          {{ item.name }}
+        </v-chip>
+      </template></v-autocomplete
+    >
     <label for="description">Description</label>
     <p class="helper">
       Ensure key information that would be most helpful for someone deciding if they're interested
@@ -149,6 +155,10 @@ export default {
   },
   methods: {
     ...mapActions(['fetchCategories', 'fetchTags', 'fetchLocations']),
+    removeTag(tag) {
+      this.tags.splice(this.tags.indexOf(tag.id), 1)
+      this.tags = [...this.tags]
+    },
     handleSubmit(e) {
       e.preventDefault()
       const { anywhere, location, description, url, company, name, tags, categoryId } = this
@@ -161,9 +171,10 @@ export default {
         url,
         company,
         name,
-        tags,
+        tags: tags.sort((a, b) => a.order - b.order).map(tag => tag.id),
         categoryId
       }
+      console.log(newResource)
       this.$emit('submit', newResource)
     }
   },

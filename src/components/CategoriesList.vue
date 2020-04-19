@@ -62,6 +62,9 @@ export default {
   },
   methods: {
     ...mapActions(['fetchCategories', 'selectCategory'])
+  },
+  beforeDestroy() {
+    this.selectCategory('All')
   }
 }
 </script>

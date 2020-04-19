@@ -7,6 +7,7 @@ import {
   POST_RESOURCE_SUCCESS,
   POST_RESOURCE_FAILURE
 } from '../constants'
+import router from '../../router'
 
 const state = {
   resources: [],
@@ -70,6 +71,7 @@ const mutations = {
   [POST_RESOURCE_SUCCESS]: (state, resource) => {
     state.isLoading = false
     console.log('Resource successfully submitted with id ' + resource.id)
+    router.push('/admin/dashboard')
   },
 
   [POST_RESOURCE_FAILURE]: (state, error) => {

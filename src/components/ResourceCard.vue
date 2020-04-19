@@ -9,11 +9,15 @@
       <p class="category-location">
         INFORMATIONAL |
         {{ resource.location.anywhere ? 'ANYWHERE' : null }}
-        {{ resource.location.specific ? `· ${resource.location.specific}` : null }}
+        {{
+          getName(resource.location.specific, allLocations)
+            ? `· ${getName(resource.location.specific, allLocations)}`
+            : ''
+        }}
       </p>
       <ul class="resource-tag-list mb-4">
         <li class="tag" v-for="tag in resource.tags" :key="tag">
-          <v-chip small class="mb-1">{{ tag }}</v-chip>
+          <v-chip small class="mb-1">{{ getName(tag, allTags) }}</v-chip>
         </li>
       </ul>
       <p class="resource-description">{{ resource.description }}</p>
@@ -43,7 +47,13 @@ export default {
     resource: Object
   },
   computed: {
-    ...mapGetters(['selectedCategory'])
+    ...mapGetters(['selectedCategory', 'allTags', 'allLocations'])
+  },
+  methods: {
+    getName(itemId, list) {
+      const matchingItem = list.find(listItem => listItem.id === itemId)
+      return matchingItem ? matchingItem.name : ''
+    }
   },
   filters: {
     formatDate: date => {

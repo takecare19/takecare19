@@ -22,8 +22,7 @@
       <div class="wrapper">
         <h2>Resources</h2>
         <CategoriesList />
-        <ResourceList :resources="allResources" v-if="hasResources" />
-        <EmptyMessage v-if="!hasResources" />
+        <ResourceList :resources="allResources" :category="selectedCategory" />
       </div>
     </div>
   </Layout>
@@ -32,13 +31,12 @@
 <script>
 import CategoriesList from '@/components/CategoriesList'
 import ResourceList from '@/components/ResourceList'
-import EmptyMessage from '@/components/EmptyMessage'
 import Layout from '@/components/Layout'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'Main',
-  components: { CategoriesList, ResourceList, EmptyMessage, Layout },
+  components: { CategoriesList, ResourceList, Layout },
   data() {
     return {
       items: ['Anywhere', 'Toronto', 'Vancouver'],
@@ -46,19 +44,15 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['allResources', 'selectedCategory']),
-    hasResources: function() {
-      return (
-        this.selectedCategory.id === 'All' ||
-        this.allResources.some(resource => resource.categoryId === this.selectedCategory.id)
-      )
-    }
+    ...mapGetters(['allResources', 'selectedCategory'])
   },
   created() {
     this.fetchResources()
+    this.fetchTags()
+    this.fetchLocations()
   },
   methods: {
-    ...mapActions(['fetchResources'])
+    ...mapActions(['fetchResources', 'fetchTags', 'fetchLocations'])
   }
 }
 </script>

@@ -2,21 +2,25 @@
   <div>
     <AdminNav />
     <div class="wrapper">
-      <h1 class="mb-5">Dashboard</h1>
+      <h1 class="mb-5">Admin Dashboard</h1>
+      <CategoriesList />
+      <ResourceList :resources="allResources" :category="selectedCategory" />
     </div>
   </div>
 </template>
 
 
 <script>
-import AdminNav from '@/components/AdminNav.vue'
+import AdminNav from '@/components/AdminNav'
+import ResourceList from '@/components/ResourceList'
+import CategoriesList from '@/components/CategoriesList'
 
 import { mapActions, mapGetters } from 'vuex'
 
 export default {
-  components: { AdminNav },
+  components: { AdminNav, ResourceList, CategoriesList },
   methods: {
-    ...mapActions(['fetchResources'])
+    ...mapActions(['fetchResources', 'fetchTags', 'fetchLocations'])
   },
   computed: {
     ...mapGetters(['allResources', 'selectedCategory']),
@@ -29,6 +33,8 @@ export default {
   },
   created() {
     this.fetchResources()
+    this.fetchTags()
+    this.fetchLocations()
   }
 }
 </script>
