@@ -10,14 +10,24 @@
     <v-btn to="/about" class="about--desktop" text>
       about
     </v-btn>
-    <v-btn to="/submit" class="submit--desktop" color="primary" depressed>
+    <v-btn
+      href="https://docs.google.com/forms/d/e/1FAIpQLSepscN5ZHSy7hQ2rxS40Z93ItSWljyvHAsN8gBy6k1HngdV4Q/viewform"
+      target="_blank"
+      class="submit--desktop"
+      color="primary"
+      depressed
+    >
       add resource
     </v-btn>
-    <router-link to="/submit" class="submit--mobile">
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSepscN5ZHSy7hQ2rxS40Z93ItSWljyvHAsN8gBy6k1HngdV4Q/viewform"
+      class="submit--mobile"
+      target="_blank"
+    >
       <v-icon large>
         mdi-plus-circle
       </v-icon>
-    </router-link>
+    </a>
   </v-app-bar>
 </template>
 
