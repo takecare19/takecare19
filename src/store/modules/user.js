@@ -26,7 +26,6 @@ const getters = {
 
 const actions = {
   login: ({ commit }, { email, password }) => {
-    console.log(email, password)
     commit(LOGIN_USER)
     firebase
       .auth()
@@ -50,7 +49,10 @@ const actions = {
 }
 
 const mutations = {
-  [LOGIN_USER]: state => (state.isLoading = true),
+  [LOGIN_USER]: state => {
+    state.isLoading = true
+    state.error = null
+  },
 
   SET_USER: (state, user) => (state.user = user),
 

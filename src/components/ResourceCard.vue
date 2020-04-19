@@ -4,16 +4,17 @@
     class="resource-card"
     :href="$vuetify.breakpoint.smAndUp ? resource.url : ''"
   >
-    <div>
+    <div class="resource-card-content">
       <h3>{{ resource.name }}</h3>
       <p class="category-location">
-        INFORMATIONAL |
+        {{ getName(resource.categoryId, allCategories) }} |
         {{ resource.location.anywhere ? 'ANYWHERE' : null }}
-        {{ resource.location.specific ? `· ${resource.location.specific}` : null }}
+        {{ resource.location.anywhere && resource.location.specific ? ' · ' : '' }}
+        {{ getName(resource.location.specific, allLocations) }}
       </p>
       <ul class="resource-tag-list mb-4">
         <li class="tag" v-for="tag in resource.tags" :key="tag">
-          <v-chip small class="mb-1">{{ tag }}</v-chip>
+          <v-chip small class="mb-1">{{ getName(tag, allTags) }}</v-chip>
         </li>
       </ul>
       <p class="resource-description">{{ resource.description }}</p>
@@ -25,7 +26,7 @@
       </p>
     </div>
     <div>
-      <a class="resource-link" :href="resource.url">
+      <a class="resource-link" target="_blank" :href="resource.url">
         <v-icon large>
           mdi-chevron-right
         </v-icon>
@@ -43,7 +44,13 @@ export default {
     resource: Object
   },
   computed: {
-    ...mapGetters(['selectedCategory'])
+    ...mapGetters(['selectedCategory', 'allTags', 'allLocations', 'allCategories'])
+  },
+  methods: {
+    getName(itemId, list) {
+      const matchingItem = list.find(listItem => listItem.id === itemId)
+      return matchingItem ? matchingItem.name : ''
+    }
   },
   filters: {
     formatDate: date => {
@@ -70,6 +77,10 @@ export default {
 
   & + .resource-card {
     margin-top: 30px;
+  }
+
+  &-content {
+    flex-grow: 1;
   }
 }
 

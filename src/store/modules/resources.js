@@ -1,5 +1,13 @@
 import { db } from '../../firebase/init'
-import { FETCH_RESOURCES, FETCH_RESOURCES_SUCCESS, FETCH_RESOURCES_FAILURE } from '../constants'
+import {
+  FETCH_RESOURCES,
+  FETCH_RESOURCES_SUCCESS,
+  FETCH_RESOURCES_FAILURE,
+  POST_RESOURCE,
+  POST_RESOURCE_SUCCESS,
+  POST_RESOURCE_FAILURE
+} from '../constants'
+import router from '../../router'
 
 const state = {
   resources: [],
@@ -28,21 +36,48 @@ const actions = {
         commit(FETCH_RESOURCES_SUCCESS, resources)
       })
       .catch(error => commit(FETCH_RESOURCES_FAILURE, error))
+  },
+  postResource: ({ commit }, resource) => {
+    commit(POST_RESOURCE)
+    db.collection('resources')
+      .add(resource)
+      .then(res => commit(POST_RESOURCE_SUCCESS, res))
+      .catch(err => commit(POST_RESOURCE_FAILURE, err))
   }
 }
 
 const mutations = {
-  [FETCH_RESOURCES]: state => (state.isLoading = true),
+  [FETCH_RESOURCES]: state => {
+    state.isLoading = true
+    state.error = null
+  },
 
   [FETCH_RESOURCES_SUCCESS]: (state, resources) => {
-    state.resources = resources
     state.isLoading = false
+    state.resources = resources
   },
 
   [FETCH_RESOURCES_FAILURE]: (state, error) => {
     state.isLoading = false
+    state.error = error
     console.error(error)
-    state.resources = error
+  },
+
+  [POST_RESOURCE]: state => {
+    state.isLoading = true
+    state.error = null
+  },
+
+  [POST_RESOURCE_SUCCESS]: (state, resource) => {
+    state.isLoading = false
+    console.log('Resource successfully submitted with id ' + resource.id)
+    router.push('/admin/dashboard')
+  },
+
+  [POST_RESOURCE_FAILURE]: (state, error) => {
+    state.isLoading = false
+    state.error = error
+    console.error(error)
   }
 }
 

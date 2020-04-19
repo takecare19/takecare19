@@ -62,6 +62,9 @@ export default {
   },
   methods: {
     ...mapActions(['fetchCategories', 'selectCategory'])
+  },
+  beforeDestroy() {
+    this.selectCategory('All')
   }
 }
 </script>
@@ -98,7 +101,7 @@ export default {
 }
 
 .categories-list .v-btn {
-  border-radius: 5px;
+  border-radius: 5px !important;
 }
 
 @media (max-width: 768px) {
