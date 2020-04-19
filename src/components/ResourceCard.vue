@@ -147,6 +147,7 @@ export default {
 
 .resource-description {
   width: 80%;
+  white-space: pre-wrap;
 }
 
 .resource-link {
@@ -156,7 +157,7 @@ export default {
 
 @media (max-width: 768px) {
   .resource-description {
-    width: 90%;
+    width: 100%;
   }
 
   .category-location {
