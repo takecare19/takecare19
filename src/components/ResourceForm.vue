@@ -21,27 +21,33 @@
       v-model="name"
       :rules="[
         v => !!v || 'Resource name is required',
-        v => (v && v.length <= 60) || 'Resource name must be less than 60 characters'
+        v => (v && v.length <= 60) || 'Must be less than 60 characters'
       ]"
       counter="60"
     ></v-text-field>
     <label for="company">Provider organization/company</label>
-    <p class="helper">e.g., Headspace</p>
+    <p class="helper">e.g., Association of Psychotherapy, Headspace</p>
     <v-text-field
       id="company"
       class="mb-5 small"
       solo
       outlined
       v-model="company"
-      counter="40"
+      :rules="[v => (v && v.length <= 60) || 'Must be less than 60 characters']"
+      counter="60"
     ></v-text-field>
     <fieldset class="mb-5">
       <legend class="required">Location</legend>
       <p class="helper">
-        Can the resource only be consumed from a specific location? Is the information only relevant
-        to a specific location? Stick to countries and/or cities
+        i.e. where does the audience need to be for the resource? Choose “anywhere” if it’s remote
+        and doesn’t matter; choose a location if the resource is only applicable to someone in a
+        certain place. Choose “anywhere” plus a location if it can be enjoyed from anywhere, but
+        also has a location-specific option
       </p>
-      <v-checkbox v-model="anywhere" label="Anywhere" />
+      <v-checkbox
+        v-model="anywhere"
+        label="Anywhere (this resource is relevant for anyone anywhere; location is not important)"
+      />
       <v-checkbox v-model="showLocation" label="Location-specific" />
       <div v-if="showLocation">
         <p class="helper required">City or country</p>
@@ -58,9 +64,30 @@
         />
       </div>
     </fieldset>
+    <label for="description" class="required">Description</label>
+    <p class="helper">
+      Write a brief summary and include key details like date(s), and time(s).
+    </p>
+    <v-textarea
+      id="description"
+      class="mb-5"
+      v-model="description"
+      counter="300"
+      solo
+      outlined
+      :rules="[v => !!v || 'Description is required']"
+    ></v-textarea>
+    <label for="url" class="required">URL</label>
+    <v-text-field
+      v-model="url"
+      class="small"
+      solo
+      outlined
+      :rules="[v => !!v || 'URL is required']"
+    ></v-text-field>
     <label for="tags" class="required">Tags</label>
     <p class="helper">
-      Select up to 5 tags to describe this resource in terms of cost, format, topic, etc.
+      Please select ~3-5 tags that are most relevant in describing this resource
     </p>
     <v-autocomplete
       id="tags"
@@ -84,31 +111,9 @@
         </v-chip>
       </template></v-autocomplete
     >
-    <label for="description">Description</label>
+    <label for="email">Anything else? </label>
     <p class="helper">
-      Ensure key information that would be most helpful for someone deciding if they're interested
-      in this resource not otherwise covered (e.g., dates and times)
-    </p>
-    <v-textarea
-      id="description"
-      class="mb-5"
-      v-model="description"
-      counter="300"
-      solo
-      outlined
-    ></v-textarea>
-    <label for="url" class="required">URL</label>
-    <v-text-field
-      v-model="url"
-      class="small"
-      solo
-      outlined
-      :rules="[v => !!v || 'URL is required']"
-    ></v-text-field>
-    <label for="email">Email</label>
-    <p class="helper">
-      Leave your contact information if you'd like to be available for any follow-ups on this
-      submission. Resources will be published without linking who submitted.
+      Add any notes or your contact info in case follow-up is needed
     </p>
     <v-text-field
       v-model="email"

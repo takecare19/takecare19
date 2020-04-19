@@ -7,13 +7,10 @@
     <div class="resource-card-content">
       <h3>{{ resource.name }}</h3>
       <p class="category-location">
-        INFORMATIONAL |
+        {{ getName(resource.categoryId, allCategories) }} |
         {{ resource.location.anywhere ? 'ANYWHERE' : null }}
-        {{
-          getName(resource.location.specific, allLocations)
-            ? `· ${getName(resource.location.specific, allLocations)}`
-            : ''
-        }}
+        {{ resource.location.anywhere && resource.location.specific ? ' · ' : '' }}
+        {{ getName(resource.location.specific, allLocations) }}
       </p>
       <ul class="resource-tag-list mb-4">
         <li class="tag" v-for="tag in resource.tags" :key="tag">
@@ -47,7 +44,7 @@ export default {
     resource: Object
   },
   computed: {
-    ...mapGetters(['selectedCategory', 'allTags', 'allLocations'])
+    ...mapGetters(['selectedCategory', 'allTags', 'allLocations', 'allCategories'])
   },
   methods: {
     getName(itemId, list) {
