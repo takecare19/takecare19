@@ -2,7 +2,7 @@
   <v-card
     v-if="selectedCategory.id === 'All' || selectedCategory.id == resource.categoryId"
     class="resource-card"
-    :href="$vuetify.breakpoint.smAndUp ? resource.url : ''"
+    :href="!isAdmin && $vuetify.breakpoint.smAndUp ? resource.url : ''"
   >
     <div class="resource-card-content">
       <h3>{{ resource.name }}</h3>
@@ -27,6 +27,11 @@
         <v-icon small class="mb-1">mdi-clock-outline</v-icon>
         {{ resource.created_at.toDate() | formatDate }}
       </p>
+      <div class="admin-actions mt-5" v-if="isAdmin">
+        <v-btn color="error" @click="deleteResource(resource.id)">
+          Delete resource
+        </v-btn>
+      </div>
     </div>
     <div>
       <a class="resource-link" target="_blank" :href="resource.url">
@@ -40,16 +45,23 @@
 
 <script>
 import moment from 'moment'
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'ResourceCard',
   props: {
     resource: Object
   },
   computed: {
-    ...mapGetters(['selectedCategory', 'allTags', 'allLocations'])
+    ...mapGetters(['selectedCategory', 'allTags', 'allLocations', 'user']),
+    isAdmin() {
+      return !!this.user && this.$route.path.includes('admin')
+    }
   },
   methods: {
+    ...mapActions(['deleteResource']),
+    goToResource(url) {
+      window.open(url, '_blank')
+    },
     getName(itemId, list) {
       const matchingItem = list.find(listItem => listItem.id === itemId)
       return matchingItem ? matchingItem.name : ''

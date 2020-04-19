@@ -47,13 +47,14 @@ const actions = {
       .then(res => commit(POST_RESOURCE_SUCCESS, res))
       .catch(err => commit(POST_RESOURCE_FAILURE, err))
   },
-  deleteResource: ({ commit }, resource) => {
+  deleteResource: ({ commit, dispatch }, resource) => {
     commit(DELETE_RESOURCE)
     db.collection('resources')
       .doc(resource)
       .delete()
       .then(() => {
-        commit(DELETE_RESOURCE_SUCCESS)
+        commit(DELETE_RESOURCE_SUCCESS, resource)
+        dispatch('fetchResources')
       })
       .catch(err => commit(DELETE_RESOURCE_FAILURE, err))
   }
@@ -83,7 +84,7 @@ const mutations = {
 
   [POST_RESOURCE_SUCCESS]: (state, resource) => {
     state.isLoading = false
-    console.log('Resource successfully submitted with id ' + resource.id)
+    console.log('Resource successfully submitted with id ' + resource)
     router.push('/admin/dashboard')
   },
 
