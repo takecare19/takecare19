@@ -26,10 +26,11 @@
         {{ resource.created_at.toDate() | formatDate }}
       </p>
       <div class="admin-actions mt-5" v-if="isAdmin">
+        <v-btn color="primary" :to="`/admin/edit/${resource.id}`">Edit</v-btn>
         <v-dialog v-model="showDialog" width="500">
           <template v-slot:activator="{ on }">
-            <v-btn color="error" dark v-on="on">
-              Delete resource
+            <v-btn text color="error" dark v-on="on">
+              Delete
             </v-btn>
           </template>
           <v-card>

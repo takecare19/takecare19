@@ -111,51 +111,64 @@
         </v-chip>
       </template></v-autocomplete
     >
-    <label for="email">Anything else? </label>
-    <p class="helper">
-      Add any notes or your contact info in case follow-up is needed
-    </p>
-    <v-text-field
-      v-model="email"
-      class="small"
-      :rules="
-        email.length
-          ? [v => (v && v.length && /.+@.+\..+/.test(v)) || 'Please enter a valid email']
-          : []
-      "
-      solo
-      outlined
-    ></v-text-field>
+    <fieldset v-if="!exisitingResource">
+      <label for="email">Anything else? </label>
+      <p class="helper">
+        Add any notes or your contact info in case follow-up is needed
+      </p>
+      <v-text-field
+        v-model="email"
+        class="small"
+        :rules="
+          email.length
+            ? [v => (v && v.length && /.+@.+\..+/.test(v)) || 'Please enter a valid email']
+            : []
+        "
+        solo
+        outlined
+      ></v-text-field>
+    </fieldset>
     <v-btn :disabled="!(valid && isLocationValid)" color="primary" class="mr-4" type="submit">
-      Submit resource
+      {{ exisitingResource ? 'Update resource' : 'Submit resource' }}
     </v-btn>
+    <v-btn text @click="$router.go(-1)">Cancel</v-btn>
   </v-form>
 </template>
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
 export default {
-  data: () => ({
-    categoryId: null,
-    name: '',
-    email: '',
-    company: '',
-    tags: null,
-    url: '',
-    description: '',
-    showLocation: false,
-    location: null,
-    locationRules: [v => this.showLocation || v],
-    anywhere: true,
-    valid: false,
+  data() {
+    return {
+      categoryId: null,
+      name: '',
+      email: '',
+      company: '',
+      tags: null,
+      url: '',
+      description: '',
+      showLocation: false,
+      location: null,
+      locationRules: [v => this.showLocation || v],
+      anywhere: true,
+      valid: false,
 
-    select: null,
-    checkbox: false
-  }),
+      select: null,
+      checkbox: false
+    }
+  },
   computed: {
     ...mapGetters(['allCategories', 'allTags', 'allLocations']),
     isLocationValid() {
       return !!(this.location || this.anywhere)
+    },
+    exisitingResource() {
+      const { id } = this.$route.params
+
+      if (id) {
+        return this.singleResource(id)
+      }
+      return null
     }
   },
   methods: {
@@ -168,25 +181,35 @@ export default {
       e.preventDefault()
       const { anywhere, location, description, url, company, name, tags, categoryId } = this
       const newResource = {
-        created_at: new Date(),
         location: { anywhere, specific: location },
-        updated_at: new Date(),
         description,
-        published_at: new Date(),
         url,
         company,
         name,
         tags: tags.sort((a, b) => a.order - b.order).map(tag => tag.id),
         categoryId
       }
-      console.log(newResource)
       this.$emit('submit', newResource)
     }
   },
   created() {
+    window.scrollTo(0, 0)
     this.fetchCategories()
     this.fetchTags()
     this.fetchLocations()
+    if (this.exisitingResource) {
+      this.categoryId = this.exisitingResource.categoryId || null
+      this.name = this.exisitingResource.name || null
+      this.company = this.exisitingResource.company || null
+      this.tags = this.exisitingResource.tags.map(tag =>
+        this.allTags.find(existingTag => tag === existingTag.id)
+      )
+      this.showLocation = this.exisitingResource.location.specific
+      this.url = this.exisitingResource.url || null
+      this.description = this.exisitingResource.description || null
+      this.location = this.exisitingResource.location.specific || null
+      this.anywhere = this.exisitingResource.location.anywhere || null
+    }
   }
 }
 </script>
