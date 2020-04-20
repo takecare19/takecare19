@@ -45,10 +45,17 @@ const addWithId = (collection, data, env) => {
     .firestore()
 
   data.forEach(doc => {
+    const id = doc.id
+    delete doc.id
     db.collection(collection)
-      .doc(doc.id)
-      .set({ name: doc.name, order: doc.order })
-      .then(docRef => console.log('Document successfully added with id', docRef))
+      .doc(id)
+      .set({
+        ...doc,
+        created_at: new Date(doc.created_at),
+        updated_at: new Date(doc.updated_at),
+        published_at: new Date(doc.published_at)
+      })
+      .then(docRef => console.log('Document successfully added', docRef))
       .catch(error => {
         console.error('Error adding document: ', error)
       })
@@ -85,4 +92,4 @@ const getDataFromCollection = collection => {
 }
 
 //getDataFromCollection('resources')
-addToCollection('resources', resources, 'prod')
+addWithId('resources', resources, 'prod')
