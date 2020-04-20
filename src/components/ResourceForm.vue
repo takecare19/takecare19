@@ -107,7 +107,6 @@
         </v-chip>
       </template></v-autocomplete
     >
-
     <fieldset v-if="!exisitingResource">
       <label for="email">Anything else? </label>
       <p class="helper">
@@ -125,7 +124,6 @@
         outlined
       ></v-text-field>
     </fieldset>
-
     <v-btn :disabled="!(valid && isLocationValid)" color="primary" class="mr-4" type="submit">
       {{ exisitingResource ? 'Update resource' : 'Submit resource' }}
     </v-btn>
