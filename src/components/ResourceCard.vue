@@ -23,7 +23,7 @@
       <p class="mt-3 mb-2">{{ resource.company }}</p>
       <p class="helper mb-0">
         <v-icon small class="mb-1">mdi-clock-outline</v-icon>
-        {{ resource.created_at.toDate() | formatDate }}
+        {{ resource.created_at | formatDate }}
       </p>
       <div class="admin-actions mt-5" v-if="isAdmin">
         <v-btn color="primary" :to="`/admin/edit/${resource.id}`">Edit</v-btn>
@@ -88,6 +88,7 @@ export default {
   },
   filters: {
     formatDate: date => {
+      console.log(date)
       if (!date) return ''
       const now = new Date()
       const differenceInDays = (now - date) / 1000 / 60 / 60 / 24

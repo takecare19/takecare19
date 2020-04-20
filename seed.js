@@ -1,8 +1,9 @@
 const admin = require('firebase-admin')
-
+var fs = require('fs')
+const resources = require('./resources.json')
 const prodServiceAccount = require('./prod-service-account.json')
 const devServiceAccount = require('./dev-service-account.json')
-const { categories, resources, locations, tags } = require('./data.js')
+// const { categories, resources, locations, tags } = require('./data.js')
 
 const addToCollection = (collection, data, env) => {
   const credential =
@@ -63,9 +64,20 @@ const getDataFromCollection = collection => {
       snapshot.forEach(doc => {
         data.push({ id: doc.ref.id, ...doc.data() })
       })
-      console.log(data)
+
+      const test = data.map(doc => ({
+        ...doc,
+        created_at: new Date(doc.created_at.toDate()),
+        updated_at: new Date(doc.updated_at.toDate()),
+        published_at: new Date(doc.published_at.toDate())
+      }))
+
+      fs.writeFile(`${collection}.json`, JSON.stringify(test), function (err) {
+        if (err) throw err
+        console.log('Saved!')
+      })
     })
 }
 
-// getDataFromCollection('tags')
-addWithId('tags', tags, 'dev')
+//getDataFromCollection('resources')
+addToCollection('resources', resources, 'prod')
