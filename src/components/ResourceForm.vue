@@ -33,7 +33,9 @@
       solo
       outlined
       v-model="company"
-      :rules="[v => (v && v.length <= 60) || 'Must be less than 60 characters']"
+      :rules="
+        company.length ? [v => (v && v.length <= 60) || 'Must be less than 60 characters'] : []
+      "
       counter="60"
     ></v-text-field>
     <fieldset class="mb-5">
@@ -100,10 +102,6 @@
       outlined
       chips
       multiple
-      :rules="[
-        v => !!v || 'Please enter at least one tag',
-        v => (v && v.length <= 5) || 'Maximum five tags'
-      ]"
     >
       <template v-slot:selection="{ attrs, item, select, selected }">
         <v-chip v-bind="attrs" :input-value="selected" close @click:close="removeTag(item)">
@@ -115,17 +113,7 @@
     <p class="helper">
       Add any notes or your contact info in case follow-up is needed
     </p>
-    <v-text-field
-      v-model="email"
-      class="small"
-      :rules="
-        email.length
-          ? [v => (v && v.length && /.+@.+\..+/.test(v)) || 'Please enter a valid email']
-          : []
-      "
-      solo
-      outlined
-    ></v-text-field>
+    <v-text-field v-model="email" class="small" solo outlined></v-text-field>
     <v-btn :disabled="!(valid && isLocationValid)" color="primary" class="mr-4" type="submit">
       Submit resource
     </v-btn>
