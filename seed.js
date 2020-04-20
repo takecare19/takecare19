@@ -19,7 +19,12 @@ const addToCollection = (collection, data, env) => {
 
   data.forEach(doc => {
     db.collection(collection)
-      .add(doc)
+      .add({
+        ...doc,
+        created_at: new Date(doc.created_at),
+        updated_at: new Date(doc.updated_at),
+        published_at: new Date(doc.published_at)
+      })
       .then(docRef => console.log('Document successfully added ', docRef.id))
       .catch(error => {
         console.error('Error adding document: ', error)
@@ -65,14 +70,14 @@ const getDataFromCollection = collection => {
         data.push({ id: doc.ref.id, ...doc.data() })
       })
 
-      const test = data.map(doc => ({
+      const withDates = data.map(doc => ({
         ...doc,
-        created_at: new Date(doc.created_at.toDate()),
-        updated_at: new Date(doc.updated_at.toDate()),
-        published_at: new Date(doc.published_at.toDate())
+        created_at: new Date(doc.created_at),
+        updated_at: new Date(doc.updated_at),
+        published_at: new Date(doc.published_at)
       }))
 
-      fs.writeFile(`${collection}.json`, JSON.stringify(test), function (err) {
+      fs.writeFile(`${collection}.js`, JSON.stringify(withDates), function (err) {
         if (err) throw err
         console.log('Saved!')
       })
