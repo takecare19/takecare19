@@ -158,7 +158,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['allCategories', 'allTags', 'allLocations']),
+    ...mapGetters(['allCategories', 'allTags', 'allLocations', 'singleResource']),
     isLocationValid() {
       return !!(this.location || this.anywhere)
     },

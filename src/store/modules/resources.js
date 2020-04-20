@@ -101,7 +101,7 @@ const mutations = {
 
   [POST_RESOURCE_SUCCESS]: (state, resource) => {
     state.isLoading = false
-    console.log('Resource successfully submitted with id ' + resource)
+    console.log('Resource successfully submitted with id ' + resource.id)
     router.push('/admin/dashboard')
   },
 
