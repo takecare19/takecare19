@@ -37,6 +37,15 @@
         >
       </div>
     </div>
+    <v-alert
+      class="text-center"
+      v-if="selectedCategory.name === 'Crisis'"
+      text
+      outlined
+      color="deep-orange"
+    >
+      If you’re in immediate danger, please call 911
+    </v-alert>
   </div>
 </template>
 
@@ -102,6 +111,10 @@ export default {
 
 .categories-list .v-btn {
   border-radius: 5px !important;
+}
+
+.v-alert__content {
+  font-family: Poppins, sans-serif;
 }
 
 @media (max-width: 768px) {
