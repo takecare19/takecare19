@@ -10,6 +10,7 @@ import Admin from '../pages/admin/Index.vue'
 import AdminLogin from '../pages/admin/Login.vue'
 import AdminDashboard from '../pages/admin/Dashboard.vue'
 import NewResource from '../pages/admin/NewResource.vue'
+import EditResource from '../pages/admin/EditResource.vue'
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,13 @@ const routes = [
       {
         path: 'new',
         component: NewResource,
+        meta: {
+          requiresAuth: true
+        }
+      },
+      {
+        path: 'edit/:id',
+        component: EditResource,
         meta: {
           requiresAuth: true
         }
