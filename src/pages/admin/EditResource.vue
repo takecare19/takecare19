@@ -2,7 +2,7 @@
   <div>
     <AdminNav />
     <div class="wrapper">
-      <h1 class="mb-5">Add a new resource</h1>
+      <h1 class="mb-5">Edit resource</h1>
       <ResourceForm @submit="handleSubmit" />
     </div>
   </div>
@@ -15,16 +15,14 @@ import ResourceForm from '@/components/ResourceForm'
 import { mapActions } from 'vuex'
 
 export default {
-  name: 'NewResource',
+  name: 'EditResource',
   components: { AdminNav, ResourceForm },
   methods: {
-    ...mapActions(['postResource']),
+    ...mapActions(['updateResource', 'fetchSingleResource']),
     handleSubmit(resource) {
       resource.approved = true
-      resource.created_at = new Date()
       resource.updated_at = new Date()
-      resource.published_at = new Date()
-      this.postResource(resource)
+      this.updateResource({ id: this.$route.params.id, resource })
     }
   }
 }
