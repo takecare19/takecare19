@@ -42,7 +42,7 @@
       v-if="selectedCategory.name === 'Crisis'"
       text
       outlined
-      color="deep-orange"
+      color="error"
     >
       If you’re in immediate danger, please call 911
     </v-alert>
@@ -113,8 +113,13 @@ export default {
   border-radius: 5px !important;
 }
 
+.v-alert {
+  padding: 10px;
+}
+
 .v-alert__content {
   font-family: Poppins, sans-serif;
+  font-size: 1.3rem;
 }
 
 @media (max-width: 768px) {
@@ -123,6 +128,10 @@ export default {
   }
   .categories-list-frame--desktop {
     display: none;
+  }
+
+  .v-alert {
+    margin-top: 20px;
   }
 }
 
