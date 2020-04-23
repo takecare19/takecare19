@@ -1,9 +1,7 @@
 <template>
   <v-footer>
     <div class="wrapper">
-      <div class="grid">
-        <p class="message mb-0">please take care of yourself and others</p>
-        <!-- Begin Mailchimp Signup Form -->
+      <div class="flex">
         <div id="mc_embed_signup">
           <form
             action="https://takecare19.us19.list-manage.com/subscribe/post?u=9e6c5cab524d54802fecc9d5f&amp;id=ed8948d007"
@@ -48,12 +46,11 @@
             </div>
           </form>
         </div>
-
         <nav>
           <ul>
-            <li v-if="$vuetify.breakpoint.smAndDown" class="back-to-top">
+            <li class="back-to-top">
               <a href="#app">
-                Back to top
+                Back to top ↑
               </a>
             </li>
             <li>
@@ -61,6 +58,7 @@
             </li>
             <li>
               <a
+                target="_blank"
                 href="https://docs.google.com/forms/d/e/1FAIpQLSepscN5ZHSy7hQ2rxS40Z93ItSWljyvHAsN8gBy6k1HngdV4Q/viewform"
                 >Add a resource</a
               >
@@ -70,14 +68,15 @@
             </li>
           </ul>
         </nav>
+      </div>
 
-        <div class="copyright">
-          <p class="mb-5">
-            Created and designed by <a href="http://www.byvivian.com/">Vivian Ngai</a> and developed
-            by <a href="http://susiekim.co/">Susie Kim</a>, with love ♥
-          </p>
-          <p>&copy; {{ new Date().getFullYear() }} takecare19.com. All rights reserved.</p>
-        </div>
+      <div class="copyright">
+        <p class="mb-6">
+          Created and designed by
+          <a target="_blank" href="http://www.byvivian.com/">Vivian Ngai</a> and developed by
+          <a target="_blank" href="http://susiekim.co/">Susie Kim</a>, with love ♥
+        </p>
+        <p>&copy; {{ new Date().getFullYear() }} takecare19.com. All rights reserved.</p>
       </div>
     </div>
   </v-footer>
@@ -88,9 +87,11 @@
 
 #mc_embed_signup_scroll {
   font-family: 'Poppins', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: left;
+}
+
+form {
+  padding: 0 !important;
 }
 
 #mc_embed_signup input.email {
@@ -99,9 +100,8 @@
 }
 
 #mc_embed_signup label {
-  font-weight: lighter;
+  font-weight: normal;
   padding-bottom: 0;
-  font-family: 'PT serif', serf;
   margin-right: 20px;
 }
 
@@ -110,32 +110,20 @@
   border-radius: 0;
 }
 
-.grid {
-  display: grid;
-  grid-template-rows: 4fr;
-  grid-row-gap: 60px;
-}
-
 footer.v-footer {
   background-size: cover;
   text-align: center;
-  padding: 200px 0 75px;
+  padding: 200px 0 50px;
   display: block;
 }
 
 .wrapper {
-  width: 90%;
-  max-width: 750px;
+  width: 85%;
+  max-width: 950px;
   margin: 0 auto;
 }
 
-.message {
-  font-size: 2.4rem;
-  font-family: 'PT Serif', serif;
-  color: $denim;
-}
-
-.copyright p {
+.copyright {
   font-size: 1.6rem;
   font-family: 'Poppins', sans-serif;
   color: $dark;
@@ -147,14 +135,22 @@ footer.v-footer {
   }
 }
 
+.flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 75px;
+}
+
 nav {
   width: 100%;
-
+  font-family: Poppins, sans-serif;
+  text-align: right;
   ul {
-    display: flex;
-    justify-content: space-between;
     font-weight: bold;
     font-size: 1.8rem;
+  }
+  li + li {
+    margin-top: 10px;
   }
 }
 
@@ -162,15 +158,27 @@ nav {
   background-color: #fff !important;
 }
 
+#mc_embed_signup input.email {
+  margin: 10px 0;
+}
+
 @media (min-width: 769px) {
   footer {
     background: url('../assets/desktop-footer-background.svg');
+  }
+
+  .back-to-top {
+    display: none;
   }
 }
 
 @media (max-width: 768px) {
   footer.v-footer {
-    padding-top: 150px;
+    padding-top: 125px;
+  }
+
+  .back-to-top {
+    display: block;
   }
 
   footer {
@@ -182,34 +190,27 @@ nav {
     }
 
     nav ul {
-      flex-direction: column;
-
       li + li {
-        margin-top: 10px;
+        margin-top: 20px;
       }
     }
   }
 
-  .grid {
-    grid-row-gap: 50px;
+  #mc_embed_signup label {
+    font-weight: 500;
   }
 
   #mc_embed_signup_scroll {
+    margin-bottom: 50px;
+  }
+
+  .copyright {
+    font-size: 1.4rem;
+  }
+
+  .flex {
     flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #mc_embed_signup input.email {
-    margin: 10px 0;
-  }
-
-  #mc_embed_signup {
-    grid-row: 1;
-  }
-
-  .message {
-    grid-row: 3;
-    font-size: 1.5rem;
+    margin-bottom: 50px;
   }
 }
 </style>
