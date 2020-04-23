@@ -24,4 +24,10 @@ export default {
   flex-direction: column;
   min-height: 100vh;
 }
+
+main {
+  background-image: url('../assets/desktop-background-top.svg');
+  background-position: 0 -50px;
+  background-size: contain;
+}
 </style>
