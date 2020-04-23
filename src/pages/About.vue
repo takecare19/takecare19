@@ -118,6 +118,17 @@ a {
 }
 
 .wrapper {
-  margin-top: 200px;
+  margin-top: 30vh;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    margin-top: 150px;
+  }
+  main {
+    background-image: url('../assets/mobile-top-background.svg');
+    background-size: 768px;
+    background-position: 50% -100px;
+  }
 }
 </style>

@@ -27,7 +27,15 @@ export default {
 
 main {
   background-image: url('../assets/desktop-background-top.svg');
-  background-position: 0 -50px;
-  background-size: contain;
+  background-position: 50% -175px;
+  background-size: 2000px;
+}
+
+@media (max-width: 768px) {
+  main {
+    background-image: url('../assets/mobile-top-background.svg');
+    background-size: 768px;
+    background-position: 50% -100px;
+  }
 }
 </style>
