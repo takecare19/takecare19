@@ -18,7 +18,7 @@ h3 {
 }
 
 h1 {
-  font-size: 4.4rem;
+  font-size: 3.6rem;
   font-weight: bold;
 }
 
@@ -74,5 +74,12 @@ main {
 
 p {
   font-family: Poppins, sans-serif;
+}
+
+.required {
+  &::after {
+    content: '*';
+    color: red;
+  }
 }
 </style>

@@ -52,13 +52,9 @@
         <p>
           This project continues to be open to resource suggestions as a way to foster collaboration
           and growth of the database. It will continue to be updated regularly (every couple of
-          days). To get updates on this project, please
-          <a
-            target="_blank"
-            href="https://takecare19.us19.list-manage.com/subscribe/post?u=9e6c5cab524d54802fecc9d5f&id=ed8948d007"
-            >subscribe to our mailing list</a
-          >. Unfortunately, not all suggestions will be added to keep the list at a manageable size
-          and not overwhelming to use.
+          days). To get updates on this project, please subscribe to our mailing list at the bottom
+          of this page. Unfortunately, not all suggestions will be added to keep the list at a
+          manageable size and not overwhelming to use.
         </p>
 
         <p>
@@ -78,9 +74,11 @@
               target="_blank"
               >here</a
             >
-          </li>
-          <li>
-            Perhaps you can ask business/service providers to offer a discount if they are able
+            <ul class="my-2">
+              <li>
+                Perhaps you can ask business/service providers to offer a discount if they are able
+              </li>
+            </ul>
           </li>
           <li>
             Help verify resources listed, by letting us know if you come across any that are
@@ -95,10 +93,10 @@
       <section class="mt-12">
         <h1 class="mb-5">Team</h1>
         <div class="flex">
-          <div class="headshot"></div>
+          <!-- <div class="headshot"></div> -->
           <div class="bio">
             <h3 class="mb-1">Vivian Ngai</h3>
-            <p class="pronoun">She/her | Creator & designer</p>
+            <p class="pronoun">She/her | Creator & Designer</p>
             <p>
               I am motivated to make mental health more accessible, inclusive, and talked about.
               It's something that was/is a challenge in my own life and of loved ones'. With the
@@ -120,8 +118,12 @@
           </div>
         </div>
       </section>
-      <section class="mt-12">
+      <section class="mt-12" id="contact">
         <h1 class="mb-5">Contact</h1>
+        <p>
+          Any general inquiries that not related to submitting a resource can be sent here, or
+          emailed directly to hello@takecare19.com.
+        </p>
         <v-form
           action="https://formspree.io/xnqbelpg"
           method="POST"
@@ -132,7 +134,7 @@
         >
           <div class="flex">
             <div class="name">
-              <label for="name">Name</label>
+              <label for="name" class="required">Name</label>
               <v-text-field
                 id="name"
                 solo
@@ -143,7 +145,7 @@
               ></v-text-field>
             </div>
             <div class="email">
-              <label for="name">Email</label>
+              <label for="email" class="required">Email</label>
               <v-text-field
                 id="email"
                 solo
@@ -157,7 +159,7 @@
               ></v-text-field>
             </div>
           </div>
-          <label for="message">Message</label>
+          <label for="message" class="required">Message</label>
           <v-textarea
             id="message"
             class="mb-5"
@@ -226,8 +228,13 @@ export default {
       xhr.send(data)
     }
   },
-  created() {
-    window.scrollTo(0, 0)
+  mounted() {
+    if (this.$route.hash === '#contact') {
+      const contactSection = document.getElementById('contact')
+      contactSection.scrollIntoView()
+    } else {
+      window.scrollTo(0, 0)
+    }
   }
 }
 </script>
@@ -280,8 +287,12 @@ a {
   height: 100%;
   justify-content: space-between;
 
+  // .bio {
+  //   width: calc(100% - 350px);
+  // }
+
   .bio {
-    width: calc(100% - 350px);
+    width: 100%;
   }
 
   .name,

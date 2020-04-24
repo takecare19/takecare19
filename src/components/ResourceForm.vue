@@ -227,13 +227,6 @@ fieldset {
   width: 60%;
 }
 
-.required {
-  &::after {
-    content: '*';
-    color: red;
-  }
-}
-
 .helper {
   color: $denim;
 }
