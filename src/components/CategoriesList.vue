@@ -37,6 +37,15 @@
         >
       </div>
     </div>
+    <v-alert
+      class="text-center"
+      v-if="selectedCategory.name === 'Crisis'"
+      text
+      outlined
+      color="error"
+    >
+      If you’re in immediate danger, please call 911
+    </v-alert>
   </div>
 </template>
 

@@ -111,8 +111,11 @@
               gratitude lists, and puppy videos.
             </p>
             <p>
-              Connect with me on <a href="">Twitter</a>, <a href="">LinkedIn</a>,
-              <a href="">Email</a>, or my <a href="">Website</a>.
+              Connect with me on
+              <a href="https://twitter.com/byVivianDesign" target="_blank">Twitter</a>,
+              <a href="https://www.linkedin.com/in/vivianngai/" target="_blank">LinkedIn</a>,
+              <a href="mailto:vivian@byvivian.com" target="_blank">Email</a>, or my
+              <a href="http://www.byvivian.com/" target="_blank">Website</a>.
             </p>
           </div>
         </div>
@@ -164,9 +167,15 @@
             v-model="message"
             :rules="[v => !!v || 'Description is required']"
           ></v-textarea>
-          <v-btn :disabled="!valid" color="primary" class="mr-4" type="submit">
+          <v-btn :disabled="!valid || sending" color="primary" class="mr-4" type="submit">
             {{ sending ? 'Submiting...' : 'Submit' }}
           </v-btn>
+          <v-alert type="success" v-if="success" class="mt-8" text outlined>
+            Thanks for your message, we'll get back to you as soon as possible.
+          </v-alert>
+          <v-alert type="error" v-if="error" class="mt-8" text outlined>
+            Sorry, something went wrong. Please email us directly at hello@takecare19.com
+          </v-alert>
         </v-form>
       </section>
     </div>
@@ -185,12 +194,15 @@ export default {
       valid: false,
       name: null,
       email: null,
-      message: null
+      message: null,
+      error: false,
+      success: false
     }
   },
   methods: {
     handleSubmit(e) {
       e.preventDefault()
+      this.sending = true
       const form = e.target
       const data = new FormData()
       data.append('name', this.name)
@@ -205,7 +217,9 @@ export default {
         if (xhr.status === 200) {
           form.reset()
           this.success = true
+          this.sending = false
         } else {
+          this.sending = false
           this.error = xhr.status
         }
       }
