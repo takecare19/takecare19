@@ -47,7 +47,7 @@ export default {
   }
 
   a + a {
-    margin-left: 50px;
+    margin-left: 25px;
   }
 }
 

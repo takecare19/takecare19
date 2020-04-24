@@ -11,7 +11,10 @@
 import Layout from '../components/Layout'
 export default {
   name: 'About',
-  components: { Layout }
+  components: { Layout },
+  created() {
+    window.scrollTo(0, 0)
+  }
 }
 </script>
 

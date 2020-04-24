@@ -70,7 +70,6 @@ a {
 
 main {
   flex: 1;
-  margin-bottom: 50px;
 }
 
 p {
