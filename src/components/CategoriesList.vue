@@ -71,9 +71,6 @@ export default {
   },
   methods: {
     ...mapActions(['fetchCategories', 'selectCategory'])
-  },
-  beforeDestroy() {
-    this.selectCategory('All')
   }
 }
 </script>
@@ -113,12 +110,25 @@ export default {
   border-radius: 5px !important;
 }
 
+.v-alert {
+  padding: 10px;
+}
+
+.v-alert__content {
+  font-family: Poppins, sans-serif;
+  font-size: 1.3rem;
+}
+
 @media (max-width: 768px) {
   .categories-list-frame--mobile {
     display: flex;
   }
   .categories-list-frame--desktop {
     display: none;
+  }
+
+  .v-alert {
+    margin-top: 20px;
   }
 }
 

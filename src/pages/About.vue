@@ -225,6 +225,8 @@ export default {
       }
       xhr.send(data)
     }
+  created() {
+    window.scrollTo(0, 0)
   }
 }
 </script>
