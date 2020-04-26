@@ -77,7 +77,7 @@ export default {
 
   .hero-content {
     max-width: 1000px;
-    width: 90%;
+    width: 85%;
     text-align: center;
 
     label {
