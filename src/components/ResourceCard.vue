@@ -2,7 +2,7 @@
   <v-card
     v-if="selectedCategory.id === 'All' || selectedCategory.id == resource.categoryId"
     class="resource-card"
-    :href="!isAdmin && $vuetify.breakpoint.smAndUp ? resource.url : ''"
+    :href="!isAdmin ? resource.url : ''"
     target="_blank"
   >
     <div class="resource-card-content">
@@ -25,6 +25,7 @@
         <v-icon small class="mb-1">mdi-clock-outline</v-icon>
         {{ resource.created_at.toDate() | formatDate }}
       </p>
+      <a v-if="isAdmin" class="mt-3 hyperlink" :href="resource.url">Go to link</a>
       <div class="admin-actions mt-5" v-if="isAdmin">
         <v-btn color="primary" :to="`/admin/edit/${resource.id}`">Edit</v-btn>
         <v-dialog v-model="showDialog" width="500">
@@ -125,6 +126,12 @@ export default {
   .company {
     font-size: 1.4rem;
   }
+}
+
+.hyperlink {
+  color: $denim !important;
+  text-decoration: underline !important;
+  display: block;
 }
 
 .theme--light.v-icon.arrow {
