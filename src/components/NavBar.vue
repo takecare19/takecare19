@@ -55,6 +55,10 @@ export default {
   .logo-link {
     margin-left: 0;
   }
+
+  .v-btn.v-btn--active::before {
+    background: white;
+  }
 }
 
 .about--mobile .v-icon {

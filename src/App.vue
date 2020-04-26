@@ -18,7 +18,7 @@ h3 {
 }
 
 h1 {
-  font-size: 4.4rem;
+  font-size: 3.6rem;
   font-weight: bold;
 }
 
@@ -95,6 +95,13 @@ p {
       background: #6f8f9a !important;
       opacity: 1 !important;
     }
+  }
+}
+
+.required {
+  &::after {
+    content: '*';
+    color: red;
   }
 }
 </style>
