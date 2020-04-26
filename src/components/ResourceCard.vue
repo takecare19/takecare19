@@ -106,6 +106,7 @@ export default {
   display: flex;
   padding-right: 5px;
   align-items: center;
+  justify-content: space-between;
 
   &.v-card {
     border: 0.5px solid lightgray;
@@ -128,6 +129,10 @@ export default {
   }
 }
 
+.resource-card-content {
+  width: calc(100% - 36px);
+}
+
 .hyperlink {
   color: $denim !important;
   text-decoration: underline !important;
@@ -136,6 +141,7 @@ export default {
 
 .theme--light.v-icon.arrow {
   color: $denim;
+  transform: translateX(10px);
 }
 
 .category-location {

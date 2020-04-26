@@ -104,5 +104,11 @@ export default {
   .v-toolbar__content {
     justify-content: space-between;
   }
+
+  .v-toolbar {
+    a + a {
+      margin-left: 0;
+    }
+  }
 }
 </style>
