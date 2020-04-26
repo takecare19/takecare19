@@ -23,6 +23,7 @@
         <h2>Resources</h2>
         <CategoriesList />
         <ResourceList :resources="allResources" :category="selectedCategory" />
+        <v-btn @click="seeMore">See more</v-btn>
       </div>
     </div>
   </Layout>
@@ -52,7 +53,10 @@ export default {
     this.fetchLocations()
   },
   methods: {
-    ...mapActions(['fetchResources', 'fetchTags', 'fetchLocations'])
+    ...mapActions(['fetchResources', 'fetchMore', 'fetchTags', 'fetchLocations']),
+    seeMore() {
+      this.fetchMore(this.selectedCategory.id)
+    }
   }
 }
 </script>

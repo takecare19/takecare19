@@ -1,6 +1,5 @@
 <template>
   <v-card
-    v-if="selectedCategory.id === 'All' || selectedCategory.id == resource.categoryId"
     class="resource-card"
     :href="!isAdmin && $vuetify.breakpoint.smAndUp ? resource.url : ''"
     target="_blank"

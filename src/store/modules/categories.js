@@ -36,8 +36,9 @@ const actions = {
       })
       .catch(error => commit(FETCH_CATEGORIES_FAILURE, error))
   },
-  selectCategory: ({ commit }, categoryId) => {
+  selectCategory: ({ commit, dispatch }, categoryId) => {
     commit(SET_SELECTED_CATEGORY, categoryId)
+    dispatch('fetchResources', categoryId)
   }
 }
 

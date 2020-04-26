@@ -1,6 +1,6 @@
 <template>
-  <div class="resource-list" v-if="!isLoadingResources">
-    <EmptyMessage v-if="!hasResources" />
+  <div class="resource-list">
+    <EmptyMessage v-if="!hasResources && !isLoadingResources" />
     <ResourceCard v-for="resource in resources" :key="resource.id" :resource="resource" />
   </div>
 </template>
