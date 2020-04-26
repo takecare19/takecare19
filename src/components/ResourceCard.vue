@@ -7,20 +7,20 @@
   >
     <div class="resource-card-content">
       <h3>{{ resource.name }}</h3>
-      <p class="category-location">
+      <p class="category-location mt-1 mb-2">
         {{ getName(resource.categoryId, allCategories) }} |
         {{ resource.location.anywhere ? 'ANYWHERE' : null }}
         {{ resource.location.anywhere && resource.location.specific ? ' · ' : '' }}
         {{ getName(resource.location.specific, allLocations) }}
       </p>
-      <ul class="resource-tag-list mb-4">
+      <ul class="resource-tag-list mb-2">
         <li class="tag" v-for="tag in resource.tags" :key="tag">
           <v-chip small class="mb-1">{{ getName(tag, allTags) }}</v-chip>
         </li>
       </ul>
-      <p class="resource-description">{{ resource.description }}</p>
+      <p class="resource-description my-2">{{ resource.description }}</p>
       <v-divider></v-divider>
-      <p class="mt-3 mb-2">{{ resource.company }}</p>
+      <p class="company my-2">{{ resource.company }}</p>
       <p class="helper mb-0">
         <v-icon small class="mb-1">mdi-clock-outline</v-icon>
         {{ resource.created_at.toDate() | formatDate }}
@@ -47,13 +47,9 @@
         </v-dialog>
       </div>
     </div>
-    <div>
-      <a class="resource-link" target="_blank" :href="resource.url">
-        <v-icon large>
-          mdi-chevron-right
-        </v-icon>
-      </a>
-    </div>
+    <v-icon large class="arrow">
+      mdi-chevron-right
+    </v-icon>
   </v-card>
 </template>
 
@@ -108,6 +104,11 @@ export default {
 .resource-card {
   display: flex;
   padding-right: 5px;
+  align-items: center;
+
+  &.v-card {
+    border: 0.5px solid lightgray;
+  }
 
   & + .resource-card {
     margin-top: 30px;
@@ -120,6 +121,14 @@ export default {
   strong {
     font-size: 3rem;
   }
+
+  .company {
+    font-size: 1.4rem;
+  }
+}
+
+.theme--light.v-icon.arrow {
+  color: $denim;
 }
 
 .category-location {
@@ -137,6 +146,16 @@ export default {
   .tag {
     .v-chip {
       background: $sky;
+      border-radius: 1px;
+
+      &:hover {
+        background: $sky;
+        opacity: 1;
+      }
+
+      &::before {
+        background: $sky;
+      }
     }
 
     & + .tag {
@@ -147,13 +166,7 @@ export default {
 }
 
 .resource-description {
-  width: 80%;
   white-space: pre-wrap;
-}
-
-.resource-link {
-  height: 100%;
-  display: flex;
 }
 
 @media (max-width: 768px) {

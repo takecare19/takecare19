@@ -76,4 +76,24 @@ main {
 p {
   font-family: Poppins, sans-serif;
 }
+
+.v-btn {
+  text-transform: none;
+  font-family: Poppins, sans-serif !important;
+}
+
+.v-btn.primary {
+  opacity: 1 !important;
+  background: #6f8f9a !important;
+
+  &:before {
+    background: #6f8f9a !important;
+  }
+
+  &:hover:before,
+  &:focus:before {
+    background: #6f8f9a !important;
+    opacity: 1 !important;
+  }
+}
 </style>

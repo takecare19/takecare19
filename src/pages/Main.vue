@@ -5,7 +5,7 @@
         <div class="hero-content">
           <h1>
             <span>
-              accessible mental health resources for coping with covid19
+              Accessible & Inclusive Mental Health Resources for Coping Through COVID&#x2011;19
             </span>
           </h1>
           <!-- <label for="location-filter">See resources revelant to:</label>
@@ -71,13 +71,13 @@ export default {
 
   h1 {
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    line-height: 1.5;
+    font-weight: 500;
+    line-height: 1.3;
   }
 
   .hero-content {
-    max-width: 800px;
-    width: 85%;
+    max-width: 1000px;
+    width: 90%;
     text-align: center;
 
     label {
@@ -119,12 +119,6 @@ export default {
   .hero-content {
     h1 {
       font-size: 2.5rem;
-      font-weight: bold;
-
-      span {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 40%, $pale-blue 40%);
-        line-height: 1.5;
-      }
     }
 
     label {

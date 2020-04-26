@@ -107,7 +107,7 @@ export default {
 }
 
 .categories-list .v-btn {
-  border-radius: 5px !important;
+  border-radius: 50px !important;
 }
 
 .v-alert {
