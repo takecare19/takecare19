@@ -64,7 +64,7 @@
               >
             </li>
             <li>
-              <router-link to="/about">Contact</router-link>
+              <router-link to="/about#contact">Contact</router-link>
             </li>
           </ul>
         </nav>
