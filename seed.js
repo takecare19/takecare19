@@ -1,6 +1,6 @@
 const admin = require('firebase-admin')
 var fs = require('fs')
-const resources = require('./resources.json')
+//const resources = require('./resources.json')
 const prodServiceAccount = require('./prod-service-account.json')
 const devServiceAccount = require('./dev-service-account.json')
 // const { categories, locations, tags } = require('./data.js')
@@ -77,19 +77,21 @@ const getDataFromCollection = collection => {
         data.push({ id: doc.ref.id, ...doc.data() })
       })
 
-      const withDates = data.map(doc => ({
-        ...doc,
-        created_at: new Date(doc.created_at),
-        updated_at: new Date(doc.updated_at),
-        published_at: new Date(doc.published_at)
-      }))
+      console.log(data)
 
-      fs.writeFile(`${collection}.js`, JSON.stringify(withDates), function (err) {
-        if (err) throw err
-        console.log('Saved!')
-      })
+      // const withDates = data.map(doc => ({
+      //   ...doc,
+      //   created_at: new Date(doc.created_at.toDate()),
+      //   updated_at: new Date(doc.updated_at.toDate()),
+      //   published_at: new Date(doc.published_at.toDate())
+      // }))
+
+      // fs.writeFile(`${collection}.json`, JSON.stringify(withDates), function (err) {
+      //   if (err) throw err
+      //   console.log('Saved!')
+      // })
     })
 }
 
-//getDataFromCollection('resources')
-addWithId('resources', resources, 'prod')
+getDataFromCollection('tags')
+//addWithId('resources', resources, 'prod')

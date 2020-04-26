@@ -1,117 +1,87 @@
 const categories = [
   {
+    id: '3JeIOXT7sy7KOWUgX9zk',
+    name: 'Informational',
+    order: 10
+  },
+  {
+    id: '8Ny050nF50gOoXxPgMbW',
+    name: 'Resisting Hate/Fear',
+    order: 50
+  },
+  {
+    id: '9geEVgJVxwzZvv8FmTJ2',
+    name: 'Being Active',
+    order: 25
+  },
+  {
+    id: 'All',
+    name: 'ALL',
+    order: 1
+  },
+  {
+    id: 'C3dJG2UJz8H6KlCkghbQ',
+    name: 'Staying Creative',
+    order: 30
+  },
+  {
+    id: 'FEumLlCmAc5zQVAvBtdV',
+    name: 'Social Services',
+    order: 40
+  },
+  {
+    id: 'GFK0Izjn1gX0tFrCcnNn',
+    name: 'Keep Learning',
+    order: 20
+  },
+  {
+    id: 'KOhg8XVTLsnwxqC3WWhb',
+    order: 55,
+    name: 'Online Therapy'
+  },
+  {
+    id: 'O7sQvfvZUQ6mZqDafaFO',
+    name: 'Local Therapy',
+    order: 60
+  },
+  {
+    id: 'QwUIN4g6euGuSoUI0Yeh',
+    order: 100,
+    name: 'Miscellaneous'
+  },
+  {
     id: 'ZNrUvRN4asfFk3FxpWh3',
     name: 'Crisis',
     order: 0
   },
   {
-    id: 'All',
-    name: 'All',
-    order: 1
-  },
-  {
-    id: '3JeIOXT7sy7KOWUgX9zk',
-    order: 2,
-    name: 'Informational/Articles'
+    id: 'ZeMEYmQsd8SKIQqAA7AL',
+    name: 'Working Better',
+    order: 45
   },
   {
     id: 'kaoFxEzS8aYrK6NSoEzw',
-    name: 'Supporting Each Other & Community',
-    order: 3
+    name: 'Supporting Others/Community',
+    order: 15
   },
   {
     id: 'w0gtsx4ckG8VyzL19GxH',
-    order: 4,
-    name: 'Mindfulness & Meditation'
-  },
-  {
-    id: '9geEVgJVxwzZvv8FmTJ2',
-    name: 'Being Active',
-    order: 5
-  },
-  {
-    id: 'C3dJG2UJz8H6KlCkghbQ',
-    name: 'Staying Creative',
-    order: 6
-  },
-  {
-    id: 'GFK0Izjn1gX0tFrCcnNn',
-    name: 'Online Learning',
-    order: 7
-  },
-  {
-    id: 'FEumLlCmAc5zQVAvBtdV',
-    name: 'Social Services',
-    order: 8
-  },
-  {
-    id: 'ZeMEYmQsd8SKIQqAA7AL',
-    name: 'Working Better',
-    order: 9
-  },
-  {
-    id: '8Ny050nF50gOoXxPgMbW',
-    name: 'Resisting Hate',
-    order: 10
-  },
-  {
-    id: 'KOhg8XVTLsnwxqC3WWhb',
-    name: 'Online Talk Therapy',
-    order: 11
-  },
-  {
-    id: 'O7sQvfvZUQ6mZqDafaFO',
-    name: 'Local Therapy',
-    order: 12
-  },
-  {
-    id: 'QwUIN4g6euGuSoUI0Yeh',
-    name: 'Misc',
-    order: 13
+    order: 35,
+    name: 'Mindfulness'
   }
 ]
 
 const locations = [
-  {
-    id: 'i6G7CdD6Z0wN1rE1jadn',
-    name: 'Anywhere',
-    order: 1
-  },
-  {
-    id: 'CaDm5zWm82h7eLIXgXye',
-    order: 5,
-    name: 'Canada'
-  },
-  {
-    id: '0GHEIYUBtuxmLlOzHLd4',
-    name: 'Ontario',
-    order: 20
-  },
-  {
-    id: 'PdFkW2NseEATQzCL8jZM',
-    name: 'Ottawa, ON',
-    order: 30
-  },
-  {
-    id: 'P7cn4TqZEBzH7tV5c8FL',
-    order: 40,
-    name: 'Toronto, ON'
-  },
-  {
-    id: 'tMim2vVCU0ZVRkXAiVKf',
-    order: 50,
-    name: 'Vancouver, BC'
-  },
-  {
-    id: 'gPaj0FpaOjbAaU8wQEfR',
-    order: 100,
-    name: 'United States'
-  },
-  {
-    id: 'y8jOgKjU0CB5RQWtdgxG',
-    name: 'International',
-    order: 500
-  }
+  [
+    { id: '0GHEIYUBtuxmLlOzHLd4', name: 'Ontario', order: 120 },
+    { id: 'CaDm5zWm82h7eLIXgXye', order: 100, name: 'Canada' },
+    { id: 'P7cn4TqZEBzH7tV5c8FL', name: 'Toronto, ON', order: 140 },
+    { id: 'PdFkW2NseEATQzCL8jZM', name: 'Ottawa, ON', order: 130 },
+    { id: 'gPaj0FpaOjbAaU8wQEfR', name: 'United States', order: 1000 },
+    { id: 'i6G7CdD6Z0wN1rE1jadn', name: 'Anywhere', order: 1 },
+    { id: 'tMim2vVCU0ZVRkXAiVKf', name: 'Vancouver, BC', order: 210 },
+    { id: 'y8jOgKjU0CB5RQWtdgxG', name: 'International', order: 5000 }
+  ]
 ]
 
 const tags = [
@@ -129,9 +99,15 @@ const tags = [
   },
   {
     id: '3sOx5yzbFwmqn9fMnhDM',
+    name: 'website',
     type: 'format',
-    order: 2230,
-    name: 'website'
+    order: 2230
+  },
+  {
+    id: '3vTxbrW5ipAgZKXCZrXP',
+    name: 'inspirational',
+    type: 'topic',
+    order: 3062
   },
   {
     id: '3vvXF1rzaWnP6IExYgHW',
@@ -147,9 +123,9 @@ const tags = [
   },
   {
     id: '4LYArt8vhwLIYKeeVTKA',
-    name: 'employers',
     type: 'audience',
-    order: 4040
+    order: 4040,
+    name: 'employers'
   },
   {
     id: '5AE9XYC5gt1XzYxbm3pl',
@@ -159,15 +135,15 @@ const tags = [
   },
   {
     id: '7mEydI2tZDums7nEUVx3',
+    name: 'front-line workers',
     type: 'audience',
-    order: 4050,
-    name: 'front-line workers'
+    order: 4050
   },
   {
     id: '7zMvDTWd79Kvnllpr0w8',
+    name: 'android',
     type: 'format',
-    order: 2010,
-    name: 'android'
+    order: 2010
   },
   {
     id: '9SVZ7IMNBvMKXReIxJei',
@@ -182,6 +158,18 @@ const tags = [
     order: 3030
   },
   {
+    id: 'AiXmdWqmoiub5ruJOKm4',
+    name: 'body-positive',
+    type: 'audience',
+    order: 4012
+  },
+  {
+    id: 'BBXzbkNhUCyEI3VL3jp5',
+    name: 'muslim',
+    type: 'audience',
+    order: '4072'
+  },
+  {
     id: 'BG08VoS0hTmitycbRLhh',
     name: 'youth',
     type: 'audience',
@@ -194,6 +182,12 @@ const tags = [
     order: 1050
   },
   {
+    id: 'BUgmiu8M8QGnGl3Sldu2',
+    name: 'womxn',
+    type: 'audience',
+    order: 4122
+  },
+  {
     id: 'CCr3szDilmyAbA2fLFNw',
     name: 'community',
     type: 'format',
@@ -201,9 +195,9 @@ const tags = [
   },
   {
     id: 'CfKIjfwhhYViJOjCEk1N',
+    name: 'live',
     type: 'format',
-    order: 2120,
-    name: 'live'
+    order: 2120
   },
   {
     id: 'DIieZ3TO9Az8mEOMz4ub',
@@ -219,9 +213,9 @@ const tags = [
   },
   {
     id: 'H43wxIMTTwpmlLgTZkig',
-    name: 'service',
     type: 'format',
-    order: 2180
+    order: 2180,
+    name: 'service'
   },
   {
     id: 'HhMtAlQZNqxbwhw9OXQH',
@@ -230,10 +224,34 @@ const tags = [
     order: 3110
   },
   {
-    id: 'MKaRMg4cBlqSKghq4LCu',
+    id: 'IevR1WiN85FQR6S47UPe',
+    name: 'resource list',
     type: 'format',
-    order: 2130,
-    name: 'panel'
+    order: 2112
+  },
+  {
+    id: 'JDGqvdzoDNqjhHsoyGWR',
+    name: '24/7',
+    type: 'format',
+    order: 2005
+  },
+  {
+    id: 'LA1qzt0NPyzDk08HSgr5',
+    type: 'topic',
+    order: 3012,
+    name: 'addiction'
+  },
+  {
+    id: 'MKaRMg4cBlqSKghq4LCu',
+    name: 'panel',
+    type: 'format',
+    order: 2130
+  },
+  {
+    id: 'McJzdFqQNamTVMjx9t68',
+    name: 'self-care',
+    type: 'topic',
+    order: 3101
   },
   {
     id: 'MwG7DfZ9Je0q7yrhiYJo',
@@ -249,9 +267,9 @@ const tags = [
   },
   {
     id: 'PuBC9xwnuCEU5kR03Bve',
+    name: 'low-cost',
     type: 'cost',
-    order: 1020,
-    name: 'low-cost'
+    order: 1020
   },
   {
     id: 'QYy2S3N7FbixbbuUKiKK',
@@ -262,8 +280,14 @@ const tags = [
   {
     id: 'R0IAmZvpCclmvg3UG4JI',
     name: 'multilingual',
-    type: 'other',
-    order: 9010
+    type: 'format',
+    order: 2122
+  },
+  {
+    id: 'RGU6ttrhhnuG6nN91B24',
+    name: 'spiritual',
+    type: 'topic',
+    order: 3102
   },
   {
     id: 'RWc2iK6uWN2bQ9NrJGNP',
@@ -285,9 +309,9 @@ const tags = [
   },
   {
     id: 'T7rf6lbsr64DOMsXjyQw',
+    name: 'recording',
     type: 'format',
-    order: 2170,
-    name: 'recording'
+    order: 2170
   },
   {
     id: 'UEGq6P9pHk9SgGujcVgh',
@@ -300,6 +324,12 @@ const tags = [
     name: 'free',
     type: 'cost',
     order: 1010
+  },
+  {
+    id: 'UgBMKNOkvOftsDd3NJKN',
+    type: 'format',
+    order: '2240',
+    name: 'workshop'
   },
   {
     id: 'W7szkBzGrIFcmHXzSXp3',
@@ -321,9 +351,21 @@ const tags = [
   },
   {
     id: 'bNyCFySbmyAd1E7wRmZl',
-    name: 'video',
     type: 'format',
-    order: 2200
+    order: 2200,
+    name: 'video'
+  },
+  {
+    id: 'bcrqArlCvnDQn9DknAY0',
+    name: 'immunocompromised',
+    type: 'audience',
+    order: '5052'
+  },
+  {
+    id: 'bfI4cx6NnBbexEsbLzir',
+    name: 'PDF',
+    type: 'format',
+    order: 2132
   },
   {
     id: 'bgqU7YCC3GlnbbecbDKO',
@@ -333,15 +375,15 @@ const tags = [
   },
   {
     id: 'c5aHgTE0s7uhFXinSEPH',
-    name: 'webinar',
     type: 'format',
-    order: 2220
+    order: 2220,
+    name: 'webinar'
   },
   {
     id: 'gJKhSxtZ91Hn5SNyoU70',
-    name: 'text',
     type: 'format',
-    order: 2190
+    order: 2190,
+    name: 'text'
   },
   {
     id: 'gaeHuZ1NhkkOFcqSNnCa',
@@ -351,9 +393,9 @@ const tags = [
   },
   {
     id: 'jfVbMq9PgcfPMnrygQIb',
+    name: 'BIPOC',
     type: 'audience',
-    order: 4010,
-    name: 'BIPOC'
+    order: 4010
   },
   {
     id: 'kUCnb1FrGt0liGVbO69b',
@@ -368,6 +410,12 @@ const tags = [
     order: 3020
   },
   {
+    id: 'lbxBp09JAgSze9GyjAg5',
+    type: 'topic',
+    order: 3104,
+    name: 'stress'
+  },
+  {
     id: 'lxkTouDfNGebQkswhiGP',
     name: 'website',
     type: 'format',
@@ -375,9 +423,9 @@ const tags = [
   },
   {
     id: 'nzsciD2Yc25cIlF3PZtn',
+    name: 'peer support/group',
     type: 'format',
-    order: 2140,
-    name: 'peer support/group'
+    order: 2140
   },
   {
     id: 'pN0WjAKdhqeMwZVs7IBR',
@@ -390,6 +438,12 @@ const tags = [
     name: 'facebook',
     type: 'format',
     order: 2090
+  },
+  {
+    id: 'qDCe1ocOcN59lBwwIUOz',
+    name: 'educators',
+    type: 'audience',
+    order: 4022
   },
   {
     id: 'qWC8DLCnc1Y01WEOmag7',
@@ -417,15 +471,15 @@ const tags = [
   },
   {
     id: 'sYilgV2dWKoeIHqvrgp0',
-    name: 'app',
     type: 'format',
-    order: '2020'
+    order: '2020',
+    name: 'app'
   },
   {
     id: 'ssH7ycWe7u25cxLE9Ly5',
-    name: 'grief',
     type: 'topic',
-    order: 3050
+    order: 3050,
+    name: 'grief'
   },
   {
     id: 'uFJUXFL2T1GPqOKxR6EO',
@@ -462,6 +516,12 @@ const tags = [
     name: 'promotion',
     type: 'cost',
     order: 1030
+  },
+  {
+    id: 'zPiJfZ2m8PEcqc5szSRB',
+    name: 'workbook',
+    type: 'format',
+    order: 2232
   }
 ]
 
