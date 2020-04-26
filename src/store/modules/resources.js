@@ -3,6 +3,9 @@ import {
   FETCH_RESOURCES,
   FETCH_RESOURCES_SUCCESS,
   FETCH_RESOURCES_FAILURE,
+  FETCH_MORE_RESOURCES,
+  FETCH_MORE_SUCCESS,
+  ALL_RESOURCES_FETCHED,
   POST_RESOURCE,
   POST_RESOURCE_SUCCESS,
   POST_RESOURCE_FAILURE,
@@ -20,7 +23,8 @@ const state = {
   resources: [],
   isLoading: false,
   error: false,
-  lastResource: false
+  lastResource: false,
+  endOfResources: false
 }
 
 const getters = {
@@ -29,15 +33,14 @@ const getters = {
     return state.resources.find(resource => resource.id === id)
   },
   isLoadingResources: () => state.isLoading,
-  resourcesError: () => state.error
+  resourcesError: () => state.error,
+  endOfResources: () => state.endOfResources
 }
 
 const actions = {
   fetchResources: ({ commit }, categoryId) => {
     commit(FETCH_RESOURCES)
     let request
-
-    console.log(state.lastResource)
 
     if (categoryId && categoryId !== 'All') {
       request = db
@@ -65,17 +68,36 @@ const actions = {
           resources.push({ id: doc.ref.id, ...doc.data() })
         })
         commit(FETCH_RESOURCES_SUCCESS, { resources, lastVisible })
+
+        if (resources.length < PAGE_SIZE || !lastVisible) {
+          commit(ALL_RESOURCES_FETCHED)
+        }
       })
       .catch(error => commit(FETCH_RESOURCES_FAILURE, error))
   },
   fetchMore: ({ commit }, categoryId) => {
-    db.collection('resources')
-      .where('approved', '==', true)
-      .where('categoryId', '==', categoryId)
-      .orderBy('created_at', 'desc')
-      .limit(PAGE_SIZE)
-      .startAfter(state.lastResource)
-      .get()
+    let request
+
+    if (categoryId && categoryId !== 'All') {
+      request = db
+        .collection('resources')
+        .where('approved', '==', true)
+        .where('categoryId', '==', categoryId)
+        .orderBy('created_at', 'desc')
+        .limit(PAGE_SIZE)
+        .startAfter(state.lastResource)
+        .get()
+    } else {
+      request = db
+        .collection('resources')
+        .where('approved', '==', true)
+        .orderBy('created_at', 'desc')
+        .limit(PAGE_SIZE)
+        .startAfter(state.lastResource)
+        .get()
+    }
+
+    request
       .then(snapshot => {
         const lastVisible = snapshot.docs[snapshot.docs.length - 1]
 
@@ -83,7 +105,11 @@ const actions = {
         snapshot.forEach(doc => {
           resources.push({ id: doc.ref.id, ...doc.data() })
         })
-        commit('FETCH_MORE_SUCCESS', { resources, lastVisible })
+        commit(FETCH_MORE_SUCCESS, { resources, lastVisible })
+
+        if (resources.length < PAGE_SIZE || !lastVisible) {
+          commit('ALL_RESOURCES_FETCHED')
+        }
       })
       .catch(error => commit(FETCH_RESOURCES_FAILURE, error))
   },
@@ -121,6 +147,12 @@ const actions = {
 const mutations = {
   [FETCH_RESOURCES]: state => {
     state.lastResource = null
+    state.endOfResources = false
+    state.isLoading = true
+    state.error = null
+  },
+
+  [FETCH_MORE_RESOURCES]: state => {
     state.isLoading = true
     state.error = null
   },
@@ -187,11 +219,11 @@ const mutations = {
     console.error(error)
   },
 
-  RESET_PAGINATION: state => {
-    state.lastResource = null
+  [ALL_RESOURCES_FETCHED]: state => {
+    state.endOfResources = true
   },
 
-  FETCH_MORE_SUCCESS: (state, { resources, lastVisible }) => {
+  [FETCH_MORE_SUCCESS]: (state, { resources, lastVisible }) => {
     state.isLoading = false
     state.resources = state.resources.concat(resources)
     state.lastResource = lastVisible
