@@ -23,6 +23,11 @@
         <h2>Resources</h2>
         <CategoriesList />
         <ResourceList :resources="allResources" :category="selectedCategory" />
+        <div class="load-more-container">
+          <v-btn text :disabled="endOfResources" class="mt-5" @click="seeMore">
+            {{ endOfResources ? 'End of list' : 'Load more' }}
+          </v-btn>
+        </div>
       </div>
     </div>
   </Layout>
@@ -44,7 +49,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['allResources', 'selectedCategory'])
+    ...mapGetters(['allResources', 'selectedCategory', 'endOfResources', 'isLoadingResources'])
   },
   created() {
     this.fetchResources()
@@ -52,7 +57,10 @@ export default {
     this.fetchLocations()
   },
   methods: {
-    ...mapActions(['fetchResources', 'fetchTags', 'fetchLocations'])
+    ...mapActions(['fetchResources', 'fetchMore', 'fetchTags', 'fetchLocations']),
+    seeMore() {
+      this.fetchMore(this.selectedCategory.id)
+    }
   }
 }
 </script>
@@ -98,6 +106,11 @@ export default {
       background-color: $navy !important;
     }
   }
+}
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
 }
 
 @media (min-width: 769px) {

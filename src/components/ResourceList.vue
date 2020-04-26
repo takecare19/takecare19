@@ -1,6 +1,6 @@
 <template>
-  <div class="resource-list" v-if="!isLoadingResources">
-    <EmptyMessage v-if="!hasResources" />
+  <div class="resource-list">
+    <EmptyMessage v-if="!resources.length && !isLoadingResources" />
     <ResourceCard v-for="resource in resources" :key="resource.id" :resource="resource" />
   </div>
 </template>
@@ -19,13 +19,7 @@ export default {
   },
   props: ['resources', 'category'],
   computed: {
-    ...mapGetters(['isLoadingResources']),
-    hasResources: function() {
-      return (
-        this.$props.category.id === 'All' ||
-        this.$props.resources.some(resource => resource.categoryId === this.$props.category.id)
-      )
-    }
+    ...mapGetters(['isLoadingResources'])
   }
 }
 </script>

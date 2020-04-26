@@ -3,7 +3,7 @@ var fs = require('fs')
 const resources = require('./resources.json')
 const prodServiceAccount = require('./prod-service-account.json')
 const devServiceAccount = require('./dev-service-account.json')
-// const { categories, resources, locations, tags } = require('./data.js')
+// const { categories, locations, tags } = require('./data.js')
 
 const addToCollection = (collection, data, env) => {
   const credential =

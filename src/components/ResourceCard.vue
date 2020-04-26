@@ -1,6 +1,5 @@
 <template>
   <v-card
-    v-if="selectedCategory.id === 'All' || selectedCategory.id == resource.categoryId"
     class="resource-card"
     :href="!isAdmin ? resource.url : ''"
     target="_blank"
