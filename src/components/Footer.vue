@@ -118,9 +118,9 @@ footer.v-footer {
 }
 
 .wrapper {
+  max-width: 1000px;
   width: 85%;
-  max-width: 950px;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
 .copyright {

@@ -2,29 +2,30 @@
   <v-card
     v-if="selectedCategory.id === 'All' || selectedCategory.id == resource.categoryId"
     class="resource-card"
-    :href="!isAdmin && $vuetify.breakpoint.smAndUp ? resource.url : ''"
+    :href="!isAdmin ? resource.url : ''"
     target="_blank"
   >
     <div class="resource-card-content">
       <h3>{{ resource.name }}</h3>
-      <p class="category-location">
+      <p class="category-location mt-1 mb-2">
         {{ getName(resource.categoryId, allCategories) }} |
         {{ resource.location.anywhere ? 'ANYWHERE' : null }}
         {{ resource.location.anywhere && resource.location.specific ? ' · ' : '' }}
         {{ getName(resource.location.specific, allLocations) }}
       </p>
-      <ul class="resource-tag-list mb-4">
+      <ul class="resource-tag-list mb-2">
         <li class="tag" v-for="tag in resource.tags" :key="tag">
           <v-chip small class="mb-1">{{ getName(tag, allTags) }}</v-chip>
         </li>
       </ul>
-      <p class="resource-description">{{ resource.description }}</p>
+      <p class="resource-description my-2">{{ resource.description }}</p>
       <v-divider></v-divider>
-      <p class="mt-3 mb-2">{{ resource.company }}</p>
+      <p class="company my-2">{{ resource.company }}</p>
       <p class="helper mb-0">
         <v-icon small class="mb-1">mdi-clock-outline</v-icon>
         {{ resource.created_at.toDate() | formatDate }}
       </p>
+      <a v-if="isAdmin" class="mt-3 hyperlink" :href="resource.url">Go to link</a>
       <div class="admin-actions mt-5" v-if="isAdmin">
         <v-btn color="primary" :to="`/admin/edit/${resource.id}`">Edit</v-btn>
         <v-dialog v-model="showDialog" width="500">
@@ -47,13 +48,9 @@
         </v-dialog>
       </div>
     </div>
-    <div>
-      <a class="resource-link" target="_blank" :href="resource.url">
-        <v-icon large>
-          mdi-chevron-right
-        </v-icon>
-      </a>
-    </div>
+    <v-icon large class="arrow">
+      mdi-chevron-right
+    </v-icon>
   </v-card>
 </template>
 
@@ -108,6 +105,12 @@ export default {
 .resource-card {
   display: flex;
   padding-right: 5px;
+  align-items: center;
+  justify-content: space-between;
+
+  &.v-card {
+    border: 0.5px solid lightgray;
+  }
 
   & + .resource-card {
     margin-top: 30px;
@@ -120,6 +123,25 @@ export default {
   strong {
     font-size: 3rem;
   }
+
+  .company {
+    font-size: 1.4rem;
+  }
+}
+
+.resource-card-content {
+  width: calc(100% - 36px);
+}
+
+.hyperlink {
+  color: $denim !important;
+  text-decoration: underline !important;
+  display: block;
+}
+
+.theme--light.v-icon.arrow {
+  color: $denim;
+  transform: translateX(10px);
 }
 
 .category-location {
@@ -137,6 +159,16 @@ export default {
   .tag {
     .v-chip {
       background: $sky;
+      border-radius: 1px;
+
+      &:hover {
+        background: $sky;
+        opacity: 1;
+      }
+
+      &::before {
+        background: $sky;
+      }
     }
 
     & + .tag {
@@ -147,13 +179,7 @@ export default {
 }
 
 .resource-description {
-  width: 80%;
   white-space: pre-wrap;
-}
-
-.resource-link {
-  height: 100%;
-  display: flex;
 }
 
 @media (max-width: 768px) {
