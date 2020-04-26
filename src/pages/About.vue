@@ -93,7 +93,6 @@
       <section class="mt-12">
         <h1 class="mb-5">Team</h1>
         <div class="flex">
-          <!-- <div class="headshot"></div> -->
           <div class="bio">
             <h3 class="mb-1">Vivian Ngai</h3>
             <p class="pronoun">She/her | Creator & Designer</p>
@@ -114,6 +113,30 @@
               <a href="https://www.linkedin.com/in/vivianngai/" target="_blank">LinkedIn</a>,
               <a href="mailto:vivian@byvivian.com" target="_blank">Email</a>, or my
               <a href="http://www.byvivian.com/" target="_blank">Website</a>.
+            </p>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="bio">
+            <h3 class="mb-1 mt-5">Susie Kim</h3>
+            <p class="pronoun">She/her | Developer</p>
+            <p>
+              As a developer, I feel privileged to have the opportunity to impact so many people
+              with my work and feel the responsibility to use that privilege to help others. Seeing
+              the amazing response from Vivian’s original list, I wanted to help extend its impact
+              even further. Building this project with Vivian has been an incredibly rewarding and
+              enjoyable experience, and I hope that it can continue to help people throughout this
+              difficult time.
+            </p>
+            <p>
+              When I am not at the computer, I like ice skating, watching anime, and taking pictures
+              of my dog.
+            </p>
+            <p>
+              Here's my
+              <a href="https://twitter.com/susiekims" target="_blank">Twitter</a>,
+              <a href="https://github.com/susiekims" target="_blank">GitHub</a>, and
+              <a href="http://susiekim.co/" target="_blank">Website</a>.
             </p>
           </div>
         </div>
