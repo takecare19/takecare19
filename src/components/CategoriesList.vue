@@ -78,6 +78,21 @@ export default {
 <style lang="scss">
 .categories-list {
   margin: 25px 0;
+
+  .v-btn.primary {
+    opacity: 1 !important;
+    background: #2b3545 !important;
+
+    &:before {
+      background: #2b3545 !important;
+    }
+
+    &:hover:before,
+    &:focus:before {
+      background: #2b3545 !important;
+      opacity: 1 !important;
+    }
+  }
 }
 
 .categories-list-frame--desktop {

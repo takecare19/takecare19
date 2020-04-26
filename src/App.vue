@@ -81,18 +81,20 @@ p {
   font-family: Poppins, sans-serif !important;
 }
 
-.v-btn.primary {
-  opacity: 1 !important;
-  background: #6f8f9a !important;
-
-  &:before {
-    background: #6f8f9a !important;
-  }
-
-  &:hover:before,
-  &:focus:before {
-    background: #6f8f9a !important;
+@media (min-width: 769px) {
+  .v-btn.primary {
     opacity: 1 !important;
+    background: #6f8f9a !important;
+
+    &:before {
+      background: #6f8f9a !important;
+    }
+
+    &:hover:before,
+    &:focus:before {
+      background: #6f8f9a !important;
+      opacity: 1 !important;
+    }
   }
 }
 </style>
