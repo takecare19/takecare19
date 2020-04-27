@@ -70,7 +70,7 @@ export default {
 
 .hero {
   width: 100%;
-  height: 60vh;
+  height: 85vh;
   min-height: 400px;
   margin-bottom: 20px;
   display: flex;
