@@ -72,5 +72,7 @@ Work on your feature. Add, commit, and push as usual
 
 It is good practice to regularly merge in `development` branch into your current branch
 
-    git fetch
+    git checkout development
+    git pull
+    git checkout name-of-your-branch
     git merge development
