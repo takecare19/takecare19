@@ -171,6 +171,7 @@ const mutations = {
     state.isLoading = false
     state.isLoadingMore = false
     state.error = error
+    router.push('/error')
     console.error(error)
   },
 
@@ -188,6 +189,7 @@ const mutations = {
   [POST_RESOURCE_FAILURE]: (state, error) => {
     state.isLoading = false
     state.error = error
+    router.push('/error')
     console.error(error)
   },
 
@@ -204,6 +206,7 @@ const mutations = {
   [DELETE_RESOURCE_FAILURE]: (state, error) => {
     state.isLoading = false
     state.error = error
+    router.push('/error')
     console.error(error)
   },
 
@@ -221,6 +224,7 @@ const mutations = {
   [UPDATE_RESOURCE_FAILURE]: (state, error) => {
     state.isLoading = false
     state.error = error
+    router.push('/error')
     console.error(error)
   },
 

@@ -65,6 +65,7 @@ const mutations = {
   [LOGIN_USER_FAILURE]: (state, error) => {
     state.isLoading = false
     console.error(error)
+    router.push('/error')
     state.error = error
   },
 
@@ -77,6 +78,7 @@ const mutations = {
   [LOGOUT_USER_FAILURE]: (state, error) => {
     state.isLoading = false
     console.error(error)
+    router.push('/error')
     state.error = error
   }
 }

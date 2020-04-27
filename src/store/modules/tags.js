@@ -1,5 +1,6 @@
 import { db } from '../../firebase/init'
 import { FETCH_TAGS, FETCH_TAGS_SUCCESS, FETCH_TAGS_FAILURE } from '../constants'
+import router from '../../router'
 
 const state = {
   tags: [],
@@ -45,6 +46,7 @@ const mutations = {
   [FETCH_TAGS_FAILURE]: (state, error) => {
     state.tags = false
     console.error(error)
+    router.push('/error')
     state.error = error
   }
 }

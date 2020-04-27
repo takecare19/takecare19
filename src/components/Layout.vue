@@ -35,7 +35,7 @@ main {
   main {
     background-image: url('../assets/mobile-top-background.svg');
     background-size: 768px;
-    background-position: 50% -100px;
+    background-position: 50% -50px;
   }
 }
 </style>

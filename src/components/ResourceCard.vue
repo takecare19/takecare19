@@ -1,9 +1,5 @@
 <template>
-  <v-card
-    class="resource-card"
-    :href="!isAdmin ? resource.url : ''"
-    target="_blank"
-  >
+  <v-card class="resource-card" :href="!isAdmin ? resource.url : ''" target="_blank">
     <div class="resource-card-content">
       <h3>{{ resource.name }}</h3>
       <p class="category-location mt-1 mb-2">
@@ -133,7 +129,7 @@ export default {
 }
 
 .hyperlink {
-  color: $denim !important;
+  color: $navy !important;
   text-decoration: underline !important;
   display: block;
 }

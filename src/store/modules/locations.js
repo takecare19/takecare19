@@ -1,5 +1,6 @@
 import { db } from '../../firebase/init'
 import { FETCH_LOCATIONS, FETCH_LOCATIONS_SUCCESS, FETCH_LOCATIONS_FAILURE } from '../constants'
+import router from '../../router'
 
 const state = {
   locations: [],
@@ -44,6 +45,7 @@ const mutations = {
 
   [FETCH_LOCATIONS_FAILURE]: (state, error) => {
     state.locations = null
+    router.push('/error')
     console.error(error)
     state.error = error
   }
