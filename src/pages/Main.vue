@@ -71,7 +71,7 @@ export default {
 .hero {
   width: 100%;
   height: 60vh;
-  min-height: 500px;
+  min-height: 400px;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
