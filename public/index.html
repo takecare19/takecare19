@@ -1,16 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="font-size: 62.5%;">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <meta
+      name="description"
+      content="A curated and regularly updated crowd-sourced list of accessible (mostly free or low cost) mental health resources to help cope with COVID-19."
+    />
+    <meta
+      name="keywords"
+      content="mental health, free, accessible, covid-19, coronavirus, covid19, resources"
+    />
+    <meta property="og:title" content="Accessible/Inclusive Mental Health Resources for COVID-19" />
+    <meta
+      property="og:description"
+      content="Free/low-cost, inclusive mental health resources to help cope through COVID-19"
+    />
+    <meta property="og:image" content="https://i.ibb.co/23fyMN0/og-image-1200-630.png" />
+    <meta property="og:url" content="https://takecare19.com/" />
+    <meta property="og:type" content="website" />
+    <title>takecare19 | accessible & inclusive mental health through COVID-19</title>
     <link
       href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css"
       rel="stylesheet"
       type="text/css"
     />
-    <title>Coming Soon | Take Care</title>
     <link
       href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap"
       rel="stylesheet"
@@ -20,6 +36,48 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        font-size: 1.6rem;
+      }
+
+      .v-input.v-select.v-autocomplete .v-input__slot {
+        border-radius: 4px;
+      }
+
+      .v-input--checkbox .v-input__slot {
+        padding: 0;
+      }
+
+      .v-label.theme--light {
+        font-family: Poppins, sans-serif;
+      }
+
+      .v-messages__message {
+        font-family: Poppins, sans-serif;
+      }
+
+      .v-chip__content {
+        font-family: Poppins, sans-serif;
+      }
+
+      textarea,
+      input[type='text'] {
+        font-family: Poppins, sans-serif !important;
+      }
+    </style>
   </head>
   <body>
     <noscript>
@@ -30,5 +88,16 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163847948-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'UA-163847948-1')
+    </script>
   </body>
 </html>

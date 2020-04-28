@@ -1,26 +1,24 @@
-/* eslint-disable no-param-reassign */
-/* eslint-disable no-shadow */
-/* eslint-disable no-return-assign */
-import db from '../../firebase/init'
+import { db } from '../../firebase/init'
 import {
   FETCH_CATEGORIES,
   SET_SELECTED_CATEGORY,
   FETCH_CATEGORIES_SUCCESS,
   FETCH_CATEGORIES_FAILURE
 } from '../constants'
+import router from '../../router'
 
 const state = {
   categories: [],
-  selectedCategory: 'All',
+  selectedCategory: { id: 'All' },
   isLoading: false,
   error: false
 }
 
 const getters = {
   allCategories: () => state.categories,
-  isLoading: () => state.isLoading,
+  isLoadingCategories: () => state.isLoading,
   selectedCategory: () => state.selectedCategory,
-  error: () => state.error
+  categoriesError: () => state.error
 }
 
 const actions = {
@@ -39,13 +37,17 @@ const actions = {
       })
       .catch(error => commit(FETCH_CATEGORIES_FAILURE, error))
   },
-  selectCategory: ({ commit }, categoryId) => {
+  selectCategory: ({ commit, dispatch }, categoryId) => {
     commit(SET_SELECTED_CATEGORY, categoryId)
+    dispatch('fetchResources', categoryId)
   }
 }
 
 const mutations = {
-  [FETCH_CATEGORIES]: state => (state.isLoading = true),
+  [FETCH_CATEGORIES]: state => {
+    state.isLoading = true
+    state.error = null
+  },
 
   [FETCH_CATEGORIES_SUCCESS]: (state, categories) => {
     state.categories = categories
@@ -54,15 +56,13 @@ const mutations = {
 
   [FETCH_CATEGORIES_FAILURE]: (state, error) => {
     state.isLoading = false
+    console.error(error)
+    router.push('/error')
     state.error = error
   },
 
   [SET_SELECTED_CATEGORY]: (state, categoryId) => {
-    if (categoryId === 'All') {
-      state.selectedCategory = categoryId
-    } else {
-      state.selectedCategory = state.categories.find(category => category.id === categoryId)
-    }
+    state.selectedCategory = state.categories.find(category => category.id === categoryId)
   }
 }
 

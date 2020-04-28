@@ -1,21 +1,51 @@
 <template>
-  <div class="categories-list-frame">
-    <div class="categories-list">
-      <v-btn
-        :text="'All' !== selectedCategory"
-        :depressed="'All' === selectedCategory"
-        @click="selectCategory('All')"
-        >All</v-btn
-      >
-      <v-btn
-        v-for="category in allCategories"
-        :key="category.id"
-        :text="category.id !== selectedCategory.id"
-        :depressed="category.id === selectedCategory.id"
-        @click="selectCategory(category.id)"
-        >{{ category.name }}</v-btn
-      >
+  <div class="categories-list">
+    <div class="categories-list-frame--desktop">
+      <div class="categories-list">
+        <v-btn
+          v-for="category in allCategories"
+          :small="$vuetify.breakpoint.smAndDown"
+          :key="category.id"
+          :color="category.name === 'Crisis' ? 'error' : 'primary'"
+          :text="category.id !== selectedCategory.id"
+          @click="selectCategory(category.id)"
+          >{{ category.name }}</v-btn
+        >
+      </div>
     </div>
+    <div class="categories-list-frame--mobile">
+      <div class="categories-row">
+        <v-btn
+          v-for="category in firstRow"
+          :small="$vuetify.breakpoint.smAndDown"
+          :key="category.id"
+          :color="category.name === 'Crisis' ? 'error' : 'primary'"
+          :text="category.id !== selectedCategory.id"
+          @click="selectCategory(category.id)"
+          >{{ category.name }}</v-btn
+        >
+      </div>
+      <div class="categories-row">
+        <v-btn
+          v-for="category in secondRow"
+          :small="$vuetify.breakpoint.smAndDown"
+          :key="category.id"
+          :color="category.name === 'Crisis' ? 'error' : 'primary'"
+          :text="category.id !== selectedCategory.id"
+          @click="selectCategory(category.id)"
+          >{{ category.name }}</v-btn
+        >
+      </div>
+    </div>
+    <v-alert
+      class="text-center"
+      v-if="selectedCategory.name === 'Crisis'"
+      text
+      outlined
+      color="error"
+    >
+      If you’re in immediate danger, please call 911
+    </v-alert>
   </div>
 </template>
 
@@ -24,7 +54,18 @@ import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'CategoriesList',
-  computed: mapGetters(['allCategories', 'isLoading', 'error', 'selectedCategory']),
+  computed: {
+    ...mapGetters(['allCategories', 'isLoadingCategories', 'categoriesError', 'selectedCategory']),
+    firstRow: function() {
+      return [...this.allCategories].splice(0, Math.ceil(this.allCategories.length / 2))
+    },
+    secondRow: function() {
+      return [...this.allCategories].splice(
+        Math.ceil(this.allCategories.length / 2),
+        this.allCategories.length
+      )
+    }
+  },
   created() {
     this.fetchCategories()
   },
@@ -36,10 +77,82 @@ export default {
 
 <style lang="scss">
 .categories-list {
-  width: 80%;
-  margin: 0 auto;
+  margin: 25px 0;
+
+  .v-btn.primary {
+    opacity: 1 !important;
+    background: #2b3545 !important;
+
+    &:before {
+      background: #2b3545 !important;
+    }
+
+    &:hover:before,
+    &:focus:before {
+      background: #2b3545 !important;
+      opacity: 1 !important;
+    }
+  }
+}
+
+.categories-list-frame--desktop {
+  padding-bottom: 10px;
+
+  .categories-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+.categories-list-frame--mobile {
+  padding-bottom: 10px;
+
   overflow-x: scroll;
   display: flex;
-  height: 50px;
+  flex-direction: column;
+  .categories-row {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+.categories-row + .categories-row {
+  margin-top: 5px;
+}
+
+.categories-list .v-btn {
+  border-radius: 50px !important;
+}
+
+.v-alert {
+  padding: 10px;
+}
+
+.v-alert__content {
+  font-family: Poppins, sans-serif;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  .categories-list-frame--mobile {
+    display: flex;
+  }
+  .categories-list-frame--desktop {
+    display: none;
+  }
+
+  .v-alert {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  .categories-list-frame--mobile {
+    display: none;
+  }
+  .categories-list-frame--desktop {
+    display: block;
+  }
 }
 </style>

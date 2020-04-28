@@ -1,7 +1,10 @@
 {
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest": true,
+    "amd": true,
+    "node": true
   },
   "extends": ["eslint:recommended", "plugin:vue/essential"],
   "globals": {
@@ -12,6 +15,6 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["vue"],
+  "plugins": ["vue", "jest"],
   "rules": {}
 }

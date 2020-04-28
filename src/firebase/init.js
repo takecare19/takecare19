@@ -1,7 +1,6 @@
-import firebase from 'firebase'
+import firebase from 'firebase/app'
 import 'firebase/firestore'
-import config from './prod-config'
+import config from './config'
 
-const app = firebase.initializeApp(config)
-
-export default app.firestore()
+export const app = firebase.initializeApp(config)
+export const db = app.firestore()

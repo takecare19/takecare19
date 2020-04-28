@@ -1,68 +1,158 @@
 <template>
-  <div>
-    <div class="hero">
-      <div class="hero-content">
-        <h1>Accessible mental health resources for coping with COVID-19</h1>
-        <v-autocomplete
+  <Layout>
+    <div>
+      <div class="hero">
+        <div class="hero-content">
+          <h1>
+            <span>
+              Accessible & Inclusive Mental Health Resources for Coping Through COVID&#x2011;19
+            </span>
+          </h1>
+          <!-- <label for="location-filter">See resources revelant to:</label>
+        <v-select
+          id="location-filer"
           v-model="selectedLocation"
-          outlined
+          solo
+          depressed
+          dark
           :items="items"
-          label="Choose a location"
-          placeholder="Start typing to Search"
-        ></v-autocomplete>
+        ></v-select> -->
+        </div>
+      </div>
+      <div class="wrapper">
+        <h2>Resources</h2>
+        <CategoriesListLoader v-if="isLoadingCategories" />
+        <CategoriesList />
+        <ResourceList
+          v-if="!isLoadingResources"
+          :resources="allResources"
+          :category="selectedCategory"
+        />
+        <ResourceCardLoader v-if="isLoadingResources || isLoadingMoreResources" />
+        <div class="load-more-container">
+          <v-btn text :disabled="endOfResources" class="mt-5" @click="seeMore">
+            {{ endOfResources ? 'End of list' : 'Load more' }}
+          </v-btn>
+        </div>
       </div>
     </div>
-    <CategoriesList />
-  </div>
+  </Layout>
 </template>
 
 <script>
-import db from '../firebase/init'
 import CategoriesList from '@/components/CategoriesList'
+import ResourceList from '@/components/ResourceList'
+import Layout from '@/components/Layout'
+import ResourceCardLoader from '@/components/ResourceCardLoader'
+import CategoriesListLoader from '@/components/CategoriesListLoader'
+
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'Main',
-  components: { CategoriesList },
+  components: { CategoriesList, ResourceList, Layout, ResourceCardLoader, CategoriesListLoader },
   data() {
     return {
-      resources: [],
-      items: ['Anywhere']
+      items: ['Anywhere', 'Toronto', 'Vancouver'],
+      selectedLocation: 'Anywhere'
     }
   },
+  computed: {
+    ...mapGetters([
+      'allResources',
+      'selectedCategory',
+      'endOfResources',
+      'isLoadingResources',
+      'isLoadingMoreResources',
+      'isLoadingCategories'
+    ])
+  },
   created() {
-    this.selectedLocation = this.items[0]
-    db.collection('resources')
-      .get()
-      .then(snapshot => {
-        snapshot.forEach(doc => {
-          this.resources.push(doc.data())
-        })
-      })
+    this.fetchResources()
+    this.fetchTags()
+    this.fetchLocations()
+  },
+  methods: {
+    ...mapActions(['fetchResources', 'fetchMore', 'fetchTags', 'fetchLocations']),
+    seeMore() {
+      this.fetchMore(this.selectedCategory.id)
+    }
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
+@import '../assets/styles/_variables.scss';
+
 .hero {
   width: 100%;
-  height: 50vh;
-  min-height: 300px;
-  background: #b0bec5;
-  position: relative;
+  height: 85vh;
+  min-height: 400px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  .hero-content {
-    position: absolute;
-    width: 80%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    line-height: 1.3;
   }
 
-  .v-input.v-autocomplete {
-    margin: 20px auto 0;
-    width: 300px;
+  .hero-content {
+    max-width: 1000px;
+    width: 85%;
+    text-align: center;
+
+    label {
+      font-size: 2.4rem;
+      font-family: 'PT Serif', serif;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 15px;
+      margin-top: 30px;
+    }
+
+    .v-select {
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    .v-input__slot {
+      background-color: $navy !important;
+    }
+  }
+}
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 769px) {
+  .hero {
+    background: url('../assets/desktop-hero-long.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background: url('../assets/mobile-hero-long.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .hero-content {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    label {
+      font-size: 1.6rem;
+    }
   }
 }
 </style>
