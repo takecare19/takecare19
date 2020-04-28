@@ -5,7 +5,7 @@ import '@firebase/auth'
 
 import Main from '../pages/Main.vue'
 import About from '../pages/About.vue'
-import Submit from '../pages/Submit.vue'
+import ErrorPage from '../pages/Error.vue'
 import Admin from '../pages/admin/Index.vue'
 import AdminLogin from '../pages/admin/Login.vue'
 import AdminDashboard from '../pages/admin/Dashboard.vue'
@@ -17,7 +17,7 @@ Vue.use(VueRouter)
 const routes = [
   { path: '/', component: Main },
   { path: '/about', component: About },
-  { path: '/submit', component: Submit },
+  { path: '/error', component: ErrorPage },
   {
     path: '/admin',
     redirect: '/admin/login',

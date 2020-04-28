@@ -22,6 +22,7 @@ import router from '../../router'
 const state = {
   resources: [],
   isLoading: false,
+  isLoadingMore: false,
   error: false,
   lastResource: false,
   endOfResources: false
@@ -33,6 +34,7 @@ const getters = {
     return state.resources.find(resource => resource.id === id)
   },
   isLoadingResources: () => state.isLoading,
+  isLoadingMoreResources: () => state.isLoadingMore,
   resourcesError: () => state.error,
   endOfResources: () => state.endOfResources
 }
@@ -77,6 +79,8 @@ const actions = {
   },
   fetchMore: ({ commit }, categoryId) => {
     let request
+
+    commit(FETCH_MORE_RESOURCES)
 
     if (categoryId && categoryId !== 'All') {
       request = db
@@ -153,7 +157,7 @@ const mutations = {
   },
 
   [FETCH_MORE_RESOURCES]: state => {
-    state.isLoading = true
+    state.isLoadingMore = true
     state.error = null
   },
 
@@ -165,7 +169,9 @@ const mutations = {
 
   [FETCH_RESOURCES_FAILURE]: (state, error) => {
     state.isLoading = false
+    state.isLoadingMore = false
     state.error = error
+    router.push('/error')
     console.error(error)
   },
 
@@ -183,6 +189,7 @@ const mutations = {
   [POST_RESOURCE_FAILURE]: (state, error) => {
     state.isLoading = false
     state.error = error
+    router.push('/error')
     console.error(error)
   },
 
@@ -199,6 +206,7 @@ const mutations = {
   [DELETE_RESOURCE_FAILURE]: (state, error) => {
     state.isLoading = false
     state.error = error
+    router.push('/error')
     console.error(error)
   },
 
@@ -216,6 +224,7 @@ const mutations = {
   [UPDATE_RESOURCE_FAILURE]: (state, error) => {
     state.isLoading = false
     state.error = error
+    router.push('/error')
     console.error(error)
   },
 
@@ -224,7 +233,7 @@ const mutations = {
   },
 
   [FETCH_MORE_SUCCESS]: (state, { resources, lastVisible }) => {
-    state.isLoading = false
+    state.isLoadingMore = false
     state.resources = state.resources.concat(resources)
     state.lastResource = lastVisible
   }

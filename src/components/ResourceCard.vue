@@ -129,7 +129,7 @@ export default {
 }
 
 .hyperlink {
-  color: $denim !important;
+  color: $navy !important;
   text-decoration: underline !important;
   display: block;
 }
