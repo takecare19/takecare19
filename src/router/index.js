@@ -11,6 +11,7 @@ import AdminLogin from '../pages/admin/Login.vue'
 import AdminDashboard from '../pages/admin/Dashboard.vue'
 import NewResource from '../pages/admin/NewResource.vue'
 import EditResource from '../pages/admin/EditResource.vue'
+import Page404 from '../pages/404.vue'
 
 Vue.use(VueRouter)
 
@@ -52,6 +53,10 @@ const routes = [
         }
       }
     ]
+  },
+  {
+    path: '*',
+    component: Page404
   }
 ]
 
