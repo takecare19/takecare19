@@ -60,7 +60,6 @@
         <p>
           Thanks so much to those who have supported, shared, and contributed so far!
         </p>
-
         <h2>What you can do to help:</h2>
         <ul>
           <li>
@@ -90,10 +89,14 @@
           </li>
         </ul>
       </section>
-      <section class="mt-12">
+      <section>
         <h1 class="mb-5">Team</h1>
         <div class="flex">
-          <!-- <div class="headshot"></div> -->
+          <img
+            class="headshot"
+            src="../assets/Portrait-taped-Vivian.svg"
+            alt="drawing of Vivian Ngai"
+          />
           <div class="bio">
             <h3 class="mb-1">Vivian Ngai</h3>
             <p class="pronoun">She/her | Creator & Designer</p>
@@ -117,8 +120,37 @@
             </p>
           </div>
         </div>
+        <div class="flex mt-10">
+          <img
+            class="headshot"
+            src="../assets/Portrait-taped-Susie.svg"
+            alt="drawing of Susie Kim"
+          />
+          <div class="bio">
+            <h3 class="mb-1">Susie Kim</h3>
+            <p class="pronoun">She/her | Developer</p>
+            <p>
+              As a developer, I feel privileged to have the opportunity to impact so many people
+              with my work and feel the responsibility to use that privilege to help others. Seeing
+              the amazing response from Vivian’s original list, I wanted to help extend its impact
+              even further. Building this project with Vivian has been an incredibly rewarding and
+              enjoyable experience, and I hope that it can continue to help people throughout this
+              difficult time.
+            </p>
+            <p>
+              When I am not at the computer, I like ice skating, watching anime, and taking pictures
+              of my dog.
+            </p>
+            <p>
+              Here's my
+              <a href="https://twitter.com/susiekims" target="_blank">Twitter</a>,
+              <a href="https://github.com/susiekims" target="_blank">GitHub</a>, and
+              <a href="http://susiekim.co/" target="_blank">Website</a>.
+            </p>
+          </div>
+        </div>
       </section>
-      <section class="mt-12" id="contact">
+      <section id="contact">
         <h1 class="mb-5">Contact</h1>
         <p>
           Any general inquiries that not related to submitting a resource can be sent here, or
@@ -254,6 +286,7 @@ ul {
 h2 {
   margin: 25px 0 15px;
   font-size: 1.8rem;
+  color: $denim;
 }
 
 a {
@@ -276,10 +309,16 @@ a {
   }
 }
 
+.divider {
+  width: 100%;
+}
+
 .headshot {
-  width: 300px;
-  height: 300px;
-  background: #f4f4f4;
+  width: 250px;
+}
+
+section + section {
+  margin-top: 100px;
 }
 
 .flex {
@@ -287,12 +326,8 @@ a {
   height: 100%;
   justify-content: space-between;
 
-  // .bio {
-  //   width: calc(100% - 350px);
-  // }
-
   .bio {
-    width: 100%;
+    width: calc(100% - 300px);
   }
 
   .name,

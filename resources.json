@@ -1,5 +1,27 @@
 [
   {
+    "id": "0wFcmWqIuItNVQNaZwtL",
+    "tags": [
+      "RWc2iK6uWN2bQ9NrJGNP",
+      "3vvXF1rzaWnP6IExYgHW",
+      "9SVZ7IMNBvMKXReIxJei",
+      "lJFqNAyaGmThgHTpOmDU",
+      "pN0WjAKdhqeMwZVs7IBR",
+      "McJzdFqQNamTVMjx9t68",
+      "lbxBp09JAgSze9GyjAg5"
+    ],
+    "created_at": "2020-04-24T13:08:00.636Z",
+    "location": { "anywhere": true, "specific": null },
+    "updated_at": "2020-04-24T13:11:44.553Z",
+    "description": "Uses the power of cognitive-behavioral-therapy (CBT) and combine interactive video classes with journaling and mindfulness exercises to help you improve your mental well-being, boost your mood & cultivate more joy in life. \nWe're offering everyone in need free access to Bloom premium for a month.",
+    "published_at": "2020-04-24T13:08:00.636Z",
+    "url": "https://www.enjoybloom.com/covid-19",
+    "approved": true,
+    "company": null,
+    "categoryId": "KOhg8XVTLsnwxqC3WWhb",
+    "name": "Bloom app: CBT Therapy & Self-Care"
+  },
+  {
     "id": "0xzn0js7DlGcySjifQhF",
     "categoryId": "O7sQvfvZUQ6mZqDafaFO",
     "company": "Canadian Hearing Services",
@@ -15,8 +37,6 @@
   },
   {
     "id": "16jE6rPRk93SGlSZzQvr",
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T19:06:27.507Z",
     "updated_at": "2020-04-19T19:06:27.507Z",
     "description": "With the number of COVID-19 cases increasing every day, psychologists offer insights on how to separate yourself from others, while still getting the social support you need.",
     "published_at": "2020-04-19T19:06:27.507Z",
@@ -30,10 +50,20 @@
       "gaeHuZ1NhkkOFcqSNnCa",
       "HhMtAlQZNqxbwhw9OXQH",
       "F354dwlCiCjV5ZI2dW1H"
-    ]
+    ],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-19T19:06:27.507Z"
   },
   {
     "id": "2DHZEwueJeqo4JuKUluG",
+    "updated_at": "2020-04-19T01:42:54.677Z",
+    "description": "This vlog has been created in part as a response to these difficult times connected to the COVID-19 pandemic, but also to remind us all that we can all reach out and help others.",
+    "published_at": "2020-04-19T01:42:54.677Z",
+    "url": "https://www.mhfa.ca/en/covid19-mhfa",
+    "approved": true,
+    "categoryId": "3JeIOXT7sy7KOWUgX9zk",
+    "company": "Mental Health Commission of Canada",
+    "name": "Helping Others During the COVID-19 Pandemic",
     "tags": [
       "UJFbvU4VcuRsEJ6J0Cvz",
       "bNyCFySbmyAd1E7wRmZl",
@@ -42,35 +72,29 @@
       "HhMtAlQZNqxbwhw9OXQH"
     ],
     "location": { "specific": null, "anywhere": true },
-    "created_at": "2020-04-19T01:42:54.677Z",
-    "updated_at": "2020-04-19T01:42:54.677Z",
-    "description": "This vlog has been created in part as a response to these difficult times connected to the COVID-19 pandemic, but also to remind us all that we can all reach out and help others.",
-    "published_at": "2020-04-19T01:42:54.677Z",
-    "url": "https://www.mhfa.ca/en/covid19-mhfa",
-    "approved": true,
-    "categoryId": "3JeIOXT7sy7KOWUgX9zk",
-    "company": "Mental Health Commission of Canada",
-    "name": "Helping Others During the COVID-19 Pandemic"
+    "created_at": "2020-04-19T01:42:54.677Z"
   },
   {
     "id": "2LXBZdOlLqj9FYpDtDhf",
+    "categoryId": "KOhg8XVTLsnwxqC3WWhb",
+    "company": "Therapy for Black Girls",
     "name": "Therapy for Black Girls",
-    "tags": ["CCr3szDilmyAbA2fLFNw", "HhMtAlQZNqxbwhw9OXQH", "jfVbMq9PgcfPMnrygQIb"],
+    "tags": [
+      "CCr3szDilmyAbA2fLFNw",
+      "HhMtAlQZNqxbwhw9OXQH",
+      "jfVbMq9PgcfPMnrygQIb",
+      "BUgmiu8M8QGnGl3Sldu2"
+    ],
     "location": { "anywhere": true, "specific": null },
     "created_at": "2020-04-19T20:48:33.037Z",
-    "updated_at": "2020-04-19T20:48:33.037Z",
+    "updated_at": "2020-04-21T12:24:48.453Z",
     "description": "So often the stigma surrounding mental health issues and therapy prevents Black women from taking the step of seeing a therapist. This space was developed to present mental health topics in a way that feels more accessible and relevant. Find Black therapists around the world; join community; podcast",
     "published_at": "2020-04-19T20:48:33.037Z",
     "url": "https://therapyforblackgirls.com/",
-    "approved": true,
-    "categoryId": "KOhg8XVTLsnwxqC3WWhb",
-    "company": "Therapy for Black Girls"
+    "approved": true
   },
   {
     "id": "2wp3vfFysFXWpDmR4tpB",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "4HPqwuhi7eMlyce9yyVG", "3WlPX9jO24Ly5gO0U9wL"],
-    "location": { "anywhere": true, "specific": "P7cn4TqZEBzH7tV5c8FL" },
-    "created_at": "2020-04-19T17:20:59.615Z",
     "updated_at": "2020-04-19T17:20:59.615Z",
     "description": "Supporting our community during the Covid-19 by providing free and pay-what-you-can offerings",
     "published_at": "2020-04-19T17:20:59.615Z",
@@ -78,14 +102,45 @@
     "approved": true,
     "categoryId": "w0gtsx4ckG8VyzL19GxH",
     "company": "Centre for Mindfulness Studies",
-    "name": "Centre for Mindfulness Studies"
+    "name": "Centre for Mindfulness Studies",
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "4HPqwuhi7eMlyce9yyVG", "3WlPX9jO24Ly5gO0U9wL"],
+    "location": { "anywhere": true, "specific": "P7cn4TqZEBzH7tV5c8FL" },
+    "created_at": "2020-04-19T17:20:59.615Z"
+  },
+  {
+    "id": "3EzYR60LFHH2sfPJre5h",
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "3sOx5yzbFwmqn9fMnhDM", "McJzdFqQNamTVMjx9t68"],
+    "location": { "specific": null, "anywhere": true },
+    "created_at": "2020-04-26T04:04:39.320Z",
+    "updated_at": "2020-04-26T04:04:39.320Z",
+    "description": "This game guides you through a series of questions that help you practice self care. It's especially useful for people who struggle with self care, executive dysfunction, and/or reading internal signals. Take your time. Set aside some time—maybe an hour to allow yourself to work through each step.",
+    "published_at": "2020-04-26T04:04:39.320Z",
+    "url": "https://youfeellikeshit.com/",
+    "approved": true,
+    "categoryId": "QwUIN4g6euGuSoUI0Yeh",
+    "company": "Amanda Miklik",
+    "name": "You Feel Like Shit: A Self Care Game"
+  },
+  {
+    "id": "3Qhf6ah1MRh6ss0tQ95M",
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "nzsciD2Yc25cIlF3PZtn"],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-23T21:33:01.786Z",
+    "updated_at": "2020-04-23T21:33:01.786Z",
+    "description": "Reimagining Recovery is offering FREE peer-led mutual aid meetings online every evening from 7-9 PM Pacific Standard Time. Go to link for full schedule and to see details on different topics and for Zoom link.",
+    "published_at": "2020-04-23T21:33:01.786Z",
+    "url": "https://reimaginingrecovery.org/schedule/",
+    "approved": true,
+    "categoryId": "kaoFxEzS8aYrK6NSoEzw",
+    "company": "",
+    "name": "Reimagining Recovery"
   },
   {
     "id": "3nILVPdz5gt14zdKmtDc",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz"],
-    "location": { "specific": null, "anywhere": true },
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "BUgmiu8M8QGnGl3Sldu2"],
+    "location": { "anywhere": true, "specific": null },
     "created_at": "2020-04-19T03:16:57.040Z",
-    "updated_at": "2020-04-19T03:16:57.040Z",
+    "updated_at": "2020-04-22T17:22:01.477Z",
     "description": "The Vault is home to intimate stories by women — our deepest thoughts, our darkest secrets, and our untold experiences worth sharing. They are offering one free story with code \"TAKECARE\" at checkout.\n",
     "published_at": "2020-04-19T03:16:57.040Z",
     "url": "https://www.vaultzine.com/",
@@ -96,8 +151,6 @@
   },
   {
     "id": "458geJRBvjhK0qBF9hNS",
-    "categoryId": "3JeIOXT7sy7KOWUgX9zk",
-    "company": "Harvard Business Review",
     "name": "That Discomfort You’re Feeling Is Grief by Scott Berinato",
     "tags": ["uFJUXFL2T1GPqOKxR6EO", "ssH7ycWe7u25cxLE9Ly5"],
     "location": { "anywhere": true, "specific": null },
@@ -106,17 +159,16 @@
     "description": "Some of the HBR edit staff met virtually the other day — a screen full of faces in a scene becoming more common everywhere. We talked about the content we’re commissioning in this harrowing time of a pandemic and how we can help people. But we also talked about how we were feeling...",
     "published_at": "2020-04-19T18:55:27.482Z",
     "url": "https://hbr.org/2020/03/that-discomfort-youre-feeling-is-grief",
-    "approved": true
+    "approved": true,
+    "categoryId": "3JeIOXT7sy7KOWUgX9zk",
+    "company": "Harvard Business Review"
   },
   {
     "id": "4KWUbssWthQ7NPsTmsmJ",
-    "updated_at": "2020-04-19T16:28:08.090Z",
-    "description": "Affordable shorter term therapy; During COVID-19, some of the counsellors in their community of practice are offering low-cost single-sessions online, $60 for 60 minutes ",
-    "published_at": "2020-04-19T16:28:08.090Z",
     "url": "https://www.hardfeelings.org/the-counsellors-single-sessions/",
     "approved": true,
+    "company": null,
     "categoryId": "O7sQvfvZUQ6mZqDafaFO",
-    "company": "Hard Feelings",
     "name": "Hard Feelings",
     "tags": [
       "BLN5h9BHIKIpEd1U1G17",
@@ -126,13 +178,33 @@
       "P2enYG1P5YLHLMKGVf5v"
     ],
     "location": { "specific": "P7cn4TqZEBzH7tV5c8FL", "anywhere": true },
-    "created_at": "2020-04-19T16:28:08.090Z"
+    "created_at": "2020-04-19T16:28:08.090Z",
+    "updated_at": "2020-04-21T12:44:16.272Z",
+    "description": "Affordable shorter term therapy\nDuring COVID-19, some of the counsellors in their community of practice are offering low-cost single-sessions online\n$60 for 60 minutes ",
+    "published_at": "2020-04-19T16:28:08.090Z"
+  },
+  {
+    "id": "5PXRIHT0ytCcqmCg1aeJ",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "XiNPDiek0SUpTqODnCFQ",
+      "gJKhSxtZ91Hn5SNyoU70",
+      "jfVbMq9PgcfPMnrygQIb",
+      "BBXzbkNhUCyEI3VL3jp5"
+    ],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-22T16:09:10.877Z",
+    "updated_at": "2020-04-22T16:43:26.648Z",
+    "description": "A confidential youth helpline for young Muslims to receive immediate, anonymous, and confidential support over the phone or text through North America (Canada/US). \n☎️ Helpline: 1-866-627-3342 (NASEEHA) (7 days, 12-9PM EST)\n💬 Textline:  1-866-627-3342 (Mon-Fri 12-9PM EST)",
+    "published_at": "2020-04-22T16:09:10.877Z",
+    "url": "https://naseeha.org/",
+    "approved": true,
+    "company": null,
+    "categoryId": "ZNrUvRN4asfFk3FxpWh3",
+    "name": "Naseeha Muslim Youth Helpline"
   },
   {
     "id": "5RfYulueAybFNyTwaJxj",
-    "categoryId": "C3dJG2UJz8H6KlCkghbQ",
-    "company": "Laura Horn Art",
-    "name": "Abstract Collage Creations",
     "tags": [
       "UJFbvU4VcuRsEJ6J0Cvz",
       "SJzeDJz6UL3hM9hOgLjM",
@@ -140,16 +212,71 @@
       "bNyCFySbmyAd1E7wRmZl",
       "DIieZ3TO9Az8mEOMz4ub"
     ],
-    "location": { "specific": null, "anywhere": true },
+    "location": { "anywhere": true, "specific": null },
     "created_at": "2020-04-19T03:30:47.822Z",
     "updated_at": "2020-04-19T03:30:47.822Z",
     "description": "This class is a calming way for you to stay connected and creative during these challenging times. Something that you can do with kids if they are home from school or maybe just to take your mind off things.",
     "published_at": "2020-04-19T03:30:47.822Z",
     "url": "https://classes.laurahornart.com/p/abstract-collage-creations",
-    "approved": true
+    "approved": true,
+    "categoryId": "C3dJG2UJz8H6KlCkghbQ",
+    "company": "Laura Horn Art",
+    "name": "Abstract Collage Creations"
+  },
+  {
+    "id": "5gaP0v3UoIJN9RNaOi0L",
+    "updated_at": "2020-04-23T22:16:56.488Z",
+    "description": "How this situation is affecting HSPs in unique ways and how they can cope.",
+    "published_at": "2020-04-23T22:16:56.488Z",
+    "url": "https://www.psychologytoday.com/us/blog/sense-and-sensitivity/202003/being-highly-sensitive-person-during-the-coronavirus-crisis",
+    "approved": true,
+    "categoryId": "3JeIOXT7sy7KOWUgX9zk",
+    "company": "Psychology Today",
+    "name": "Being a Highly Sensitive Person During the COVID-19 Crisis",
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "uFJUXFL2T1GPqOKxR6EO"],
+    "location": { "specific": null, "anywhere": true },
+    "created_at": "2020-04-23T22:16:56.487Z"
+  },
+  {
+    "id": "5yKPu0JGF5Z9Bv3BpCet",
+    "name": "Suicide Hotlines For Every Country",
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "XiNPDiek0SUpTqODnCFQ"],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-22T17:19:38.553Z",
+    "updated_at": "2020-04-22T17:19:38.553Z",
+    "description": "There’s nothing to lose. Calling a suicide hotline is a great way to vent and get sound advice on how to deal with your problems. If you want to help yourself or someone else, this is a great place to start. This page has an extensive list of countries and their relevant suicide hotline telephone numbers. Please choose your country and call the appropriate number. ",
+    "published_at": "2020-04-22T17:19:38.553Z",
+    "url": "https://www.suicidestop.com/call_a_hotline.html",
+    "approved": true,
+    "categoryId": "ZNrUvRN4asfFk3FxpWh3",
+    "company": "Suicide Stop "
+  },
+  {
+    "id": "6Advaczj5pvsaLk7OQra",
+    "published_at": "2020-04-26T04:46:30.740Z",
+    "url": "https://dribbble.com/stories/2020/04/03/stay-home-and-color",
+    "approved": true,
+    "categoryId": "C3dJG2UJz8H6KlCkghbQ",
+    "company": "Dribbble",
+    "name": "Stay Home & Color: A collection of coloring pages to relax",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "McJzdFqQNamTVMjx9t68",
+      "lbxBp09JAgSze9GyjAg5",
+      "DIieZ3TO9Az8mEOMz4ub",
+      "5AE9XYC5gt1XzYxbm3pl"
+    ],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-26T04:46:30.740Z",
+    "updated_at": "2020-04-26T04:46:30.740Z",
+    "description": "These designers have got you covered. Below you’ll find a handful of coloring pages created by designers in our community for you and/or your kiddos to enjoy passing the time. Download your favorites, print them out, and stay creative, friends!"
   },
   {
     "id": "6LzJkRPloRwIbnPiIOHu",
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-19T19:54:29.415Z",
+    "updated_at": "2020-04-19T19:54:29.415Z",
+    "description": "CACL will be sharing disability-related resources related to the COVID-19 pandemic on this page, pulled together in one spot for families. When you find reliable information or practices that may help other families, share it! And to be sure we see it, use #COVIDdisability. ",
     "published_at": "2020-04-19T19:54:29.415Z",
     "url": "https://cacl.ca/coviddisability/",
     "approved": true,
@@ -162,78 +289,109 @@
       "DIieZ3TO9Az8mEOMz4ub",
       "rGAIsC4hY2fj76ZMgmFJ",
       "YFAUSY5PrVBcntAw16QU"
-    ],
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T19:54:29.415Z",
-    "updated_at": "2020-04-19T19:54:29.415Z",
-    "description": "CACL will be sharing disability-related resources related to the COVID-19 pandemic on this page, pulled together in one spot for families. When you find reliable information or practices that may help other families, share it! And to be sure we see it, use #COVIDdisability. "
+    ]
   },
   {
     "id": "6OQDT0bmA62OCYH8Fu3h",
-    "tags": ["x49joBkOiGWAKjF5vapi", "RWc2iK6uWN2bQ9NrJGNP", "bNyCFySbmyAd1E7wRmZl"],
-    "location": { "anywhere": true, "specific": null },
+    "location": { "specific": "CaDm5zWm82h7eLIXgXye", "anywhere": false },
     "created_at": "2020-04-19T04:41:18.978Z",
-    "updated_at": "2020-04-19T04:41:18.978Z",
+    "updated_at": "2020-04-20T16:37:36.819Z",
     "description": "Collab between TIFF + Crave; a series from Crave’s selection of titles, accompanied by conversations with special guests via IG. Crave is also offering free 30-day trial for new users.",
     "published_at": "2020-04-19T04:41:18.978Z",
     "url": "https://tiff.net/stayathome",
     "approved": true,
     "categoryId": "QwUIN4g6euGuSoUI0Yeh",
     "company": "crave & TIFF",
-    "name": "Stay-at-Home Cinema"
+    "name": "Stay-at-Home Cinema",
+    "tags": ["x49joBkOiGWAKjF5vapi", "RWc2iK6uWN2bQ9NrJGNP", "bNyCFySbmyAd1E7wRmZl"]
+  },
+  {
+    "id": "6Wf50b5V3VwQKjwqoN4i",
+    "company": null,
+    "categoryId": "ZNrUvRN4asfFk3FxpWh3",
+    "name": "Nisa Helpline for Muslim Womxn",
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "BBXzbkNhUCyEI3VL3jp5", "BUgmiu8M8QGnGl3Sldu2"],
+    "location": { "anywhere": true, "specific": "CaDm5zWm82h7eLIXgXye" },
+    "created_at": "2020-04-22T16:39:29.975Z",
+    "updated_at": "2020-04-22T16:42:56.020Z",
+    "description": "We assist Muslim Women across North America, by providing free, anonymous, confidential, and non-judgmental peer-to-peer counselling. Callers also have the option to receive faith-based counselling!\nAccessible anywhere in North America, 10AM-10PM, 7 days a week.\n☎️ 1-866-315 6472 (NISA)",
+    "published_at": "2020-04-22T16:39:29.975Z",
+    "url": "https://nisahelpline.com/",
+    "approved": true
   },
   {
     "id": "6dIlLQNL5EL1PxZLOuLv",
-    "name": "New Creations Counseling Services",
     "tags": ["uZRGXe3b9yacgemOOxm4", "jfVbMq9PgcfPMnrygQIb"],
     "location": { "anywhere": true, "specific": "gPaj0FpaOjbAaU8wQEfR" },
     "created_at": "2020-04-20T01:13:53.294Z",
-    "updated_at": "2020-04-20T01:13:53.294Z",
+    "updated_at": "2020-04-21T12:22:16.518Z",
     "description": "Offers online therapy for individuals and couples with sliding scale both remotely and in-person. Based in Fort Lauderdale, FL.\n",
     "published_at": "2020-04-20T01:13:53.294Z",
     "url": "http://www.newcreationscounseling.net/",
     "approved": true,
+    "company": null,
     "categoryId": "O7sQvfvZUQ6mZqDafaFO",
-    "company": ""
+    "name": "New Creations Counseling Services"
   },
   {
     "id": "6y1JKMmDcPP0lZZT6Jo0",
-    "url": "https://www.talkspace.com/covid-resources",
-    "approved": true,
-    "categoryId": "KOhg8XVTLsnwxqC3WWhb",
-    "company": "",
-    "name": "TalkSpace",
     "tags": [
       "BLN5h9BHIKIpEd1U1G17",
       "3WlPX9jO24Ly5gO0U9wL",
       "q3G31cduDS8dcECBL97A",
+      "9SVZ7IMNBvMKXReIxJei",
       "lJFqNAyaGmThgHTpOmDU",
       "HhMtAlQZNqxbwhw9OXQH"
     ],
     "location": { "anywhere": true, "specific": null },
     "created_at": "2020-04-20T00:47:31.572Z",
-    "updated_at": "2020-04-20T00:47:31.572Z",
+    "updated_at": "2020-04-21T12:23:40.120Z",
     "description": "Offering special COVID-19 specific programs: \n-Free therapist-led Facebook support groups\n-16-day anxiety relief program to reduce and manage fear\n-Ongoing support from our network of licensed therapists\nGet $65 off with code APPLY65; Plans start at $65/week",
-    "published_at": "2020-04-20T00:47:31.572Z"
+    "published_at": "2020-04-20T00:47:31.572Z",
+    "url": "https://www.talkspace.com/covid-resources",
+    "approved": true,
+    "company": null,
+    "categoryId": "KOhg8XVTLsnwxqC3WWhb",
+    "name": "TalkSpace"
   },
   {
     "id": "7Ezo6wqFhOjFrLnU5cKc",
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "3WlPX9jO24Ly5gO0U9wL", "9SVZ7IMNBvMKXReIxJei"],
     "location": { "anywhere": true, "specific": null },
     "created_at": "2020-04-19T04:10:31.802Z",
-    "updated_at": "2020-04-19T04:10:31.802Z",
+    "updated_at": "2020-04-20T17:00:51.220Z",
     "description": "Access 2500+ online courses from 140 top institutions. Courses in various subjects such as humanities, math, computer science.",
     "published_at": "2020-04-19T04:10:31.802Z",
     "url": "https://www.edx.org/schools-partners",
     "approved": true,
+    "company": "",
     "categoryId": "GFK0Izjn1gX0tFrCcnNn",
-    "company": "edX",
-    "name": "edX",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "3WlPX9jO24Ly5gO0U9wL", "9SVZ7IMNBvMKXReIxJei"]
+    "name": "edX"
+  },
+  {
+    "id": "8JGnXGTdeOh9JVNFnLtQ",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "uFJUXFL2T1GPqOKxR6EO",
+      "lJFqNAyaGmThgHTpOmDU",
+      "rsNOheT2MIYnwe4TNVHb",
+      "DIieZ3TO9Az8mEOMz4ub",
+      "rGAIsC4hY2fj76ZMgmFJ",
+      "BG08VoS0hTmitycbRLhh"
+    ],
+    "location": { "specific": null, "anywhere": true },
+    "created_at": "2020-04-21T00:38:53.737Z",
+    "updated_at": "2020-04-21T00:38:53.737Z",
+    "description": "Children and youth who have an anxiety disorder may find the information about COVID-19 in the news and around them especially worrisome. With that in mind, for many children the most reassuring way to manage this information is in conversation and relationship with parent(s)/caregiver(s).",
+    "published_at": "2020-04-21T00:38:53.737Z",
+    "url": "https://www.cmho.org/blog/blog-news/6519918-talking-to-your-anxious-child-about-covid-19",
+    "approved": true,
+    "categoryId": "3JeIOXT7sy7KOWUgX9zk",
+    "company": "Children's Mental Health Ontario",
+    "name": "Talking to your Anxious Child about COVID-19"
   },
   {
     "id": "8U6SKiQd3a05CMmkjZXt",
-    "updated_at": "2020-04-19T15:46:00.780Z",
-    "description": "These structured sessions provide focused treatment for mild to moderate symptoms of anxiety and depression. We work together to improve your daily functioning and build skills and resources to support resilience. $25 weekly sessions - online only",
     "published_at": "2020-04-19T15:46:00.780Z",
     "url": "https://www.christophermckinnon.ca/covid19-programs",
     "approved": true,
@@ -246,11 +404,21 @@
       "pN0WjAKdhqeMwZVs7IBR",
       "HhMtAlQZNqxbwhw9OXQH"
     ],
-    "location": { "anywhere": false, "specific": "P7cn4TqZEBzH7tV5c8FL" },
-    "created_at": "2020-04-19T15:46:00.780Z"
+    "location": { "anywhere": null, "specific": "P7cn4TqZEBzH7tV5c8FL" },
+    "created_at": "2020-04-19T15:46:00.780Z",
+    "updated_at": "2020-04-26T16:03:31.590Z",
+    "description": "Offering numerous COVID-19 specific offerings including focused counselling for anxiety and depression - $25 per 30-minute session (online); and sliding scale individual psychotherapy ($75 to $165). Also a support group for those at risk during COVID19 (see Supporting Each Other section)"
   },
   {
     "id": "8deI2Hn8kh3N8KTC96WU",
+    "updated_at": "2020-04-21T15:45:20.997Z",
+    "description": "US network of local crisis centers that provides free and confidential emotional support to people in suicidal crisis or emotional distress 24 hours a day, 7 days a week. \n☎ 1-800-273-8255 (🗨 or chat on website). \nAlso available in Español, and for 🦻 Deaf & Head of Hearing.",
+    "published_at": "2020-04-19T20:51:54.701Z",
+    "url": "https://suicidepreventionlifeline.org/",
+    "approved": true,
+    "categoryId": "ZNrUvRN4asfFk3FxpWh3",
+    "company": "National Suicide Prevention Lifeline",
+    "name": "National Suicide Prevention Lifeline",
     "tags": [
       "UJFbvU4VcuRsEJ6J0Cvz",
       "JDGqvdzoDNqjhHsoyGWR",
@@ -258,19 +426,18 @@
       "R0IAmZvpCclmvg3UG4JI",
       "XiNPDiek0SUpTqODnCFQ"
     ],
-    "location": { "anywhere": false, "specific": "gPaj0FpaOjbAaU8wQEfR" },
-    "created_at": "2020-04-19T20:51:54.701Z",
-    "updated_at": "2020-04-19T20:51:54.701Z",
-    "description": "US network of local crisis centers that provides free and confidential emotional support to people in suicidal crisis or emotional distress 24 hours a day, 7 days a week. 1-800-273-8255 (or chat on website). Also available in Español, and for Deaf & Head of Hearing.",
-    "published_at": "2020-04-19T20:51:54.701Z",
-    "url": "https://suicidepreventionlifeline.org/",
-    "approved": true,
-    "categoryId": "ZNrUvRN4asfFk3FxpWh3",
-    "company": "National Suicide Prevention Lifeline",
-    "name": "National Suicide Prevention Lifeline"
+    "location": { "specific": "gPaj0FpaOjbAaU8wQEfR", "anywhere": null },
+    "created_at": "2020-04-19T20:51:54.701Z"
   },
   {
     "id": "8nrP4yH7nBk2MNmedeZL",
+    "updated_at": "2020-04-21T12:35:05.193Z",
+    "description": "During the COVD-19 Pandemic, is offering some sliding scale appointments. All appointments are currently being offered online/by telephone. Incorporates skills and strategies from Dialectical Behaviour Therapy, Cognitive Behavioural Therapy, and Mindfulness.",
+    "published_at": "2020-04-19T15:49:58.764Z",
+    "url": "https://www.matteldridgecounselling.com/",
+    "approved": true,
+    "company": "",
+    "categoryId": "O7sQvfvZUQ6mZqDafaFO",
     "name": "Matt Eldridge Counselling",
     "tags": [
       "uZRGXe3b9yacgemOOxm4",
@@ -278,15 +445,8 @@
       "pN0WjAKdhqeMwZVs7IBR",
       "P2enYG1P5YLHLMKGVf5v"
     ],
-    "location": { "specific": "P7cn4TqZEBzH7tV5c8FL", "anywhere": true },
-    "created_at": "2020-04-19T15:49:58.764Z",
-    "updated_at": "2020-04-19T15:49:58.764Z",
-    "description": "During the COVD-19 Pandemic, is offering some sliding scale appointments. All appointments are currently being offered online/by telephone. Incorporates skills and strategies from Dialectical Behaviour Therapy, Cognitive Behavioural Therapy, and Mindfulness.",
-    "published_at": "2020-04-19T15:49:58.764Z",
-    "url": "https://www.matteldridgecounselling.com/",
-    "approved": true,
-    "categoryId": "O7sQvfvZUQ6mZqDafaFO",
-    "company": "Matt Eldridge Counselling"
+    "location": { "anywhere": true, "specific": "P7cn4TqZEBzH7tV5c8FL" },
+    "created_at": "2020-04-19T15:49:58.764Z"
   },
   {
     "id": "9Ak0J1B9nP7hzI5w6CjL",
@@ -304,34 +464,60 @@
   },
   {
     "id": "9ldodvkHF39B355XCJfh",
+    "location": { "specific": null, "anywhere": true },
+    "created_at": "2020-04-19T20:24:17.626Z",
+    "updated_at": "2020-04-20T16:40:07.974Z",
+    "description": "Inspirational article on how others are creating community for those in need. ",
+    "published_at": "2020-04-19T20:24:17.626Z",
     "url": "https://bioneers.org/facing-covid-19-with-community-instead-of-fear-zp0z2003/?mc_cid=808933eee1&mc_eid=9bcc83d175",
     "approved": true,
     "categoryId": "QwUIN4g6euGuSoUI0Yeh",
     "company": "Bioneers",
     "name": "Facing COVID-19 With Community Instead of Fear",
-    "tags": ["uFJUXFL2T1GPqOKxR6EO", "CCr3szDilmyAbA2fLFNw"],
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T20:24:17.626Z",
-    "updated_at": "2020-04-19T20:24:17.626Z",
-    "description": "Inspirational article on how others are creating community for those in need. ",
-    "published_at": "2020-04-19T20:24:17.626Z"
+    "tags": [
+      "uFJUXFL2T1GPqOKxR6EO",
+      "CCr3szDilmyAbA2fLFNw",
+      "UEGq6P9pHk9SgGujcVgh",
+      "3vTxbrW5ipAgZKXCZrXP",
+      "jfVbMq9PgcfPMnrygQIb"
+    ]
   },
   {
     "id": "ACP09HbLqZ7QXYZJraej",
-    "tags": ["bfI4cx6NnBbexEsbLzir", "rsNOheT2MIYnwe4TNVHb"],
-    "location": { "anywhere": true, "specific": "0GHEIYUBtuxmLlOzHLd4" },
-    "created_at": "2020-04-19T20:31:42.600Z",
-    "updated_at": "2020-04-19T20:31:42.600Z",
-    "description": "Tip sheet for caregivers for their mental health during COVID-19",
     "published_at": "2020-04-19T20:31:42.600Z",
     "url": "https://ontariocaregiver.ca/wp-content/uploads/2020/03/Ontario-Caregiver-Organization-Caregiver-Mental-Health-During-COVID-19-1.pdf",
     "approved": true,
     "categoryId": "3JeIOXT7sy7KOWUgX9zk",
     "company": "The Ontario Caregiver Organziation",
-    "name": "Caregiver Mental Health During COVID-19 Outbreak"
+    "name": "Caregiver Mental Health During COVID-19 Outbreak",
+    "tags": ["bfI4cx6NnBbexEsbLzir", "rsNOheT2MIYnwe4TNVHb"],
+    "location": { "specific": "0GHEIYUBtuxmLlOzHLd4", "anywhere": true },
+    "created_at": "2020-04-19T20:31:42.600Z",
+    "updated_at": "2020-04-19T20:31:42.600Z",
+    "description": "Tip sheet for caregivers for their mental health during COVID-19"
+  },
+  {
+    "id": "AOAUadCdctrW59fUZwVE",
+    "name": "Free Bystander Intervention Training Against Xenophobia",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "3WlPX9jO24Ly5gO0U9wL",
+      "c5aHgTE0s7uhFXinSEPH",
+      "UEGq6P9pHk9SgGujcVgh"
+    ],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-21T00:55:05.817Z",
+    "updated_at": "2020-04-21T00:55:05.817Z",
+    "description": "Interactive training will teach you Hollaback!’s 5D’s of bystander intervention methodology. We’ll start by talking about the types of disrespect that Asian and Asian American folks are facing right now — from microaggressions to violence — using a tool we call the “spectrum of disrespect.” 1 hour long.",
+    "published_at": "2020-04-21T00:55:05.817Z",
+    "url": "https://www.ihollaback.org/bystanderintervention/",
+    "approved": true,
+    "categoryId": "8Ny050nF50gOoXxPgMbW",
+    "company": "Hollaback!"
   },
   {
     "id": "AZmdVq2KAwKHUTb2cHf8",
+    "name": "These 12 Famous Museums Offer Virtual Tours",
     "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "bNyCFySbmyAd1E7wRmZl", "MwG7DfZ9Je0q7yrhiYJo"],
     "location": { "anywhere": true, "specific": null },
     "created_at": "2020-04-19T03:15:16.448Z",
@@ -341,14 +527,13 @@
     "url": "https://www.travelandleisure.com/attractions/museums-galleries/museums-with-virtual-tours?fbclid=IwAR3f-M2KggcKWjE6nLyC1-FDJDURLf2Mgj74qImaXLwMQXf_lFNRwZ9XlYk",
     "approved": true,
     "categoryId": "C3dJG2UJz8H6KlCkghbQ",
-    "company": "Travel + Leisure",
-    "name": "These 12 Famous Museums Offer Virtual Tours"
+    "company": "Travel + Leisure"
   },
   {
     "id": "AkeIRsWfQ2dMq3Tv3PrB",
     "location": { "anywhere": true, "specific": "y8jOgKjU0CB5RQWtdgxG" },
     "created_at": "2020-04-19T18:31:54.244Z",
-    "updated_at": "2020-04-19T18:31:54.244Z",
+    "updated_at": "2020-04-21T00:58:06.726Z",
     "description": "As the government announces further social distancing measures, how should people maintain good mental health in long periods of self-isolation? ",
     "published_at": "2020-04-19T18:31:54.244Z",
     "url": "https://www.independent.co.uk/life-style/health-and-families/coronavirus-mental-health-self-isolate-how-to-manage-quarantine-a9404431.html?fbclid=IwAR3Qscj35pyDzzbvsES1wH728LHq4sG7ihigW5k5SatgIvp7lypcFxMMte4",
@@ -356,24 +541,31 @@
     "categoryId": "3JeIOXT7sy7KOWUgX9zk",
     "company": "Independent.co.uk",
     "name": "Coronavirus: Manaing mental health during social-isolation",
-    "tags": ["bNyCFySbmyAd1E7wRmZl"]
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "bNyCFySbmyAd1E7wRmZl"]
   },
   {
     "id": "AqyAzrabIwbcnPPCi5Wm",
-    "categoryId": "kaoFxEzS8aYrK6NSoEzw",
-    "company": "",
-    "name": "Mental Health Pandemic (Facebook Group)",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "q3G31cduDS8dcECBL97A", "nzsciD2Yc25cIlF3PZtn"],
-    "location": { "specific": null, "anywhere": true },
-    "created_at": "2020-04-19T02:25:16.719Z",
     "updated_at": "2020-04-19T02:25:16.719Z",
     "description": "Facebook group to share resources and information to help deal with our mental health during this time.",
     "published_at": "2020-04-19T02:25:16.719Z",
     "url": "https://www.facebook.com/groups/1284892608388437/",
-    "approved": true
+    "approved": true,
+    "categoryId": "kaoFxEzS8aYrK6NSoEzw",
+    "company": "",
+    "name": "Mental Health Pandemic (Facebook Group)",
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "q3G31cduDS8dcECBL97A", "nzsciD2Yc25cIlF3PZtn"],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-19T02:25:16.719Z"
   },
   {
     "id": "BFTMWdBJamQhDi6VfMDj",
+    "updated_at": "2020-04-26T16:04:55.886Z",
+    "description": "The intent of this course is to give you a deeper understanding of the anxiety reaction as it relates to various aspects of our current life, ranging from our consumption of news to the way we talk to our children about this. 8 hours.",
+    "published_at": "2020-04-19T03:59:55.191Z",
+    "url": "https://www.coursera.org/learn/manage-health-covid-19",
+    "approved": true,
+    "categoryId": "GFK0Izjn1gX0tFrCcnNn",
+    "company": "University of Toronto (via Coursera)",
     "name": "Mind Control: Managing Your Mental Health During COVID-19",
     "tags": [
       "UJFbvU4VcuRsEJ6J0Cvz",
@@ -383,17 +575,17 @@
       "pN0WjAKdhqeMwZVs7IBR"
     ],
     "location": { "specific": null, "anywhere": true },
-    "created_at": "2020-04-19T03:59:55.190Z",
-    "updated_at": "2020-04-19T03:59:55.191Z",
-    "description": "The intent of this course is to give you a deeper understanding of the anxiety reaction as it relates to various aspects of our current life, ranging from our consumption of news to the way we talk to our children about this.  ",
-    "published_at": "2020-04-19T03:59:55.191Z",
-    "url": "https://www.coursera.org/learn/manage-health-covid-19",
-    "approved": true,
-    "categoryId": "GFK0Izjn1gX0tFrCcnNn",
-    "company": "University of Toronto (via Coursera)"
+    "created_at": "2020-04-19T03:59:55.190Z"
   },
   {
     "id": "BJURh4AE82waSUsA61SJ",
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-19T20:04:53.727Z",
+    "updated_at": "2020-04-19T20:04:53.727Z",
+    "description": "If you are working with other people to build a movement for social justice and liberation, then you probably find yourself in meetings, what, every once in a while? ",
+    "published_at": "2020-04-19T20:04:53.727Z",
+    "url": "https://www.storybasedstrategy.org/blog-full/2019/9/18/checking-in-to-prevent-checking-out?fbclid=IwAR0DA8GilvvbTWkYyAz_D8yeLgZSW5BaXnyE6HrZrC6RtHORJvknZi0ttyY",
+    "approved": true,
     "categoryId": "ZeMEYmQsd8SKIQqAA7AL",
     "company": "Centre for Story-Based Strategy",
     "name": "Checking-in to prevent checking-out",
@@ -403,45 +595,40 @@
       "31VNAUBBeFMszklb2Y82",
       "W7szkBzGrIFcmHXzSXp3",
       "4LYArt8vhwLIYKeeVTKA"
-    ],
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T20:04:53.727Z",
-    "updated_at": "2020-04-19T20:04:53.727Z",
-    "description": "If you are working with other people to build a movement for social justice and liberation, then you probably find yourself in meetings, what, every once in a while? ",
-    "published_at": "2020-04-19T20:04:53.727Z",
-    "url": "https://www.storybasedstrategy.org/blog-full/2019/9/18/checking-in-to-prevent-checking-out?fbclid=IwAR0DA8GilvvbTWkYyAz_D8yeLgZSW5BaXnyE6HrZrC6RtHORJvknZi0ttyY",
-    "approved": true
+    ]
   },
   {
     "id": "CAi1jRunqSCQfEwx3qg5",
-    "categoryId": "C3dJG2UJz8H6KlCkghbQ",
-    "company": "Scribe Media",
-    "name": "Scribe Book School - Book Writing Course",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz"],
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "3WlPX9jO24Ly5gO0U9wL"],
     "location": { "specific": null, "anywhere": true },
     "created_at": "2020-04-19T03:25:32.969Z",
-    "updated_at": "2020-04-19T03:25:32.969Z",
+    "updated_at": "2020-04-21T12:32:25.951Z",
     "description": "Scribe Book School reveals the exact, step-by-step process used with their authors that pay $5k or more to help them write, publish and market their books. \n",
     "published_at": "2020-04-19T03:25:32.969Z",
     "url": "https://scribewriting.com/bookschool/",
-    "approved": true
+    "approved": true,
+    "categoryId": "C3dJG2UJz8H6KlCkghbQ",
+    "company": "Scribe Media",
+    "name": "Scribe Book School - Book Writing Course"
   },
   {
     "id": "CErMQKZ6jsRvEzbFPm4j",
+    "name": "Anishnawbe Health Toronto (AHT)",
+    "tags": ["R0IAmZvpCclmvg3UG4JI", "jfVbMq9PgcfPMnrygQIb"],
+    "location": { "anywhere": null, "specific": "P7cn4TqZEBzH7tV5c8FL" },
+    "created_at": "2020-04-19T16:10:56.660Z",
+    "updated_at": "2020-04-21T12:39:04.432Z",
+    "description": "Improving health and well being of Aboriginal People in spirit, mind, emotion and body through Traditional and Western healing approaches. Programs and services offered are based on culture and traditions through a multi-disciplinary team of dedicated healthcare professionals and service providers.",
     "published_at": "2020-04-19T16:10:56.660Z",
     "url": "https://www.aht.ca/services-and-programs/services-offered",
     "approved": true,
-    "categoryId": "O7sQvfvZUQ6mZqDafaFO",
-    "company": "Anishnawbe Health Toronto (AHT)",
-    "name": "Anishnawbe Health Toronto (AHT)",
-    "tags": ["jfVbMq9PgcfPMnrygQIb", "R0IAmZvpCclmvg3UG4JI"],
-    "location": { "specific": "P7cn4TqZEBzH7tV5c8FL", "anywhere": false },
-    "created_at": "2020-04-19T16:10:56.660Z",
-    "updated_at": "2020-04-19T16:10:56.660Z",
-    "description": "Improving health and well being of Aboriginal People in spirit, mind, emotion and body through Traditional and Western healing approaches. Programs and services offered are based on culture and traditions through a multi-disciplinary team of dedicated healthcare professionals and service providers."
+    "company": "",
+    "categoryId": "O7sQvfvZUQ6mZqDafaFO"
   },
   {
     "id": "CF6GrpaYkafD2mYvvl26",
+    "url": "https://dcogt.com/408-help-line",
+    "approved": true,
     "categoryId": "ZNrUvRN4asfFk3FxpWh3",
     "company": "Distress Centres of Greater Toronto",
     "name": "Toronto Distress Centre",
@@ -451,16 +638,17 @@
       "XiNPDiek0SUpTqODnCFQ",
       "HhMtAlQZNqxbwhw9OXQH"
     ],
-    "location": { "anywhere": false, "specific": "P7cn4TqZEBzH7tV5c8FL" },
+    "location": { "specific": "P7cn4TqZEBzH7tV5c8FL", "anywhere": null },
     "created_at": "2020-04-19T19:11:55.892Z",
-    "updated_at": "2020-04-19T19:11:55.892Z",
-    "description": "GTA: 416-408-4357 (HELP) / PEEL: 905-459-7777.  \nProvides telephone support to individuals in the community who are at risk and their most vulnerable. Highly-trained volunteer responders (with the support of professional staff) connect with callers 24 hours a day, 7 days a week, 365 days a year.\n",
-    "published_at": "2020-04-19T19:11:55.892Z",
-    "url": "https://dcogt.com/408-help-line",
-    "approved": true
+    "updated_at": "2020-04-21T15:37:38.933Z",
+    "description": "GTA: ☎ 416-408-4357 (HELP) / PEEL: ☎ 905-459-7777\nProvides telephone support to individuals in the community who are at risk and their most vulnerable. \nHighly-trained volunteer responders (with the support of professional staff) connect with callers 24 hours a day, 7 days a week, 365 days a year.\n",
+    "published_at": "2020-04-19T19:11:55.892Z"
   },
   {
     "id": "ClEUWCtKX3Orc1shxwCE",
+    "updated_at": "2020-04-19T04:49:08.246Z",
+    "description": "They facilitate pro bono mental health services for healthcare workers who have been impacted by COVID-19 (i.e., doctors, nurses, nursing aides, paramedics, PSWs, etc).",
+    "published_at": "2020-04-19T04:49:08.246Z",
     "url": "https://covid19therapists.com/",
     "approved": true,
     "categoryId": "O7sQvfvZUQ6mZqDafaFO",
@@ -472,14 +660,32 @@
       "31VNAUBBeFMszklb2Y82",
       "7mEydI2tZDums7nEUVx3"
     ],
-    "location": { "specific": "0GHEIYUBtuxmLlOzHLd4", "anywhere": false },
-    "created_at": "2020-04-19T04:49:08.246Z",
-    "updated_at": "2020-04-19T04:49:08.246Z",
-    "description": "They facilitate pro bono mental health services for healthcare workers who have been impacted by COVID-19 (i.e., doctors, nurses, nursing aides, paramedics, PSWs, etc).",
-    "published_at": "2020-04-19T04:49:08.246Z"
+    "location": { "anywhere": false, "specific": "0GHEIYUBtuxmLlOzHLd4" },
+    "created_at": "2020-04-19T04:49:08.246Z"
+  },
+  {
+    "id": "CudHU9EbI6uehuqkRqTu",
+    "updated_at": "2020-04-24T14:44:34.194Z",
+    "description": "This page is a list of high-quality resources (Learning & Resources; Productivity; Health & Fitness; Entertainment) available for free or cheaper than usual due to the COVID-19.",
+    "published_at": "2020-04-24T14:44:34.194Z",
+    "url": "https://stayhomeandlearn.org/",
+    "approved": true,
+    "categoryId": "GFK0Izjn1gX0tFrCcnNn",
+    "company": "",
+    "name": "Stay (The F***) Home & Learn",
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "IevR1WiN85FQR6S47UPe"],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-24T14:44:34.194Z"
   },
   {
     "id": "DXBpLnWkrJ5poha2SkDX",
+    "updated_at": "2020-04-19T15:39:00.982Z",
+    "description": "A local charitable organization for people who are grieving the death of a loved one. Offering 1-1 phone or video calls, peer-led group supports, and also announcing new meetings and activities. Phone or email programsupport@bfotoronto.ca or 416-440-0290x102. All services free. ",
+    "published_at": "2020-04-19T15:39:00.982Z",
+    "url": "https://www.bfotoronto.ca/",
+    "approved": true,
+    "categoryId": "O7sQvfvZUQ6mZqDafaFO",
+    "company": "Bereaved Families of Ontario (BFO)",
     "name": "Bereaved Families of Ontario - Toronto (BFO-Toronto)",
     "tags": [
       "UJFbvU4VcuRsEJ6J0Cvz",
@@ -488,34 +694,66 @@
       "bNyCFySbmyAd1E7wRmZl",
       "9jgzWVwGICwdQwlsls45"
     ],
-    "location": { "specific": "P7cn4TqZEBzH7tV5c8FL", "anywhere": false },
-    "created_at": "2020-04-19T15:39:00.982Z",
-    "updated_at": "2020-04-19T15:39:00.982Z",
-    "description": "A local charitable organization for people who are grieving the death of a loved one. Offering 1-1 phone or video calls, peer-led group supports, and also announcing new meetings and activities. Phone or email programsupport@bfotoronto.ca or 416-440-0290x102. All services free. ",
-    "published_at": "2020-04-19T15:39:00.982Z",
-    "url": "https://www.bfotoronto.ca/",
+    "location": { "anywhere": false, "specific": "P7cn4TqZEBzH7tV5c8FL" },
+    "created_at": "2020-04-19T15:39:00.982Z"
+  },
+  {
+    "id": "EBXSxpmkSA7kxTXLbDHw",
+    "published_at": "2020-04-26T03:43:11.057Z",
+    "url": "https://www.mentalhealthfirstaid.org/2020/03/how-to-help-someone-with-anxiety-or-depression-during-covid-19/?mkt_tok=eyJpIjoiWXprd09HTmpOVFUxWVdabCIsInQiOiJWOVJrM2xwY1QxVjBETVl1NjhTcXhDUGZjXC9WYWVrN2sxc1pTcXQ2NzhDOVBIRVZaaTgzY0NSTENNdDNYNGRkdjdtcENhZG9zUmFFaUV3VHJIMTZQUGxURUwrWEh1UFRtbStzTEpSZDBwYXFxTWFwZTd1YWI3ZytBRjE1cHJ3dzMifQ%3D%3D",
     "approved": true,
-    "categoryId": "O7sQvfvZUQ6mZqDafaFO",
-    "company": "Bereaved Families of Ontario (BFO)"
+    "categoryId": "kaoFxEzS8aYrK6NSoEzw",
+    "company": "Mental Health First Aid USA",
+    "name": "How to Help Someone with Anxiety or Depression During COVID",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "uFJUXFL2T1GPqOKxR6EO",
+      "lJFqNAyaGmThgHTpOmDU",
+      "pN0WjAKdhqeMwZVs7IBR",
+      "QYy2S3N7FbixbbuUKiKK",
+      "McJzdFqQNamTVMjx9t68",
+      "HhMtAlQZNqxbwhw9OXQH"
+    ],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-26T03:43:11.057Z",
+    "updated_at": "2020-04-26T03:54:27.681Z",
+    "description": "A brief overview of the mental health first aid steps to support someone with anxiety/depression during COVID-19. Includes an illustration. "
   },
   {
     "id": "G5FKIPIFHy3sHTKoTc24",
+    "name": "Shift Collab",
+    "tags": ["uZRGXe3b9yacgemOOxm4"],
+    "location": { "anywhere": true, "specific": "P7cn4TqZEBzH7tV5c8FL" },
+    "created_at": "2020-04-20T00:59:44.792Z",
     "updated_at": "2020-04-20T00:59:44.792Z",
     "description": "In-person and online options. Sliding scale options. Free initial consult call. \n",
     "published_at": "2020-04-20T00:59:44.792Z",
     "url": "https://www.shiftcollab.com/",
     "approved": true,
     "categoryId": "KOhg8XVTLsnwxqC3WWhb",
+    "company": ""
+  },
+  {
+    "id": "GFT0hUjXGhWyWTTBegyl",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "q3G31cduDS8dcECBL97A",
+      "nzsciD2Yc25cIlF3PZtn",
+      "jfVbMq9PgcfPMnrygQIb"
+    ],
+    "location": { "anywhere": true, "specific": "CaDm5zWm82h7eLIXgXye" },
+    "created_at": "2020-04-24T15:50:40.191Z",
+    "updated_at": "2020-04-24T15:50:40.191Z",
+    "description": "SAMHAA was created to provide a safe forum where members of the South Asian community can come together to create awareness of mental health issues, fight stigma and misinformation, and bridge the gap between the community and mental health resource providers. A Facebook group.",
+    "published_at": "2020-04-24T15:50:40.191Z",
+    "url": "https://www.facebook.com/pg/southasianmentalhealth/",
+    "approved": true,
+    "categoryId": "kaoFxEzS8aYrK6NSoEzw",
     "company": "",
-    "name": "Shift Collab",
-    "tags": ["uZRGXe3b9yacgemOOxm4"],
-    "location": { "anywhere": true, "specific": "P7cn4TqZEBzH7tV5c8FL" },
-    "created_at": "2020-04-20T00:59:44.792Z"
+    "name": "South Asian Mental Health Alliance (SAMHAA)"
   },
   {
     "id": "GJh1m213b9pGFbT1F77G",
-    "categoryId": "C3dJG2UJz8H6KlCkghbQ",
-    "company": "Art Gallery of Ontario (AGO)",
     "name": "AGO from Home",
     "tags": [
       "UJFbvU4VcuRsEJ6J0Cvz",
@@ -529,43 +767,40 @@
     "description": "On March 27 we launched AGO from Home, a new way to enjoy the museum from your home, bringing you into the building virtually through unique access to stories and experiences. AGO from Home will give everyone a chance to engage with art and our team at the AGO through interesting and diverse stories, videos, and closer looks at artwork as well as some DIY and How-To videos.",
     "published_at": "2020-04-19T03:12:12.662Z",
     "url": "https://ago.ca/agoinsider/experience-ago-from-home?utm_source=New+AGO+Master+List&utm_campaign=b21129feab-AGOfromHome_Apr1&utm_medium=email&utm_term=0_d4ab708299-b21129feab-248459017",
-    "approved": true
+    "approved": true,
+    "categoryId": "C3dJG2UJz8H6KlCkghbQ",
+    "company": "Art Gallery of Ontario (AGO)"
   },
   {
     "id": "H5MWysFkyQGCKvXRhDVI",
+    "location": { "specific": "P7cn4TqZEBzH7tV5c8FL", "anywhere": false },
+    "created_at": "2020-04-20T01:01:40.392Z",
+    "updated_at": "2020-04-20T01:01:40.392Z",
+    "description": "If you are a University or College student at eligible campuses you have access to free therapy sessions. Visit the website for eligibility here.\n",
     "published_at": "2020-04-20T01:01:40.392Z",
     "url": "https://realcampus.ca/",
     "approved": true,
     "categoryId": "KOhg8XVTLsnwxqC3WWhb",
     "company": "Shift Collab",
     "name": "Real Campus",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "bgqU7YCC3GlnbbecbDKO"],
-    "location": { "anywhere": false, "specific": "P7cn4TqZEBzH7tV5c8FL" },
-    "created_at": "2020-04-20T01:01:40.392Z",
-    "updated_at": "2020-04-20T01:01:40.392Z",
-    "description": "If you are a University or College student at eligible campuses you have access to free therapy sessions. Visit the website for eligibility here.\n"
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "bgqU7YCC3GlnbbecbDKO"]
   },
   {
     "id": "HLD1Txhp0QIv1rCT3Rir",
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-19T19:51:44.531Z",
+    "updated_at": "2020-04-19T19:51:44.531Z",
+    "description": "A fun little site of various activities/challenges you can take if you're feeling bored or want to get your mind off things. ",
+    "published_at": "2020-04-19T19:51:44.531Z",
     "url": "https://bored.solutions/",
     "approved": true,
     "categoryId": "QwUIN4g6euGuSoUI0Yeh",
     "company": "bored.solutions",
     "name": "Bored Solutions",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "IevR1WiN85FQR6S47UPe"],
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T19:51:44.531Z",
-    "updated_at": "2020-04-19T19:51:44.531Z",
-    "description": "A fun little site of various activities/challenges you can take if you're feeling bored or want to get your mind off things. ",
-    "published_at": "2020-04-19T19:51:44.531Z"
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "IevR1WiN85FQR6S47UPe"]
   },
   {
     "id": "HLJ6VcKqH2MRBEpVRVOv",
-    "url": "https://socialmovementtechnologies.org/transitioning-to-remote-teams-organizing-with-social-distance/",
-    "approved": true,
-    "categoryId": "ZeMEYmQsd8SKIQqAA7AL",
-    "company": "Social Movement Technologies",
-    "name": "Transitioning to remote & organizing with physical distance",
     "tags": [
       "c5aHgTE0s7uhFXinSEPH",
       "QYy2S3N7FbixbbuUKiKK",
@@ -577,56 +812,76 @@
     "created_at": "2020-04-19T20:06:45.606Z",
     "updated_at": "2020-04-19T20:06:45.606Z",
     "description": "These two free sessions will provide guidance, an opportunity for sharing and discussion, and access to a Slack community of organizers for follow-up and resource-sharing.",
-    "published_at": "2020-04-19T20:06:45.606Z"
-  },
-  {
-    "id": "HgKNP8yqhJbrk21dIdt1",
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T02:46:13.447Z",
-    "updated_at": "2020-04-19T02:46:13.447Z",
-    "description": "Practice anywhere. Practice everywhere. All-level classes led by our global yoga ambassadors.\nIncludes Power yoga; Restorative Yoga, Vinyasa Yoga, Yoga for Runners; Yoga for Every Level",
-    "published_at": "2020-04-19T02:46:13.447Z",
-    "url": "https://shop.lululemon.com/story/yoga-videos",
+    "published_at": "2020-04-19T20:06:45.606Z",
+    "url": "https://socialmovementtechnologies.org/transitioning-to-remote-teams-organizing-with-social-distance/",
     "approved": true,
-    "categoryId": "9geEVgJVxwzZvv8FmTJ2",
-    "company": "Lululemon",
-    "name": "Yoga Videos by Lululemon",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "bNyCFySbmyAd1E7wRmZl"]
+    "categoryId": "ZeMEYmQsd8SKIQqAA7AL",
+    "company": "Social Movement Technologies",
+    "name": "Transitioning to remote & organizing with physical distance"
   },
   {
     "id": "HiPjig79wxve5wvoFc2v",
+    "tags": ["uFJUXFL2T1GPqOKxR6EO", "wE6dEFKrnGutAB3qOL4l", "31VNAUBBeFMszklb2Y82"],
+    "location": { "specific": null, "anywhere": true },
+    "created_at": "2020-04-19T18:58:46.878Z",
+    "updated_at": "2020-04-19T18:58:46.878Z",
+    "description": "The internet wants you to believe you aren’t doing enough with all that “extra time” you have now. But staying inside and attending to basic needs is plenty.\n\n\n",
+    "published_at": "2020-04-19T18:58:46.878Z",
     "url": "https://www.nytimes.com/2020/04/01/style/productivity-coronavirus.html",
     "approved": true,
     "categoryId": "3JeIOXT7sy7KOWUgX9zk",
     "company": "The New York Times",
-    "name": "Stop Trying to Be Productive",
-    "tags": ["uFJUXFL2T1GPqOKxR6EO", "wE6dEFKrnGutAB3qOL4l", "31VNAUBBeFMszklb2Y82"],
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T18:58:46.878Z",
-    "updated_at": "2020-04-19T18:58:46.878Z",
-    "description": "The internet wants you to believe you aren’t doing enough with all that “extra time” you have now. But staying inside and attending to basic needs is plenty.\n\n\n",
-    "published_at": "2020-04-19T18:58:46.878Z"
+    "name": "Stop Trying to Be Productive"
+  },
+  {
+    "id": "HmnsamT2igpTRvn7bcZZ",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "RWc2iK6uWN2bQ9NrJGNP",
+      "7zMvDTWd79Kvnllpr0w8",
+      "sYilgV2dWKoeIHqvrgp0",
+      "3vvXF1rzaWnP6IExYgHW",
+      "lJFqNAyaGmThgHTpOmDU",
+      "pN0WjAKdhqeMwZVs7IBR",
+      "lbxBp09JAgSze9GyjAg5"
+    ],
+    "location": { "specific": null, "anywhere": true },
+    "created_at": "2020-04-24T14:55:32.428Z",
+    "updated_at": "2020-04-24T14:55:32.428Z",
+    "description": "Sanvello provides on-demand help with reducing stress and anxiety. \nTo that end, premium access to Sanvello—all content, coping tools, and peer support—is completely free during the COVID-19 crisis. It’s effective immediately (no action required).",
+    "published_at": "2020-04-24T14:55:32.428Z",
+    "url": "https://www.sanvello.com/coronavirus-anxiety-support/",
+    "approved": true,
+    "categoryId": "w0gtsx4ckG8VyzL19GxH",
+    "company": "Sanvello Health Inc",
+    "name": "Savello app for Stress, Anxiety & Depression"
   },
   {
     "id": "Hn8GQ0zB7KHf8T3dobOm",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "3WlPX9jO24Ly5gO0U9wL", "9SVZ7IMNBvMKXReIxJei"],
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T03:37:39.193Z",
-    "updated_at": "2020-04-19T03:37:39.193Z",
-    "description": "In this course you will engage in a series of challenges designed to increase your own happiness and build more productive habits. Professor Santos reveals misconceptions about happiness, annoying features of the mind that lead us to think the way we do, and the research that can help us change.",
+    "updated_at": "2020-04-26T16:06:15.284Z",
+    "description": "This course will engage in a series of challenges designed to increase your own happiness and build more productive habits. Professor Santos reveals misconceptions about happiness, annoying features of the mind that lead us to think the way we do, and the research that can help us change. 2 weeks.",
     "published_at": "2020-04-19T03:37:39.193Z",
     "url": "https://www.coursera.org/learn/the-science-of-well-being",
     "approved": true,
     "categoryId": "GFK0Izjn1gX0tFrCcnNn",
     "company": "Yale University via Coursera",
-    "name": "The Science of Well-Being"
+    "name": "The Science of Well-Being",
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "3WlPX9jO24Ly5gO0U9wL", "9SVZ7IMNBvMKXReIxJei"],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-19T03:37:39.193Z"
   },
   {
     "id": "HvvHFOr48C9GulzXejHB",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "lJFqNAyaGmThgHTpOmDU"],
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "3sOx5yzbFwmqn9fMnhDM",
+      "lJFqNAyaGmThgHTpOmDU",
+      "McJzdFqQNamTVMjx9t68",
+      "lbxBp09JAgSze9GyjAg5"
+    ],
     "location": { "anywhere": true, "specific": null },
     "created_at": "2020-04-19T01:36:49.649Z",
-    "updated_at": "2020-04-19T01:36:49.649Z",
+    "updated_at": "2020-04-26T16:12:05.956Z",
     "description": "A toolkit of resources for anxiety and your mental health in a global climate of uncertainty.",
     "published_at": "2020-04-19T01:36:49.649Z",
     "url": "https://www.virusanxiety.com/take-care",
@@ -657,42 +912,26 @@
   },
   {
     "id": "JPlpychpS2q5sCFSPx8g",
-    "updated_at": "2020-04-19T17:02:08.603Z",
-    "description": "handpicked some of our favorite meditations, sleep stories, movement exercises, journals, and music. All of the resources on this page are free to use, and to share. Available in multiple languages (bottom of page); and offering 40% for a subscription to Calm Premium.",
+    "updated_at": "2020-04-26T16:09:44.802Z",
+    "description": "Handpicked some of our favourite meditations, sleep stories, movement exercises, journals, and music. All of the resources on this page are free to use, and to share. Available in multiple languages (bottom of page)\nAlso offering: 40% for a subscription to Calm Premium.",
     "published_at": "2020-04-19T17:02:08.603Z",
     "url": "https://www.calm.com/blog/take-a-deep-breath",
     "approved": true,
+    "company": "Calm app",
     "categoryId": "w0gtsx4ckG8VyzL19GxH",
-    "company": "Calm.com",
     "name": "Calm Together",
-    "tags": [
-      "UJFbvU4VcuRsEJ6J0Cvz",
-      "x49joBkOiGWAKjF5vapi",
-      "lJFqNAyaGmThgHTpOmDU",
-      "R0IAmZvpCclmvg3UG4JI"
-    ],
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T17:02:08.603Z"
-  },
-  {
-    "id": "JjWJa83BNnsOMeZ4gLHP",
     "tags": [
       "UJFbvU4VcuRsEJ6J0Cvz",
       "x49joBkOiGWAKjF5vapi",
       "7zMvDTWd79Kvnllpr0w8",
       "sYilgV2dWKoeIHqvrgp0",
-      "3vvXF1rzaWnP6IExYgHW"
+      "3vvXF1rzaWnP6IExYgHW",
+      "R0IAmZvpCclmvg3UG4JI",
+      "3sOx5yzbFwmqn9fMnhDM",
+      "lJFqNAyaGmThgHTpOmDU"
     ],
-    "location": { "anywhere": true, "specific": "CaDm5zWm82h7eLIXgXye" },
-    "created_at": "2020-04-19T16:57:11.784Z",
-    "updated_at": "2020-04-19T16:57:11.784Z",
-    "description": "An app that is normally paid; offering free meditations for COVID-19. Also offering US healthcare professionals and educators from around the world a free subscription (see link for full details). ",
-    "published_at": "2020-04-19T16:57:11.784Z",
-    "url": "https://www.headspace.com/covid-19",
-    "approved": true,
-    "categoryId": "w0gtsx4ckG8VyzL19GxH",
-    "company": "Headspace",
-    "name": "Headspace - Free meditations for COVID-19"
+    "created_at": "2020-04-19T17:02:08.603Z",
+    "location": { "anywhere": true, "specific": null }
   },
   {
     "id": "K1NFJKaBjh63aYQqrxGO",
@@ -715,7 +954,33 @@
     ]
   },
   {
+    "id": "KPMuauewotEiugwm6v2w",
+    "location": { "anywhere": null, "specific": "0GHEIYUBtuxmLlOzHLd4" },
+    "created_at": "2020-04-20T21:08:50.082Z",
+    "updated_at": "2020-04-21T12:20:30.333Z",
+    "description": "BounceBack is a free, guided self-help program that’s effective in helping people aged 15 and up who are experiencing mild-to-moderate anxiety or depression, or may be feeling low, stressed, worried, irritable or angry. ",
+    "published_at": "2020-04-20T21:08:50.082Z",
+    "url": "https://bouncebackontario.ca/",
+    "approved": true,
+    "categoryId": "FEumLlCmAc5zQVAvBtdV",
+    "company": "CMHA Ontario",
+    "name": "BounceBack",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "3WlPX9jO24Ly5gO0U9wL",
+      "XiNPDiek0SUpTqODnCFQ",
+      "bNyCFySbmyAd1E7wRmZl",
+      "lJFqNAyaGmThgHTpOmDU",
+      "pN0WjAKdhqeMwZVs7IBR",
+      "lbxBp09JAgSze9GyjAg5",
+      "BG08VoS0hTmitycbRLhh"
+    ]
+  },
+  {
     "id": "KfFPYuvZNYFz3EuodBbH",
+    "published_at": "2020-04-19T01:55:38.754Z",
+    "url": "https://www.huddle.care/covid/",
+    "approved": true,
     "categoryId": "kaoFxEzS8aYrK6NSoEzw",
     "company": "huddle.care",
     "name": "COVID-19 Online Support Groups",
@@ -728,50 +993,77 @@
     "location": { "anywhere": true, "specific": null },
     "created_at": "2020-04-19T01:55:38.754Z",
     "updated_at": "2020-04-19T01:55:38.754Z",
-    "description": "They are facilitating free video-based peer-led support groups for people to connect with and support each other. Groups will be sorted by gender, age, and topic.\n\nGroups start on Monday, March 23rd, 2020",
-    "published_at": "2020-04-19T01:55:38.754Z",
-    "url": "https://www.huddle.care/covid/",
-    "approved": true
+    "description": "They are facilitating free video-based peer-led support groups for people to connect with and support each other. Groups will be sorted by gender, age, and topic.\n\nGroups start on Monday, March 23rd, 2020"
   },
   {
     "id": "KwHLgYQOPoUYmSKGaIYQ",
+    "url": "https://76d67a00-6a01-4ad7-a676-1e8960d7c8aa.filesusr.com/ugd/b8a493_215941041f724ff88271326bfa5de251.pdf",
+    "approved": true,
     "categoryId": "QwUIN4g6euGuSoUI0Yeh",
     "company": "Dr. Sachiko Nagasawa, Bay Psychology",
     "name": "Tolerance for Uncertainty: A COVID-19 Workbook",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "lJFqNAyaGmThgHTpOmDU", "pN0WjAKdhqeMwZVs7IBR"],
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "bfI4cx6NnBbexEsbLzir",
+      "zPiJfZ2m8PEcqc5szSRB",
+      "lJFqNAyaGmThgHTpOmDU",
+      "pN0WjAKdhqeMwZVs7IBR"
+    ],
     "location": { "anywhere": true, "specific": null },
     "created_at": "2020-04-19T04:44:11.774Z",
-    "updated_at": "2020-04-19T04:44:11.774Z",
+    "updated_at": "2020-04-20T16:37:56.196Z",
     "description": "A guide to accept your feelings, tolerate distress, and thrive. This workbook was created to assist you with managing the strong emotions that will arise during this difficult time through a form of psychological treatment called Dialectical Behaviour Therapy (DBT).",
-    "published_at": "2020-04-19T04:44:11.774Z",
-    "url": "https://76d67a00-6a01-4ad7-a676-1e8960d7c8aa.filesusr.com/ugd/b8a493_215941041f724ff88271326bfa5de251.pdf",
-    "approved": true
+    "published_at": "2020-04-19T04:44:11.774Z"
   },
   {
     "id": "KxMzp9ZXR2yCtDQwTWz4",
-    "url": "https://www.headspace.com/covid-19",
-    "approved": true,
-    "categoryId": "w0gtsx4ckG8VyzL19GxH",
-    "company": "Headspace",
-    "name": "Headspace - Free meditations for COVID-19",
     "tags": [
       "UJFbvU4VcuRsEJ6J0Cvz",
       "x49joBkOiGWAKjF5vapi",
       "7zMvDTWd79Kvnllpr0w8",
       "sYilgV2dWKoeIHqvrgp0",
-      "3vvXF1rzaWnP6IExYgHW"
+      "3vvXF1rzaWnP6IExYgHW",
+      "lJFqNAyaGmThgHTpOmDU",
+      "lbxBp09JAgSze9GyjAg5"
     ],
     "location": { "anywhere": true, "specific": "CaDm5zWm82h7eLIXgXye" },
     "created_at": "2020-04-19T16:57:12.236Z",
-    "updated_at": "2020-04-19T16:57:12.236Z",
+    "updated_at": "2020-04-21T12:28:40.365Z",
     "description": "An app that is normally paid; offering free meditations for COVID-19. Also offering US healthcare professionals and educators from around the world a free subscription (see link for full details). ",
-    "published_at": "2020-04-19T16:57:12.236Z"
+    "published_at": "2020-04-19T16:57:12.236Z",
+    "url": "https://www.headspace.com/covid-19",
+    "approved": true,
+    "categoryId": "w0gtsx4ckG8VyzL19GxH",
+    "company": "Headspace",
+    "name": "Headspace - Free meditations for COVID-19"
+  },
+  {
+    "id": "LB27jyuKsk1Hi8pJDCUn",
+    "published_at": "2020-04-20T21:11:52.706Z",
+    "url": "http://www.talk4healing.com/",
+    "approved": true,
+    "company": null,
+    "categoryId": "ZNrUvRN4asfFk3FxpWh3",
+    "name": "Talk4Healing for Indigenous Womxn",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "JDGqvdzoDNqjhHsoyGWR",
+      "r9iw7nxOm8VfKJ2Xi2jI",
+      "R0IAmZvpCclmvg3UG4JI",
+      "XiNPDiek0SUpTqODnCFQ",
+      "jfVbMq9PgcfPMnrygQIb",
+      "BUgmiu8M8QGnGl3Sldu2"
+    ],
+    "location": { "anywhere": null, "specific": "0GHEIYUBtuxmLlOzHLd4" },
+    "created_at": "2020-04-20T21:11:52.706Z",
+    "updated_at": "2020-04-22T17:21:18.010Z",
+    "description": "A culturally grounded, fully confidential helpline for Indigenous women available in 14 languages all across Ontario. There are ☎ phone, 🗨 chat, or 💬 text options.\n☎ 1-855 -554-HEAL (toll-free)"
   },
   {
     "id": "LctWc5KfOQyC1JUjAvoF",
     "location": { "anywhere": true, "specific": "P7cn4TqZEBzH7tV5c8FL" },
     "created_at": "2020-04-19T16:13:47.184Z",
-    "updated_at": "2020-04-19T16:13:47.184Z",
+    "updated_at": "2020-04-26T16:03:51.080Z",
     "description": "A counsellor trained in psychotherapy, and currently providing pay-what-you-can counselling via phone/video ",
     "published_at": "2020-04-19T16:13:47.184Z",
     "url": "https://heartcentredawareness.com/",
@@ -779,13 +1071,12 @@
     "categoryId": "O7sQvfvZUQ6mZqDafaFO",
     "company": "Kristy White",
     "name": "Heart Centred Therapy",
-    "tags": ["4HPqwuhi7eMlyce9yyVG"]
+    "tags": ["4HPqwuhi7eMlyce9yyVG", "RGU6ttrhhnuG6nN91B24"]
   },
   {
     "id": "LsU0FO3FGcuuo3PX62pN",
-    "name": "Tune in Tuesdays: For adults (with autism/dev. disabilities)",
     "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "q3G31cduDS8dcECBL97A", "YFAUSY5PrVBcntAw16QU"],
-    "location": { "specific": null, "anywhere": true },
+    "location": { "anywhere": true, "specific": null },
     "created_at": "2020-04-19T17:15:07.464Z",
     "updated_at": "2020-04-19T17:15:07.464Z",
     "description": "Mindfulness for autistic adults and adults with other developmental disabilities during COVID-19. Take part in accessible and inclusive guided online meditation sessions, Facilitated by Sue Hutton, a clinician with over 30 years of mindfulness experience. Apr 21 - Jun 16",
@@ -793,10 +1084,14 @@
     "url": "https://www.facebook.com/pg/suehuttonmindfulness/events/?ref=page_internal",
     "approved": true,
     "categoryId": "w0gtsx4ckG8VyzL19GxH",
-    "company": "Sue Hutton Mindfulness"
+    "company": "Sue Hutton Mindfulness",
+    "name": "Tune in Tuesdays: For adults (with autism/dev. disabilities)"
   },
   {
     "id": "LvQXu8Aw9MX4PfDVsql4",
+    "company": "",
+    "categoryId": "O7sQvfvZUQ6mZqDafaFO",
+    "name": "Balanced Mind & Wellness ",
     "tags": [
       "x49joBkOiGWAKjF5vapi",
       "BLN5h9BHIKIpEd1U1G17",
@@ -805,17 +1100,17 @@
     ],
     "location": { "anywhere": true, "specific": "P7cn4TqZEBzH7tV5c8FL" },
     "created_at": "2020-04-19T16:15:50.439Z",
-    "updated_at": "2020-04-19T16:15:50.439Z",
+    "updated_at": "2020-04-21T12:38:37.382Z",
     "description": "Phone and secure video counselling in GTA; offering reduced rates of 25% less until April 30, 2020 ",
     "published_at": "2020-04-19T16:15:50.439Z",
     "url": "https://balancedmindandwellness.janeapp.com/",
-    "approved": true,
-    "categoryId": "O7sQvfvZUQ6mZqDafaFO",
-    "company": "Balanced Mind & Wellness ",
-    "name": "Balanced Mind & Wellness "
+    "approved": true
   },
   {
     "id": "MRE3q8JjHccZgCBMVMuI",
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "3WlPX9jO24Ly5gO0U9wL", "9SVZ7IMNBvMKXReIxJei"],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-19T04:15:59.472Z",
     "updated_at": "2020-04-19T04:15:59.472Z",
     "description": "Build in-demand tech skills without leaving your house. Get free access to 7,000+ expert-led video courses and more all month long. ",
     "published_at": "2020-04-19T04:15:59.472Z",
@@ -823,15 +1118,10 @@
     "approved": true,
     "categoryId": "GFK0Izjn1gX0tFrCcnNn",
     "company": "Pluralsight",
-    "name": "Pluralsight’s #FREEapril ",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "3WlPX9jO24Ly5gO0U9wL", "9SVZ7IMNBvMKXReIxJei"],
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T04:15:59.472Z"
+    "name": "Pluralsight’s #FREEapril "
   },
   {
     "id": "OFPjjIFKKAhVrV9PzJJj",
-    "url": "https://tryhealthyminds.org/#program",
-    "approved": true,
     "categoryId": "w0gtsx4ckG8VyzL19GxH",
     "company": "healthyminds innovations",
     "name": "healthyminds program",
@@ -845,10 +1135,14 @@
     "created_at": "2020-04-19T17:07:39.536Z",
     "updated_at": "2020-04-19T17:07:39.536Z",
     "description": "Now freely available for individuals thanks to the generosity of our donors, in this time of uncertainty, and beyond. Translating pioneering neuroscience into tools for everyday life, our unique framework guides you through the four pillars of the science of training the mind.",
-    "published_at": "2020-04-19T17:07:39.536Z"
+    "published_at": "2020-04-19T17:07:39.536Z",
+    "url": "https://tryhealthyminds.org/#program",
+    "approved": true
   },
   {
     "id": "OdMNqcntsZdH1OWObJMI",
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-19T20:21:26.021Z",
     "updated_at": "2020-04-19T20:21:26.021Z",
     "description": "Nine ways you can take charge right now",
     "published_at": "2020-04-19T20:21:26.021Z",
@@ -857,26 +1151,26 @@
     "categoryId": "3JeIOXT7sy7KOWUgX9zk",
     "company": "Colorlines",
     "name": "Self-Love in the Time of Coronavirus",
-    "tags": ["uFJUXFL2T1GPqOKxR6EO", "McJzdFqQNamTVMjx9t68", "jfVbMq9PgcfPMnrygQIb"],
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T20:21:26.021Z"
+    "tags": ["uFJUXFL2T1GPqOKxR6EO", "McJzdFqQNamTVMjx9t68", "jfVbMq9PgcfPMnrygQIb"]
   },
   {
     "id": "OyFvYDWkW5bekBidjsO9",
+    "url": "https://www.bigwhitewall.com/",
+    "approved": true,
+    "categoryId": "KOhg8XVTLsnwxqC3WWhb",
+    "company": "",
+    "name": "Big White Wall",
     "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "JDGqvdzoDNqjhHsoyGWR", "nzsciD2Yc25cIlF3PZtn"],
     "location": { "anywhere": false, "specific": "0GHEIYUBtuxmLlOzHLd4" },
     "created_at": "2020-04-20T00:38:29.694Z",
     "updated_at": "2020-04-20T00:38:29.694Z",
     "description": "Free, online mental health and wellbeing service that helps people who are dealing with everyday stressors or major life events. Available 24/7/365, Anonymous. For residents of Ontario. \n",
-    "published_at": "2020-04-20T00:38:29.694Z",
-    "url": "https://www.bigwhitewall.com/",
-    "approved": true,
-    "categoryId": "KOhg8XVTLsnwxqC3WWhb",
-    "company": "",
-    "name": "Big White Wall"
+    "published_at": "2020-04-20T00:38:29.694Z"
   },
   {
     "id": "PsSQfJte9WovggqQIRsz",
+    "categoryId": "3JeIOXT7sy7KOWUgX9zk",
+    "company": "mind.org.uk",
     "name": "Coronavirus and your wellbeing",
     "tags": [
       "R0IAmZvpCclmvg3UG4JI",
@@ -885,32 +1179,47 @@
       "gaeHuZ1NhkkOFcqSNnCa",
       "F354dwlCiCjV5ZI2dW1H"
     ],
-    "location": { "anywhere": true, "specific": "y8jOgKjU0CB5RQWtdgxG" },
+    "location": { "specific": "y8jOgKjU0CB5RQWtdgxG", "anywhere": true },
     "created_at": "2020-04-19T18:25:42.929Z",
     "updated_at": "2020-04-19T18:25:42.929Z",
     "description": "Covers: Practical advice for staying at home; Taking care of your mental health and wellbeing; Support for work, benefits and housing; Checklist for staying at home.\nIn English or Welsh.",
     "published_at": "2020-04-19T18:25:42.929Z",
     "url": "https://www.mind.org.uk/information-support/coronavirus/coronavirus-and-your-wellbeing/",
-    "approved": true,
-    "categoryId": "3JeIOXT7sy7KOWUgX9zk",
-    "company": "mind.org.uk"
+    "approved": true
   },
   {
     "id": "QVGdAbsaKkq8hpuhoL6t",
-    "updated_at": "2020-04-19T16:30:25.141Z",
+    "location": { "anywhere": null, "specific": "P7cn4TqZEBzH7tV5c8FL" },
+    "created_at": "2020-04-19T16:30:25.141Z",
+    "updated_at": "2020-04-20T16:42:11.084Z",
     "description": "The Toronto Institute for Relational Psychotherapy provides a list of therapists who may offer services at a low cost. This site has listings for you to contact a TIRP student or recent graduate directly.",
     "published_at": "2020-04-19T16:30:25.141Z",
     "url": "https://tirp-lowcost-therapy.ca/",
     "approved": true,
     "categoryId": "O7sQvfvZUQ6mZqDafaFO",
     "company": "The Toronto Institute for Relational Psychotherapy (TIRP)",
-    "name": "Low-Cost Therapy",
-    "tags": ["PuBC9xwnuCEU5kR03Bve"],
-    "location": { "anywhere": false, "specific": "P7cn4TqZEBzH7tV5c8FL" },
-    "created_at": "2020-04-19T16:30:25.141Z"
+    "name": "Low-Cost Relational Psychotherapy",
+    "tags": ["PuBC9xwnuCEU5kR03Bve", "QYy2S3N7FbixbbuUKiKK"]
+  },
+  {
+    "id": "QWOHerHvQOtrPDmdlbnR",
+    "updated_at": "2020-04-23T21:33:25.892Z",
+    "description": "Provides free full-length workout videos, workout routines, healthy recipes and more, for any fitness level.",
+    "published_at": "2020-04-23T20:34:25.742Z",
+    "url": "https://www.fitnessblender.com/",
+    "approved": true,
+    "company": null,
+    "categoryId": "9geEVgJVxwzZvv8FmTJ2",
+    "name": "Fitness Blender",
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "bNyCFySbmyAd1E7wRmZl"],
+    "location": { "specific": null, "anywhere": true },
+    "created_at": "2020-04-23T20:34:25.742Z"
   },
   {
     "id": "R8oLP0tQe8EtbXi3nfh7",
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "rsNOheT2MIYnwe4TNVHb", "YFAUSY5PrVBcntAw16QU"],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-19T17:11:45.041Z",
     "updated_at": "2020-04-19T17:11:45.041Z",
     "description": "We are offering free online mindfulness sessions for caregivers and loved ones in the developmental disability community, regardless of age or disability. Apr 20 - May 11",
     "published_at": "2020-04-19T17:11:45.041Z",
@@ -918,13 +1227,17 @@
     "approved": true,
     "categoryId": "w0gtsx4ckG8VyzL19GxH",
     "company": "Sue Hutton Mindfulness",
-    "name": "Mindfulness Monday",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "rsNOheT2MIYnwe4TNVHb", "YFAUSY5PrVBcntAw16QU"],
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T17:11:45.041Z"
+    "name": "Mindfulness Monday"
   },
   {
     "id": "RCb3clQFW6wIon9lN80A",
+    "updated_at": "2020-04-21T12:38:08.555Z",
+    "description": "Rachelle Bensoussan is a bereavement clinician/grief therapist for 12 years and offering 1:1 support via Zoom and hosting online grief writing workshops and online group grief literacy trainings\n",
+    "published_at": "2020-04-19T16:22:44.563Z",
+    "url": "https://www.beingherehuman.com/services",
+    "approved": true,
+    "company": "",
+    "categoryId": "O7sQvfvZUQ6mZqDafaFO",
     "name": "being here, human",
     "tags": [
       "3WlPX9jO24Ly5gO0U9wL",
@@ -934,55 +1247,122 @@
       "HhMtAlQZNqxbwhw9OXQH"
     ],
     "location": { "anywhere": true, "specific": "P7cn4TqZEBzH7tV5c8FL" },
-    "created_at": "2020-04-19T16:22:44.563Z",
-    "updated_at": "2020-04-19T16:22:44.563Z",
-    "description": "Rachelle Bensoussan is a bereavement clinician/grief therapist for 12 years and offering 1:1 support via Zoom and hosting online grief writing workshops and online group grief literacy trainings\n",
-    "published_at": "2020-04-19T16:22:44.563Z",
-    "url": "https://www.beingherehuman.com/services",
+    "created_at": "2020-04-19T16:22:44.563Z"
+  },
+  {
+    "id": "RGhXV29UDQilzBu94PVW",
+    "created_at": "2020-04-26T03:48:57.931Z",
+    "location": { "anywhere": true, "specific": null },
+    "updated_at": "2020-04-26T03:51:25.613Z",
+    "description": "Managing attention (yours and theirs) will help kids thrive. Here are suggestions from ADHD experts for helping kids with ADHD weather this storm.\nArticle also available in Spanish.\n",
+    "published_at": "2020-04-26T03:48:57.931Z",
+    "url": "https://childmind.org/article/giving-kids-with-adhd-support-and-structure-during-the-coronavirus-crisis/",
     "approved": true,
-    "categoryId": "O7sQvfvZUQ6mZqDafaFO",
-    "company": "being here, human"
+    "categoryId": "3JeIOXT7sy7KOWUgX9zk",
+    "company": "Child Mind Institute",
+    "name": "Support for Kids With ADHD During the Coronavirus Crisis",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "uFJUXFL2T1GPqOKxR6EO",
+      "R0IAmZvpCclmvg3UG4JI",
+      "rsNOheT2MIYnwe4TNVHb",
+      "qDCe1ocOcN59lBwwIUOz",
+      "rGAIsC4hY2fj76ZMgmFJ",
+      "YFAUSY5PrVBcntAw16QU"
+    ]
   },
   {
     "id": "RtmWzBQclB7Yy6ifNhNR",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "7zMvDTWd79Kvnllpr0w8",
+      "sYilgV2dWKoeIHqvrgp0",
+      "lJFqNAyaGmThgHTpOmDU",
+      "lbxBp09JAgSze9GyjAg5"
+    ],
     "location": { "specific": null, "anywhere": true },
     "created_at": "2020-04-19T16:59:39.207Z",
-    "updated_at": "2020-04-19T16:59:39.207Z",
+    "updated_at": "2020-04-21T12:30:13.090Z",
     "description": "Dive into breathing techniques that are approved by ancient traditions, by modern science. Use the power of breathing and meditation to increase your mindfulness and live a better life. You will see the positive impact anyway, for only 7-15 minutes a day.",
     "published_at": "2020-04-19T16:59:39.207Z",
     "url": "https://play.google.com/store/apps/details?id=com.abdula.pranabreath&hl=en_CA",
     "approved": true,
     "categoryId": "w0gtsx4ckG8VyzL19GxH",
     "company": "Oleksandr Albul",
-    "name": "Prana Breath: Calm & Meditate",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "sYilgV2dWKoeIHqvrgp0", "lJFqNAyaGmThgHTpOmDU"]
+    "name": "Prana Breath: Calm & Meditate"
+  },
+  {
+    "id": "S5lbhEVzk65ABuqMPT8i",
+    "categoryId": "KOhg8XVTLsnwxqC3WWhb",
+    "company": "",
+    "name": "SilverCloud Health",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "9SVZ7IMNBvMKXReIxJei",
+      "lJFqNAyaGmThgHTpOmDU",
+      "lbxBp09JAgSze9GyjAg5"
+    ],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-23T20:41:11.488Z",
+    "updated_at": "2020-04-23T20:41:11.488Z",
+    "description": "Digital mental and behavioural health platform with over 30 programs from wellness to severse mental health conditions with proven outcomes and engagement.\nDo a self-assessment to help determine goals; individualized program; check in on progress\n🔑 Access Code: SHOPPERS",
+    "published_at": "2020-04-23T20:41:11.488Z",
+    "url": "https://shoppers.silvercloudhealth.com/signup/shoppers_offer/132/signup",
+    "approved": true
+  },
+  {
+    "id": "SuNQsYRdtyvrL6pQkO4t",
+    "published_at": "2020-04-21T00:30:08.438Z",
+    "url": "https://thewellnesssociety.org/wp-content/uploads/2020/04/Coronavirus-Anxiety-Workbook.pdf",
+    "approved": true,
+    "categoryId": "3JeIOXT7sy7KOWUgX9zk",
+    "company": "The Wellness Society",
+    "name": "Coronavirus Anxiety Workbook",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "bfI4cx6NnBbexEsbLzir",
+      "zPiJfZ2m8PEcqc5szSRB",
+      "lJFqNAyaGmThgHTpOmDU",
+      "lbxBp09JAgSze9GyjAg5"
+    ],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-21T00:30:08.438Z",
+    "updated_at": "2020-04-21T12:24:07.777Z",
+    "description": "A tool to help you build resilience during difficult times"
   },
   {
     "id": "T9FFwPdriT0bYra4mmqJ",
+    "location": { "specific": null, "anywhere": true },
+    "created_at": "2020-04-19T21:17:26.560Z",
+    "updated_at": "2020-04-20T16:57:27.910Z",
+    "description": "Watch all of our 50+ special virtual well-being workshops on topics like self-hypnosis, intuitive business, Human Design, astrology, nutrition, and more before they disappear on May 31st, 2020.",
+    "published_at": "2020-04-19T21:17:26.560Z",
+    "url": "https://www.holisticism.com/virtual-workshops",
+    "approved": true,
+    "categoryId": "GFK0Izjn1gX0tFrCcnNn",
+    "company": "Holisticism",
     "name": "The Liminal Library",
     "tags": [
       "UJFbvU4VcuRsEJ6J0Cvz",
       "3WlPX9jO24Ly5gO0U9wL",
       "bNyCFySbmyAd1E7wRmZl",
       "UgBMKNOkvOftsDd3NJKN",
+      "McJzdFqQNamTVMjx9t68",
       "RGU6ttrhhnuG6nN91B24"
-    ],
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T21:17:26.560Z",
-    "updated_at": "2020-04-19T21:17:26.560Z",
-    "description": "Watch all of our 50+ special virtual well-being workshops on topics like self-hypnosis, intuitive business, Human Design, astrology, nutrition, and more before they disappear on May 31st, 2020.",
-    "published_at": "2020-04-19T21:17:26.560Z",
-    "url": "https://www.holisticism.com/virtual-workshops",
-    "approved": true,
-    "categoryId": "GFK0Izjn1gX0tFrCcnNn",
-    "company": "Holisticism"
+    ]
   },
   {
     "id": "Te8jfbf5KaAVYJSOsBtY",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz"],
-    "location": { "anywhere": true, "specific": null },
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "uFJUXFL2T1GPqOKxR6EO",
+      "lJFqNAyaGmThgHTpOmDU",
+      "SPpkj0qbGOqXTR5lDNNY",
+      "lbxBp09JAgSze9GyjAg5"
+    ],
+    "location": { "specific": null, "anywhere": true },
     "created_at": "2020-04-19T18:41:20.388Z",
-    "updated_at": "2020-04-19T18:41:20.388Z",
+    "updated_at": "2020-04-26T16:13:08.622Z",
     "description": "Coronavirus has plunged the world into uncertainty and the constant news about the pandemic can feel relentless. All of this is taking its toll on people's mental health, particularly those already living with conditions like anxiety and OCD. So how can we protect our mental health?",
     "published_at": "2020-04-19T18:41:20.388Z",
     "url": "https://www.bbc.com/news/health-51873799",
@@ -993,37 +1373,37 @@
   },
   {
     "id": "TkwAqll9ynUOA1iOSNJW",
+    "published_at": "2020-04-19T15:52:34.300Z",
     "url": "https://www.umhn.ca/",
     "approved": true,
+    "company": "",
     "categoryId": "O7sQvfvZUQ6mZqDafaFO",
-    "company": "Umbrella Mental Health Network",
     "name": "Umbrella Mental Health Network",
     "tags": ["P2enYG1P5YLHLMKGVf5v"],
-    "location": { "specific": "P7cn4TqZEBzH7tV5c8FL", "anywhere": false },
+    "location": { "anywhere": null, "specific": "P7cn4TqZEBzH7tV5c8FL" },
     "created_at": "2020-04-19T15:52:34.300Z",
-    "updated_at": "2020-04-19T15:52:34.300Z",
-    "description": "A network of queer and trans-identified mental health professionals who work primarily in the lesbian, gay, bisexual, trans, queer, intersex, asexual, two-spirited (LGBTQIA2S) community within Toronto. ",
-    "published_at": "2020-04-19T15:52:34.300Z"
+    "updated_at": "2020-04-21T12:42:21.648Z",
+    "description": "A network of queer and trans-identified mental health professionals who work primarily in the lesbian, gay, bisexual, trans, queer, intersex, asexual, two-spirited (LGBTQIA2S) community within Toronto. "
   },
   {
     "id": "U02c4Gvbx0ic8fV8DHQO",
+    "updated_at": "2020-04-19T18:58:09.783Z",
+    "description": "A comprehensive guide of information and resources for improving mental health through COVID-19",
+    "published_at": "2020-04-19T18:58:09.783Z",
+    "url": "https://mentalhealthcovid19.ca/",
+    "approved": true,
     "categoryId": "3JeIOXT7sy7KOWUgX9zk",
     "company": "Jerome Perera, MD, Psychiatrist, Clinician-Teacher ",
     "name": "Improving Mental Health During COVID-19 ",
     "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "uFJUXFL2T1GPqOKxR6EO", "IevR1WiN85FQR6S47UPe"],
     "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T18:58:09.783Z",
-    "updated_at": "2020-04-19T18:58:09.783Z",
-    "description": "A comprehensive guide of information and resources for improving mental health through COVID-19",
-    "published_at": "2020-04-19T18:58:09.783Z",
-    "url": "https://mentalhealthcovid19.ca/",
-    "approved": true
+    "created_at": "2020-04-19T18:58:09.783Z"
   },
   {
     "id": "U2Jd3vJqI3W4bkBR4Yu4",
-    "location": { "anywhere": true, "specific": "CaDm5zWm82h7eLIXgXye" },
+    "location": { "specific": "CaDm5zWm82h7eLIXgXye", "anywhere": null },
     "created_at": "2020-04-19T04:13:06.620Z",
-    "updated_at": "2020-04-19T04:13:06.621Z",
+    "updated_at": "2020-04-21T01:02:31.582Z",
     "description": "A free digital program for all Canadians – to support your mental well-being through the COVID-19 crisis. Get guidance that’s created to help with the specific emotional well-being concerns stirred by the pandemic, through easy-to-digest resources from our team of caring clinical psychologists.",
     "published_at": "2020-04-19T04:13:06.621Z",
     "url": "https://www.mindbeacon.com/strongerminds",
@@ -1031,21 +1411,27 @@
     "categoryId": "GFK0Izjn1gX0tFrCcnNn",
     "company": "MindBeacon",
     "name": "Stronger Minds by BEACON",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "3WlPX9jO24Ly5gO0U9wL", "9SVZ7IMNBvMKXReIxJei"]
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "3WlPX9jO24Ly5gO0U9wL",
+      "9SVZ7IMNBvMKXReIxJei",
+      "lJFqNAyaGmThgHTpOmDU",
+      "pN0WjAKdhqeMwZVs7IBR"
+    ]
   },
   {
     "id": "VFjuZkWjsXRdPXUn6jqZ",
-    "name": "Seniors Safety Line",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "5AE9XYC5gt1XzYxbm3pl"],
-    "location": { "anywhere": false, "specific": "0GHEIYUBtuxmLlOzHLd4" },
-    "created_at": "2020-04-19T19:26:37.094Z",
-    "updated_at": "2020-04-19T19:26:37.094Z",
-    "description": "Provides contact and referral information for local agencies across the province that assist in cases of elder abuse. Trained counsellors also provide safety planning and supportive counseling for older adults who are being abused or at-risk of abuse. Call 1-866-299-1011 from anywhere in Ontario.\n",
+    "updated_at": "2020-04-26T16:00:50.785Z",
+    "description": "Provides contact and referral information for local agencies across the province that assist in cases of elder abuse. Trained counsellors also provide safety planning and supportive counseling for older adults who are being abused or at-risk of abuse. \n☎ Call 1-866-299-1011 from anywhere in Ontario (toll-free).\n",
     "published_at": "2020-04-19T19:26:37.094Z",
     "url": "http://www.eapon.ca/",
     "approved": true,
     "categoryId": "ZNrUvRN4asfFk3FxpWh3",
-    "company": "Elder Abuse Prevention (ON)"
+    "company": "Elder Abuse Prevention (ON)",
+    "name": "Seniors Safety Line",
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "XiNPDiek0SUpTqODnCFQ", "5AE9XYC5gt1XzYxbm3pl"],
+    "location": { "anywhere": null, "specific": "0GHEIYUBtuxmLlOzHLd4" },
+    "created_at": "2020-04-19T19:26:37.094Z"
   },
   {
     "id": "VSjLmlhzYka0ephCizQH",
@@ -1068,10 +1454,15 @@
   },
   {
     "id": "VnJ1WfwT9K2yoZBQ1Hl1",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "bfI4cx6NnBbexEsbLzir", "lJFqNAyaGmThgHTpOmDU"],
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "bfI4cx6NnBbexEsbLzir",
+      "lJFqNAyaGmThgHTpOmDU",
+      "lbxBp09JAgSze9GyjAg5"
+    ],
     "location": { "anywhere": true, "specific": null },
     "created_at": "2020-04-19T18:34:38.936Z",
-    "updated_at": "2020-04-19T18:34:38.936Z",
+    "updated_at": "2020-04-26T16:11:17.112Z",
     "description": "Tips for managing stress in this anxious time",
     "published_at": "2020-04-19T18:34:38.936Z",
     "url": "https://newpaltz.edu/media/idmh/covid-19/IDMH%20COVID19%20Community%20Stress%20Management%20Tip%20Sheet%202020%20Final.pdf",
@@ -1081,74 +1472,130 @@
     "name": "COVID-19: Managing Stress in this Anxious Time"
   },
   {
+    "id": "VwK4vyOmOTuYpSzNv3go",
+    "updated_at": "2020-04-20T21:05:44.043Z",
+    "description": "ConnexOntario provides free and confidential health services information for people experiencing problems with alcohol and drugs, mental illness and/or gambling. Our system navigation and information service is live-answer 24/7, confidential, and free. \n☎ 1-866-531-2600",
+    "published_at": "2020-04-20T21:05:32.945Z",
+    "url": "https://www.connexontario.ca/",
+    "approved": true,
+    "categoryId": "FEumLlCmAc5zQVAvBtdV",
+    "company": "Government of Ontario",
+    "name": "ConnexOntario",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "JDGqvdzoDNqjhHsoyGWR",
+      "r9iw7nxOm8VfKJ2Xi2jI",
+      "CfKIjfwhhYViJOjCEk1N",
+      "XiNPDiek0SUpTqODnCFQ",
+      "gJKhSxtZ91Hn5SNyoU70"
+    ],
+    "location": { "anywhere": null, "specific": "0GHEIYUBtuxmLlOzHLd4" },
+    "created_at": "2020-04-20T21:05:32.945Z"
+  },
+  {
     "id": "VzPXrv1azhHI2WvCqQj0",
+    "published_at": "2020-04-19T21:10:55.904Z",
+    "url": "https://bodypositiveyoga.com/7-day-yoga-exploration/",
+    "approved": true,
+    "categoryId": "9geEVgJVxwzZvv8FmTJ2",
+    "company": "Body Positive Yoga",
+    "name": "7 Day Yoga Exploration",
     "tags": [
       "UJFbvU4VcuRsEJ6J0Cvz",
       "3WlPX9jO24Ly5gO0U9wL",
       "bNyCFySbmyAd1E7wRmZl",
       "AiXmdWqmoiub5ruJOKm4"
     ],
-    "location": { "specific": null, "anywhere": true },
+    "location": { "anywhere": true, "specific": null },
     "created_at": "2020-04-19T21:10:55.904Z",
     "updated_at": "2020-04-19T21:10:55.904Z",
-    "description": "Get 7 days of free yoga videos and celebrate your body’s intelligence and power. Each day we’ll focus on a different part of the body that could use a little attention, from wrist therapy for device overload, to firing up your glutes for a stable, strong practice.",
-    "published_at": "2020-04-19T21:10:55.904Z",
-    "url": "https://bodypositiveyoga.com/7-day-yoga-exploration/",
-    "approved": true,
-    "categoryId": "9geEVgJVxwzZvv8FmTJ2",
-    "company": "Body Positive Yoga",
-    "name": "7 Day Yoga Exploration"
+    "description": "Get 7 days of free yoga videos and celebrate your body’s intelligence and power. Each day we’ll focus on a different part of the body that could use a little attention, from wrist therapy for device overload, to firing up your glutes for a stable, strong practice."
   },
   {
     "id": "X3284VTwCrbeAgwXFklI",
-    "name": "Online COVID-19 Support Group ",
-    "tags": ["CfKIjfwhhYViJOjCEk1N", "nzsciD2Yc25cIlF3PZtn", "bNyCFySbmyAd1E7wRmZl"],
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T02:32:27.627Z",
-    "updated_at": "2020-04-19T02:32:27.627Z",
+    "updated_at": "2020-04-26T16:10:38.962Z",
     "description": "Small, facilitated online group (max of 8 people) will meet for 90 minutes each week for six weeks. It is specifically designed for folks who are at-risk of life-threatening complications if they contract COVID-19 or other infections like influenza. $150/6 weeks",
     "published_at": "2020-04-19T02:32:27.627Z",
     "url": "https://www.christophermckinnon.ca/covid19-programs",
     "approved": true,
     "categoryId": "kaoFxEzS8aYrK6NSoEzw",
-    "company": "Christopher McKinnon (RP, Qualifying)"
+    "company": "Christopher McKinnon (RP, Qualifying)",
+    "name": "Online COVID-19 Support Group ",
+    "tags": [
+      "CfKIjfwhhYViJOjCEk1N",
+      "nzsciD2Yc25cIlF3PZtn",
+      "bNyCFySbmyAd1E7wRmZl",
+      "bcrqArlCvnDQn9DknAY0"
+    ],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-19T02:32:27.627Z"
+  },
+  {
+    "id": "XC07zRG2Y6E7az4Gwnbq",
+    "location": { "anywhere": true, "specific": "y8jOgKjU0CB5RQWtdgxG" },
+    "created_at": "2020-04-22T16:51:48.494Z",
+    "updated_at": "2020-04-22T16:51:48.494Z",
+    "description": "Opening Doors is a user led organisation run by people with learning difficulties for people with learning difficulties.\nThis is a PDF with illustrations and information about the coronavirus and staying in for folks with learning or development challenges. ",
+    "published_at": "2020-04-22T16:51:48.494Z",
+    "url": "http://www.openingdoors.org.uk/uploads/images/486.pdf",
+    "approved": true,
+    "categoryId": "3JeIOXT7sy7KOWUgX9zk",
+    "company": "Opening Doors",
+    "name": "My plan for being safe and staying in: Illustrated workbook",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "bfI4cx6NnBbexEsbLzir",
+      "zPiJfZ2m8PEcqc5szSRB",
+      "rsNOheT2MIYnwe4TNVHb",
+      "YFAUSY5PrVBcntAw16QU"
+    ]
   },
   {
     "id": "Yg0wRkTGoUyCHukT1IJy",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "RWc2iK6uWN2bQ9NrJGNP"],
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T02:51:42.773Z",
-    "updated_at": "2020-04-19T02:51:42.773Z",
-    "description": "Try the Peloton App at home, now free for 90 days. Your pass to thousands of live and on-demand classes—anywhere, anytime.\nGet what you need to meet your goals, with a mix of running, strength, toning, cycling, yoga, meditation and outdoor workouts.",
     "published_at": "2020-04-19T02:51:42.773Z",
     "url": "https://www.onepeloton.ca/app",
     "approved": true,
     "categoryId": "9geEVgJVxwzZvv8FmTJ2",
     "company": "Peloton",
-    "name": "Peloton Workout App"
+    "name": "Peloton Workout App",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "RWc2iK6uWN2bQ9NrJGNP",
+      "7zMvDTWd79Kvnllpr0w8",
+      "sYilgV2dWKoeIHqvrgp0",
+      "3vvXF1rzaWnP6IExYgHW",
+      "9SVZ7IMNBvMKXReIxJei"
+    ],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-19T02:51:42.773Z",
+    "updated_at": "2020-04-26T16:09:06.626Z",
+    "description": "Try the Peloton App at home, now free for 90 days. Your pass to thousands of live and on-demand classes—anywhere, anytime.\nGet what you need to meet your goals, with a mix of running, strength, toning, cycling, yoga, meditation and outdoor workouts."
   },
   {
     "id": "Yv7yLidMmIsknGMlwSNN",
+    "updated_at": "2020-04-22T15:57:42.537Z",
+    "description": "Offers immediate counselling and crisis intervention to all Indigenous peoples across Canada. \n☎ Call 1-855-242-3310 (toll-free), 24/7, or use the 🗨 chat box to connect with a counsellor online. \nAvailable in English &  French. \nOn request, phone counselling is also available in: Cree, Ojibway; Inuktitut.",
+    "published_at": "2020-04-19T19:37:06.077Z",
+    "url": "https://www.hopeforwellness.ca/",
+    "approved": true,
+    "categoryId": "ZNrUvRN4asfFk3FxpWh3",
+    "company": "Donna Cona",
+    "name": "First Nations and Inuit Hope for Wellness Helpline",
     "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
       "JDGqvdzoDNqjhHsoyGWR",
       "r9iw7nxOm8VfKJ2Xi2jI",
       "R0IAmZvpCclmvg3UG4JI",
       "XiNPDiek0SUpTqODnCFQ",
       "jfVbMq9PgcfPMnrygQIb"
     ],
-    "location": { "anywhere": false, "specific": "CaDm5zWm82h7eLIXgXye" },
-    "created_at": "2020-04-19T19:37:06.077Z",
-    "updated_at": "2020-04-19T19:37:06.077Z",
-    "description": "Offers immediate counselling and crisis intervention to all Indigenous peoples across Canada. Call 1-855-242-3310 (toll-free), 24/7, or use the chat box to connect with a counsellor online. Available in English &  French. On request, phone counselling is also available in: Cree, Ojibway; Inuktitut.",
-    "published_at": "2020-04-19T19:37:06.077Z",
-    "url": "https://www.hopeforwellness.ca/",
-    "approved": true,
-    "categoryId": "ZNrUvRN4asfFk3FxpWh3",
-    "company": "Donna Cona",
-    "name": "Hope for Wellness Helpline"
+    "location": { "anywhere": null, "specific": "CaDm5zWm82h7eLIXgXye" },
+    "created_at": "2020-04-19T19:37:06.077Z"
   },
   {
     "id": "ZfjIAeofkIV0xvmiBCdu",
+    "updated_at": "2020-04-19T01:48:26.957Z",
+    "description": "When you don't know what to say to a friend who doesn't seem okay, this is a site with resources on how to be there for others going through a difficult time.",
     "published_at": "2020-04-19T01:48:26.957Z",
     "url": "https://bethere.org/",
     "approved": true,
@@ -1162,32 +1609,52 @@
       "HhMtAlQZNqxbwhw9OXQH",
       "BG08VoS0hTmitycbRLhh"
     ],
-    "location": { "specific": null, "anywhere": true },
-    "created_at": "2020-04-19T01:48:26.957Z",
-    "updated_at": "2020-04-19T01:48:26.957Z",
-    "description": "When you don't know what to say to a friend who doesn't seem okay, this is a site with resources on how to be there for others going through a difficult time."
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-19T01:48:26.957Z"
   },
   {
     "id": "Zlp3jjFB179lhtxAjSDS",
     "tags": [
+      "R0IAmZvpCclmvg3UG4JI",
       "lJFqNAyaGmThgHTpOmDU",
       "pN0WjAKdhqeMwZVs7IBR",
-      "jfVbMq9PgcfPMnrygQIb",
-      "R0IAmZvpCclmvg3UG4JI"
+      "jfVbMq9PgcfPMnrygQIb"
     ],
-    "location": { "anywhere": false, "specific": "P7cn4TqZEBzH7tV5c8FL" },
+    "location": { "specific": "P7cn4TqZEBzH7tV5c8FL", "anywhere": null },
     "created_at": "2020-04-19T15:42:05.449Z",
-    "updated_at": "2020-04-19T15:42:05.449Z",
+    "updated_at": "2020-04-21T12:34:42.333Z",
     "description": "A diverse and skilled team of 15 clinicians currently working extended hours to provide support to our community during this uncertain time.",
     "published_at": "2020-04-19T15:42:05.449Z",
     "url": "http://www.well-nest.ca/",
     "approved": true,
+    "company": "",
     "categoryId": "O7sQvfvZUQ6mZqDafaFO",
-    "company": "WellNest Psychotherapy Services",
     "name": "WellNest Psychotherapy Services"
   },
   {
+    "id": "bNNSrEJnZpuCOqLAVmfS",
+    "url": "https://www.facebook.com/redtabletalk/videos/658414061639561/",
+    "approved": true,
+    "categoryId": "QwUIN4g6euGuSoUI0Yeh",
+    "company": "Red Table Talk",
+    "name": "Managing Our Anxiety & Fear During COVID-19 Discussion",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "bNyCFySbmyAd1E7wRmZl",
+      "lJFqNAyaGmThgHTpOmDU",
+      "jfVbMq9PgcfPMnrygQIb"
+    ],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-20T21:21:11.005Z",
+    "updated_at": "2020-04-21T00:56:25.595Z",
+    "description": "In this challenging time, motivational speaker Jay Shetty and psychologist Dr. Ramani come to the Red Table with tips and tools for managing the emotional toll that's been brought on by COVID-19. ",
+    "published_at": "2020-04-20T21:21:11.005Z"
+  },
+  {
     "id": "c0TyFJQPz6lgcUzlv9R0",
+    "categoryId": "QwUIN4g6euGuSoUI0Yeh",
+    "company": "Georgia Aquarium",
+    "name": "Live View from the Georgia Aquarium",
     "tags": [
       "UJFbvU4VcuRsEJ6J0Cvz",
       "CfKIjfwhhYViJOjCEk1N",
@@ -1200,35 +1667,24 @@
     "description": "Live feeds from the Georgia Aquarium including the Webcams of Jellyfish, African Penguins, Gators, Sea Lions, Piranhas, Beluga Whales, Indo-Pacific Barrier Reefs, Ocean Voyager, Southern Sea Otters, etc.",
     "published_at": "2020-04-19T04:35:44.124Z",
     "url": "https://www.georgiaaquarium.org/webcam/ocean-voyager/",
-    "approved": true,
-    "categoryId": "QwUIN4g6euGuSoUI0Yeh",
-    "company": "Georgia Aquarium",
-    "name": "Live View from the Georgia Aquarium"
+    "approved": true
   },
   {
     "id": "cLrCNml2G7uIYi3GxA6p",
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "PuBC9xwnuCEU5kR03Bve", "jfVbMq9PgcfPMnrygQIb"],
+    "location": { "anywhere": true, "specific": "gPaj0FpaOjbAaU8wQEfR" },
+    "created_at": "2020-04-19T21:03:46.838Z",
+    "updated_at": "2020-04-20T17:02:42.871Z",
+    "description": "Making it as easy as possible for people to find therapists, life coaches, emergency mental health centers, and free/low costs community clinics, by and for the Latinx community. ",
+    "published_at": "2020-04-19T21:03:46.838Z",
     "url": "https://www.therapyforlatinx.com/",
     "approved": true,
     "categoryId": "KOhg8XVTLsnwxqC3WWhb",
     "company": "Therapy for Latinx",
-    "name": "Therapy for Latinx",
-    "tags": ["jfVbMq9PgcfPMnrygQIb"],
-    "location": { "specific": "gPaj0FpaOjbAaU8wQEfR", "anywhere": true },
-    "created_at": "2020-04-19T21:03:46.838Z",
-    "updated_at": "2020-04-19T21:03:46.838Z",
-    "description": "Making it as easy as possible for people to find therapists, life coaches, emergency mental health centers, and free/low costs community clinics, by and for the Latinx community. ",
-    "published_at": "2020-04-19T21:03:46.838Z"
+    "name": "Therapy for Latinx"
   },
   {
     "id": "dgXwbvYB0p5Xyfw97swR",
-    "updated_at": "2020-04-19T17:23:21.097Z",
-    "description": "Guided meditation in the comfort of your own space - no prior knowledge required. Highly rated sessions are 30 minutes, fully-guided and conveniently done by video!",
-    "published_at": "2020-04-19T17:23:21.097Z",
-    "url": "https://inkblottherapy.com/meditation",
-    "approved": true,
-    "categoryId": "w0gtsx4ckG8VyzL19GxH",
-    "company": "Inkblot Therapy",
-    "name": "Inkblot Meditation",
     "tags": [
       "UJFbvU4VcuRsEJ6J0Cvz",
       "CCr3szDilmyAbA2fLFNw",
@@ -1236,11 +1692,18 @@
       "nzsciD2Yc25cIlF3PZtn"
     ],
     "location": { "specific": null, "anywhere": true },
-    "created_at": "2020-04-19T17:23:21.097Z"
+    "created_at": "2020-04-19T17:23:21.097Z",
+    "updated_at": "2020-04-19T17:23:21.097Z",
+    "description": "Guided meditation in the comfort of your own space - no prior knowledge required. Highly rated sessions are 30 minutes, fully-guided and conveniently done by video!",
+    "published_at": "2020-04-19T17:23:21.097Z",
+    "url": "https://inkblottherapy.com/meditation",
+    "approved": true,
+    "categoryId": "w0gtsx4ckG8VyzL19GxH",
+    "company": "Inkblot Therapy",
+    "name": "Inkblot Meditation"
   },
   {
     "id": "exALY36QybBXvwPZNiOl",
-    "published_at": "2020-04-19T02:42:47.543Z",
     "url": "https://www.downdogapp.com/",
     "approved": true,
     "categoryId": "9geEVgJVxwzZvv8FmTJ2",
@@ -1255,34 +1718,66 @@
     "location": { "specific": null, "anywhere": true },
     "created_at": "2020-04-19T02:42:47.543Z",
     "updated_at": "2020-04-19T02:42:47.543Z",
-    "description": "Downdog is offering all of their exercise apps for free until May 1st (Down Dog, Yoga for Beginners, HIIT, Barre, and 7 Minute Workout).\nStudents and teachers (K-12, college) get free access until July 1st.\nHealthcare workers also get free access until July 1st."
+    "description": "Downdog is offering all of their exercise apps for free until May 1st (Down Dog, Yoga for Beginners, HIIT, Barre, and 7 Minute Workout).\nStudents and teachers (K-12, college) get free access until July 1st.\nHealthcare workers also get free access until July 1st.",
+    "published_at": "2020-04-19T02:42:47.543Z"
   },
   {
     "id": "fARGCINOZHgo3LKMnsUG",
-    "categoryId": "9geEVgJVxwzZvv8FmTJ2",
-    "company": "Fitbit",
-    "name": "Fitbit Premium",
-    "tags": ["x49joBkOiGWAKjF5vapi", "RWc2iK6uWN2bQ9NrJGNP"],
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T03:08:33.261Z",
-    "updated_at": "2020-04-19T03:08:33.261Z",
+    "updated_at": "2020-04-26T16:06:59.622Z",
     "description": "Offering select Premium features for free; and extended trial of premium to 90 days",
     "published_at": "2020-04-19T03:08:33.261Z",
     "url": "https://blog.fitbit.com/letter-from-ceo/",
+    "approved": true,
+    "categoryId": "9geEVgJVxwzZvv8FmTJ2",
+    "company": "Fitbit",
+    "name": "Fitbit Premium",
+    "tags": [
+      "x49joBkOiGWAKjF5vapi",
+      "RWc2iK6uWN2bQ9NrJGNP",
+      "7zMvDTWd79Kvnllpr0w8",
+      "sYilgV2dWKoeIHqvrgp0",
+      "3vvXF1rzaWnP6IExYgHW",
+      "9SVZ7IMNBvMKXReIxJei",
+      "3sOx5yzbFwmqn9fMnhDM"
+    ],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-19T03:08:33.261Z"
+  },
+  {
+    "id": "futCwJOyBt9amcZV9q6m",
+    "categoryId": "KOhg8XVTLsnwxqC3WWhb",
+    "company": "",
+    "name": "Wellness Together Canada",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "IevR1WiN85FQR6S47UPe",
+      "9SVZ7IMNBvMKXReIxJei",
+      "lJFqNAyaGmThgHTpOmDU",
+      "pN0WjAKdhqeMwZVs7IBR",
+      "QYy2S3N7FbixbbuUKiKK",
+      "lbxBp09JAgSze9GyjAg5",
+      "F354dwlCiCjV5ZI2dW1H"
+    ],
+    "location": { "specific": "CaDm5zWm82h7eLIXgXye", "anywhere": true },
+    "created_at": "2020-04-23T20:49:06.885Z",
+    "updated_at": "2020-04-23T20:49:06.885Z",
+    "description": "Wellness Together Canada provides free online tools and resources including modules for addressing low mood, worry, substance use, social isolation and relationship issues. PHQ-4 and WEMWBS and WSAS self-assessment. Gives recommendations based on results.",
+    "published_at": "2020-04-23T20:49:06.885Z",
+    "url": "https://ca.portal.gs/",
     "approved": true
   },
   {
     "id": "g4tNuNyG4i0cp27zSZvN",
     "tags": ["PuBC9xwnuCEU5kR03Bve", "BLN5h9BHIKIpEd1U1G17", "uZRGXe3b9yacgemOOxm4"],
-    "location": { "anywhere": true, "specific": "P7cn4TqZEBzH7tV5c8FL" },
+    "location": { "specific": "P7cn4TqZEBzH7tV5c8FL", "anywhere": false },
     "created_at": "2020-04-20T01:04:56.101Z",
-    "updated_at": "2020-04-20T01:04:56.101Z",
+    "updated_at": "2020-04-20T16:41:04.136Z",
     "description": "A directory of qualified therapists offering reduced rates, low-cost, and sliding scale fees.",
     "published_at": "2020-04-20T01:04:56.101Z",
     "url": "https://www.affordabletherapytoronto.com/",
     "approved": true,
+    "company": null,
     "categoryId": "O7sQvfvZUQ6mZqDafaFO",
-    "company": "",
     "name": "Affordable Therapy Network of Toronto"
   },
   {
@@ -1306,6 +1801,9 @@
   },
   {
     "id": "gaqbazMYxv7710Qb1lzs",
+    "categoryId": "O7sQvfvZUQ6mZqDafaFO",
+    "company": "Tynan Rhea Therapy Services",
+    "name": "Online COVID-19 Respite Clinic ",
     "tags": ["4HPqwuhi7eMlyce9yyVG", "jfVbMq9PgcfPMnrygQIb", "P2enYG1P5YLHLMKGVf5v"],
     "location": { "anywhere": true, "specific": "P7cn4TqZEBzH7tV5c8FL" },
     "created_at": "2020-04-19T16:20:23.139Z",
@@ -1313,13 +1811,36 @@
     "description": "Special pay-what-you-can online clinic with no minimum fee for folks who are feeling the wear of social isolation and struggling to access mental health services due to lack of funds. All sessions will occur online with voice or voice & video conferencing. No consult required.",
     "published_at": "2020-04-19T16:20:23.139Z",
     "url": "https://app.acuityscheduling.com/schedule.php?owner=18913550",
+    "approved": true
+  },
+  {
+    "id": "gu3chd9xka179lY1wlYi",
+    "updated_at": "2020-04-26T03:46:43.124Z",
+    "description": "I’ve been largely homebound due to chronic illness for several years now. I tried to think of some tips and tricks for everyone else to get through a week or more of staying mostly at home. I skipped past the usual advice...and tried to focus on what has helped me personally the most.",
+    "published_at": "2020-04-26T03:46:43.124Z",
+    "url": "https://medium.com/@ellensamuels/ten-tips-from-a-chronically-ill-person-for-surviving-social-distancing-ba1656f7def0",
     "approved": true,
-    "categoryId": "O7sQvfvZUQ6mZqDafaFO",
-    "company": "Tynan Rhea Therapy Services",
-    "name": "Online COVID-19 Respite Clinic "
+    "categoryId": "3JeIOXT7sy7KOWUgX9zk",
+    "company": "Ellen Samuels via Medium",
+    "name": "10 Tips from a Chronically Ill Person for Surviving Distance",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "uFJUXFL2T1GPqOKxR6EO",
+      "gaeHuZ1NhkkOFcqSNnCa",
+      "McJzdFqQNamTVMjx9t68"
+    ],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-26T03:46:43.124Z"
   },
   {
     "id": "hT1PvOo38FbciuSPXZ2o",
+    "updated_at": "2020-04-19T04:24:05.057Z",
+    "description": "211 Ontario is your primary source of information on government and community-based social services. Includes mental health services/programs. Call 2-1-1, 24 hours, 7 days a week in 150 languages. \nWebsite also has chat and search feature. ",
+    "published_at": "2020-04-19T04:24:05.057Z",
+    "url": "https://www.211oncovid19.ca/",
+    "approved": true,
+    "categoryId": "FEumLlCmAc5zQVAvBtdV",
+    "company": "211 Ontario",
     "name": "211 Ontario - COVID-19",
     "tags": [
       "UJFbvU4VcuRsEJ6J0Cvz",
@@ -1329,31 +1850,71 @@
       "R0IAmZvpCclmvg3UG4JI"
     ],
     "location": { "anywhere": false, "specific": "0GHEIYUBtuxmLlOzHLd4" },
-    "created_at": "2020-04-19T04:24:05.057Z",
-    "updated_at": "2020-04-19T04:24:05.057Z",
-    "description": "211 Ontario is your primary source of information on government and community-based social services. Includes mental health services/programs. Call 2-1-1, 24 hours, 7 days a week in 150 languages. \nWebsite also has chat and search feature. ",
-    "published_at": "2020-04-19T04:24:05.057Z",
-    "url": "https://www.211oncovid19.ca/",
+    "created_at": "2020-04-19T04:24:05.057Z"
+  },
+  {
+    "id": "hr3wgnhUCZg2qOYE7QR8",
+    "name": "The Trevor Project for LGBTQ+ Youth",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "JDGqvdzoDNqjhHsoyGWR",
+      "r9iw7nxOm8VfKJ2Xi2jI",
+      "XiNPDiek0SUpTqODnCFQ",
+      "gJKhSxtZ91Hn5SNyoU70",
+      "P2enYG1P5YLHLMKGVf5v",
+      "BG08VoS0hTmitycbRLhh"
+    ],
+    "location": { "anywhere": true, "specific": "gPaj0FpaOjbAaU8wQEfR" },
+    "created_at": "2020-04-22T17:03:51.703Z",
+    "updated_at": "2020-04-22T17:04:29.656Z",
+    "description": "A crisis intervention and suicide prevention service available 24/7/365 for LGBTQ+ youth (under 25)\nPhone: 1-866-488-7386 \nText: \"START\" to 678678\nChat: (go to link)\n",
+    "published_at": "2020-04-22T17:03:51.703Z",
+    "url": "https://www.thetrevorproject.org/get-help-now/",
     "approved": true,
-    "categoryId": "FEumLlCmAc5zQVAvBtdV",
-    "company": "211 Ontario"
+    "company": null,
+    "categoryId": "ZNrUvRN4asfFk3FxpWh3"
+  },
+  {
+    "id": "i0Pew56F3NiBcQRBU1Fa",
+    "updated_at": "2020-04-22T17:07:17.228Z",
+    "description": "TrevorSpace is an affirming international community for LGBTQ young people ages 13-24. ",
+    "published_at": "2020-04-22T17:07:17.228Z",
+    "url": "https://www.trevorspace.org/",
+    "approved": true,
+    "categoryId": "kaoFxEzS8aYrK6NSoEzw",
+    "company": "",
+    "name": "Trevor Space for LGBTQ+ Youth",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "nzsciD2Yc25cIlF3PZtn",
+      "P2enYG1P5YLHLMKGVf5v",
+      "BG08VoS0hTmitycbRLhh"
+    ],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-22T17:07:17.228Z"
   },
   {
     "id": "iuuOZ6JCeo0Y1Yxu8VzS",
-    "url": "https://affinity.serif.com/en-us/supporting-the-creative-community/",
-    "approved": true,
-    "categoryId": "C3dJG2UJz8H6KlCkghbQ",
-    "company": "Affinity",
     "name": "Affinity Creative Suite Software",
     "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "BLN5h9BHIKIpEd1U1G17"],
-    "location": { "anywhere": true, "specific": null },
+    "location": { "specific": null, "anywhere": true },
     "created_at": "2020-04-19T03:27:48.943Z",
     "updated_at": "2020-04-19T03:27:48.943Z",
     "description": "To provide some support during this incredibly difficult time, we’re now offering a 90-day free trial of all the Mac and Windows versions of the whole Affinity suite. We’re also offering a 50% discount for users who would prefer to buy and keep the apps, including iPad versions.",
-    "published_at": "2020-04-19T03:27:48.943Z"
+    "published_at": "2020-04-19T03:27:48.943Z",
+    "url": "https://affinity.serif.com/en-us/supporting-the-creative-community/",
+    "approved": true,
+    "categoryId": "C3dJG2UJz8H6KlCkghbQ",
+    "company": "Affinity"
   },
   {
     "id": "jxPmO5bNKOmtXOqq1U3Y",
+    "published_at": "2020-04-19T20:45:18.878Z",
+    "url": "https://liberatemeditation.com/",
+    "approved": true,
+    "categoryId": "w0gtsx4ckG8VyzL19GxH",
+    "company": "Liberate Meditation",
+    "name": "Liberate Meditation app",
     "tags": [
       "7zMvDTWd79Kvnllpr0w8",
       "sYilgV2dWKoeIHqvrgp0",
@@ -1363,45 +1924,41 @@
     "location": { "anywhere": true, "specific": null },
     "created_at": "2020-04-19T20:45:18.878Z",
     "updated_at": "2020-04-19T20:45:18.878Z",
-    "description": "The only meditation app by and for the Black & African Diaspora",
-    "published_at": "2020-04-19T20:45:18.878Z",
-    "url": "https://liberatemeditation.com/",
-    "approved": true,
-    "categoryId": "w0gtsx4ckG8VyzL19GxH",
-    "company": "Liberate Meditation",
-    "name": "Liberate Meditation app"
+    "description": "The only meditation app by and for the Black & African Diaspora"
   },
   {
     "id": "kRCVQG9CzdjGycxV4QFC",
-    "name": "Toronto’s Queer & Trans Therapist Listing (PDF)",
-    "tags": ["P2enYG1P5YLHLMKGVf5v"],
-    "location": { "specific": "P7cn4TqZEBzH7tV5c8FL", "anywhere": false },
+    "tags": ["IevR1WiN85FQR6S47UPe", "bfI4cx6NnBbexEsbLzir", "P2enYG1P5YLHLMKGVf5v"],
+    "location": { "anywhere": null, "specific": "P7cn4TqZEBzH7tV5c8FL" },
     "created_at": "2020-04-19T16:03:35.012Z",
-    "updated_at": "2020-04-19T16:03:35.012Z",
+    "updated_at": "2020-04-21T12:39:29.883Z",
     "description": "A PDF document listing many of Toronto's Queer and Trans Therapists",
     "published_at": "2020-04-19T16:03:35.012Z",
     "url": "https://drive.google.com/file/d/1sW6xksMGZ9NdlLdNraDJfE-tyFC9fN-Q/view?fbclid=IwAR2NNC-TDdBkYvFjk_1sT6wy7VHp9OOncXJeI8YwOVxa9qVpN4v6B7CV3X8",
     "approved": true,
     "categoryId": "O7sQvfvZUQ6mZqDafaFO",
-    "company": "Rahim Thawer, MSW, RSW"
+    "company": "Rahim Thawer, MSW, RSW",
+    "name": "Toronto’s Queer & Trans Therapist Listing (PDF)"
   },
   {
     "id": "lHwjg4zpfV71mwPdeBMp",
+    "company": null,
+    "categoryId": "O7sQvfvZUQ6mZqDafaFO",
     "name": "Silm Mental Health",
-    "tags": ["uZRGXe3b9yacgemOOxm4", "jfVbMq9PgcfPMnrygQIb"],
-    "location": { "anywhere": false, "specific": "P7cn4TqZEBzH7tV5c8FL" },
+    "tags": ["uZRGXe3b9yacgemOOxm4", "jfVbMq9PgcfPMnrygQIb", "P2enYG1P5YLHLMKGVf5v"],
+    "location": { "anywhere": null, "specific": "P7cn4TqZEBzH7tV5c8FL" },
     "created_at": "2020-04-19T04:55:31.142Z",
-    "updated_at": "2020-04-19T04:55:31.142Z",
+    "updated_at": "2020-04-26T16:01:48.590Z",
     "description": "We are a diverse set of mental health professionals who are keen on supporting individuals and communities through COVID-19 and other difficulties. We always offer a generous sliding scale, and are currently also offering pro bono services. All therapy is currently offered online.",
     "published_at": "2020-04-19T04:55:31.142Z",
     "url": "https://silmmentalhealth.com/",
-    "approved": true,
-    "categoryId": "O7sQvfvZUQ6mZqDafaFO",
-    "company": "Silm Mental Health"
+    "approved": true
   },
   {
     "id": "liuw9JHy5L7Jw9172fnS",
-    "updated_at": "2020-04-19T03:51:38.755Z",
+    "location": { "specific": null, "anywhere": true },
+    "created_at": "2020-04-19T03:51:38.755Z",
+    "updated_at": "2020-04-20T20:45:20.051Z",
     "description": "Crescendo’s D&I Learning Platform is free for 6 weeks with learning tracks about: Connecting Pandemics & Xenophobia, COVID-19 & Socio-Economic Status, and Inclusive Remote Work",
     "published_at": "2020-04-19T03:51:38.755Z",
     "url": "https://crescendowork.com/diversity-inclusion-remote-teams",
@@ -1409,15 +1966,20 @@
     "categoryId": "ZeMEYmQsd8SKIQqAA7AL",
     "company": "Crescendo",
     "name": "D&I Learning Platform",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "9SVZ7IMNBvMKXReIxJei"],
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T03:51:38.755Z"
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "9SVZ7IMNBvMKXReIxJei",
+      "UEGq6P9pHk9SgGujcVgh",
+      "31VNAUBBeFMszklb2Y82",
+      "W7szkBzGrIFcmHXzSXp3",
+      "4LYArt8vhwLIYKeeVTKA"
+    ]
   },
   {
     "id": "mR2af4DLxu9V9U3hlnbt",
-    "location": { "anywhere": true, "specific": "P7cn4TqZEBzH7tV5c8FL" },
+    "location": { "anywhere": false, "specific": "P7cn4TqZEBzH7tV5c8FL" },
     "created_at": "2020-04-19T04:02:49.361Z",
-    "updated_at": "2020-04-19T04:02:49.361Z",
+    "updated_at": "2020-04-20T16:59:21.298Z",
     "description": "Since library branches are closed, and we're all staying home as much as we can, we want to make sure that you're stocked up with things to read, watch, listen to, learn and do. Here's a quick guide to all of the online services you can use with your library card.",
     "published_at": "2020-04-19T04:02:49.361Z",
     "url": "https://torontopubliclibrary.typepad.com/digital-services/2020/03/38-ways-to-use-the-library-from-home.html",
@@ -1429,13 +1991,6 @@
   },
   {
     "id": "mVz6Sp11ArDrtfb7RDfj",
-    "location": { "specific": "gPaj0FpaOjbAaU8wQEfR", "anywhere": true },
-    "created_at": "2020-04-19T20:56:21.065Z",
-    "updated_at": "2020-04-19T20:56:21.065Z",
-    "description": "We’re the first social and wellness platform designed to celebrate people of color. In addition to our online oasis, we have a members clubhouse located in East Williamsburg, Brooklyn. ",
-    "published_at": "2020-04-19T20:56:21.065Z",
-    "url": "https://www.careforyourhomies.com/",
-    "approved": true,
     "categoryId": "kaoFxEzS8aYrK6NSoEzw",
     "company": "Ethel's club",
     "name": "Care for your Homies",
@@ -1444,14 +1999,17 @@
       "McJzdFqQNamTVMjx9t68",
       "HhMtAlQZNqxbwhw9OXQH",
       "jfVbMq9PgcfPMnrygQIb"
-    ]
+    ],
+    "location": { "anywhere": true, "specific": "gPaj0FpaOjbAaU8wQEfR" },
+    "created_at": "2020-04-19T20:56:21.065Z",
+    "updated_at": "2020-04-19T20:56:21.065Z",
+    "description": "We’re the first social and wellness platform designed to celebrate people of color. In addition to our online oasis, we have a members clubhouse located in East Williamsburg, Brooklyn. ",
+    "published_at": "2020-04-19T20:56:21.065Z",
+    "url": "https://www.careforyourhomies.com/",
+    "approved": true
   },
   {
     "id": "mXhI502HoKEVR3GqzvNS",
-    "url": "https://insighttimer.com/",
-    "approved": true,
-    "categoryId": "w0gtsx4ckG8VyzL19GxH",
-    "company": "InsightTimer",
     "name": "InsightTimer: Largest Free Library of Guided Meditations",
     "tags": [
       "UJFbvU4VcuRsEJ6J0Cvz",
@@ -1464,19 +2022,36 @@
     "created_at": "2020-04-19T17:05:38.474Z",
     "updated_at": "2020-04-19T17:05:38.474Z",
     "description": "We believe everyone deserves access to a free daily meditation practice. Which is why we publish the world's largest collection of free guided meditations, with over 40,000 titles.",
-    "published_at": "2020-04-19T17:05:38.474Z"
+    "published_at": "2020-04-19T17:05:38.474Z",
+    "url": "https://insighttimer.com/",
+    "approved": true,
+    "categoryId": "w0gtsx4ckG8VyzL19GxH",
+    "company": "InsightTimer"
+  },
+  {
+    "id": "n975dGEveBKjoWKl0tMg",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "uFJUXFL2T1GPqOKxR6EO",
+      "lJFqNAyaGmThgHTpOmDU",
+      "pN0WjAKdhqeMwZVs7IBR",
+      "QYy2S3N7FbixbbuUKiKK",
+      "lbxBp09JAgSze9GyjAg5",
+      "HhMtAlQZNqxbwhw9OXQH"
+    ],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-26T03:54:13.848Z",
+    "updated_at": "2020-04-26T03:54:13.848Z",
+    "description": "Use tips from the MHFA curriculum to reach out to someone who might need you.",
+    "published_at": "2020-04-26T03:54:13.848Z",
+    "url": "https://www.mentalhealthfirstaid.org/2020/03/how-to-support-a-loved-one-going-through-a-tough-time-during-covid-19/?mkt_tok=eyJpIjoiWXprd09HTmpOVFUxWVdabCIsInQiOiJWOVJrM2xwY1QxVjBETVl1NjhTcXhDUGZjXC9WYWVrN2sxc1pTcXQ2NzhDOVBIRVZaaTgzY0NSTENNdDNYNGRkdjdtcENhZG9zUmFFaUV3VHJIMTZQUGxURUwrWEh1UFRtbStzTEpSZDBwYXFxTWFwZTd1YWI3ZytBRjE1cHJ3dzMifQ%3D%3D",
+    "approved": true,
+    "categoryId": "kaoFxEzS8aYrK6NSoEzw",
+    "company": "Mental Health First Aid USA",
+    "name": "How to Support a Loved One Going Through a Tough Time Dur..."
   },
   {
     "id": "ntwsuMcubk0fHXKof0sW",
-    "tags": [
-      "UJFbvU4VcuRsEJ6J0Cvz",
-      "7zMvDTWd79Kvnllpr0w8",
-      "sYilgV2dWKoeIHqvrgp0",
-      "3vvXF1rzaWnP6IExYgHW",
-      "7mEydI2tZDums7nEUVx3"
-    ],
-    "location": { "specific": "gPaj0FpaOjbAaU8wQEfR", "anywhere": false },
-    "created_at": "2020-04-20T00:50:10.980Z",
     "updated_at": "2020-04-20T00:50:10.980Z",
     "description": "Although we’re all facing uncertainty, health care professionals on the frontline are bearing the brunt of this devastating pandemic That’s why Talkspace and our partners are providing 2,100 free months of therapy for doctors, nurses, social workers and front line workers.",
     "published_at": "2020-04-20T00:50:10.980Z",
@@ -1484,39 +2059,94 @@
     "approved": true,
     "categoryId": "KOhg8XVTLsnwxqC3WWhb",
     "company": "",
-    "name": "TalkSpace"
+    "name": "TalkSpace",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "7zMvDTWd79Kvnllpr0w8",
+      "sYilgV2dWKoeIHqvrgp0",
+      "3vvXF1rzaWnP6IExYgHW",
+      "7mEydI2tZDums7nEUVx3"
+    ],
+    "location": { "anywhere": false, "specific": "gPaj0FpaOjbAaU8wQEfR" },
+    "created_at": "2020-04-20T00:50:10.980Z"
+  },
+  {
+    "id": "ocHdFI912vonbteAMOd4",
+    "published_at": "2020-04-24T15:48:57.748Z",
+    "url": "https://www.successbc.ca/eng/services/family-youth/counselling-service/",
+    "approved": true,
+    "categoryId": "ZNrUvRN4asfFk3FxpWh3",
+    "company": "S.U.C.C.E.S.S. BC",
+    "name": "Chinese Help Lines",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "R0IAmZvpCclmvg3UG4JI",
+      "XiNPDiek0SUpTqODnCFQ",
+      "jfVbMq9PgcfPMnrygQIb"
+    ],
+    "location": { "anywhere": null, "specific": "tMim2vVCU0ZVRkXAiVKf" },
+    "created_at": "2020-04-24T15:48:57.748Z",
+    "updated_at": "2020-04-24T15:50:50.018Z",
+    "description": "Provides informational and emotional support to the Chinese community in Mandarin and Cantonese.\nOperating Hours: Due to COVID-19 outbreak, Chinese Help Lines service hours have been reduced to 11 am to 8 pm daily (PST). 7 days a week.\n☎ Cantonese: 604-270-8233\n☎ Mandarin: 604-270-8222"
   },
   {
     "id": "oiIkdCKvVueHG0XH3pFQ",
+    "name": "Nike Training Club",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "7zMvDTWd79Kvnllpr0w8",
+      "sYilgV2dWKoeIHqvrgp0",
+      "3vvXF1rzaWnP6IExYgHW"
+    ],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-19T03:00:27.634Z",
+    "updated_at": "2020-04-26T16:07:27.012Z",
+    "description": "Turn staying in into your at-home advantage. Start training with a personal plan that guides you—while adjusting to your progress, schedule and other activities. With NTC, you get access to four 4–6 week training plans. ",
+    "published_at": "2020-04-19T03:00:27.634Z",
     "url": "https://www.nike.com/ca/ntc-app",
     "approved": true,
     "categoryId": "9geEVgJVxwzZvv8FmTJ2",
-    "company": "Nike",
-    "name": "Nike Training Club",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz"],
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T03:00:27.634Z",
-    "updated_at": "2020-04-19T03:00:27.634Z",
-    "description": "Turn staying in into your at-home advantage. Start training with a personal plan that guides you—while adjusting to your progress, schedule and other activities. With NTC, you get access to four 4–6 week training plans. ",
-    "published_at": "2020-04-19T03:00:27.634Z"
+    "company": "Nike"
   },
   {
     "id": "p4PxdG6NlUTttb0BkFkS",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "bNyCFySbmyAd1E7wRmZl"],
-    "location": { "specific": null, "anywhere": true },
-    "created_at": "2020-04-19T17:19:18.497Z",
-    "updated_at": "2020-04-19T17:19:18.497Z",
-    "description": "Some of Shifu Yan Xin (34th generation Shaolin Disciple) asked him about what training we can do to keep our lungs strong and healthy, so Shifu has made this video, where he has designed 5 Shaolin Qi Gong movements that will help us to work on our lungs and strengthen it. 9:19 minutes (Youtube)",
     "published_at": "2020-04-19T17:19:18.497Z",
     "url": "https://youtu.be/qViH3a4S-Uk",
     "approved": true,
     "categoryId": "w0gtsx4ckG8VyzL19GxH",
     "company": "KungFu.life",
-    "name": "5 Shaolin Qi Gong Breath Exercises to Strengthen the Lungs"
+    "name": "5 Shaolin Qi Gong Breath Exercises to Strengthen the Lungs",
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "bNyCFySbmyAd1E7wRmZl"],
+    "location": { "specific": null, "anywhere": true },
+    "created_at": "2020-04-19T17:19:18.497Z",
+    "updated_at": "2020-04-19T17:19:18.497Z",
+    "description": "Some of Shifu Yan Xin (34th generation Shaolin Disciple) asked him about what training we can do to keep our lungs strong and healthy, so Shifu has made this video, where he has designed 5 Shaolin Qi Gong movements that will help us to work on our lungs and strengthen it. 9:19 minutes (Youtube)"
+  },
+  {
+    "id": "pDRB8QRRxn0lDUtGAhZx",
+    "categoryId": "KOhg8XVTLsnwxqC3WWhb",
+    "company": "Ayana Therapy",
+    "name": "Ayana: Therapy for Marginalized & Intersectional Communities",
+    "tags": [
+      "sYilgV2dWKoeIHqvrgp0",
+      "XiNPDiek0SUpTqODnCFQ",
+      "gJKhSxtZ91Hn5SNyoU70",
+      "bNyCFySbmyAd1E7wRmZl",
+      "jfVbMq9PgcfPMnrygQIb",
+      "P2enYG1P5YLHLMKGVf5v",
+      "BBXzbkNhUCyEI3VL3jp5",
+      "YFAUSY5PrVBcntAw16QU"
+    ],
+    "location": { "specific": null, "anywhere": true },
+    "created_at": "2020-04-22T16:31:00.095Z",
+    "updated_at": "2020-04-22T16:43:13.311Z",
+    "description": "COMING SOON\nApp matching marginalized communities with compatible licensed therapists based on their unique experiences and identities across race, gender identity, class, sexuality, ethnicity, and ability. It allows for flexible, convenient and anonymous online communication",
+    "published_at": "2020-04-22T16:31:00.095Z",
+    "url": "https://www.ayanatherapy.com/",
+    "approved": true
   },
   {
     "id": "pOURIePOia0DtBpOlevK",
-    "published_at": "2020-04-20T00:42:24.345Z",
     "url": "https://www.7cups.com/",
     "approved": true,
     "categoryId": "KOhg8XVTLsnwxqC3WWhb",
@@ -1536,26 +2166,33 @@
     "location": { "anywhere": true, "specific": null },
     "created_at": "2020-04-20T00:42:24.345Z",
     "updated_at": "2020-04-20T00:42:24.345Z",
-    "description": "Online platform that connects you to caring listeners for free emotional support 24/7; or be a listener for others"
+    "description": "Online platform that connects you to caring listeners for free emotional support 24/7; or be a listener for others",
+    "published_at": "2020-04-20T00:42:24.345Z"
   },
   {
     "id": "pQkmo656U4efzAEdH84n",
-    "updated_at": "2020-04-19T16:25:47.041Z",
-    "description": "Online therapy for individuals experiencing anxiety or depression, sliding scale available for those financially affected by COVID-19",
     "published_at": "2020-04-19T16:25:47.041Z",
     "url": "http://daniellehulantherapy.com/",
     "approved": true,
+    "company": "",
     "categoryId": "O7sQvfvZUQ6mZqDafaFO",
-    "company": "Danielle Hulan, MSW, RSW",
     "name": "Danielle Hulan Therapy & Counselling",
     "tags": ["uZRGXe3b9yacgemOOxm4", "lJFqNAyaGmThgHTpOmDU", "pN0WjAKdhqeMwZVs7IBR"],
-    "location": { "anywhere": true, "specific": "P7cn4TqZEBzH7tV5c8FL" },
-    "created_at": "2020-04-19T16:25:47.041Z"
+    "location": { "specific": "P7cn4TqZEBzH7tV5c8FL", "anywhere": true },
+    "created_at": "2020-04-19T16:25:47.041Z",
+    "updated_at": "2020-04-21T12:37:49.512Z",
+    "description": "Online therapy for individuals experiencing anxiety or depression, sliding scale available for those financially affected by COVID-19"
   },
   {
     "id": "psMrzw4CsFo2Zir0YtMU",
+    "url": "https://www.crisistextline.org/",
+    "approved": true,
+    "categoryId": "ZNrUvRN4asfFk3FxpWh3",
+    "company": "Crisis Text Line",
+    "name": "Crisis Text Line ",
     "tags": [
       "UJFbvU4VcuRsEJ6J0Cvz",
+      "JDGqvdzoDNqjhHsoyGWR",
       "r9iw7nxOm8VfKJ2Xi2jI",
       "nzsciD2Yc25cIlF3PZtn",
       "gJKhSxtZ91Hn5SNyoU70",
@@ -1563,17 +2200,19 @@
     ],
     "location": { "anywhere": true, "specific": "CaDm5zWm82h7eLIXgXye" },
     "created_at": "2020-04-19T02:07:44.832Z",
-    "updated_at": "2020-04-19T02:07:44.832Z",
-    "description": "Text HOME to 741741 to connect with a Crisis Counselor (Canada/US)\nFree 24/7 support at your fingertips\nA live, trained Crisis Counselor receives the text and responds, all from our secure online platform. The volunteer Crisis Counselor will help you move from a hot moment to a cool moment.",
-    "published_at": "2020-04-19T02:07:44.832Z",
-    "url": "https://www.crisistextline.org/",
-    "approved": true,
-    "categoryId": "ZNrUvRN4asfFk3FxpWh3",
-    "company": "Crisis Text Line",
-    "name": "Crisis Text Line "
+    "updated_at": "2020-04-21T15:36:40.917Z",
+    "description": "💬 Text HOME to 741741 to connect with a Crisis Counselor (Canada/US)\nFree 24/7 support at your fingertips\nA live, trained Crisis Counselor receives the text and responds, all from our secure online platform.\nThe volunteer Crisis Counselor will help you move from a hot moment to a cool moment.",
+    "published_at": "2020-04-19T02:07:44.832Z"
   },
   {
     "id": "ptd0X5c577faXiQ9gllv",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "uFJUXFL2T1GPqOKxR6EO",
+      "31VNAUBBeFMszklb2Y82",
+      "W7szkBzGrIFcmHXzSXp3",
+      "4LYArt8vhwLIYKeeVTKA"
+    ],
     "location": { "anywhere": true, "specific": null },
     "created_at": "2020-04-19T20:03:32.558Z",
     "updated_at": "2020-04-19T20:03:32.558Z",
@@ -1583,14 +2222,26 @@
     "approved": true,
     "categoryId": "ZeMEYmQsd8SKIQqAA7AL",
     "company": "The Engine Room",
-    "name": "Building Trust While Working Remotely",
+    "name": "Building Trust While Working Remotely"
+  },
+  {
+    "id": "puvMufuEoovDZccTssip",
+    "name": "Subtle Asian Mental Health Facebook Group",
     "tags": [
       "UJFbvU4VcuRsEJ6J0Cvz",
-      "uFJUXFL2T1GPqOKxR6EO",
-      "31VNAUBBeFMszklb2Y82",
-      "W7szkBzGrIFcmHXzSXp3",
-      "4LYArt8vhwLIYKeeVTKA"
-    ]
+      "q3G31cduDS8dcECBL97A",
+      "nzsciD2Yc25cIlF3PZtn",
+      "jfVbMq9PgcfPMnrygQIb"
+    ],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-22T17:10:56.337Z",
+    "updated_at": "2020-04-22T17:10:56.337Z",
+    "description": "Our hope for this group is to reach as many Asians struggling with mental health, cultural issues, inter-generational trauma, and associated problems as possible. Mental health is a growing issue among global Asian diaspora communities, but as Asians we tend to be brought up to not talk about it...",
+    "published_at": "2020-04-22T17:10:56.337Z",
+    "url": "https://www.facebook.com/groups/subtleasianmentalhealth/",
+    "approved": true,
+    "categoryId": "kaoFxEzS8aYrK6NSoEzw",
+    "company": "Asian Mental Health Collective"
   },
   {
     "id": "q6bJMEpMYH0EyxqxjJDA",
@@ -1608,25 +2259,67 @@
   },
   {
     "id": "qdMXXWWtngAA8uNlFxEQ",
-    "url": "https://www.shiftcollab.com/blog/working-remote-and-feeling-connected",
-    "approved": true,
     "categoryId": "ZeMEYmQsd8SKIQqAA7AL",
     "company": "Shift Collab",
     "name": "Working Remote & Feeling Connected During the Pandemic",
     "tags": [
       "UJFbvU4VcuRsEJ6J0Cvz",
+      "QYy2S3N7FbixbbuUKiKK",
       "31VNAUBBeFMszklb2Y82",
       "W7szkBzGrIFcmHXzSXp3",
       "4LYArt8vhwLIYKeeVTKA"
     ],
-    "location": { "anywhere": true, "specific": null },
+    "location": { "specific": null, "anywhere": true },
     "created_at": "2020-04-19T03:54:04.142Z",
-    "updated_at": "2020-04-19T03:54:04.142Z",
+    "updated_at": "2020-04-20T20:53:16.816Z",
     "description": "Article on how to work remotely and still feel connected with your team during this time.",
-    "published_at": "2020-04-19T03:54:04.142Z"
+    "published_at": "2020-04-19T03:54:04.142Z",
+    "url": "https://www.shiftcollab.com/blog/working-remote-and-feeling-connected",
+    "approved": true
+  },
+  {
+    "id": "qoVg6Cr0glvbtamD9uhX",
+    "updated_at": "2020-04-26T16:11:35.000Z",
+    "description": "During these uncertain times of social distancing and self-quarantine, anxiety and stress are high for most people. However, youth with autism spectrum disorder (ASD) are particularly prone to distress in response to changes or disruptions in their typical routines. \nArticle also available in Spanish.",
+    "published_at": "2020-04-26T03:50:48.198Z",
+    "url": "https://childmind.org/article/tips-for-talking-with-your-child-with-autism-about-the-coronavirus/",
+    "approved": true,
+    "categoryId": "3JeIOXT7sy7KOWUgX9zk",
+    "company": "Child Mind Institute",
+    "name": "Tips for Talking With Your Child With Autism About COVID-19",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "uFJUXFL2T1GPqOKxR6EO",
+      "R0IAmZvpCclmvg3UG4JI",
+      "lbxBp09JAgSze9GyjAg5",
+      "rsNOheT2MIYnwe4TNVHb",
+      "qDCe1ocOcN59lBwwIUOz",
+      "rGAIsC4hY2fj76ZMgmFJ",
+      "YFAUSY5PrVBcntAw16QU"
+    ],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-26T03:50:48.198Z"
+  },
+  {
+    "id": "rbnwtQbl3OBOCT1FnPXs",
+    "updated_at": "2020-04-24T01:40:01.474Z",
+    "description": "The aging population, ages 65 and older, is one of the most vulnerable demographic groups in the United States. The novel coronavirus (COVID-19) pandemic puts seniors and their mental health at significant risk. Tips for how seniors can stay healthy and connected during the COVID-19 pandemic.",
+    "published_at": "2020-04-24T01:40:01.474Z",
+    "url": "https://www.medicareadvantage.com/resources/senior-guide-to-mental-health-during-covid-19",
+    "approved": true,
+    "categoryId": "3JeIOXT7sy7KOWUgX9zk",
+    "company": "Medicare Advantage",
+    "name": "Senior Guide to Mental Health During Coronavirus (COVID-19)",
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "uFJUXFL2T1GPqOKxR6EO", "5AE9XYC5gt1XzYxbm3pl"],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-24T01:40:01.474Z"
   },
   {
     "id": "sZZyLTSpfUHj22efdavw",
+    "location": { "anywhere": true, "specific": "P7cn4TqZEBzH7tV5c8FL" },
+    "created_at": "2020-04-19T18:54:06.077Z",
+    "updated_at": "2020-04-26T16:11:56.504Z",
+    "description": "A comprehensive guide for all things mental health from stress and anxiety, quarantine and isolation, and stigma and prejudice. Also resources for healthcare workers.",
     "published_at": "2020-04-19T18:54:06.077Z",
     "url": "http://www.camh.ca/covid19",
     "approved": true,
@@ -1638,52 +2331,69 @@
       "uFJUXFL2T1GPqOKxR6EO",
       "IevR1WiN85FQR6S47UPe",
       "lJFqNAyaGmThgHTpOmDU",
+      "lbxBp09JAgSze9GyjAg5",
       "7mEydI2tZDums7nEUVx3"
+    ]
+  },
+  {
+    "id": "tGIVn8XZZ2cJs92BsobM",
+    "categoryId": "8Ny050nF50gOoXxPgMbW",
+    "company": "Huffington Post",
+    "name": "Self-Care Tips For Asian Americans Dealing With Racism...",
+    "tags": [
+      "uFJUXFL2T1GPqOKxR6EO",
+      "lJFqNAyaGmThgHTpOmDU",
+      "UEGq6P9pHk9SgGujcVgh",
+      "McJzdFqQNamTVMjx9t68",
+      "jfVbMq9PgcfPMnrygQIb"
     ],
-    "location": { "anywhere": true, "specific": "P7cn4TqZEBzH7tV5c8FL" },
-    "created_at": "2020-04-19T18:54:06.077Z",
-    "updated_at": "2020-04-19T18:54:06.077Z",
-    "description": "A comprehensive guide for all things mental health from stress and anxiety, quarantine and isolation, and stigma and prejudice. Also resources for healthcare workers."
+    "location": { "anywhere": true, "specific": "gPaj0FpaOjbAaU8wQEfR" },
+    "created_at": "2020-04-21T00:48:57.650Z",
+    "updated_at": "2020-04-21T00:55:29.347Z",
+    "description": "Therapists share the advice they give Asian American clients who are dealing with discrimination during the COVID-19 pandemic.",
+    "published_at": "2020-04-21T00:48:57.650Z",
+    "url": "https://www.huffingtonpost.ca/entry/self-care-advice-asian-americans_l_5e83a656c5b6a1bb764f0e45",
+    "approved": true
   },
   {
     "id": "tHDEcoGJqjJykrNOZhw1",
+    "updated_at": "2020-04-26T16:00:07.774Z",
+    "description": "Canada's only 24/7 national support service. Text, Phone, Live Chat and Other resources for kids and youth. \n☎ 1-800-668-6868 to talk to a counsellor privately, no judgement, and confidential.\n💬 Text CONNECT to 686868\nEnglish and French. ",
+    "published_at": "2020-04-19T19:16:55.255Z",
+    "url": "https://kidshelpphone.ca/",
+    "approved": true,
     "categoryId": "ZNrUvRN4asfFk3FxpWh3",
     "company": "Kids Help Phone",
     "name": "Kids Help Phone",
     "tags": [
       "UJFbvU4VcuRsEJ6J0Cvz",
       "JDGqvdzoDNqjhHsoyGWR",
+      "r9iw7nxOm8VfKJ2Xi2jI",
       "R0IAmZvpCclmvg3UG4JI",
+      "XiNPDiek0SUpTqODnCFQ",
+      "gJKhSxtZ91Hn5SNyoU70",
       "DIieZ3TO9Az8mEOMz4ub",
       "BG08VoS0hTmitycbRLhh"
     ],
-    "location": { "anywhere": false, "specific": "CaDm5zWm82h7eLIXgXye" },
-    "created_at": "2020-04-19T19:16:55.255Z",
-    "updated_at": "2020-04-19T19:16:55.255Z",
-    "description": "Canada's only 24/7 national support service. Text, Phone, Live Chat and Other resources for kids and youth. 1-800-668-6868 to talk to a counsellor privately, no judgement, and confidential. English and French. ",
-    "published_at": "2020-04-19T19:16:55.255Z",
-    "url": "https://kidshelpphone.ca/",
-    "approved": true
+    "location": { "anywhere": null, "specific": "CaDm5zWm82h7eLIXgXye" },
+    "created_at": "2020-04-19T19:16:55.255Z"
   },
   {
     "id": "u3cPYd3gJZTHiRSJkKZh",
-    "location": { "anywhere": false, "specific": "P7cn4TqZEBzH7tV5c8FL" },
+    "company": null,
+    "categoryId": "ZNrUvRN4asfFk3FxpWh3",
+    "name": "Gerstein Crisis Centre",
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "JDGqvdzoDNqjhHsoyGWR", "XiNPDiek0SUpTqODnCFQ"],
+    "location": { "specific": "P7cn4TqZEBzH7tV5c8FL", "anywhere": null },
     "created_at": "2020-04-19T19:30:11.569Z",
-    "updated_at": "2020-04-19T19:30:11.569Z",
-    "description": "24-hour community-based crisis services for adults 16+ in the City of Toronto who are dealing with mental health, concurrent, or substance use issues and are currently in crisis. (416) 929-5200.",
+    "updated_at": "2020-04-21T15:40:24.376Z",
+    "description": "24-hour community-based crisis services for adults 16+ in the City of Toronto who are dealing with mental health, concurrent, or substance use issues and are currently in crisis. \n☎ (416) 929-5200.",
     "published_at": "2020-04-19T19:30:11.569Z",
     "url": "http://gersteincentre.org/",
-    "approved": true,
-    "categoryId": "ZNrUvRN4asfFk3FxpWh3",
-    "company": "Gerstein Crisis Centre",
-    "name": "Gerstein Crisis Centre",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "JDGqvdzoDNqjhHsoyGWR", "XiNPDiek0SUpTqODnCFQ"]
+    "approved": true
   },
   {
     "id": "uDy19ehbHqsuguj7cP3J",
-    "published_at": "2020-04-19T03:05:51.407Z",
-    "url": "https://www.doyogawithme.com/",
-    "approved": true,
     "categoryId": "9geEVgJVxwzZvv8FmTJ2",
     "company": "DoYogaWithMe",
     "name": "DoYogaWithMe Video Yoga Classes",
@@ -1697,46 +2407,41 @@
     "location": { "anywhere": true, "specific": null },
     "created_at": "2020-04-19T03:05:51.407Z",
     "updated_at": "2020-04-19T03:05:51.407Z",
-    "description": "A passionate community around accessibility, diversity, transparency, hundreds of curated, high quality videos for all levels, and a world-class 250-hour Yoga Teacher Training. Offers free membership for those in need; For those quarantined by the coronavirus, contact them for 2 free months"
+    "description": "A passionate community around accessibility, diversity, transparency, hundreds of curated, high quality videos for all levels, and a world-class 250-hour Yoga Teacher Training. Offers free membership for those in need; For those quarantined by the coronavirus, contact them for 2 free months",
+    "published_at": "2020-04-19T03:05:51.407Z",
+    "url": "https://www.doyogawithme.com/",
+    "approved": true
   },
   {
     "id": "unuhNf8fSkb9Unxxaurb",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "uFJUXFL2T1GPqOKxR6EO", "31VNAUBBeFMszklb2Y82"],
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T20:01:44.640Z",
-    "updated_at": "2020-04-19T20:01:44.640Z",
-    "description": "A guide to transitioning your digital security culture to meet the moment.",
     "published_at": "2020-04-19T20:01:44.640Z",
     "url": "https://medium.com/@EqualityLabs/digital-resilience-in-the-time-of-coronavirus-d1f733008359",
     "approved": true,
     "categoryId": "ZeMEYmQsd8SKIQqAA7AL",
     "company": "Equality Labs",
-    "name": "Digital Resilience in the Time of Coronavirus"
+    "name": "Digital Resilience in the Time of Coronavirus",
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "uFJUXFL2T1GPqOKxR6EO", "31VNAUBBeFMszklb2Y82"],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-19T20:01:44.640Z",
+    "updated_at": "2020-04-19T20:01:44.640Z",
+    "description": "A guide to transitioning your digital security culture to meet the moment."
   },
   {
     "id": "uwl2pw5SyFP3jxlaB4am",
-    "tags": ["4HPqwuhi7eMlyce9yyVG", "uZRGXe3b9yacgemOOxm4", "HhMtAlQZNqxbwhw9OXQH"],
-    "location": { "anywhere": true, "specific": "P7cn4TqZEBzH7tV5c8FL" },
+    "location": { "specific": "P7cn4TqZEBzH7tV5c8FL", "anywhere": true },
     "created_at": "2020-04-19T15:57:30.250Z",
-    "updated_at": "2020-04-19T15:57:30.250Z",
+    "updated_at": "2020-04-21T12:41:00.089Z",
     "description": "During COVID-19, is offering sessions exclusively via phone and video, and offering pay-what-you-can sessions during this time",
     "published_at": "2020-04-19T15:57:30.250Z",
     "url": "https://www.brittcarontherapy.com/",
     "approved": true,
+    "company": "",
     "categoryId": "O7sQvfvZUQ6mZqDafaFO",
-    "company": "Britt Caron Therapy ",
-    "name": "Britt Caron Therapy "
+    "name": "Britt Caron Therapy ",
+    "tags": ["4HPqwuhi7eMlyce9yyVG", "uZRGXe3b9yacgemOOxm4", "HhMtAlQZNqxbwhw9OXQH"]
   },
   {
     "id": "w1YbVXNaDYoTlLXgNXXD",
-    "name": "The Yoga Room Youtube Channel",
-    "tags": [
-      "bNyCFySbmyAd1E7wRmZl",
-      "AiXmdWqmoiub5ruJOKm4",
-      "DIieZ3TO9Az8mEOMz4ub",
-      "5AE9XYC5gt1XzYxbm3pl",
-      "YFAUSY5PrVBcntAw16QU"
-    ],
     "location": { "specific": null, "anywhere": true },
     "created_at": "2020-04-19T21:13:37.454Z",
     "updated_at": "2020-04-19T21:13:37.454Z",
@@ -1745,10 +2450,45 @@
     "url": "https://www.youtube.com/user/rryogaroom/playlists",
     "approved": true,
     "categoryId": "9geEVgJVxwzZvv8FmTJ2",
-    "company": "The Yoga Room"
+    "company": "The Yoga Room",
+    "name": "The Yoga Room Youtube Channel",
+    "tags": [
+      "bNyCFySbmyAd1E7wRmZl",
+      "AiXmdWqmoiub5ruJOKm4",
+      "DIieZ3TO9Az8mEOMz4ub",
+      "5AE9XYC5gt1XzYxbm3pl",
+      "YFAUSY5PrVBcntAw16QU"
+    ]
+  },
+  {
+    "id": "w73r0ZnStzeE4btu5fdS",
+    "url": "http://www.awhl.org/",
+    "approved": true,
+    "categoryId": "ZNrUvRN4asfFk3FxpWh3",
+    "company": "",
+    "name": "Assaulted Women's Helpline",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "JDGqvdzoDNqjhHsoyGWR",
+      "XiNPDiek0SUpTqODnCFQ",
+      "kUCnb1FrGt0liGVbO69b",
+      "BUgmiu8M8QGnGl3Sldu2"
+    ],
+    "location": { "anywhere": false, "specific": "P7cn4TqZEBzH7tV5c8FL" },
+    "created_at": "2020-04-22T16:14:41.769Z",
+    "updated_at": "2020-04-22T16:14:41.769Z",
+    "description": "Offers a 24-hour telephone and TTY crisis line to all woman who have experienced abuse. \n\n☎️ GTA: 416-863-0511\n☎️ GTA TTY: 416-364-8762\n☎️ TOLL-FREE: 1-866-863-0511\n☎️ TOLL FREE TTY: 1-8666-863-7868\n#SAFE (#7233) on your Bell, Rogers, Fido or Telus Mobile",
+    "published_at": "2020-04-22T16:14:41.769Z"
   },
   {
     "id": "wDoBmcx79E4ZodECT727",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "lJFqNAyaGmThgHTpOmDU",
+      "SPpkj0qbGOqXTR5lDNNY",
+      "uedmAs1KDqderoxkqQ9d",
+      "R0IAmZvpCclmvg3UG4JI"
+    ],
     "location": { "anywhere": true, "specific": null },
     "created_at": "2020-04-19T17:26:35.134Z",
     "updated_at": "2020-04-19T17:26:35.134Z",
@@ -1758,17 +2498,13 @@
     "approved": true,
     "categoryId": "w0gtsx4ckG8VyzL19GxH",
     "company": "Savyn Tech",
-    "name": "SAVYN: PTSD therapy made simple and accessible",
-    "tags": [
-      "UJFbvU4VcuRsEJ6J0Cvz",
-      "lJFqNAyaGmThgHTpOmDU",
-      "SPpkj0qbGOqXTR5lDNNY",
-      "uedmAs1KDqderoxkqQ9d",
-      "R0IAmZvpCclmvg3UG4JI"
-    ]
+    "name": "SAVYN: PTSD therapy made simple and accessible"
   },
   {
     "id": "xLGl3HQ6K8FYLDjem9yl",
+    "published_at": "2020-04-19T18:28:47.367Z",
+    "url": "https://www.socialwork.career/2020/03/covid-19-resources-social-workers-therapists.html?fbclid=IwAR0wRqcNrB-XgwFGtVwq462_kMz_olhgkfWj0EElufHGOnksdSBi9pWcQCA",
+    "approved": true,
     "categoryId": "QwUIN4g6euGuSoUI0Yeh",
     "company": "SocialWork.Career",
     "name": "COVID-19 Resources for Social Workers and Therapists",
@@ -1781,22 +2517,11 @@
     ],
     "location": { "anywhere": true, "specific": null },
     "created_at": "2020-04-19T18:28:47.367Z",
-    "updated_at": "2020-04-19T18:28:47.367Z",
-    "description": "Below is a roundup of over 60 free resources that may be of help to you as a social worker, mental health professional and/or social work educator during the COVID-19 pandemic.",
-    "published_at": "2020-04-19T18:28:47.367Z",
-    "url": "https://www.socialwork.career/2020/03/covid-19-resources-social-workers-therapists.html?fbclid=IwAR0wRqcNrB-XgwFGtVwq462_kMz_olhgkfWj0EElufHGOnksdSBi9pWcQCA",
-    "approved": true
+    "updated_at": "2020-04-20T16:38:24.705Z",
+    "description": "Below is a roundup of over 60 free resources that may be of help to you as a social worker, mental health professional and/or social work educator during the COVID-19 pandemic."
   },
   {
     "id": "xjDCSAamPt8C3AdT8XLP",
-    "tags": [
-      "UJFbvU4VcuRsEJ6J0Cvz",
-      "31VNAUBBeFMszklb2Y82",
-      "W7szkBzGrIFcmHXzSXp3",
-      "4LYArt8vhwLIYKeeVTKA"
-    ],
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T03:55:48.670Z",
     "updated_at": "2020-04-19T03:55:48.670Z",
     "description": "An article by the And Also Too team: \"Early this week, our team met to reflect on what we’ve learned about prioritizing care, accessibility, and our humanity while trying to create beautiful work in a remote context...\"",
     "published_at": "2020-04-19T03:55:48.670Z",
@@ -1804,41 +2529,60 @@
     "approved": true,
     "categoryId": "ZeMEYmQsd8SKIQqAA7AL",
     "company": "And Also Too",
-    "name": "Care-based Approaches to Remote Work"
+    "name": "Care-based Approaches to Remote Work",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "31VNAUBBeFMszklb2Y82",
+      "W7szkBzGrIFcmHXzSXp3",
+      "4LYArt8vhwLIYKeeVTKA"
+    ],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-19T03:55:48.670Z"
+  },
+  {
+    "id": "xv921cxWOmOTmj2jP2Pi",
+    "name": "7 Minutes Workout app",
+    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "7zMvDTWd79Kvnllpr0w8", "sYilgV2dWKoeIHqvrgp0"],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-23T21:37:48.611Z",
+    "updated_at": "2020-04-23T21:37:48.611Z",
+    "description": "Consists of only 12 exercises to be done for 30 seconds, with 10 second breaks between each exercise. All you need is a chair and a wall. Repeat 2-3 circuits depending on how much time you have. Based on HICT (high intensity circuit training). ",
+    "published_at": "2020-04-23T21:37:48.611Z",
+    "url": "https://play.google.com/store/apps/details?id=com.popularapp.sevenmins&hl=en_CA",
+    "approved": true,
+    "categoryId": "9geEVgJVxwzZvv8FmTJ2",
+    "company": ""
   },
   {
     "id": "xzD6QWs2QflysgtQ97D5",
-    "published_at": "2020-04-19T15:55:15.042Z",
-    "url": "https://www.yzobelahyett.com/",
-    "approved": true,
-    "categoryId": "O7sQvfvZUQ6mZqDafaFO",
-    "company": "Yzobela Hyett, M.Ed., R.P. (Qualifying)",
-    "name": "Yzobela Hyett ",
     "tags": ["uZRGXe3b9yacgemOOxm4", "lJFqNAyaGmThgHTpOmDU", "pN0WjAKdhqeMwZVs7IBR"],
     "location": { "anywhere": true, "specific": "P7cn4TqZEBzH7tV5c8FL" },
     "created_at": "2020-04-19T15:55:15.042Z",
-    "updated_at": "2020-04-19T15:55:15.042Z",
-    "description": "Offering individual online/phone therapy, and is able to offer sliding scale to individuals who are financially impacted by Covid-19"
+    "updated_at": "2020-04-21T12:40:23.820Z",
+    "description": "Offering individual online/phone therapy, and is able to offer sliding scale to individuals who are financially impacted by Covid-19",
+    "published_at": "2020-04-19T15:55:15.042Z",
+    "url": "https://www.yzobelahyett.com/",
+    "approved": true,
+    "company": "",
+    "categoryId": "O7sQvfvZUQ6mZqDafaFO",
+    "name": "Yzobela Hyett "
   },
   {
     "id": "yBVJGKo9vQdxk92WqtKr",
-    "location": { "anywhere": true, "specific": "P7cn4TqZEBzH7tV5c8FL" },
-    "created_at": "2020-04-19T16:01:38.771Z",
-    "updated_at": "2020-04-19T16:01:38.771Z",
-    "description": "I have immediate availability for virtual sessions- whether short term for support during our time of crisis or interest in long term support as we rise to the other side of this time of isolation. At this time of economic instability I am offering ‘pay-what-you-can’ or deferred payment to those who are facing financial uncertainty. ",
     "published_at": "2020-04-19T16:01:38.771Z",
     "url": "https://www.psychologytoday.com/ca/therapists/nasima-salehe-toronto-on/471466?sid=5e7f7d8bc6291&name=nasima&ref=1&tr=ResultsName",
     "approved": true,
+    "company": "",
     "categoryId": "O7sQvfvZUQ6mZqDafaFO",
-    "company": "Nasima Salehe (Qualifying), BA, CAPT",
     "name": "Nasima Salehe",
-    "tags": ["PuBC9xwnuCEU5kR03Bve", "4HPqwuhi7eMlyce9yyVG", "lJFqNAyaGmThgHTpOmDU"]
+    "tags": ["PuBC9xwnuCEU5kR03Bve", "4HPqwuhi7eMlyce9yyVG", "lJFqNAyaGmThgHTpOmDU"],
+    "location": { "specific": "P7cn4TqZEBzH7tV5c8FL", "anywhere": true },
+    "created_at": "2020-04-19T16:01:38.771Z",
+    "updated_at": "2020-04-21T12:41:43.655Z",
+    "description": "I have immediate availability for virtual sessions- whether short term for support during our time of crisis or interest in long term support as we rise to the other side of this time of isolation. At this time of economic instability I am offering ‘pay-what-you-can’ or deferred payment to those who are facing financial uncertainty. "
   },
   {
     "id": "yDgUChUfhdA0H1PdtPBF",
-    "updated_at": "2020-04-19T03:19:37.289Z",
-    "description": "Filmmaker Gary Hustwit is streaming his documentaries free worldwide during the global COVID-19 crisis. Each Tuesday a new film will be posted on website. ",
-    "published_at": "2020-04-19T03:19:37.289Z",
     "url": "https://www.ohyouprettythings.com/free",
     "approved": true,
     "categoryId": "C3dJG2UJz8H6KlCkghbQ",
@@ -1846,81 +2590,95 @@
     "name": "Free Weekly Design Documentaries",
     "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "bNyCFySbmyAd1E7wRmZl"],
     "location": { "specific": null, "anywhere": true },
-    "created_at": "2020-04-19T03:19:37.289Z"
+    "created_at": "2020-04-19T03:19:37.289Z",
+    "updated_at": "2020-04-19T03:19:37.289Z",
+    "description": "Filmmaker Gary Hustwit is streaming his documentaries free worldwide during the global COVID-19 crisis. Each Tuesday a new film will be posted on website. ",
+    "published_at": "2020-04-19T03:19:37.289Z"
   },
   {
     "id": "yH0B9Nxyv5gf0gFczpqE",
     "published_at": "2020-04-19T02:37:43.895Z",
     "url": "https://www.facebook.com/groups/183711662902821/",
     "approved": true,
+    "company": null,
     "categoryId": "kaoFxEzS8aYrK6NSoEzw",
-    "company": "",
     "name": "Toronto Trauma Peer Support Network",
     "tags": [
       "UJFbvU4VcuRsEJ6J0Cvz",
+      "CCr3szDilmyAbA2fLFNw",
       "q3G31cduDS8dcECBL97A",
       "nzsciD2Yc25cIlF3PZtn",
       "uedmAs1KDqderoxkqQ9d"
     ],
-    "location": { "specific": null, "anywhere": true },
+    "location": { "anywhere": true, "specific": null },
     "created_at": "2020-04-19T02:37:43.895Z",
-    "updated_at": "2020-04-19T02:37:43.895Z",
+    "updated_at": "2020-04-20T16:58:06.868Z",
     "description": "Facebook group to share resources, and get digital support for PTSD & complex PTSD"
   },
   {
     "id": "yQ772CtGLXjx3Rp9E4Wi",
+    "name": "Open Path Psychotherapy Collective",
+    "tags": ["PuBC9xwnuCEU5kR03Bve"],
+    "location": { "anywhere": true, "specific": "P7cn4TqZEBzH7tV5c8FL" },
+    "created_at": "2020-04-20T01:07:54.843Z",
+    "updated_at": "2020-04-20T01:07:54.843Z",
+    "description": "Our therapists provide affordable, in-office and online psychotherapy sessions between $30 and $60 (between $30 and $80 for couples & family sessions)",
     "published_at": "2020-04-20T01:07:54.843Z",
     "url": "https://openpathcollective.org/",
     "approved": true,
     "categoryId": "O7sQvfvZUQ6mZqDafaFO",
-    "company": "",
-    "name": "Open Path Psychotherapy Collective",
-    "tags": ["PuBC9xwnuCEU5kR03Bve"],
-    "location": { "specific": "P7cn4TqZEBzH7tV5c8FL", "anywhere": true },
-    "created_at": "2020-04-20T01:07:54.843Z",
-    "updated_at": "2020-04-20T01:07:54.843Z",
-    "description": "Our therapists provide affordable, in-office and online psychotherapy sessions between $30 and $60 (between $30 and $80 for couples & family sessions)"
+    "company": ""
   },
   {
     "id": "ySOccjQsU1VGnjNqSOg6",
-    "updated_at": "2020-04-19T18:39:50.691Z",
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "uFJUXFL2T1GPqOKxR6EO",
+      "lJFqNAyaGmThgHTpOmDU",
+      "lbxBp09JAgSze9GyjAg5"
+    ],
+    "location": { "anywhere": true, "specific": null },
+    "created_at": "2020-04-19T18:39:50.691Z",
+    "updated_at": "2020-04-26T16:12:34.978Z",
     "description": "Human beings like certainty.  We are hard-wired to want to know what is happening when and to notice things that feel threatening to us.  When things feel uncertain or when we don’t generally feel safe, it’s normal to feel stressed...",
     "published_at": "2020-04-19T18:39:50.691Z",
     "url": "https://afsp.org/story/taking-care-of-your-mental-health-in-the-face-of-uncertainty",
     "approved": true,
     "categoryId": "3JeIOXT7sy7KOWUgX9zk",
     "company": "American Foundation for Suicide Prevention",
-    "name": "Taking Care of Your Mental Health in the Face of Uncertainty",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "lJFqNAyaGmThgHTpOmDU"],
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T18:39:50.691Z"
+    "name": "Taking Care of Your Mental Health in the Face of Uncertainty"
   },
   {
     "id": "zefts3d3tMaV0MRKCCMf",
-    "tags": ["uFJUXFL2T1GPqOKxR6EO"],
-    "location": { "anywhere": true, "specific": null },
-    "created_at": "2020-04-19T19:08:21.690Z",
-    "updated_at": "2020-04-19T19:08:21.690Z",
-    "description": "With guidance from Dr. Keith Dobson, clinical psychologist and professor at the University of Calgary, the Mental Health Commission of Canada has compiled the following tips to help Canadians protect their mental health as they strive to safeguard their physical well-being...",
-    "published_at": "2020-04-19T19:08:21.690Z",
     "url": "https://www.mentalhealthcommission.ca/English/news-article/13920/choosing-sources-information-carefully-critical-covid-19-mental-well-being-says",
     "approved": true,
     "categoryId": "3JeIOXT7sy7KOWUgX9zk",
     "company": "Mental Health Commission of Canada",
-    "name": "Choosing sources of COVID-19 info carefully is critical"
+    "name": "Choosing sources of COVID-19 info carefully is critical",
+    "tags": ["uFJUXFL2T1GPqOKxR6EO"],
+    "location": { "specific": null, "anywhere": true },
+    "created_at": "2020-04-19T19:08:21.690Z",
+    "updated_at": "2020-04-19T19:08:21.690Z",
+    "description": "With guidance from Dr. Keith Dobson, clinical psychologist and professor at the University of Calgary, the Mental Health Commission of Canada has compiled the following tips to help Canadians protect their mental health as they strive to safeguard their physical well-being...",
+    "published_at": "2020-04-19T19:08:21.690Z"
   },
   {
     "id": "zg0DsTMPYpLQP0tO02Zb",
-    "location": { "anywhere": false, "specific": "CaDm5zWm82h7eLIXgXye" },
-    "created_at": "2020-04-19T19:40:15.734Z",
-    "updated_at": "2020-04-19T19:40:15.734Z",
-    "description": "We offer support to anyone concerned about suicide. Whether you are suffering from a loss, worried about someone who may be having suicidal thoughts, or having suicidal thoughts yourself, our highly trained responders are there to provide support. Call toll-free number 1-833-456-4566",
     "published_at": "2020-04-19T19:40:15.734Z",
     "url": "https://www.crisisservicescanada.ca/en/call-us/",
     "approved": true,
     "categoryId": "ZNrUvRN4asfFk3FxpWh3",
     "company": "Crisis Services Canada",
     "name": "Crisis Services Canada",
-    "tags": ["UJFbvU4VcuRsEJ6J0Cvz", "JDGqvdzoDNqjhHsoyGWR", "ssH7ycWe7u25cxLE9Ly5"]
+    "tags": [
+      "UJFbvU4VcuRsEJ6J0Cvz",
+      "JDGqvdzoDNqjhHsoyGWR",
+      "XiNPDiek0SUpTqODnCFQ",
+      "ssH7ycWe7u25cxLE9Ly5"
+    ],
+    "location": { "anywhere": null, "specific": "CaDm5zWm82h7eLIXgXye" },
+    "created_at": "2020-04-19T19:40:15.734Z",
+    "updated_at": "2020-04-20T21:13:32.803Z",
+    "description": "We offer support to anyone concerned about suicide. Whether you are suffering from a loss, worried about someone who may be having suicidal thoughts, or having suicidal thoughts yourself, our highly trained responders are there to provide support. \n☎ 1-833-456-4566"
   }
 ]
