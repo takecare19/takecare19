@@ -1,12 +1,12 @@
 <template>
   <Layout>
     <div class="wrapper">
-      <h1 class="mb-8">Something went wrong</h1>
+      <h1 class="mb-8">404</h1>
       <div class="flex">
         <div>
           <p>
-            Oops, there's been an error on our end. Please try your request again later or
-            <a class="link" href="/about#contact">let us know about the issue</a>.
+            Oops, this page can't be found! <br />
+            No worries, head to the homepage.
           </p>
           <v-btn color="primary" to="/">Back home</v-btn>
         </div>
@@ -34,6 +34,7 @@ export default {
 h1 {
   color: $denim;
   text-align: center;
+  font-size: 6rem;
 }
 
 .flex {
@@ -47,7 +48,7 @@ h1 {
 }
 
 img {
-  width: 50%;
+  width: 40%;
 }
 
 p {
