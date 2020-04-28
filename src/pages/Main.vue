@@ -21,8 +21,14 @@
       </div>
       <div class="wrapper">
         <h2>Resources</h2>
+        <CategoriesListLoader v-if="isLoadingCategories" />
         <CategoriesList />
-        <ResourceList :resources="allResources" :category="selectedCategory" />
+        <ResourceList
+          v-if="!isLoadingResources"
+          :resources="allResources"
+          :category="selectedCategory"
+        />
+        <ResourceCardLoader v-if="isLoadingResources || isLoadingMoreResources" />
         <div class="load-more-container">
           <v-btn text :disabled="endOfResources" class="mt-5" @click="seeMore">
             {{ endOfResources ? 'End of list' : 'Load more' }}
@@ -37,11 +43,14 @@
 import CategoriesList from '@/components/CategoriesList'
 import ResourceList from '@/components/ResourceList'
 import Layout from '@/components/Layout'
+import ResourceCardLoader from '@/components/ResourceCardLoader'
+import CategoriesListLoader from '@/components/CategoriesListLoader'
+
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'Main',
-  components: { CategoriesList, ResourceList, Layout },
+  components: { CategoriesList, ResourceList, Layout, ResourceCardLoader, CategoriesListLoader },
   data() {
     return {
       items: ['Anywhere', 'Toronto', 'Vancouver'],
@@ -49,7 +58,14 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['allResources', 'selectedCategory', 'endOfResources', 'isLoadingResources'])
+    ...mapGetters([
+      'allResources',
+      'selectedCategory',
+      'endOfResources',
+      'isLoadingResources',
+      'isLoadingMoreResources',
+      'isLoadingCategories'
+    ])
   },
   created() {
     this.fetchResources()
@@ -70,7 +86,7 @@ export default {
 
 .hero {
   width: 100%;
-  height: 60vh;
+  height: 85vh;
   min-height: 400px;
   margin-bottom: 20px;
   display: flex;
@@ -115,7 +131,7 @@ export default {
 
 @media (min-width: 769px) {
   .hero {
-    background: url('../assets/desktop-heroimage.svg');
+    background: url('../assets/desktop-hero-long.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -124,7 +140,7 @@ export default {
 
 @media (max-width: 768px) {
   .hero {
-    background: url('../assets/mobile-heroimage.svg');
+    background: url('../assets/mobile-hero-long.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

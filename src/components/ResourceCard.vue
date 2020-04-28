@@ -1,9 +1,5 @@
 <template>
-  <v-card
-    class="resource-card"
-    :href="!isAdmin ? resource.url : ''"
-    target="_blank"
-  >
+  <v-card class="resource-card" :href="!isAdmin ? resource.url : ''" target="_blank">
     <div class="resource-card-content">
       <h3>{{ resource.name }}</h3>
       <p class="category-location mt-1 mb-2">
@@ -133,7 +129,7 @@ export default {
 }
 
 .hyperlink {
-  color: $denim !important;
+  color: $navy !important;
   text-decoration: underline !important;
   display: block;
 }
@@ -156,6 +152,9 @@ export default {
   flex-wrap: wrap;
 
   .tag {
+    font-family: Poppins, sans-serif;
+    margin-right: 5px;
+
     .v-chip {
       background: $sky;
       border-radius: 1px;
@@ -168,11 +167,6 @@ export default {
       &::before {
         background: $sky;
       }
-    }
-
-    & + .tag {
-      margin-left: 5px;
-      font-family: Poppins, sans-serif;
     }
   }
 }

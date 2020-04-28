@@ -5,6 +5,7 @@ import {
   FETCH_CATEGORIES_SUCCESS,
   FETCH_CATEGORIES_FAILURE
 } from '../constants'
+import router from '../../router'
 
 const state = {
   categories: [],
@@ -56,6 +57,7 @@ const mutations = {
   [FETCH_CATEGORIES_FAILURE]: (state, error) => {
     state.isLoading = false
     console.error(error)
+    router.push('/error')
     state.error = error
   },
 

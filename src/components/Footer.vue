@@ -113,7 +113,7 @@ form {
 footer.v-footer {
   background-size: cover;
   text-align: center;
-  padding: 200px 0 50px;
+  padding: 150px 0 50px;
   display: block;
 }
 
@@ -164,7 +164,9 @@ nav {
 
 @media (min-width: 769px) {
   footer {
-    background: url('../assets/desktop-footer-background.svg');
+    background: url('../assets/Desktop-Footer-Revised.svg');
+    background-size: cover;
+    background-position: 90% 0%;
   }
 
   .back-to-top {
