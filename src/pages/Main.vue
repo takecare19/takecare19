@@ -86,7 +86,7 @@ export default {
 
 .hero {
   width: 100%;
-  height: 60vh;
+  height: 85vh;
   min-height: 400px;
   margin-bottom: 20px;
   display: flex;
@@ -131,7 +131,7 @@ export default {
 
 @media (min-width: 769px) {
   .hero {
-    background: url('../assets/desktop-heroimage.svg');
+    background: url('../assets/desktop-hero-long.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -140,7 +140,7 @@ export default {
 
 @media (max-width: 768px) {
   .hero {
-    background: url('../assets/mobile-heroimage.svg');
+    background: url('../assets/mobile-hero-long.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -152,6 +152,9 @@ export default {
   flex-wrap: wrap;
 
   .tag {
+    font-family: Poppins, sans-serif;
+    margin-right: 5px;
+
     .v-chip {
       background: $sky;
       border-radius: 1px;
@@ -164,11 +167,6 @@ export default {
       &::before {
         background: $sky;
       }
-    }
-
-    & + .tag {
-      margin-left: 5px;
-      font-family: Poppins, sans-serif;
     }
   }
 }
