@@ -96,26 +96,9 @@ const actions = {
       query = query.where('categoryId', '==', categoryId)
     }
 
-    // eslint-disable-next-line no-debugger
-    debugger
     if (tags && tags.length) {
       query = query.where('tags', 'array-contains-any', tags)
     }
-    // if (costTags && costTags.length) {
-    //   query = query.where('costTags', 'array-contains-any', costTags)
-    // }
-
-    // if (audienceTags && audienceTags.length) {
-    //   query = query.where('audienceTags', 'array-contains-any', audienceTags)
-    // }
-
-    // if (formatTags && formatTags.length) {
-    //   query = query.where('formatTags', 'array-contains-any', formatTags)
-    // }
-
-    // if (topicTags && topicTags.length) {
-    //   query = query.where('topicTags', 'array-contains-any', topicTags)
-    // }
 
     query
       .orderBy('created_at', 'desc')

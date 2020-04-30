@@ -178,24 +178,13 @@ export default {
 
       const { anywhere, location, description, url, company, name, tags, categoryId } = this
 
-      const sortedTagIds = tags.sort((a, b) => a.order - b.order).map(tag => tag.id)
-
-      const getTags = type => {
-        return sortedTagIds.filter(sortedTag => {
-          return this.allTags.find(tag => tag.id === sortedTag).type === type
-        })
-      }
-
       const newResource = {
         location: { anywhere, specific: location },
         description,
         url,
         company,
         name,
-        costTags: getTags('cost'),
-        topicTags: getTags('topic'),
-        formatTags: getTags('format'),
-        audienceTags: getTags('audience'),
+        tags: tags.sort((a, b) => a.order - b.order).map(tag => tag.id),
         categoryId
       }
       this.$emit('submit', newResource)

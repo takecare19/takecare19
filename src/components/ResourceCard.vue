@@ -9,7 +9,7 @@
         {{ getName(resource.location.specific, allLocations) }}
       </p>
       <ul class="resource-tag-list mb-2">
-        <li class="tag" v-for="tag in tagsForResource" :key="tag">
+        <li class="tag" v-for="tag in resource.tags" :key="tag">
           <v-chip small class="mb-1">{{ getName(tag, allTags) }}</v-chip>
         </li>
       </ul>
