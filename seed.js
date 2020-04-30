@@ -145,6 +145,6 @@ const reformatTags = () => {
   })
 }
 
-addWithId('tags', tags, 'dev')
-//getDataFromCollection('tags', 'prod')
+addWithId('resources', resources, 'dev')
+//getDataFromCollection('resources', 'prod')
 //reformatTags()

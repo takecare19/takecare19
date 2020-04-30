@@ -40,13 +40,33 @@ const getters = {
 }
 
 const actions = {
-  fetchResources: ({ commit }, { categoryId } = {}) => {
+  fetchResources: ({ commit }, { categoryId, tags } = {}) => {
     commit(FETCH_RESOURCES)
     let query = db.collection('resources').where('approved', '==', true)
 
     if (categoryId && categoryId !== 'All') {
       query = query.where('categoryId', '==', categoryId)
     }
+
+    if (tags && tags.length) {
+      query = query.where('tags', 'array-contains-any', tags)
+    }
+
+    // if (costTags && costTags.length) {
+    //   query = query.where('costTags', 'array-contains-any', costTags)
+    // }
+
+    // if (audienceTags && audienceTags.length) {
+    //   query = query.where('audienceTags', 'array-contains-any', audienceTags)
+    // }
+
+    // if (formatTags && formatTags.length) {
+    //   query = query.where('formatTags', 'array-contains-any', formatTags)
+    // }
+
+    // if (topicTags && topicTags.length) {
+    //   query = query.where('topicTags', 'array-contains-any', topicTags)
+    // }
 
     query
       .orderBy('created_at', 'desc')
@@ -67,7 +87,7 @@ const actions = {
       })
       .catch(error => commit(FETCH_RESOURCES_FAILURE, error))
   },
-  fetchMore: ({ commit }, categoryId) => {
+  fetchMore: ({ commit }, { categoryId, tags } = {}) => {
     let query = db.collection('resources').where('approved', '==', true)
 
     commit(FETCH_MORE_RESOURCES)
@@ -75,6 +95,27 @@ const actions = {
     if (categoryId && categoryId !== 'All') {
       query = query.where('categoryId', '==', categoryId)
     }
+
+    // eslint-disable-next-line no-debugger
+    debugger
+    if (tags && tags.length) {
+      query = query.where('tags', 'array-contains-any', tags)
+    }
+    // if (costTags && costTags.length) {
+    //   query = query.where('costTags', 'array-contains-any', costTags)
+    // }
+
+    // if (audienceTags && audienceTags.length) {
+    //   query = query.where('audienceTags', 'array-contains-any', audienceTags)
+    // }
+
+    // if (formatTags && formatTags.length) {
+    //   query = query.where('formatTags', 'array-contains-any', formatTags)
+    // }
+
+    // if (topicTags && topicTags.length) {
+    //   query = query.where('topicTags', 'array-contains-any', topicTags)
+    // }
 
     query
       .orderBy('created_at', 'desc')

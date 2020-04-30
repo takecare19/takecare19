@@ -87,7 +87,7 @@ export default {
   methods: {
     ...mapActions(['fetchResources', 'fetchMore', 'fetchTags', 'fetchLocations']),
     seeMore() {
-      this.fetchMore(this.selectedCategory.id)
+      this.fetchMore({ categoryId: this.selectedCategory.id })
     }
   }
 }

@@ -78,7 +78,7 @@
         </section>
       </v-card-text>
       <v-card-actions>
-        <v-btn color="primary" @click="showFilterDialog = false" :disabled="!totalTags"
+        <v-btn color="primary" @click="applyFilters" :disabled="!totalTags"
           >Apply {{ totalTags }} filter{{ totalTags !== 1 ? 's' : '' }}</v-btn
         >
         <v-spacer></v-spacer>
@@ -91,11 +91,11 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'FilterDialog',
   computed: {
-    ...mapGetters(['allTags']),
+    ...mapGetters(['allTags', 'selectedCategory']),
     costTags() {
       return this.allTags.filter(tag => tag.type === 'cost')
     },
@@ -115,9 +115,6 @@ export default {
         this.selectedTopicTags.length +
         this.selectedAudienceTags.length
       )
-    },
-    isApplied() {
-      return false
     }
   },
   data() {
@@ -126,10 +123,12 @@ export default {
       selectedCostTags: [],
       selectedFormatTags: [],
       selectedTopicTags: [],
-      selectedAudienceTags: []
+      selectedAudienceTags: [],
+      isApplied: false
     }
   },
   methods: {
+    ...mapActions(['fetchResources']),
     clearTags() {
       this.selectedCostTags = []
       this.selectedAudienceTags = []
@@ -159,6 +158,19 @@ export default {
       } else {
         selectedTags.push(tag)
       }
+    },
+    applyFilters() {
+      this.fetchResources({
+        categoryId: this.selectedCategory.id,
+        tags: [
+          ...this.selectedTopicTags,
+          ...this.selectedAudienceTags,
+          ...this.selectedFormatTags,
+          ...this.selectedCostTags
+        ]
+      })
+      this.isApplied = true
+      this.showFilterDialog = false
     }
   }
 }
