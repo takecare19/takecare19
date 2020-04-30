@@ -9,7 +9,7 @@
         {{ getName(resource.location.specific, allLocations) }}
       </p>
       <ul class="resource-tag-list mb-2">
-        <li class="tag" v-for="tag in resource.tags" :key="tag">
+        <li class="tag" v-for="tag in tagsForResource" :key="tag">
           <v-chip small class="mb-1">{{ getName(tag, allTags) }}</v-chip>
         </li>
       </ul>
@@ -66,6 +66,14 @@ export default {
     ...mapGetters(['selectedCategory', 'allTags', 'allLocations', 'user', 'allCategories']),
     isAdmin() {
       return !!this.user && this.$route.path.includes('admin')
+    },
+    tagsForResource() {
+      return [
+        ...this.$props.resource.costTags,
+        ...this.$props.resource.formatTags,
+        ...this.$props.resource.topicTags,
+        ...this.$props.resource.audienceTags
+      ]
     }
   },
   methods: {
