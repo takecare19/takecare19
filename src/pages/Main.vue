@@ -8,7 +8,7 @@
               Accessible & Inclusive Mental Health Resources for Coping Through COVID&#x2011;19
             </span>
           </h1>
-          <label for="location-filter">See resources revelant to:</label>
+          <!-- <label for="location-filter">See resources revelant to:</label>
           <v-select
             id="location-filer"
             v-model="selectedLocation"
@@ -16,7 +16,7 @@
             depressed
             dark
             :items="items"
-          ></v-select>
+          ></v-select> -->
         </div>
       </div>
       <div class="wrapper">
