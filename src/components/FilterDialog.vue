@@ -1,13 +1,21 @@
 <template>
   <v-dialog scrollable v-model="showFilterDialog" width="80%">
     <template v-slot:activator="{ on }">
-      <v-btn color="primary" dark v-on="on">Open Dialog</v-btn>
+      <v-badge offset-x="10" offset-y="10" color="primary" :content="isApplied ? totalTags : '0'">
+        <v-btn color="secondary" dark v-on="on">
+          <v-icon class="small mr-1">mdi-filter</v-icon>
+          Filters
+        </v-btn>
+      </v-badge>
     </template>
-    <v-card>
+    <v-card id="filter-dialog">
+      <v-btn class="close-button" icon @click="showFilterDialog = false">
+        <v-icon large>mdi-close-circle</v-icon>
+      </v-btn>
       <v-card-title>
         <h2>Filter by Tags</h2>
       </v-card-title>
-      <v-card-text height="80vh" id="filter-dialog">
+      <v-card-text height="80vh">
         <section>
           <h3 class="helper mt-10 mb-5">COST</h3>
           <v-btn
@@ -70,8 +78,13 @@
         </section>
       </v-card-text>
       <v-card-actions>
-        <v-btn color="blue darken-1" text @click="showFilterDialog = false">Close</v-btn>
-        <v-btn color="blue darken-1" text @click="showFilterDialog = false">Save</v-btn>
+        <v-btn color="primary" @click="showFilterDialog = false" :disabled="!totalTags"
+          >Apply {{ totalTags }} filter{{ totalTags !== 1 ? 's' : '' }}</v-btn
+        >
+        <v-spacer></v-spacer>
+        <v-btn color="error" text @click="clearTags">
+          Clear filters
+        </v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
@@ -94,6 +107,17 @@ export default {
     },
     topicTags() {
       return this.allTags.filter(tag => tag.type === 'topic')
+    },
+    totalTags() {
+      return (
+        this.selectedCostTags.length +
+        this.selectedFormatTags.length +
+        this.selectedTopicTags.length +
+        this.selectedAudienceTags.length
+      )
+    },
+    isApplied() {
+      return false
     }
   },
   data() {
@@ -106,6 +130,12 @@ export default {
     }
   },
   methods: {
+    clearTags() {
+      this.selectedCostTags = []
+      this.selectedAudienceTags = []
+      this.selectedFormatTags = []
+      this.selectedTopicTags = []
+    },
     toggleTag(tag, type) {
       let selectedTags
       switch (type) {
@@ -135,6 +165,9 @@ export default {
 </script>
 
 <style lang="scss">
+.close-button {
+  margin-left: auto;
+}
 #filter-dialog {
   .v-btn.filter-tag {
     margin-right: 5px;
@@ -143,8 +176,8 @@ export default {
     padding: 0 8px;
   }
 
-  .v-btn.secondary {
-    color: #333;
+  h2 {
+    margin-top: -25px;
   }
 }
 </style>

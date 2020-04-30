@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div>
+    <div id="homepage">
       <div class="hero">
         <div class="hero-content">
           <h1 class="mt-5">
@@ -139,6 +139,13 @@ export default {
 .load-more-container {
   display: flex;
   justify-content: center;
+}
+
+#homepage {
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 @media (min-width: 769px) {
