@@ -20,7 +20,10 @@
         </div>
       </div>
       <div class="wrapper">
-        <h2>Resources</h2>
+        <div class="flex">
+          <h2>Resources</h2>
+          <FilterDialog />
+        </div>
         <CategoriesListLoader v-if="isLoadingCategories" />
         <CategoriesList />
         <ResourceList
@@ -45,16 +48,25 @@ import ResourceList from '@/components/ResourceList'
 import Layout from '@/components/Layout'
 import ResourceCardLoader from '@/components/ResourceCardLoader'
 import CategoriesListLoader from '@/components/CategoriesListLoader'
+import FilterDialog from '@/components/FilterDialog'
 
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'Main',
-  components: { CategoriesList, ResourceList, Layout, ResourceCardLoader, CategoriesListLoader },
+  components: {
+    CategoriesList,
+    ResourceList,
+    Layout,
+    ResourceCardLoader,
+    CategoriesListLoader,
+    FilterDialog
+  },
   data() {
     return {
       items: ['Anywhere', 'Toronto', 'Vancouver'],
-      selectedLocation: 'Anywhere'
+      selectedLocation: 'Anywhere',
+      showFilterDialog: false
     }
   },
   computed: {

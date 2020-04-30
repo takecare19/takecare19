@@ -1,0 +1,150 @@
+<template>
+  <v-dialog scrollable v-model="showFilterDialog" width="80%">
+    <template v-slot:activator="{ on }">
+      <v-btn color="primary" dark v-on="on">Open Dialog</v-btn>
+    </template>
+    <v-card>
+      <v-card-title>
+        <h2>Filter by Tags</h2>
+      </v-card-title>
+      <v-card-text height="80vh" id="filter-dialog">
+        <section>
+          <h3 class="helper mt-10 mb-5">COST</h3>
+          <v-btn
+            class="filter-tag"
+            :color="selectedCostTags.includes(tag.id) ? 'secondary' : 'default'"
+            v-for="tag in costTags"
+            :key="tag.id"
+            @click="toggleTag(tag.id, tag.type)"
+          >
+            <v-icon small class="mr-1">
+              {{ selectedCostTags.includes(tag.id) ? 'mdi-check' : 'mdi-plus' }}
+            </v-icon>
+            {{ tag.name }}
+          </v-btn>
+        </section>
+        <section>
+          <h3 class="helper mt-10 mb-5">FORMAT</h3>
+          <v-btn
+            class="filter-tag"
+            :color="selectedFormatTags.includes(tag.id) ? 'secondary' : 'default'"
+            v-for="tag in formatTags"
+            :key="tag.id"
+            @click="toggleTag(tag.id, tag.type)"
+          >
+            <v-icon small class="mr-1">
+              {{ selectedFormatTags.includes(tag.id) ? 'mdi-check' : 'mdi-plus' }}
+            </v-icon>
+            {{ tag.name }}
+          </v-btn>
+        </section>
+        <section>
+          <h3 class="helper mt-10 mb-5">TOPIC</h3>
+          <v-btn
+            class="filter-tag"
+            :color="selectedTopicTags.includes(tag.id) ? 'secondary' : 'default'"
+            v-for="tag in topicTags"
+            :key="tag.id"
+            @click="toggleTag(tag.id, tag.type)"
+          >
+            <v-icon small class="mr-1">
+              {{ selectedTopicTags.includes(tag.id) ? 'mdi-check' : 'mdi-plus' }}
+            </v-icon>
+            {{ tag.name }}
+          </v-btn>
+        </section>
+        <section>
+          <h3 class="helper mt-10 mb-5">AUDIENCE</h3>
+          <v-btn
+            class="filter-tag"
+            :color="selectedAudienceTags.includes(tag.id) ? 'secondary' : 'default'"
+            v-for="tag in audienceTags"
+            :key="tag.id"
+            @click="toggleTag(tag.id, tag.type)"
+          >
+            <v-icon small class="mr-1">
+              {{ selectedAudienceTags.includes(tag.id) ? 'mdi-check' : 'mdi-plus' }}
+            </v-icon>
+            {{ tag.name }}
+          </v-btn>
+        </section>
+      </v-card-text>
+      <v-card-actions>
+        <v-btn color="blue darken-1" text @click="showFilterDialog = false">Close</v-btn>
+        <v-btn color="blue darken-1" text @click="showFilterDialog = false">Save</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-dialog>
+</template>
+
+<script>
+import { mapGetters } from 'vuex'
+export default {
+  name: 'FilterDialog',
+  computed: {
+    ...mapGetters(['allTags']),
+    costTags() {
+      return this.allTags.filter(tag => tag.type === 'cost')
+    },
+    audienceTags() {
+      return this.allTags.filter(tag => tag.type === 'audience')
+    },
+    formatTags() {
+      return this.allTags.filter(tag => tag.type === 'format')
+    },
+    topicTags() {
+      return this.allTags.filter(tag => tag.type === 'topic')
+    }
+  },
+  data() {
+    return {
+      showFilterDialog: false,
+      selectedCostTags: [],
+      selectedFormatTags: [],
+      selectedTopicTags: [],
+      selectedAudienceTags: []
+    }
+  },
+  methods: {
+    toggleTag(tag, type) {
+      let selectedTags
+      switch (type) {
+        case 'cost':
+          selectedTags = this.selectedCostTags
+          break
+        case 'audience':
+          selectedTags = this.selectedAudienceTags
+          break
+        case 'format':
+          selectedTags = this.selectedFormatTags
+          break
+        case 'topic':
+          selectedTags = this.selectedTopicTags
+          break
+        default:
+          break
+      }
+      if (selectedTags.includes(tag)) {
+        selectedTags.splice(selectedTags.indexOf(tag), 1)
+      } else {
+        selectedTags.push(tag)
+      }
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+#filter-dialog {
+  .v-btn.filter-tag {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 0 8px;
+  }
+
+  .v-btn.secondary {
+    color: #333;
+  }
+}
+</style>
