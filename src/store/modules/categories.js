@@ -39,7 +39,7 @@ const actions = {
   },
   selectCategory: ({ commit, dispatch }, categoryId) => {
     commit(SET_SELECTED_CATEGORY, categoryId)
-    dispatch('fetchResources', categoryId)
+    dispatch('fetchResources', { categoryId })
   }
 }
 

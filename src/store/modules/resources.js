@@ -40,28 +40,18 @@ const getters = {
 }
 
 const actions = {
-  fetchResources: ({ commit }, categoryId) => {
+  fetchResources: ({ commit }, { categoryId } = {}) => {
     commit(FETCH_RESOURCES)
-    let request
+    let query = db.collection('resources').where('approved', '==', true)
 
     if (categoryId && categoryId !== 'All') {
-      request = db
-        .collection('resources')
-        .where('approved', '==', true)
-        .where('categoryId', '==', categoryId)
-        .orderBy('created_at', 'desc')
-        .limit(PAGE_SIZE)
-        .get()
-    } else {
-      request = db
-        .collection('resources')
-        .where('approved', '==', true)
-        .orderBy('created_at', 'desc')
-        .limit(PAGE_SIZE)
-        .get()
+      query = query.where('categoryId', '==', categoryId)
     }
 
-    request
+    query
+      .orderBy('created_at', 'desc')
+      .limit(PAGE_SIZE)
+      .get()
       .then(snapshot => {
         const lastVisible = snapshot.docs[snapshot.docs.length - 1]
 
@@ -78,30 +68,19 @@ const actions = {
       .catch(error => commit(FETCH_RESOURCES_FAILURE, error))
   },
   fetchMore: ({ commit }, categoryId) => {
-    let request
+    let query = db.collection('resources').where('approved', '==', true)
 
     commit(FETCH_MORE_RESOURCES)
 
     if (categoryId && categoryId !== 'All') {
-      request = db
-        .collection('resources')
-        .where('approved', '==', true)
-        .where('categoryId', '==', categoryId)
-        .orderBy('created_at', 'desc')
-        .limit(PAGE_SIZE)
-        .startAfter(state.lastResource)
-        .get()
-    } else {
-      request = db
-        .collection('resources')
-        .where('approved', '==', true)
-        .orderBy('created_at', 'desc')
-        .limit(PAGE_SIZE)
-        .startAfter(state.lastResource)
-        .get()
+      query = query.where('categoryId', '==', categoryId)
     }
 
-    request
+    query
+      .orderBy('created_at', 'desc')
+      .limit(PAGE_SIZE)
+      .startAfter(state.lastResource)
+      .get()
       .then(snapshot => {
         const lastVisible = snapshot.docs[snapshot.docs.length - 1]
 
