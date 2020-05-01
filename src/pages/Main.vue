@@ -1,28 +1,32 @@
 <template>
   <Layout>
-    <div>
+    <div id="homepage">
       <div class="hero">
         <div class="hero-content">
-          <h1>
+          <h1 class="mt-5">
             <span>
               Accessible & Inclusive Mental Health Resources for Coping Through COVID&#x2011;19
             </span>
           </h1>
           <!-- <label for="location-filter">See resources revelant to:</label>
-        <v-select
-          id="location-filer"
-          v-model="selectedLocation"
-          solo
-          depressed
-          dark
-          :items="items"
-        ></v-select> -->
+          <v-select
+            id="location-filer"
+            v-model="selectedLocation"
+            solo
+            depressed
+            dark
+            :items="items"
+          ></v-select> -->
         </div>
       </div>
       <div class="wrapper">
-        <h2>Resources</h2>
         <CategoriesListLoader v-if="isLoadingCategories" />
         <CategoriesList />
+        <div class="flex mb-3">
+          <h2>Resources</h2>
+          <FilterDialog />
+        </div>
+        <div class="helper mb-5 sort-by-text">Sorted by: Newest first</div>
         <ResourceList
           v-if="!isLoadingResources"
           :resources="allResources"
@@ -45,16 +49,25 @@ import ResourceList from '@/components/ResourceList'
 import Layout from '@/components/Layout'
 import ResourceCardLoader from '@/components/ResourceCardLoader'
 import CategoriesListLoader from '@/components/CategoriesListLoader'
+import FilterDialog from '@/components/FilterDialog'
 
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'Main',
-  components: { CategoriesList, ResourceList, Layout, ResourceCardLoader, CategoriesListLoader },
+  components: {
+    CategoriesList,
+    ResourceList,
+    Layout,
+    ResourceCardLoader,
+    CategoriesListLoader,
+    FilterDialog
+  },
   data() {
     return {
       items: ['Anywhere', 'Toronto', 'Vancouver'],
-      selectedLocation: 'Anywhere'
+      selectedLocation: 'Anywhere',
+      showFilterDialog: false
     }
   },
   computed: {
@@ -64,7 +77,8 @@ export default {
       'endOfResources',
       'isLoadingResources',
       'isLoadingMoreResources',
-      'isLoadingCategories'
+      'isLoadingCategories',
+      'appliedTags'
     ])
   },
   created() {
@@ -75,7 +89,7 @@ export default {
   methods: {
     ...mapActions(['fetchResources', 'fetchMore', 'fetchTags', 'fetchLocations']),
     seeMore() {
-      this.fetchMore(this.selectedCategory.id)
+      this.fetchMore({ categoryId: this.selectedCategory.id, tags: this.appliedTags })
     }
   }
 }
@@ -127,6 +141,18 @@ export default {
 .load-more-container {
   display: flex;
   justify-content: center;
+}
+
+#homepage {
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sort-by-text {
+    font-size: 1.6rem;
+  }
 }
 
 @media (min-width: 769px) {

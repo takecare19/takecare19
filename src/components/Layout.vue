@@ -27,8 +27,8 @@ export default {
 
 main {
   background-image: url('../assets/desktop-background-top.svg');
-  background-position: 50% -175px;
-  background-size: 2000px;
+  background-position: 50% -250px;
+  background-size: 3000px;
 }
 
 @media (max-width: 768px) {

@@ -20,6 +20,10 @@
   font-family: Poppins, sans-serif !important;
 }
 
+.v-card__actions > .v-btn.v-btn {
+  padding: 0 16px;
+}
+
 .v-btn.v-btn--depressed {
   font-weight: 400;
 }
@@ -34,6 +38,10 @@
 
 .v-input.v-select {
   border-radius: 0;
+}
+
+.v-btn.secondary {
+  color: #333 !important;
 }
 
 .v-list-item__title {

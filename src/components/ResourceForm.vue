@@ -175,7 +175,9 @@ export default {
     },
     handleSubmit(e) {
       e.preventDefault()
+
       const { anywhere, location, description, url, company, name, tags, categoryId } = this
+
       const newResource = {
         location: { anywhere, specific: location },
         description,

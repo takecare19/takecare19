@@ -66,6 +66,14 @@ export default {
     ...mapGetters(['selectedCategory', 'allTags', 'allLocations', 'user', 'allCategories']),
     isAdmin() {
       return !!this.user && this.$route.path.includes('admin')
+    },
+    tagsForResource() {
+      return [
+        ...this.$props.resource.costTags,
+        ...this.$props.resource.formatTags,
+        ...this.$props.resource.topicTags,
+        ...this.$props.resource.audienceTags
+      ]
     }
   },
   methods: {
