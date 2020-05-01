@@ -1,5 +1,5 @@
 <template>
-  <v-dialog scrollable v-model="showFilterDialog" width="80%" @input="v => handleOpen()">
+  <v-dialog scrollable v-model="showFilterDialog" width="95%" @input="v => handleOpen()">
     <template v-slot:activator="{ on }">
       <v-badge
         offset-x="10"
@@ -63,6 +63,9 @@
         >
         <v-spacer></v-spacer>
         <v-btn color="error" text @click="clearTags" :disabled="!selectedTags.length">
+          <v-icon small>
+            mdi-close
+          </v-icon>
           Clear all
         </v-btn>
       </v-card-actions>
@@ -137,6 +140,12 @@ export default {
     border-radius: 8px;
     padding: 0 8px;
   }
+  .v-card__text {
+    padding: 0 10px 20px;
+  }
+  .v-card__title {
+    padding: 16px 10px 10px;
+  }
 
   label {
     font-size: 2.6rem;
@@ -170,7 +179,31 @@ export default {
   }
 }
 
+.v-dialog.v-dialog--scrollable {
+  max-width: 750px;
+}
 .v-btn.v-size--x-large {
   font-size: 2.6rem;
 }
+
+@media (max-width: 768px) {
+  #filter-dialog {
+    .v-btn.v-size--x-large {
+      font-size: 1.8rem;
+    }
+
+    .v-btn.filter-tag {
+      margin-right: 8px;
+      margin-bottom: 8px;
+      border-radius: 8px;
+      padding: 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .v-card__actions .v-btn {
+      font-size: 1.2rem;
+    }
+  }
+}
 </style>
+
