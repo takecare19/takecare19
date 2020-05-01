@@ -43,4 +43,6 @@ export const LOGIN_USER_SUCCESS = 'LOGIN_USER_SUCCESS'
 export const LOGOUT_USER_FAILURE = 'LOGOUT_USER_FAILURE'
 export const LOGOUT_USER_SUCCESS = 'LOGOUT_USER_SUCCESS'
 
-export const PAGE_SIZE = 20
+export const SET_TAGS = 'SET_TAGS'
+
+export const PAGE_SIZE = 2

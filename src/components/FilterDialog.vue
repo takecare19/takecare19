@@ -1,11 +1,12 @@
 <template>
-  <v-dialog scrollable v-model="showFilterDialog" width="80%">
+  <v-dialog scrollable v-model="showFilterDialog" width="80%" @input="v => handleOpen()">
     <template v-slot:activator="{ on }">
       <v-badge
         offset-x="10"
         offset-y="10"
         color="primary"
-        :content="isApplied ? selectedTags.length : '0'"
+        :content="appliedTags.length"
+        :value="appliedTags.length"
       >
         <v-btn color="secondary" dark v-on="on">
           <v-icon class="small mr-1">mdi-filter</v-icon>
@@ -44,6 +45,7 @@
             v-for="tag in selectedTypeTags"
             :key="tag.id"
             @click="toggleTag(tag.id)"
+            :disabled="selectedTags.length >= 11 && !selectedTags.includes(tag.id)"
           >
             <v-icon small class="mr-1">
               {{ selectedTags.includes(tag.id) ? 'mdi-check' : 'mdi-plus' }}
@@ -51,14 +53,17 @@
             {{ tag.name }}
           </v-btn>
         </section>
+        <strong v-if="selectedTags.length >= 11" class="error--text"
+          >You can only choose up to 10 tags.</strong
+        >
       </v-card-text>
       <v-card-actions>
-        <v-btn color="primary" @click="applyFilters" :disabled="!selectedTags.length"
+        <v-btn color="primary" @click="applyFilters" :disabled="selectedTags.length >= 11"
           >Apply {{ selectedTags.length }} filter{{ selectedTags.length !== 1 ? 's' : '' }}</v-btn
         >
         <v-spacer></v-spacer>
-        <v-btn color="error" text @click="clearTags">
-          Clear filters
+        <v-btn color="error" text @click="clearTags" :disabled="!selectedTags.length">
+          Clear all
         </v-btn>
       </v-card-actions>
     </v-card>
@@ -70,7 +75,7 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'FilterDialog',
   computed: {
-    ...mapGetters(['allTags', 'selectedCategory']),
+    ...mapGetters(['allTags', 'selectedCategory', 'appliedTags']),
     selectedTypeTags() {
       return this.allTags.filter(tag => tag.type === this.selectedFilterType)
     }
@@ -85,7 +90,10 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['fetchResources']),
+    ...mapActions(['fetchResources', 'setTags']),
+    handleOpen() {
+      this.selectedTags = [...this.appliedTags]
+    },
     setFilterType(type) {
       this.selectedTags = []
       this.selectedFilterType = type
@@ -101,6 +109,7 @@ export default {
       }
     },
     applyFilters() {
+      this.setTags(this.selectedTags)
       this.fetchResources({
         categoryId: this.selectedCategory.id,
         tags: this.selectedTags
@@ -108,6 +117,9 @@ export default {
       this.isApplied = true
       this.showFilterDialog = false
     }
+  },
+  destroyed() {
+    this.setTags([])
   }
 }
 </script>
@@ -131,6 +143,9 @@ export default {
     margin-bottom: 30px;
   }
 
+  .error--text {
+    font-size: 1.5rem;
+  }
   .v-select {
     width: 200px;
     font-size: 2.6rem;
