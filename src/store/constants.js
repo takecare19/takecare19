@@ -45,4 +45,4 @@ export const LOGOUT_USER_SUCCESS = 'LOGOUT_USER_SUCCESS'
 
 export const SET_TAGS = 'SET_TAGS'
 
-export const PAGE_SIZE = 2
+export const PAGE_SIZE = 20
