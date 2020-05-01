@@ -127,7 +127,9 @@ export default {
 <style lang="scss">
 #filter-dialog {
   .close-button {
-    margin-left: auto;
+    position: absolute;
+    top: 20px;
+    right: 25px;
   }
   .v-btn.filter-tag {
     margin-right: 8px;
