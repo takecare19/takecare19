@@ -21,8 +21,8 @@
       <v-card-title>
         <v-menu offset-y>
           <template v-slot:activator="{ on }">
-            <v-btn text x-large v-on="on">
-              Filter by {{ selectedFilterType }}
+            <v-btn text x-large v-on="on" class="filter-by-button">
+              Filter by <span class="underline">{{ selectedFilterType }}</span>
               <v-icon>mdi-menu-down</v-icon>
             </v-btn>
           </template>
@@ -32,11 +32,19 @@
               :key="index"
               @click="setFilterType(type)"
             >
-              <v-list-item-title>{{ type }}</v-list-item-title>
+              <v-list-item-title>
+                {{ type }}
+                <v-icon v-if="selectedFilterType === type" x-small color="success"
+                  >mdi-check-bold</v-icon
+                >
+              </v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>
       </v-card-title>
+      <strong v-if="selectedTags.length >= 11" class="error--text"
+        >You can only choose up to 10 tags.</strong
+      >
       <v-card-text height="80vh">
         <section class="my-5">
           <v-btn
@@ -53,9 +61,6 @@
             {{ tag.name }}
           </v-btn>
         </section>
-        <strong v-if="selectedTags.length >= 11" class="error--text"
-          >You can only choose up to 10 tags.</strong
-        >
       </v-card-text>
       <v-card-actions>
         <v-btn color="primary" @click="applyFilters" :disabled="selectedTags.length >= 11"
@@ -139,12 +144,18 @@ export default {
     margin-bottom: 8px;
     border-radius: 8px;
     padding: 0 8px;
+    font-size: 1.4rem;
+    font-weight: 400;
   }
   .v-card__text {
     padding: 0 10px 20px;
   }
   .v-card__title {
     padding: 16px 10px 10px;
+  }
+
+  .filter-by-button::before {
+    background-color: #fff;
   }
 
   label {
@@ -154,8 +165,15 @@ export default {
     margin-bottom: 30px;
   }
 
+  .underline {
+    text-decoration: underline;
+    margin-left: 0.6rem;
+  }
+
   .error--text {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    padding: 0 10px;
+    font-family: Poppins, sans-serif;
   }
   .v-select {
     width: 200px;
@@ -192,16 +210,12 @@ export default {
       font-size: 1.8rem;
     }
 
-    .v-btn.filter-tag {
-      margin-right: 8px;
-      margin-bottom: 8px;
-      border-radius: 8px;
-      padding: 0 8px;
+    .v-card__actions .v-btn {
       font-size: 1.2rem;
     }
 
-    .v-card__actions .v-btn {
-      font-size: 1.2rem;
+    .error--text {
+      font-size: 1.2;
     }
   }
 }

@@ -20,12 +20,13 @@
         </div>
       </div>
       <div class="wrapper">
-        <div class="flex">
+        <CategoriesListLoader v-if="isLoadingCategories" />
+        <CategoriesList />
+        <div class="flex mb-3">
           <h2>Resources</h2>
           <FilterDialog />
         </div>
-        <CategoriesListLoader v-if="isLoadingCategories" />
-        <CategoriesList />
+        <div class="helper mb-5 sort-by-text">Sorted by: Newest first</div>
         <ResourceList
           v-if="!isLoadingResources"
           :resources="allResources"
@@ -145,7 +146,12 @@ export default {
 #homepage {
   .flex {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+  }
+
+  .sort-by-text {
+    font-size: 1.6rem;
   }
 }
 
