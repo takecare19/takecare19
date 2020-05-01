@@ -11,6 +11,13 @@ export default {
 </script>
 
 <style lang="scss">
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
 h1,
 h2,
 h3 {
@@ -23,7 +30,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3.6rem;
+  font-size: 2.8rem;
 }
 
 h3 {
@@ -78,6 +85,40 @@ p {
 
 .v-btn {
   text-transform: none;
+  font-family: Poppins, sans-serif !important;
+}
+
+.v-btn.primary {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.v-badge__badge {
+  font-family: Poppins, sans-serif;
+}
+
+.v-input.v-select.v-autocomplete .v-input__slot {
+  border-radius: 4px;
+}
+
+.v-input--checkbox .v-input__slot {
+  padding: 0;
+}
+
+.v-label.theme--light {
+  font-family: Poppins, sans-serif;
+}
+
+.v-messages__message {
+  font-family: Poppins, sans-serif;
+}
+
+.v-chip__content {
+  font-family: Poppins, sans-serif;
+}
+
+textarea,
+input[type='text'] {
   font-family: Poppins, sans-serif !important;
 }
 

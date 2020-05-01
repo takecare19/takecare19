@@ -1,5 +1,5 @@
 <template>
-  <div class="categories-list">
+  <div class="categories-list mb-12">
     <div class="categories-list-frame--desktop">
       <div class="categories-list">
         <v-btn
@@ -77,8 +77,6 @@ export default {
 
 <style lang="scss">
 .categories-list {
-  margin: 25px 0;
-
   .v-btn.primary {
     opacity: 1 !important;
     background: #2b3545 !important;
