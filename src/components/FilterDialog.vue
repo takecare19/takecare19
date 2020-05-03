@@ -19,6 +19,25 @@
         <v-icon large>mdi-close-circle</v-icon>
       </v-btn>
       <v-card-title>
+        <v-select
+          id="location-filer"
+          v-model="selectedLocations"
+          solo
+          depressed
+          multiple
+          dark
+          :items="allLocations"
+          item-text="name"
+          item-value="id"
+        >
+          <template v-slot:selection="{ item, index }">
+            <span v-if="index === 0 && selectedLocations.length === 1">{{ item.name }}</span>
+
+            <span v-if="index === 1 && selectedLocations.length > 1"
+              >{{ selectedLocations.length }} locations</span
+            >
+          </template>
+        </v-select>
         <v-menu offset-y>
           <template v-slot:activator="{ on }">
             <v-btn text x-large v-on="on" class="filter-by-button">
@@ -83,7 +102,7 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'FilterDialog',
   computed: {
-    ...mapGetters(['allTags', 'selectedCategory', 'appliedTags']),
+    ...mapGetters(['allTags', 'selectedCategory', 'appliedTags', 'allLocations']),
     selectedTypeTags() {
       return this.allTags.filter(tag => tag.type === this.selectedFilterType)
     }
@@ -92,11 +111,13 @@ export default {
     return {
       showFilterDialog: false,
       selectedTags: [],
+      selectedLocations: [],
       isApplied: false,
       selectedFilterType: 'cost',
       filterTypes: ['cost', 'format', 'audience', 'topic']
     }
   },
+
   methods: {
     ...mapActions(['fetchResources', 'setTags']),
     handleOpen() {
@@ -120,7 +141,8 @@ export default {
       this.setTags(this.selectedTags)
       this.fetchResources({
         categoryId: this.selectedCategory.id,
-        tags: this.selectedTags
+        tags: this.selectedTags,
+        locations: this.selectedLocations
       })
       this.isApplied = true
       this.showFilterDialog = false
