@@ -10,7 +10,7 @@
       >
         <v-btn color="secondary" dark v-on="on">
           <v-icon class="small mr-1">mdi-filter</v-icon>
-          Filter resources
+          Filter
         </v-btn>
       </v-badge>
     </template>
@@ -43,12 +43,9 @@
           <p class="helper mb-3">Choose a group and any tag(s) within it</p>
 
           <v-tabs background-color="white">
-            <v-tab
-              v-for="(type, index) in filterTypes"
-              :key="index"
-              @click="selectedFilterType = type"
-              >{{ type }}</v-tab
-            >
+            <v-tab v-for="(type, index) in filterTypes" :key="index" @click="setFilterType(type)">{{
+              type
+            }}</v-tab>
             <v-tab-item v-for="(type, index) in filterTypes" :key="index">
               <v-container>
                 <v-btn
