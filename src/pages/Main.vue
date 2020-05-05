@@ -13,7 +13,7 @@
       <div class="wrapper">
         <CategoriesListLoader v-if="isLoadingCategories" />
         <CategoriesList />
-        <div class="flex mb-3">
+        <div class="flex mb-3 resource-title-container">
           <h2>Resources</h2>
           <FilterDialog />
         </div>
@@ -174,6 +174,11 @@ export default {
     label {
       font-size: 1.6rem;
     }
+  }
+
+  #homepage .resource-title-container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 </style>

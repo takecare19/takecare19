@@ -8,9 +8,9 @@
         :content="allAppliedFilters"
         :value="allAppliedFilters > 0"
       >
-        <v-btn color="secondary" dark v-on="on">
+        <v-btn color="secondary" dark v-on="on" class="filter-toggle">
           <v-icon class="small mr-1">mdi-filter</v-icon>
-          Filter
+          Filter by Location & Tags
         </v-btn>
       </v-badge>
     </template>
@@ -271,6 +271,10 @@ export default {
       padding: 0 10px;
       font-size: 1rem;
     }
+  }
+
+  .filter-toggle .v-btn__content {
+    font-size: 1.4rem;
   }
 }
 </style>
