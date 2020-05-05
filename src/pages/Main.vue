@@ -89,6 +89,7 @@ export default {
       'isLoadingMoreResources',
       'isLoadingCategories',
       'appliedTags',
+      'appliedLocation',
       'allLocations'
     ])
   },
@@ -100,7 +101,11 @@ export default {
   methods: {
     ...mapActions(['fetchResources', 'fetchMore', 'fetchTags', 'fetchLocations']),
     seeMore() {
-      this.fetchMore({ categoryId: this.selectedCategory.id, tags: this.appliedTags })
+      this.fetchMore({
+        categoryId: this.selectedCategory.id,
+        tags: this.appliedTags,
+        location: this.appliedLocation
+      })
     }
   }
 }

@@ -39,7 +39,11 @@ const actions = {
   },
   selectCategory: ({ commit, dispatch, rootState }, categoryId) => {
     commit(SET_SELECTED_CATEGORY, categoryId)
-    dispatch('fetchResources', { categoryId, tags: rootState.filters.appliedTags })
+    dispatch('fetchResources', {
+      categoryId,
+      tags: rootState.filters.appliedTags,
+      location: rootState.filters.appliedLocation
+    })
   }
 }
 

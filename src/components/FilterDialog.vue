@@ -5,8 +5,8 @@
         offset-x="10"
         offset-y="10"
         color="primary"
-        :content="appliedTags.length"
-        :value="appliedTags.length"
+        :content="allFilters"
+        :value="allFilters > 0"
       >
         <v-btn color="secondary" dark v-on="on">
           <v-icon class="small mr-1">mdi-filter</v-icon>
@@ -18,54 +18,40 @@
       <v-btn class="close-button" icon @click="showFilterDialog = false">
         <v-icon large>mdi-close-circle</v-icon>
       </v-btn>
-      <v-card-title>
-        <v-select
-          id="location-filer"
-          v-model="selectedLocations"
-          solo
-          depressed
-          multiple
-          dark
-          :items="allLocations"
-          item-text="name"
-          item-value="id"
-        >
-          <template v-slot:selection="{ item, index }">
-            <span v-if="index === 0 && selectedLocations.length === 1">{{ item.name }}</span>
-
-            <span v-if="index === 1 && selectedLocations.length > 1"
-              >{{ selectedLocations.length }} locations</span
-            >
-          </template>
-        </v-select>
-        <v-menu offset-y>
-          <template v-slot:activator="{ on }">
-            <v-btn text x-large v-on="on" class="filter-by-button">
-              Filter by <span class="underline">{{ selectedFilterType }}</span>
-              <v-icon>mdi-menu-down</v-icon>
-            </v-btn>
-          </template>
-          <v-list>
-            <v-list-item
+      <v-card-text height="80vh">
+        <section class="mb-12">
+          <h2 class="my-3">Filter by location</h2>
+          <p class="helper mb-4">Select one location</p>
+          <v-btn
+            class="filter-tag"
+            :color="selectedLocation === location.id ? 'secondary' : 'default'"
+            v-for="location in allLocations"
+            :key="location.id"
+            @click="toggleLocation(location)"
+            :disabled="selectedLocation && !selectedLocation === location.id"
+          >
+            <v-icon small class="mr-1">
+              {{ selectedLocation === location.id ? 'mdi-check' : 'mdi-plus' }}
+            </v-icon>
+            {{ location.name }}
+          </v-btn>
+        </section>
+        <section class="my-5">
+          <h2 class="mb-3">
+            Filter by tags
+          </h2>
+          <p class="helper mb-3">Choose a group and any tag(s) within it</p>
+          <v-radio-group v-model="selectedFilterType" row>
+            <v-radio
               v-for="(type, index) in filterTypes"
               :key="index"
-              @click="setFilterType(type)"
-            >
-              <v-list-item-title>
-                {{ type }}
-                <v-icon v-if="selectedFilterType === type" x-small color="success"
-                  >mdi-check-bold</v-icon
-                >
-              </v-list-item-title>
-            </v-list-item>
-          </v-list>
-        </v-menu>
-      </v-card-title>
-      <strong v-if="selectedTags.length >= 11" class="error--text"
-        >You can only choose up to 10 tags.</strong
-      >
-      <v-card-text height="80vh">
-        <section class="my-5">
+              :label="type"
+              :value="type"
+            ></v-radio>
+          </v-radio-group>
+          <strong v-if="selectedTags.length >= 11" class="error--text mb-3">
+            You can only choose up to 10 tags.
+          </strong>
           <v-btn
             class="filter-tag"
             :color="selectedTags.includes(tag.id) ? 'secondary' : 'default'"
@@ -83,10 +69,10 @@
       </v-card-text>
       <v-card-actions>
         <v-btn color="primary" @click="applyFilters" :disabled="selectedTags.length >= 11"
-          >Apply {{ selectedTags.length }} filter{{ selectedTags.length !== 1 ? 's' : '' }}</v-btn
+          >Apply {{ allFilters }} filter{{ allFilters !== 1 ? 's' : '' }}</v-btn
         >
         <v-spacer></v-spacer>
-        <v-btn color="error" text @click="clearTags" :disabled="!selectedTags.length">
+        <v-btn color="error" text @click="clearFilters" :disabled="allFilters === 0">
           <v-icon small>
             mdi-close
           </v-icon>
@@ -105,13 +91,17 @@ export default {
     ...mapGetters(['allTags', 'selectedCategory', 'appliedTags', 'allLocations']),
     selectedTypeTags() {
       return this.allTags.filter(tag => tag.type === this.selectedFilterType)
+    },
+    allFilters() {
+      const selectedLocation = this.selectedLocation ? 1 : 0
+      return this.selectedTags.length + selectedLocation
     }
   },
   data() {
     return {
       showFilterDialog: false,
       selectedTags: [],
-      selectedLocations: [],
+      selectedLocation: null,
       isApplied: false,
       selectedFilterType: 'cost',
       filterTypes: ['cost', 'format', 'audience', 'topic']
@@ -119,7 +109,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(['fetchResources', 'setTags']),
+    ...mapActions(['fetchResources', 'setTags', 'setLocation']),
     handleOpen() {
       this.selectedTags = [...this.appliedTags]
     },
@@ -127,7 +117,8 @@ export default {
       this.selectedTags = []
       this.selectedFilterType = type
     },
-    clearTags() {
+    clearFilters() {
+      this.selectedLocation = null
       this.selectedTags = []
     },
     toggleTag(tag) {
@@ -137,12 +128,20 @@ export default {
         this.selectedTags.push(tag)
       }
     },
+    toggleLocation(location) {
+      if (this.selectedLocation === location.id) {
+        this.selectedLocation = null
+      } else {
+        this.selectedLocation = location.id
+      }
+    },
     applyFilters() {
       this.setTags(this.selectedTags)
+      this.setLocation(this.selectedLocation)
       this.fetchResources({
         categoryId: this.selectedCategory.id,
         tags: this.selectedTags,
-        locations: this.selectedLocations
+        location: this.selectedLocation
       })
       this.isApplied = true
       this.showFilterDialog = false
@@ -156,6 +155,10 @@ export default {
 
 <style lang="scss">
 #filter-dialog {
+  .v-card__text {
+    color: #333;
+    line-height: 1;
+  }
   .close-button {
     position: absolute;
     top: 20px;
@@ -180,11 +183,8 @@ export default {
     background-color: #fff;
   }
 
-  label {
-    font-size: 2.6rem;
-    font-family: PT Serif, serif;
-    font-weight: bold;
-    margin-bottom: 30px;
+  .v-input--radio-group .v-input__slot {
+    padding: 0;
   }
 
   .underline {
@@ -194,8 +194,8 @@ export default {
 
   .error--text {
     font-size: 1.4rem;
-    padding: 0 10px;
     font-family: Poppins, sans-serif;
+    display: block;
   }
   .v-select {
     width: 200px;
