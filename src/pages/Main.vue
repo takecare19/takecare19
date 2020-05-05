@@ -8,26 +8,6 @@
               Accessible & Inclusive Mental Health Resources for Coping Through COVID&#x2011;19
             </span>
           </h1>
-          <label for="location-filter">See resources revelant to:</label>
-          <v-select
-            id="location-filer"
-            v-model="selectedLocations"
-            solo
-            depressed
-            multiple
-            dark
-            :items="allLocations"
-            item-text="name"
-            item-value="id"
-          >
-            <template v-slot:selection="{ item, index }">
-              <span v-if="index === 0 && selectedLocations.length === 1">{{ item.name }}</span>
-
-              <span v-if="index === 1 && selectedLocations.length > 1"
-                >{{ selectedLocations.length }} locations</span
-              >
-            </template>
-          </v-select>
         </div>
       </div>
       <div class="wrapper">
@@ -76,7 +56,6 @@ export default {
   },
   data() {
     return {
-      selectedLocations: [],
       showFilterDialog: false
     }
   },

@@ -1,4 +1,3 @@
-/* eslint-disable no-debugger */
 import { db } from '../../firebase/init'
 import {
   FETCH_RESOURCES,
@@ -54,7 +53,6 @@ const actions = {
     }
 
     if (location) {
-      debugger
       if (location === 'anywhere') {
         query = query.where('location.anywhere', '==', true)
       } else {
@@ -95,7 +93,6 @@ const actions = {
     }
 
     if (location) {
-      debugger
       if (location === 'anywhere') {
         query = query.where('location.anywhere', '==', true)
       } else {

@@ -5,12 +5,12 @@
         offset-x="10"
         offset-y="10"
         color="primary"
-        :content="allFilters"
-        :value="allFilters > 0"
+        :content="allAppliedFilters"
+        :value="allAppliedFilters > 0"
       >
         <v-btn color="secondary" dark v-on="on">
           <v-icon class="small mr-1">mdi-filter</v-icon>
-          Filters
+          Filter resources
         </v-btn>
       </v-badge>
     </template>
@@ -41,30 +41,32 @@
             Filter by tags
           </h2>
           <p class="helper mb-3">Choose a group and any tag(s) within it</p>
-          <v-radio-group v-model="selectedFilterType" row>
-            <v-radio
+
+          <v-tabs background-color="white">
+            <v-tab
               v-for="(type, index) in filterTypes"
               :key="index"
-              :label="type"
-              :value="type"
-            ></v-radio>
-          </v-radio-group>
-          <strong v-if="selectedTags.length >= 11" class="error--text mb-3">
-            You can only choose up to 10 tags.
-          </strong>
-          <v-btn
-            class="filter-tag"
-            :color="selectedTags.includes(tag.id) ? 'secondary' : 'default'"
-            v-for="tag in selectedTypeTags"
-            :key="tag.id"
-            @click="toggleTag(tag.id)"
-            :disabled="selectedTags.length >= 11 && !selectedTags.includes(tag.id)"
-          >
-            <v-icon small class="mr-1">
-              {{ selectedTags.includes(tag.id) ? 'mdi-check' : 'mdi-plus' }}
-            </v-icon>
-            {{ tag.name }}
-          </v-btn>
+              @click="selectedFilterType = type"
+              >{{ type }}</v-tab
+            >
+            <v-tab-item v-for="(type, index) in filterTypes" :key="index">
+              <v-container>
+                <v-btn
+                  class="filter-tag"
+                  :color="selectedTags.includes(tag.id) ? 'secondary' : 'default'"
+                  v-for="tag in selectedTypeTags"
+                  :key="tag.id"
+                  @click="toggleTag(tag.id)"
+                  :disabled="selectedTags.length >= 11 && !selectedTags.includes(tag.id)"
+                >
+                  <v-icon small class="mr-1">
+                    {{ selectedTags.includes(tag.id) ? 'mdi-check' : 'mdi-plus' }}
+                  </v-icon>
+                  {{ tag.name }}
+                </v-btn>
+              </v-container>
+            </v-tab-item>
+          </v-tabs>
         </section>
       </v-card-text>
       <v-card-actions>
@@ -88,13 +90,23 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'FilterDialog',
   computed: {
-    ...mapGetters(['allTags', 'selectedCategory', 'appliedTags', 'allLocations']),
+    ...mapGetters([
+      'allTags',
+      'selectedCategory',
+      'appliedTags',
+      'allLocations',
+      'appliedLocation'
+    ]),
     selectedTypeTags() {
       return this.allTags.filter(tag => tag.type === this.selectedFilterType)
     },
     allFilters() {
       const selectedLocation = this.selectedLocation ? 1 : 0
       return this.selectedTags.length + selectedLocation
+    },
+    allAppliedFilters() {
+      const appliedLocation = this.appliedLocation ? 1 : 0
+      return this.appliedTags.length + appliedLocation
     }
   },
   data() {
@@ -178,7 +190,17 @@ export default {
   .v-card__title {
     padding: 16px 10px 10px;
   }
-
+  .v-tab {
+    min-width: 0;
+    padding: 0 16px;
+    font-size: 1.2rem;
+    font-family: Poppins, sans-serif;
+    text-transform: none;
+  }
+  .v-window-item .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .filter-by-button::before {
     background-color: #fff;
   }
@@ -236,8 +258,21 @@ export default {
       font-size: 1.2rem;
     }
 
+    .v-slide-group__prev.v-slide-group__prev--disabled {
+      display: none;
+    }
+
     .error--text {
       font-size: 1.2;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+    }
+
+    .v-tab {
+      padding: 0 10px;
+      font-size: 1rem;
     }
   }
 }
