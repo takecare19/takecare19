@@ -41,7 +41,9 @@
             Filter by tags
           </h2>
           <p class="helper mb-3">Choose a group and any tag(s) within it</p>
-
+          <strong v-if="selectedTags.length >= 11" class="error--text mb-2"
+            >You can only choose up to 10 tags.</strong
+          >
           <v-tabs background-color="white">
             <v-tab v-for="(type, index) in filterTypes" :key="index" @click="setFilterType(type)">{{
               type
@@ -75,7 +77,7 @@
           <v-icon small>
             mdi-close
           </v-icon>
-          Clear all
+          Clear selection
         </v-btn>
       </v-card-actions>
     </v-card>
@@ -171,7 +173,8 @@ export default {
   .close-button {
     position: absolute;
     top: 20px;
-    right: 25px;
+    right: 35px;
+    z-index: 1;
   }
   .v-btn.filter-tag {
     margin-right: 8px;
@@ -236,6 +239,12 @@ export default {
       letter-spacing: 0;
     }
   }
+
+  .v-card__actions .v-btn__content,
+  .v-card__actions .v-btn--disabled .v-btn__content {
+    font-size: 1.4rem;
+    letter-spacing: 0.02rem;
+  }
 }
 
 .v-dialog.v-dialog--scrollable {
@@ -251,7 +260,8 @@ export default {
       font-size: 1.8rem;
     }
 
-    .v-card__actions .v-btn {
+    .v-card__actions .v-btn__content,
+    .v-card__actions .v-btn--disabled .v-btn__content {
       font-size: 1.2rem;
     }
 
@@ -269,12 +279,15 @@ export default {
 
     .v-tab {
       padding: 0 10px;
-      font-size: 1rem;
+      font-size: 1.4rem;
     }
   }
 
-  .filter-toggle .v-btn__content {
-    font-size: 1.4rem;
+  .filter-toggle {
+    margin-top: 10px;
+    .v-btn__content {
+      font-size: 1.4rem;
+    }
   }
 }
 </style>
