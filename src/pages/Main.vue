@@ -8,21 +8,12 @@
               Accessible & Inclusive Mental Health Resources for Coping Through COVID&#x2011;19
             </span>
           </h1>
-          <!-- <label for="location-filter">See resources revelant to:</label>
-          <v-select
-            id="location-filer"
-            v-model="selectedLocation"
-            solo
-            depressed
-            dark
-            :items="items"
-          ></v-select> -->
         </div>
       </div>
       <div class="wrapper">
         <CategoriesListLoader v-if="isLoadingCategories" />
         <CategoriesList />
-        <div class="flex mb-3">
+        <div class="flex mb-3 resource-title-container">
           <h2>Resources</h2>
           <FilterDialog />
         </div>
@@ -33,7 +24,7 @@
           :category="selectedCategory"
         />
         <ResourceCardLoader v-if="isLoadingResources || isLoadingMoreResources" />
-        <div class="load-more-container">
+        <div class="load-more-container" v-if="allResources.length">
           <v-btn text :disabled="endOfResources" class="mt-5" @click="seeMore">
             {{ endOfResources ? 'End of list' : 'Load more' }}
           </v-btn>
@@ -65,8 +56,6 @@ export default {
   },
   data() {
     return {
-      items: ['Anywhere', 'Toronto', 'Vancouver'],
-      selectedLocation: 'Anywhere',
       showFilterDialog: false
     }
   },
@@ -78,7 +67,9 @@ export default {
       'isLoadingResources',
       'isLoadingMoreResources',
       'isLoadingCategories',
-      'appliedTags'
+      'appliedTags',
+      'appliedLocation',
+      'allLocations'
     ])
   },
   created() {
@@ -89,7 +80,11 @@ export default {
   methods: {
     ...mapActions(['fetchResources', 'fetchMore', 'fetchTags', 'fetchLocations']),
     seeMore() {
-      this.fetchMore({ categoryId: this.selectedCategory.id, tags: this.appliedTags })
+      this.fetchMore({
+        categoryId: this.selectedCategory.id,
+        tags: this.appliedTags,
+        location: this.appliedLocation
+      })
     }
   }
 }
@@ -179,6 +174,11 @@ export default {
     label {
       font-size: 1.6rem;
     }
+  }
+
+  #homepage .resource-title-container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 </style>
