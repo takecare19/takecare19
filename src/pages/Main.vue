@@ -24,7 +24,7 @@
           :category="selectedCategory"
         />
         <ResourceCardLoader v-if="isLoadingResources || isLoadingMoreResources" />
-        <div class="load-more-container">
+        <div class="load-more-container" v-if="allResources.length">
           <v-btn text :disabled="endOfResources" class="mt-5" @click="seeMore">
             {{ endOfResources ? 'End of list' : 'Load more' }}
           </v-btn>

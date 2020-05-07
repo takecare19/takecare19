@@ -1,13 +1,7 @@
 <template>
   <v-dialog scrollable v-model="showFilterDialog" width="95%" @input="v => handleOpen()">
     <template v-slot:activator="{ on }">
-      <v-badge
-        offset-x="10"
-        offset-y="10"
-        color="primary"
-        :content="allAppliedFilters"
-        :value="allAppliedFilters > 0"
-      >
+      <v-badge overlap color="primary" :content="allAppliedFilters" :value="allAppliedFilters > 0">
         <v-btn color="secondary" dark v-on="on" class="filter-toggle">
           <v-icon class="small mr-1">mdi-filter</v-icon>
           Filter by Location & Tags
@@ -15,9 +9,11 @@
       </v-badge>
     </template>
     <v-card id="filter-dialog">
-      <v-btn class="close-button" icon @click="showFilterDialog = false">
-        <v-icon large>mdi-close-circle</v-icon>
-      </v-btn>
+      <v-card-title>
+        <v-btn class="close-button" icon @click="showFilterDialog = false">
+          <v-icon large>mdi-close-circle</v-icon>
+        </v-btn>
+      </v-card-title>
       <v-card-text height="80vh">
         <section class="mb-12">
           <h2 class="my-3">Filter by location</h2>
@@ -41,9 +37,6 @@
             Filter by tags
           </h2>
           <p class="helper mb-3">Choose a group and any tag(s) within it</p>
-          <strong v-if="selectedTags.length >= 11" class="error--text mb-2"
-            >You can only choose up to 10 tags.</strong
-          >
           <v-tabs background-color="white">
             <v-tab v-for="(type, index) in filterTypes" :key="index" @click="setFilterType(type)">{{
               type
@@ -69,16 +62,20 @@
         </section>
       </v-card-text>
       <v-card-actions>
-        <v-btn color="primary" @click="applyFilters" :disabled="selectedTags.length >= 11"
-          >Apply {{ allFilters }} filter{{ allFilters !== 1 ? 's' : '' }}</v-btn
+        <strong v-if="selectedTags.length >= 11" class="error--text mb-2"
+          >You can only choose up to 10 tags.</strong
         >
-        <v-spacer></v-spacer>
-        <v-btn color="error" text @click="clearFilters" :disabled="allFilters === 0">
-          <v-icon small>
-            mdi-close
-          </v-icon>
-          Clear selection
-        </v-btn>
+        <div class="flex">
+          <v-btn color="primary" @click="applyFilters" :disabled="selectedTags.length >= 11"
+            >Apply {{ allFilters }} filter{{ allFilters !== 1 ? 's' : '' }}</v-btn
+          >
+          <v-btn color="error" text @click="clearFilters" :disabled="allFilters === 0">
+            <v-icon small>
+              mdi-close
+            </v-icon>
+            Clear selection
+          </v-btn>
+        </div>
       </v-card-actions>
     </v-card>
   </v-dialog>
@@ -165,15 +162,14 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/styles/_variables.scss';
 #filter-dialog {
   .v-card__text {
     color: #333;
     line-height: 1;
   }
   .close-button {
-    position: absolute;
-    top: 20px;
-    right: 35px;
+    margin-left: auto;
     z-index: 1;
   }
   .v-btn.filter-tag {
@@ -188,7 +184,7 @@ export default {
     padding: 0 10px 20px;
   }
   .v-card__title {
-    padding: 16px 10px 10px;
+    padding: 0;
   }
   .v-tab {
     min-width: 0;
@@ -240,10 +236,23 @@ export default {
     }
   }
 
+  .v-card__actions {
+    display: block;
+  }
+
   .v-card__actions .v-btn__content,
   .v-card__actions .v-btn--disabled .v-btn__content {
     font-size: 1.4rem;
     letter-spacing: 0.02rem;
+  }
+
+  .flex {
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .helper {
+    color: $denim;
   }
 }
 
