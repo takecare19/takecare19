@@ -88,9 +88,8 @@ p {
   font-family: Poppins, sans-serif !important;
 }
 
-.v-btn.primary {
-  padding-left: 15px;
-  padding-right: 15px;
+.v-btn:not(.v-btn--round).v-size--default {
+  padding: 0 20px !important;
 }
 
 .v-badge__badge {
