@@ -44,5 +44,6 @@ export const LOGOUT_USER_FAILURE = 'LOGOUT_USER_FAILURE'
 export const LOGOUT_USER_SUCCESS = 'LOGOUT_USER_SUCCESS'
 
 export const SET_TAGS = 'SET_TAGS'
+export const SET_LOCATION = 'SET_LOCATION'
 
 export const PAGE_SIZE = 20

@@ -40,7 +40,7 @@ const getters = {
 }
 
 const actions = {
-  fetchResources: ({ commit }, { categoryId, tags } = {}) => {
+  fetchResources: ({ commit }, { categoryId, tags, location } = {}) => {
     commit(FETCH_RESOURCES)
     let query = db.collection('resources').where('approved', '==', true)
 
@@ -52,30 +52,22 @@ const actions = {
       query = query.where('tags', 'array-contains-any', tags)
     }
 
-    // if (costTags && costTags.length) {
-    //   query = query.where('costTags', 'array-contains-any', costTags)
-    // }
-
-    // if (audienceTags && audienceTags.length) {
-    //   query = query.where('audienceTags', 'array-contains-any', audienceTags)
-    // }
-
-    // if (formatTags && formatTags.length) {
-    //   query = query.where('formatTags', 'array-contains-any', formatTags)
-    // }
-
-    // if (topicTags && topicTags.length) {
-    //   query = query.where('topicTags', 'array-contains-any', topicTags)
-    // }
+    if (location) {
+      if (location === 'anywhere') {
+        query = query.where('location.anywhere', '==', true)
+      } else {
+        query = query.where('location.specific', '==', location)
+      }
+    }
 
     query
       .orderBy('created_at', 'desc')
       .limit(PAGE_SIZE)
       .get()
       .then(snapshot => {
+        const resources = []
         const lastVisible = snapshot.docs[snapshot.docs.length - 1]
 
-        const resources = []
         snapshot.forEach(doc => {
           resources.push({ id: doc.ref.id, ...doc.data() })
         })
@@ -87,7 +79,7 @@ const actions = {
       })
       .catch(error => commit(FETCH_RESOURCES_FAILURE, error))
   },
-  fetchMore: ({ commit }, { categoryId, tags } = {}) => {
+  fetchMore: ({ commit }, { categoryId, tags, location } = {}) => {
     let query = db.collection('resources').where('approved', '==', true)
 
     commit(FETCH_MORE_RESOURCES)
@@ -100,22 +92,30 @@ const actions = {
       query = query.where('tags', 'array-contains-any', tags)
     }
 
+    if (location) {
+      if (location === 'anywhere') {
+        query = query.where('location.anywhere', '==', true)
+      } else {
+        query = query.where('location.specific', '==', location)
+      }
+    }
+
     query
       .orderBy('created_at', 'desc')
       .limit(PAGE_SIZE)
       .startAfter(state.lastResource)
       .get()
       .then(snapshot => {
+        const resources = []
         const lastVisible = snapshot.docs[snapshot.docs.length - 1]
 
-        const resources = []
         snapshot.forEach(doc => {
           resources.push({ id: doc.ref.id, ...doc.data() })
         })
         commit(FETCH_MORE_SUCCESS, { resources, lastVisible })
 
         if (resources.length < PAGE_SIZE || !lastVisible) {
-          commit('ALL_RESOURCES_FETCHED')
+          commit(ALL_RESOURCES_FETCHED)
         }
       })
       .catch(error => commit(FETCH_RESOURCES_FAILURE, error))

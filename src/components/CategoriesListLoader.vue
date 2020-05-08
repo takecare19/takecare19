@@ -1,27 +1,11 @@
 <template>
   <div class="categories-loader mt-8 mb-0">
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
-    <v-skeleton-loader class="ma-1" type="chip"></v-skeleton-loader>
+    <v-skeleton-loader
+      class="ma-1"
+      type="chip"
+      v-for="(chip, i) in new Array($vuetify.breakpoint.xsOnly ? 8 : 18)"
+      :key="i"
+    ></v-skeleton-loader>
   </div>
 </template>
 
@@ -37,9 +21,6 @@
 
 @media (max-width: 768px) {
   .categories-loader {
-    width: 1600px;
-    overflow: hidden;
-
     .v-skeleton-loader__chip.v-skeleton-loader__bone {
       height: 20px;
     }

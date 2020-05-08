@@ -1,78 +1,81 @@
 <template>
   <v-dialog scrollable v-model="showFilterDialog" width="95%" @input="v => handleOpen()">
     <template v-slot:activator="{ on }">
-      <v-badge
-        offset-x="10"
-        offset-y="10"
-        color="primary"
-        :content="appliedTags.length"
-        :value="appliedTags.length"
-      >
-        <v-btn color="secondary" dark v-on="on">
+      <v-badge overlap color="primary" :content="allAppliedFilters" :value="allAppliedFilters > 0">
+        <v-btn color="secondary" dark v-on="on" class="filter-toggle">
           <v-icon class="small mr-1">mdi-filter</v-icon>
-          Filters
+          Filter by Location & Tags
         </v-btn>
       </v-badge>
     </template>
     <v-card id="filter-dialog">
-      <v-btn class="close-button" icon @click="showFilterDialog = false">
-        <v-icon large>mdi-close-circle</v-icon>
-      </v-btn>
       <v-card-title>
-        <v-menu offset-y>
-          <template v-slot:activator="{ on }">
-            <v-btn text x-large v-on="on" class="filter-by-button">
-              Filter by <span class="underline">{{ selectedFilterType }}</span>
-              <v-icon>mdi-menu-down</v-icon>
-            </v-btn>
-          </template>
-          <v-list>
-            <v-list-item
-              v-for="(type, index) in filterTypes"
-              :key="index"
-              @click="setFilterType(type)"
-            >
-              <v-list-item-title>
-                {{ type }}
-                <v-icon v-if="selectedFilterType === type" x-small color="success"
-                  >mdi-check-bold</v-icon
-                >
-              </v-list-item-title>
-            </v-list-item>
-          </v-list>
-        </v-menu>
+        <v-btn class="close-button" icon @click="showFilterDialog = false">
+          <v-icon large>mdi-close-circle</v-icon>
+        </v-btn>
       </v-card-title>
-      <strong v-if="selectedTags.length >= 11" class="error--text"
-        >You can only choose up to 10 tags.</strong
-      >
       <v-card-text height="80vh">
-        <section class="my-5">
+        <section class="mb-12">
+          <h2 class="my-3">Filter by location</h2>
+          <p class="helper mb-4">Select one location</p>
           <v-btn
             class="filter-tag"
-            :color="selectedTags.includes(tag.id) ? 'secondary' : 'default'"
-            v-for="tag in selectedTypeTags"
-            :key="tag.id"
-            @click="toggleTag(tag.id)"
-            :disabled="selectedTags.length >= 11 && !selectedTags.includes(tag.id)"
+            :color="selectedLocation === location.id ? 'secondary' : 'default'"
+            v-for="location in allLocations"
+            :key="location.id"
+            @click="toggleLocation(location)"
+            :disabled="selectedLocation && !selectedLocation === location.id"
           >
             <v-icon small class="mr-1">
-              {{ selectedTags.includes(tag.id) ? 'mdi-check' : 'mdi-plus' }}
+              {{ selectedLocation === location.id ? 'mdi-check' : 'mdi-plus' }}
             </v-icon>
-            {{ tag.name }}
+            {{ location.name }}
           </v-btn>
+        </section>
+        <section class="my-5">
+          <h2 class="mb-3">
+            Filter by tags
+          </h2>
+          <p class="helper mb-3">Choose a group and any tag(s) within it</p>
+          <v-tabs background-color="white">
+            <v-tab v-for="(type, index) in filterTypes" :key="index" @click="setFilterType(type)">{{
+              type
+            }}</v-tab>
+            <v-tab-item v-for="(type, index) in filterTypes" :key="index">
+              <v-container>
+                <v-btn
+                  class="filter-tag"
+                  :color="selectedTags.includes(tag.id) ? 'secondary' : 'default'"
+                  v-for="tag in selectedTypeTags"
+                  :key="tag.id"
+                  @click="toggleTag(tag.id)"
+                  :disabled="selectedTags.length >= 11 && !selectedTags.includes(tag.id)"
+                >
+                  <v-icon small class="mr-1">
+                    {{ selectedTags.includes(tag.id) ? 'mdi-check' : 'mdi-plus' }}
+                  </v-icon>
+                  {{ tag.name }}
+                </v-btn>
+              </v-container>
+            </v-tab-item>
+          </v-tabs>
         </section>
       </v-card-text>
       <v-card-actions>
-        <v-btn color="primary" @click="applyFilters" :disabled="selectedTags.length >= 11"
-          >Apply {{ selectedTags.length }} filter{{ selectedTags.length !== 1 ? 's' : '' }}</v-btn
+        <strong v-if="selectedTags.length >= 11" class="error--text mb-2"
+          >You can only choose up to 10 tags.</strong
         >
-        <v-spacer></v-spacer>
-        <v-btn color="error" text @click="clearTags" :disabled="!selectedTags.length">
-          <v-icon small>
-            mdi-close
-          </v-icon>
-          Clear all
-        </v-btn>
+        <div class="flex">
+          <v-btn color="primary" @click="applyFilters" :disabled="selectedTags.length >= 11"
+            >Apply {{ allFilters }} filter{{ allFilters !== 1 ? 's' : '' }}</v-btn
+          >
+          <v-btn color="error" text @click="clearFilters" :disabled="allFilters === 0">
+            <v-icon small>
+              mdi-close
+            </v-icon>
+            Clear selection
+          </v-btn>
+        </div>
       </v-card-actions>
     </v-card>
   </v-dialog>
@@ -83,22 +86,38 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'FilterDialog',
   computed: {
-    ...mapGetters(['allTags', 'selectedCategory', 'appliedTags']),
+    ...mapGetters([
+      'allTags',
+      'selectedCategory',
+      'appliedTags',
+      'allLocations',
+      'appliedLocation'
+    ]),
     selectedTypeTags() {
       return this.allTags.filter(tag => tag.type === this.selectedFilterType)
+    },
+    allFilters() {
+      const selectedLocation = this.selectedLocation ? 1 : 0
+      return this.selectedTags.length + selectedLocation
+    },
+    allAppliedFilters() {
+      const appliedLocation = this.appliedLocation ? 1 : 0
+      return this.appliedTags.length + appliedLocation
     }
   },
   data() {
     return {
       showFilterDialog: false,
       selectedTags: [],
+      selectedLocation: null,
       isApplied: false,
       selectedFilterType: 'cost',
       filterTypes: ['cost', 'format', 'audience', 'topic']
     }
   },
+
   methods: {
-    ...mapActions(['fetchResources', 'setTags']),
+    ...mapActions(['fetchResources', 'setTags', 'setLocation']),
     handleOpen() {
       this.selectedTags = [...this.appliedTags]
     },
@@ -106,7 +125,8 @@ export default {
       this.selectedTags = []
       this.selectedFilterType = type
     },
-    clearTags() {
+    clearFilters() {
+      this.selectedLocation = null
       this.selectedTags = []
     },
     toggleTag(tag) {
@@ -116,11 +136,20 @@ export default {
         this.selectedTags.push(tag)
       }
     },
+    toggleLocation(location) {
+      if (this.selectedLocation === location.id) {
+        this.selectedLocation = null
+      } else {
+        this.selectedLocation = location.id
+      }
+    },
     applyFilters() {
       this.setTags(this.selectedTags)
+      this.setLocation(this.selectedLocation)
       this.fetchResources({
         categoryId: this.selectedCategory.id,
-        tags: this.selectedTags
+        tags: this.selectedTags,
+        location: this.selectedLocation
       })
       this.isApplied = true
       this.showFilterDialog = false
@@ -133,11 +162,15 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/styles/_variables.scss';
 #filter-dialog {
+  .v-card__text {
+    color: #333;
+    line-height: 1;
+  }
   .close-button {
-    position: absolute;
-    top: 20px;
-    right: 25px;
+    margin-left: auto;
+    z-index: 1;
   }
   .v-btn.filter-tag {
     margin-right: 8px;
@@ -151,18 +184,25 @@ export default {
     padding: 0 10px 20px;
   }
   .v-card__title {
-    padding: 16px 10px 10px;
+    padding: 0;
   }
-
+  .v-tab {
+    min-width: 0;
+    padding: 0 16px;
+    font-size: 1.2rem;
+    font-family: Poppins, sans-serif;
+    text-transform: none;
+  }
+  .v-window-item .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .filter-by-button::before {
     background-color: #fff;
   }
 
-  label {
-    font-size: 2.6rem;
-    font-family: PT Serif, serif;
-    font-weight: bold;
-    margin-bottom: 30px;
+  .v-input--radio-group .v-input__slot {
+    padding: 0;
   }
 
   .underline {
@@ -172,8 +212,8 @@ export default {
 
   .error--text {
     font-size: 1.4rem;
-    padding: 0 10px;
     font-family: Poppins, sans-serif;
+    display: block;
   }
   .v-select {
     width: 200px;
@@ -195,6 +235,25 @@ export default {
       letter-spacing: 0;
     }
   }
+
+  .v-card__actions {
+    display: block;
+  }
+
+  .v-card__actions .v-btn__content,
+  .v-card__actions .v-btn--disabled .v-btn__content {
+    font-size: 1.4rem;
+    letter-spacing: 0.02rem;
+  }
+
+  .flex {
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .helper {
+    color: $denim;
+  }
 }
 
 .v-dialog.v-dialog--scrollable {
@@ -210,12 +269,32 @@ export default {
       font-size: 1.8rem;
     }
 
-    .v-card__actions .v-btn {
+    .v-card__actions .v-btn__content,
+    .v-card__actions .v-btn--disabled .v-btn__content {
       font-size: 1.2rem;
+    }
+
+    .v-slide-group__prev.v-slide-group__prev--disabled {
+      display: none;
     }
 
     .error--text {
       font-size: 1.2;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+    }
+
+    .v-tab {
+      padding: 0 10px;
+      font-size: 1.4rem;
+    }
+  }
+
+  .filter-toggle {
+    .v-btn__content {
+      font-size: 1.4rem;
     }
   }
 }
