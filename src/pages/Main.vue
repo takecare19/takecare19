@@ -182,6 +182,10 @@ export default {
   #homepage .resource-title-container {
     flex-direction: column;
     align-items: flex-start;
+
+    h2 {
+      margin-bottom: 10px;
+    }
   }
 }
 </style>
