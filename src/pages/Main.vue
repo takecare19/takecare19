@@ -25,8 +25,11 @@
         />
         <ResourceCardLoader v-if="isLoadingResources || isLoadingMoreResources" />
         <div class="load-more-container" v-if="allResources.length">
-          <v-btn text :disabled="endOfResources" class="mt-5" @click="seeMore">
+          <v-btn color="secondary" :disabled="endOfResources" class="mt-5" @click="seeMore">
             {{ endOfResources ? 'End of list' : 'Load more' }}
+            <v-icon small class="ml-1" v-if="!endOfResources">
+              mdi-arrow-down
+            </v-icon>
           </v-btn>
         </div>
       </div>
