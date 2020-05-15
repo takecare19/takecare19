@@ -160,8 +160,8 @@ export default {
 
 .new-label.v-chip.v-size--default {
   position: absolute;
-  top: 1px;
-  right: 1px;
+  top: 0px;
+  right: 0px;
   border-radius: 0;
   background: $sunshine;
   color: white;
@@ -205,6 +205,11 @@ export default {
 
   .category-location {
     font-size: 1.2rem;
+  }
+
+  .new-label.v-chip.v-size--default {
+    font-size: 1.2rem;
+    padding: 15px 10px;
   }
 }
 </style>
