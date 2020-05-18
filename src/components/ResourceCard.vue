@@ -1,5 +1,10 @@
 <template>
-  <v-card class="resource-card" :href="!isAdmin ? resource.url : ''" target="_blank">
+  <v-card
+    class="resource-card"
+    :href="!isAdmin ? resource.url : ''"
+    target="_blank"
+    v-if="!hideCrisis"
+  >
     <v-chip class="new-label" v-if="isNew">New</v-chip>
     <div class="resource-card-content">
       <h3>{{ resource.name }}</h3>
@@ -68,6 +73,12 @@ export default {
     isAdmin() {
       return !!this.user && this.$route.path.includes('admin')
     },
+    hideCrisis() {
+      return (
+        this.selectedCategory.id === 'All' &&
+        this.$props.resource.categoryId === 'ZNrUvRN4asfFk3FxpWh3'
+      )
+    },
     isNew() {
       const now = moment()
       const referenceDate = moment(this.$props.resource.created_at.toDate())
@@ -79,6 +90,7 @@ export default {
       return referenceDate.isAfter(sevenDaysAgo)
     }
   },
+
   methods: {
     ...mapActions(['deleteResource']),
     goToResource(url) {
