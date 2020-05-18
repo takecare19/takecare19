@@ -1,5 +1,10 @@
 <template>
-  <v-card class="resource-card" :href="!isAdmin ? resource.url : ''" target="_blank">
+  <v-card
+    class="resource-card"
+    :href="!isAdmin ? resource.url : ''"
+    target="_blank"
+    v-if="!hideCrisis"
+  >
     <div class="resource-card-content">
       <h3>{{ resource.name }}</h3>
       <p class="category-location mt-1 mb-2">
@@ -67,15 +72,14 @@ export default {
     isAdmin() {
       return !!this.user && this.$route.path.includes('admin')
     },
-    tagsForResource() {
-      return [
-        ...this.$props.resource.costTags,
-        ...this.$props.resource.formatTags,
-        ...this.$props.resource.topicTags,
-        ...this.$props.resource.audienceTags
-      ]
+    hideCrisis() {
+      return (
+        this.selectedCategory.id === 'All' &&
+        this.$props.resource.categoryId === 'ZNrUvRN4asfFk3FxpWh3'
+      )
     }
   },
+
   methods: {
     ...mapActions(['deleteResource']),
     goToResource(url) {

@@ -46,9 +46,7 @@ const actions = {
 
     if (categoryId && categoryId !== 'All') {
       query = query.where('categoryId', '==', categoryId)
-    }
-
-    if (tags && tags.length) {
+    } else if (tags && tags.length) {
       query = query.where('tags', 'array-contains-any', tags)
     }
 
