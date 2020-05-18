@@ -20,14 +20,6 @@
   font-family: Poppins, sans-serif !important;
 }
 
-.v-card__actions > .v-btn.v-btn {
-  padding: 0 16px;
-}
-
-.v-btn.v-btn--depressed {
-  font-weight: 400;
-}
-
 .v-btn.v-size--default {
   font-size: 1.6rem;
 }
@@ -51,7 +43,7 @@
 
 .v-btn:not(.v-btn--round),
 .v-input__slot {
-  padding: 0 25px;
+  padding: 0 20px !important;
   border-radius: 0;
   box-shadow: none !important;
 }
