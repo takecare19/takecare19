@@ -59,6 +59,10 @@ export default {
   .v-btn.v-btn--active::before {
     background: white;
   }
+
+  .about--desktop.theme--light.v-btn:hover::before {
+    opacity: 0;
+  }
 }
 
 .about--mobile .v-icon {
