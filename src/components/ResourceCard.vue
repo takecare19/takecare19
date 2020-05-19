@@ -1,5 +1,11 @@
 <template>
-  <v-card class="resource-card" :href="!isAdmin ? resource.url : ''" target="_blank">
+  <v-card
+    class="resource-card"
+    :href="!isAdmin ? resource.url : ''"
+    target="_blank"
+    v-if="!hideCrisis"
+  >
+    <v-chip class="new-label" v-if="isNew">New</v-chip>
     <div class="resource-card-content">
       <h3>{{ resource.name }}</h3>
       <p class="category-location mt-1 mb-2">
@@ -67,15 +73,24 @@ export default {
     isAdmin() {
       return !!this.user && this.$route.path.includes('admin')
     },
-    tagsForResource() {
-      return [
-        ...this.$props.resource.costTags,
-        ...this.$props.resource.formatTags,
-        ...this.$props.resource.topicTags,
-        ...this.$props.resource.audienceTags
-      ]
+    hideCrisis() {
+      return (
+        this.selectedCategory.id === 'All' &&
+        this.$props.resource.categoryId === 'ZNrUvRN4asfFk3FxpWh3'
+      )
+    },
+    isNew() {
+      const now = moment()
+      const referenceDate = moment(this.$props.resource.created_at.toDate())
+      const sevenDaysAgo = now
+        .clone()
+        .subtract(7, 'days')
+        .startOf('day')
+
+      return referenceDate.isAfter(sevenDaysAgo)
     }
   },
+
   methods: {
     ...mapActions(['deleteResource']),
     goToResource(url) {
@@ -155,6 +170,18 @@ export default {
   letter-spacing: 0.05rem;
 }
 
+.new-label.v-chip.v-size--default {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border-radius: 0;
+  background: $sunshine;
+  color: white;
+  font-size: 1.6rem;
+  padding: 20px 15px;
+  border-top-right-radius: 3px;
+}
+
 .resource-tag-list {
   display: flex;
   flex-wrap: wrap;
@@ -190,6 +217,11 @@ export default {
 
   .category-location {
     font-size: 1.2rem;
+  }
+
+  .new-label.v-chip.v-size--default {
+    font-size: 1.2rem;
+    padding: 15px 10px;
   }
 }
 </style>
