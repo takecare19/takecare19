@@ -169,7 +169,7 @@ nav {
 }
 
 #kofi-button {
-  border: 1px solid $navy;
+  border: 1px solid $denim;
   border-radius: 5px;
   padding: 7px 17px;
   font-weight: 500;
