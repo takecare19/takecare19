@@ -76,7 +76,13 @@
           <a target="_blank" href="http://www.byvivian.com/">Vivian Ngai</a> and developed by
           <a target="_blank" href="http://susiekim.co/">Susie Kim</a>, with love ♥
         </p>
-        <p>&copy; {{ new Date().getFullYear() }} takecare19.com. All rights reserved.</p>
+        <a id="kofi-button" target="_blank" href="https://ko-fi.com/takecare19">
+          <img src="../assets/kofi-logo.svg" alt="Ko-Fi logo" />
+          Support this project
+        </a>
+        <p class="mt-6">
+          &copy; {{ new Date().getFullYear() }} takecare19.com. All rights reserved.
+        </p>
       </div>
     </div>
   </v-footer>
@@ -160,6 +166,18 @@ nav {
 
 #mc_embed_signup input.email {
   margin: 10px 0;
+}
+
+#kofi-button {
+  border: 1px solid $navy;
+  border-radius: 5px;
+  padding: 7px 17px;
+  font-weight: 500;
+  text-decoration: none;
+  img {
+    height: 2.4rem;
+    transform: translate(-5px, 7px);
+  }
 }
 
 @media (min-width: 769px) {
