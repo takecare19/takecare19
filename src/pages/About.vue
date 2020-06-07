@@ -87,6 +87,10 @@
             If/when you're financially able, support the businesses/providers that have been
             generous during this time
           </li>
+          <li>
+            Support this project with a small financial donation to cover our expenses and time
+            <a href="https://ko-fi.com/takecare19" target="_blank">here</a>
+          </li>
         </ul>
       </section>
       <section>

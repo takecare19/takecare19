@@ -293,7 +293,6 @@ export default {
   }
 
   .filter-toggle {
-    margin-top: 10px;
     .v-btn__content {
       font-size: 1.4rem;
     }
