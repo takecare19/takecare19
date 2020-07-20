@@ -4,29 +4,8 @@
       <section>
         <h1 class="mb-8">About</h1>
         <p>
-          Since the COVID-19 pandemic hit the world in early 2020, it has been a challenging time
-          for everyone in different ways. This website is a compilation of accessible—mostly free or
-          low-cost, and inclusive resources to help cope and support mental wellness through
-          COVID-19 (and beyond).
+          The COVID-19 pandemic has been a challenging time for everyone in different ways.
         </p>
-        <p>
-          This project started out as a small crowd-sourced Google Doc that has since grown and been
-          shared through various networks. It is now in its next evolution as a website to help
-          create a better and easier way to search for more relevant resources to you, and to expand
-          to other locations.
-        </p>
-
-        <h2>
-          Why is this project important?
-        </h2>
-        <ul>
-          <li>
-            To help mental health resources be accessible, especially inclusive ones
-          </li>
-          <li>
-            To help de-stigmatize mental health
-          </li>
-        </ul>
         <h2>The objective is to compile resources that are:</h2>
         <ul>
           <li>
@@ -39,14 +18,28 @@
             seniors, etc.)
           </li>
         </ul>
+        <h2>
+          Why is this project important?
+        </h2>
+        <ul>
+          <li>
+            To help mental health resources be accessible, especially inclusive ones
+          </li>
+          <li>
+            To help de-stigmatize mental health
+          </li>
+        </ul>
         <p>
-          This project is not an affiliate or sponsored—just a passion project to compile resources
-          that may help with everyone's mental and emotional wellness.
+          This project started out as a small crowd-sourced Google Doc that has since grown and been
+          shared through various networks. It is now in its next evolution as a website to help
+          create a better and easier way to search for more relevant resources to you, and to expand
+          to other locations.
         </p>
 
         <p>
-          Listed resources do not constitute or imply endorsement or recommendation. Because it's a
-          crowd-sourced compilation, we can't verify every single one, but try our best to.
+          This project is not affiliated or sponsored—just a passion project to compile resources
+          that may help with everyone's mental and emotional wellness. Listed resources do not
+          constitute or imply endorsement or recommendation.
         </p>
 
         <p>
@@ -57,9 +50,6 @@
           manageable size and not overwhelming to use.
         </p>
 
-        <p>
-          Thanks so much to those who have supported, shared, and contributed so far!
-        </p>
         <h2>What you can do to help:</h2>
         <ul>
           <li>
