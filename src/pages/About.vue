@@ -53,8 +53,13 @@
         <h2>What you can do to help:</h2>
         <ul>
           <li>
-            Share this website; use it as a way to start a conversation at your workplace, social
-            networks, etc.
+            Share this website and use it as a way to start a conversation at your workplace, social
+            networks, family, etc. Access shareable images
+            <a
+              href="https://drive.google.com/drive/folders/1HSEoZyXslxYyvgO8ihntUSDrmwR-BbfY?usp=sharing"
+              target="_blank"
+              >here</a
+            >
           </li>
           <li>
             If you come across any great free, discounted, and/or inclusive resources, suggest it
